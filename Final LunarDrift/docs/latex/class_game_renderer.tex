@@ -1,0 +1,110 @@
+\hypertarget{class_game_renderer}{}\section{Game\+Renderer Class Reference}
+\label{class_game_renderer}\index{Game\+Renderer@{Game\+Renderer}}
+
+
+{\ttfamily \#include $<$Game\+Renderer.\+h$>$}
+
+Inheritance diagram for Game\+Renderer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game_renderer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_game_renderer_a91d4feda47647fc97397d9e09bbc36df}{Game\+Renderer} (\hyperlink{class_context}{Context} $\ast$context, G\+Lsizei width, G\+Lsizei height)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_game_renderer_a7548becdb4364d14cafa7a5436f42af6}{$\sim$\+Game\+Renderer} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_shader_manager}{Shader\+Manager} $>$ \hyperlink{class_game_renderer_ac01f6745a9dd800dfe4c5fb12d46bc38}{load\+Standard\+Shaders} (\hyperlink{class_context}{Context} $\ast$context) override
+\begin{DoxyCompactList}\small\item\em Create and return a shader manager containing the standard shaders. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 5 of file Game\+Renderer.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Game\+Renderer@{Game\+Renderer}!Game\+Renderer@{Game\+Renderer}}
+\index{Game\+Renderer@{Game\+Renderer}!Game\+Renderer@{Game\+Renderer}}
+\subsubsection[{\texorpdfstring{Game\+Renderer(\+Context $\ast$context, G\+Lsizei width, G\+Lsizei height)}{GameRenderer(Context *context, GLsizei width, GLsizei height)}}]{\setlength{\rightskip}{0pt plus 5cm}Game\+Renderer\+::\+Game\+Renderer (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context, }
+\item[{G\+Lsizei}]{width, }
+\item[{G\+Lsizei}]{height}
+\end{DoxyParamCaption}
+)}\hypertarget{class_game_renderer_a91d4feda47647fc97397d9e09bbc36df}{}\label{class_game_renderer_a91d4feda47647fc97397d9e09bbc36df}
+
+
+Default constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphics context \\
+\hline
+{\em width} & Width of context in pixels \\
+\hline
+{\em height} & Height of context in pixels \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 3 of file Game\+Renderer.\+cpp.
+
+
+
+References f, Renderer\+::load(), and Renderer\+::set\+Clear\+Color().
+
+\index{Game\+Renderer@{Game\+Renderer}!````~Game\+Renderer@{$\sim$\+Game\+Renderer}}
+\index{````~Game\+Renderer@{$\sim$\+Game\+Renderer}!Game\+Renderer@{Game\+Renderer}}
+\subsubsection[{\texorpdfstring{$\sim$\+Game\+Renderer()}{~GameRenderer()}}]{\setlength{\rightskip}{0pt plus 5cm}Game\+Renderer\+::$\sim$\+Game\+Renderer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_game_renderer_a7548becdb4364d14cafa7a5436f42af6}{}\label{class_game_renderer_a7548becdb4364d14cafa7a5436f42af6}
+
+
+Default destructor. 
+
+
+
+Definition at line 12 of file Game\+Renderer.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{Game\+Renderer@{Game\+Renderer}!load\+Standard\+Shaders@{load\+Standard\+Shaders}}
+\index{load\+Standard\+Shaders@{load\+Standard\+Shaders}!Game\+Renderer@{Game\+Renderer}}
+\subsubsection[{\texorpdfstring{load\+Standard\+Shaders(\+Context $\ast$context) override}{loadStandardShaders(Context *context) override}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$ {\bf Shader\+Manager} $>$ Game\+Renderer\+::load\+Standard\+Shaders (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{class_game_renderer_ac01f6745a9dd800dfe4c5fb12d46bc38}{}\label{class_game_renderer_ac01f6745a9dd800dfe4c5fb12d46bc38}
+
+
+Create and return a shader manager containing the standard shaders. 
+
+\begin{DoxyReturn}{Returns}
+Managed pointer of a default shader manager 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_renderer_a18aeed0fc26835778f23a2ff7406446b}{Renderer}.
+
+
+
+Definition at line 18 of file Game\+Renderer.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lunar\+Drift/game/\hyperlink{_game_renderer_8h}{Game\+Renderer.\+h}\item 
+Lunar\+Drift/game/\hyperlink{_game_renderer_8cpp}{Game\+Renderer.\+cpp}\end{DoxyCompactItemize}

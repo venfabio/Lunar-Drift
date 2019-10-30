@@ -1,0 +1,9 @@
+<map id="LunarDrift/LunarDrift/engine/managers/SceneObjectManager.h" name="LunarDrift/LunarDrift/engine/managers/SceneObjectManager.h">
+<area shape="rect" id="node2" href="$_collision_component_8cpp.html" title="LunarDrift/LunarDrift\l/engine/components/Collision\lComponent.cpp" alt="" coords="5,109,197,165"/>
+<area shape="rect" id="node3" href="$_explodable_component_8cpp.html" title="LunarDrift/LunarDrift\l/engine/components/Explodable\lComponent.cpp" alt="" coords="222,109,429,165"/>
+<area shape="rect" id="node4" href="$_propulsion_component_8cpp.html" title="LunarDrift/LunarDrift\l/engine/components/Propulsion\lComponent.cpp" alt="" coords="453,109,657,165"/>
+<area shape="rect" id="node5" href="$_scene_8cpp.html" title="LunarDrift/LunarDrift\l/engine/containers/Scene.cpp" alt="" coords="681,117,876,158"/>
+<area shape="rect" id="node6" href="$_scene_object_manager_8cpp.html" title="LunarDrift/LunarDrift\l/engine/managers/SceneObject\lManager.cpp" alt="" coords="901,109,1105,165"/>
+<area shape="rect" id="node7" href="$_explosion_8cpp.html" title="LunarDrift/LunarDrift\l/engine/prefabs/Explosion.cpp" alt="" coords="1129,117,1325,158"/>
+<area shape="rect" id="node8" href="$_particle_system_8cpp.html" title="LunarDrift/LunarDrift\l/engine/prefabs/ParticleSystem.cpp" alt="" coords="1349,117,1577,158"/>
+</map>

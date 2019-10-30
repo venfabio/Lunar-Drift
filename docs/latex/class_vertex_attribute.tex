@@ -1,0 +1,281 @@
+\hypertarget{class_vertex_attribute}{}\section{Vertex\+Attribute Class Reference}
+\label{class_vertex_attribute}\index{Vertex\+Attribute@{Vertex\+Attribute}}
+
+
+Describes an attribute in a given vertex type for shader inputting.  
+
+
+
+
+{\ttfamily \#include $<$Vertex\+Attribute.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_vertex_attribute_abe7f703a33ec0d67ecd975c08dc33f9b}{Type} \{ \\*
+\hyperlink{class_vertex_attribute_abe7f703a33ec0d67ecd975c08dc33f9baa245c3230debe5c956484ecc6fa93877}{Type\+::\+Byte} = G\+L\+\_\+\+B\+Y\+TE, 
+\hyperlink{class_vertex_attribute_abe7f703a33ec0d67ecd975c08dc33f9ba4b4ba765b750d5836bfeb2213cc3caea}{Type\+::\+U\+Byte} = G\+L\+\_\+\+U\+N\+S\+I\+G\+N\+E\+D\+\_\+\+B\+Y\+TE, 
+\hyperlink{class_vertex_attribute_abe7f703a33ec0d67ecd975c08dc33f9ba30bb747c98bccdd11b3f89e644c4d0ad}{Type\+::\+Short} = G\+L\+\_\+\+S\+H\+O\+RT, 
+\hyperlink{class_vertex_attribute_abe7f703a33ec0d67ecd975c08dc33f9badfe785f133347f9b473f99009732b1bc}{Type\+::\+U\+Short} = G\+L\+\_\+\+U\+N\+S\+I\+G\+N\+E\+D\+\_\+\+S\+H\+O\+RT, 
+\\*
+\hyperlink{class_vertex_attribute_abe7f703a33ec0d67ecd975c08dc33f9ba1686a6c336b71b36d77354cea19a8b52}{Type\+::\+Int} = G\+L\+\_\+\+I\+NT, 
+\hyperlink{class_vertex_attribute_abe7f703a33ec0d67ecd975c08dc33f9ba0b1291eded63143ac04709711274785a}{Type\+::\+U\+Int} = G\+L\+\_\+\+U\+N\+S\+I\+G\+N\+E\+D\+\_\+\+I\+NT, 
+\hyperlink{class_vertex_attribute_abe7f703a33ec0d67ecd975c08dc33f9bad35523d81610cee8b87cdac1853ad51f}{Type\+::\+Half\+Float} = G\+L\+\_\+\+H\+A\+L\+F\+\_\+\+F\+L\+O\+AT, 
+\hyperlink{class_vertex_attribute_abe7f703a33ec0d67ecd975c08dc33f9ba22ae0e2b89e5e3d477f988cc36d3272b}{Type\+::\+Float} = G\+L\+\_\+\+F\+L\+O\+AT, 
+\\*
+\hyperlink{class_vertex_attribute_abe7f703a33ec0d67ecd975c08dc33f9bad909d38d705ce75386dd86e611a82f5b}{Type\+::\+Double} = G\+L\+\_\+\+D\+O\+U\+B\+LE, 
+\hyperlink{class_vertex_attribute_abe7f703a33ec0d67ecd975c08dc33f9ba4457d440870ad6d42bab9082d9bf9b61}{Type\+::\+Fixed} = G\+L\+\_\+\+F\+I\+X\+ED
+ \}\begin{DoxyCompactList}\small\item\em Type of the sub-\/components of this vertex attribute. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_vertex_attribute_afe863b8c7c1387ddf85f84f4514cd11c}{Vertex\+Attribute} (const std\+::string \&semantic, G\+Lsizeiptr offset, G\+Lsizei stride, \hyperlink{class_vertex_attribute_abe7f703a33ec0d67ecd975c08dc33f9b}{Type} type, G\+Lint count)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_vertex_attribute_a21b60c2cd1acad3d3f6a9fed9156f335}{$\sim$\+Vertex\+Attribute} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_vertex_attribute_a4b554dd320723193c6d75b0ef76f6ccc}{bind} (\hyperlink{class_context}{Context} $\ast$context, std\+::shared\+\_\+ptr$<$ \hyperlink{class_shader_program}{Shader\+Program} $>$ shader)
+\begin{DoxyCompactList}\small\item\em Enable use of this vertex attribute in the V\+AO. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{class_vertex_attribute_abff460f38ece89d9eccdb6c92e667ebd}{m\+\_\+\+Semantic}
+\begin{DoxyCompactList}\small\item\em Associated shader input name. \end{DoxyCompactList}\item 
+G\+Lsizeiptr \hyperlink{class_vertex_attribute_af9c032cbe6af149b1e43f7e470aa9078}{m\+\_\+\+Offset}
+\begin{DoxyCompactList}\small\item\em Vertex offset. \end{DoxyCompactList}\item 
+G\+Lsizei \hyperlink{class_vertex_attribute_af1d7ac6261c307a4ba190dbc65f0d083}{m\+\_\+\+Stride}
+\begin{DoxyCompactList}\small\item\em Size of the vertex. \end{DoxyCompactList}\item 
+\hyperlink{class_vertex_attribute_abe7f703a33ec0d67ecd975c08dc33f9b}{Type} \hyperlink{class_vertex_attribute_a5ad1bf49939bd899afb0896d99b441a8}{m\+\_\+\+Type}
+\begin{DoxyCompactList}\small\item\em Attribute type. \end{DoxyCompactList}\item 
+G\+Lint \hyperlink{class_vertex_attribute_a3152574c68d7bede1302f6ec6f78b065}{m\+\_\+\+Count}
+\begin{DoxyCompactList}\small\item\em Quantity of consecutive types in vertex. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Describes an attribute in a given vertex type for shader inputting. 
+
+Vertices can take many forms, yet describe similar data. Likewise, shaders can take the same data in different ways, depending on the index generated. Consequently, this class acts to map a given attribute as a \char`\"{}semantic\char`\"{}, which is translated trivially into the shaders\textquotesingle{} input\textquotesingle{}s name.
+
+\begin{DoxyPrecond}{Precondition}
+A valid Open\+GL context must be present to the program 
+\end{DoxyPrecond}
+\begin{DoxyAuthor}{Author}
+Hayley Hatton 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/02/2016 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_vertex_buffer_object}{Vertex\+Buffer\+Object} 
+
+\hyperlink{class_shader_program}{Shader\+Program} 
+
+\hyperlink{class_vertex_array_object}{Vertex\+Array\+Object} 
+\end{DoxySeeAlso}
+
+
+Definition at line 21 of file Vertex\+Attribute.\+h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\index{Vertex\+Attribute@{Vertex\+Attribute}!Type@{Type}}
+\index{Type@{Type}!Vertex\+Attribute@{Vertex\+Attribute}}
+\subsubsection[{\texorpdfstring{Type}{Type}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Vertex\+Attribute\+::\+Type}\hspace{0.3cm}{\ttfamily [strong]}}\hypertarget{class_vertex_attribute_abe7f703a33ec0d67ecd975c08dc33f9b}{}\label{class_vertex_attribute_abe7f703a33ec0d67ecd975c08dc33f9b}
+
+
+Type of the sub-\/components of this vertex attribute. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Byte@{Byte}!Vertex\+Attribute@{Vertex\+Attribute}}\index{Vertex\+Attribute@{Vertex\+Attribute}!Byte@{Byte}}\item[{\em 
+Byte\hypertarget{class_vertex_attribute_abe7f703a33ec0d67ecd975c08dc33f9baa245c3230debe5c956484ecc6fa93877}{}\label{class_vertex_attribute_abe7f703a33ec0d67ecd975c08dc33f9baa245c3230debe5c956484ecc6fa93877}
+}]\index{U\+Byte@{U\+Byte}!Vertex\+Attribute@{Vertex\+Attribute}}\index{Vertex\+Attribute@{Vertex\+Attribute}!U\+Byte@{U\+Byte}}\item[{\em 
+U\+Byte\hypertarget{class_vertex_attribute_abe7f703a33ec0d67ecd975c08dc33f9ba4b4ba765b750d5836bfeb2213cc3caea}{}\label{class_vertex_attribute_abe7f703a33ec0d67ecd975c08dc33f9ba4b4ba765b750d5836bfeb2213cc3caea}
+}]\index{Short@{Short}!Vertex\+Attribute@{Vertex\+Attribute}}\index{Vertex\+Attribute@{Vertex\+Attribute}!Short@{Short}}\item[{\em 
+Short\hypertarget{class_vertex_attribute_abe7f703a33ec0d67ecd975c08dc33f9ba30bb747c98bccdd11b3f89e644c4d0ad}{}\label{class_vertex_attribute_abe7f703a33ec0d67ecd975c08dc33f9ba30bb747c98bccdd11b3f89e644c4d0ad}
+}]\index{U\+Short@{U\+Short}!Vertex\+Attribute@{Vertex\+Attribute}}\index{Vertex\+Attribute@{Vertex\+Attribute}!U\+Short@{U\+Short}}\item[{\em 
+U\+Short\hypertarget{class_vertex_attribute_abe7f703a33ec0d67ecd975c08dc33f9badfe785f133347f9b473f99009732b1bc}{}\label{class_vertex_attribute_abe7f703a33ec0d67ecd975c08dc33f9badfe785f133347f9b473f99009732b1bc}
+}]\index{Int@{Int}!Vertex\+Attribute@{Vertex\+Attribute}}\index{Vertex\+Attribute@{Vertex\+Attribute}!Int@{Int}}\item[{\em 
+Int\hypertarget{class_vertex_attribute_abe7f703a33ec0d67ecd975c08dc33f9ba1686a6c336b71b36d77354cea19a8b52}{}\label{class_vertex_attribute_abe7f703a33ec0d67ecd975c08dc33f9ba1686a6c336b71b36d77354cea19a8b52}
+}]\index{U\+Int@{U\+Int}!Vertex\+Attribute@{Vertex\+Attribute}}\index{Vertex\+Attribute@{Vertex\+Attribute}!U\+Int@{U\+Int}}\item[{\em 
+U\+Int\hypertarget{class_vertex_attribute_abe7f703a33ec0d67ecd975c08dc33f9ba0b1291eded63143ac04709711274785a}{}\label{class_vertex_attribute_abe7f703a33ec0d67ecd975c08dc33f9ba0b1291eded63143ac04709711274785a}
+}]\index{Half\+Float@{Half\+Float}!Vertex\+Attribute@{Vertex\+Attribute}}\index{Vertex\+Attribute@{Vertex\+Attribute}!Half\+Float@{Half\+Float}}\item[{\em 
+Half\+Float\hypertarget{class_vertex_attribute_abe7f703a33ec0d67ecd975c08dc33f9bad35523d81610cee8b87cdac1853ad51f}{}\label{class_vertex_attribute_abe7f703a33ec0d67ecd975c08dc33f9bad35523d81610cee8b87cdac1853ad51f}
+}]\index{Float@{Float}!Vertex\+Attribute@{Vertex\+Attribute}}\index{Vertex\+Attribute@{Vertex\+Attribute}!Float@{Float}}\item[{\em 
+Float\hypertarget{class_vertex_attribute_abe7f703a33ec0d67ecd975c08dc33f9ba22ae0e2b89e5e3d477f988cc36d3272b}{}\label{class_vertex_attribute_abe7f703a33ec0d67ecd975c08dc33f9ba22ae0e2b89e5e3d477f988cc36d3272b}
+}]\index{Double@{Double}!Vertex\+Attribute@{Vertex\+Attribute}}\index{Vertex\+Attribute@{Vertex\+Attribute}!Double@{Double}}\item[{\em 
+Double\hypertarget{class_vertex_attribute_abe7f703a33ec0d67ecd975c08dc33f9bad909d38d705ce75386dd86e611a82f5b}{}\label{class_vertex_attribute_abe7f703a33ec0d67ecd975c08dc33f9bad909d38d705ce75386dd86e611a82f5b}
+}]\index{Fixed@{Fixed}!Vertex\+Attribute@{Vertex\+Attribute}}\index{Vertex\+Attribute@{Vertex\+Attribute}!Fixed@{Fixed}}\item[{\em 
+Fixed\hypertarget{class_vertex_attribute_abe7f703a33ec0d67ecd975c08dc33f9ba4457d440870ad6d42bab9082d9bf9b61}{}\label{class_vertex_attribute_abe7f703a33ec0d67ecd975c08dc33f9ba4457d440870ad6d42bab9082d9bf9b61}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 27 of file Vertex\+Attribute.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Vertex\+Attribute@{Vertex\+Attribute}!Vertex\+Attribute@{Vertex\+Attribute}}
+\index{Vertex\+Attribute@{Vertex\+Attribute}!Vertex\+Attribute@{Vertex\+Attribute}}
+\subsubsection[{\texorpdfstring{Vertex\+Attribute(const std\+::string \&semantic, G\+Lsizeiptr offset, G\+Lsizei stride, Type type, G\+Lint count)}{VertexAttribute(const std::string &semantic, GLsizeiptr offset, GLsizei stride, Type type, GLint count)}}]{\setlength{\rightskip}{0pt plus 5cm}Vertex\+Attribute\+::\+Vertex\+Attribute (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{semantic, }
+\item[{G\+Lsizeiptr}]{offset, }
+\item[{G\+Lsizei}]{stride, }
+\item[{{\bf Type}}]{type, }
+\item[{G\+Lint}]{count}
+\end{DoxyParamCaption}
+)}\hypertarget{class_vertex_attribute_afe863b8c7c1387ddf85f84f4514cd11c}{}\label{class_vertex_attribute_afe863b8c7c1387ddf85f84f4514cd11c}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em semantic} & Shader input name (e.\+g. position, which becomes a\+\_\+\+Position) \\
+\hline
+{\em offset} & Offset into the vertex structure where this attribute begins \\
+\hline
+{\em stride} & Size of the surrounding vertex \\
+\hline
+{\em type} & Type of attribute \\
+\hline
+{\em count} & Number of said types per attribute (e.\+g. vec4 = type float, count 4) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 4 of file Vertex\+Attribute.\+cpp.
+
+\index{Vertex\+Attribute@{Vertex\+Attribute}!````~Vertex\+Attribute@{$\sim$\+Vertex\+Attribute}}
+\index{````~Vertex\+Attribute@{$\sim$\+Vertex\+Attribute}!Vertex\+Attribute@{Vertex\+Attribute}}
+\subsubsection[{\texorpdfstring{$\sim$\+Vertex\+Attribute()}{~VertexAttribute()}}]{\setlength{\rightskip}{0pt plus 5cm}Vertex\+Attribute\+::$\sim$\+Vertex\+Attribute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_vertex_attribute_a21b60c2cd1acad3d3f6a9fed9156f335}{}\label{class_vertex_attribute_a21b60c2cd1acad3d3f6a9fed9156f335}
+
+
+Default destructor. 
+
+
+
+Definition at line 21 of file Vertex\+Attribute.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{Vertex\+Attribute@{Vertex\+Attribute}!bind@{bind}}
+\index{bind@{bind}!Vertex\+Attribute@{Vertex\+Attribute}}
+\subsubsection[{\texorpdfstring{bind(\+Context $\ast$context, std\+::shared\+\_\+ptr$<$ Shader\+Program $>$ shader)}{bind(Context *context, std::shared_ptr< ShaderProgram > shader)}}]{\setlength{\rightskip}{0pt plus 5cm}void Vertex\+Attribute\+::bind (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context, }
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Shader\+Program} $>$}]{shader}
+\end{DoxyParamCaption}
+)}\hypertarget{class_vertex_attribute_a4b554dd320723193c6d75b0ef76f6ccc}{}\label{class_vertex_attribute_a4b554dd320723193c6d75b0ef76f6ccc}
+
+
+Enable use of this vertex attribute in the V\+AO. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphics context \\
+\hline
+{\em shader} & Smart pointer of a shader program to connect attribute to \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 26 of file Vertex\+Attribute.\+cpp.
+
+
+
+References Double, Float, Half\+Float, m\+\_\+\+Count, m\+\_\+\+Offset, m\+\_\+\+Semantic, m\+\_\+\+Stride, and m\+\_\+\+Type.
+
+
+
+\subsection{Member Data Documentation}
+\index{Vertex\+Attribute@{Vertex\+Attribute}!m\+\_\+\+Count@{m\+\_\+\+Count}}
+\index{m\+\_\+\+Count@{m\+\_\+\+Count}!Vertex\+Attribute@{Vertex\+Attribute}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Count}{m_Count}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lint Vertex\+Attribute\+::m\+\_\+\+Count\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_vertex_attribute_a3152574c68d7bede1302f6ec6f78b065}{}\label{class_vertex_attribute_a3152574c68d7bede1302f6ec6f78b065}
+
+
+Quantity of consecutive types in vertex. 
+
+
+
+Definition at line 66 of file Vertex\+Attribute.\+h.
+
+
+
+Referenced by bind().
+
+\index{Vertex\+Attribute@{Vertex\+Attribute}!m\+\_\+\+Offset@{m\+\_\+\+Offset}}
+\index{m\+\_\+\+Offset@{m\+\_\+\+Offset}!Vertex\+Attribute@{Vertex\+Attribute}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Offset}{m_Offset}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lsizeiptr Vertex\+Attribute\+::m\+\_\+\+Offset\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_vertex_attribute_af9c032cbe6af149b1e43f7e470aa9078}{}\label{class_vertex_attribute_af9c032cbe6af149b1e43f7e470aa9078}
+
+
+Vertex offset. 
+
+
+
+Definition at line 63 of file Vertex\+Attribute.\+h.
+
+
+
+Referenced by bind().
+
+\index{Vertex\+Attribute@{Vertex\+Attribute}!m\+\_\+\+Semantic@{m\+\_\+\+Semantic}}
+\index{m\+\_\+\+Semantic@{m\+\_\+\+Semantic}!Vertex\+Attribute@{Vertex\+Attribute}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Semantic}{m_Semantic}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Vertex\+Attribute\+::m\+\_\+\+Semantic\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_vertex_attribute_abff460f38ece89d9eccdb6c92e667ebd}{}\label{class_vertex_attribute_abff460f38ece89d9eccdb6c92e667ebd}
+
+
+Associated shader input name. 
+
+
+
+Definition at line 62 of file Vertex\+Attribute.\+h.
+
+
+
+Referenced by bind().
+
+\index{Vertex\+Attribute@{Vertex\+Attribute}!m\+\_\+\+Stride@{m\+\_\+\+Stride}}
+\index{m\+\_\+\+Stride@{m\+\_\+\+Stride}!Vertex\+Attribute@{Vertex\+Attribute}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Stride}{m_Stride}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lsizei Vertex\+Attribute\+::m\+\_\+\+Stride\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_vertex_attribute_af1d7ac6261c307a4ba190dbc65f0d083}{}\label{class_vertex_attribute_af1d7ac6261c307a4ba190dbc65f0d083}
+
+
+Size of the vertex. 
+
+
+
+Definition at line 64 of file Vertex\+Attribute.\+h.
+
+
+
+Referenced by bind().
+
+\index{Vertex\+Attribute@{Vertex\+Attribute}!m\+\_\+\+Type@{m\+\_\+\+Type}}
+\index{m\+\_\+\+Type@{m\+\_\+\+Type}!Vertex\+Attribute@{Vertex\+Attribute}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Type}{m_Type}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Type} Vertex\+Attribute\+::m\+\_\+\+Type\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_vertex_attribute_a5ad1bf49939bd899afb0896d99b441a8}{}\label{class_vertex_attribute_a5ad1bf49939bd899afb0896d99b441a8}
+
+
+Attribute type. 
+
+
+
+Definition at line 65 of file Vertex\+Attribute.\+h.
+
+
+
+Referenced by bind().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lunar\+Drift/engine/graphics/buffers/\hyperlink{_vertex_attribute_8h}{Vertex\+Attribute.\+h}\item 
+Lunar\+Drift/engine/graphics/buffers/\hyperlink{_vertex_attribute_8cpp}{Vertex\+Attribute.\+cpp}\end{DoxyCompactItemize}

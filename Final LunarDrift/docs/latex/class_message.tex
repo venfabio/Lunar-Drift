@@ -1,0 +1,140 @@
+\hypertarget{class_message}{}\section{Message Class Reference}
+\label{class_message}\index{Message@{Message}}
+
+
+Base class for messages.  
+
+
+
+
+{\ttfamily \#include $<$Message.\+h$>$}
+
+Inheritance diagram for Message\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.823529cm]{class_message}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_message_a3092661fab5b2cca2405372abf68cd91}{Message} (const std\+::string \&type)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_message_a3f7275462831f787a861271687bcad67}{$\sim$\+Message} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+const std\+::string \& \hyperlink{class_message_af9a175efa065d40d7bc9903f6ba2cc5d}{get\+Type} () const 
+\begin{DoxyCompactList}\small\item\em Access the type identifier of the derived message subclass. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::string \hyperlink{class_message_ae74bd8f969ef873186859fc3a7ad0e41}{m\+\_\+\+Type}
+\begin{DoxyCompactList}\small\item\em Type identifier of the derived class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for messages. 
+
+Messages are packets of data sent between entities in the program. Events operate in a broadcast fashion, messages operate in a unicast fashion with a sender and a receiver at the point of handling.
+
+\begin{DoxyAuthor}{Author}
+Hayley Hatton 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/03/2016 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_i_message_listener}{I\+Message\+Listener} 
+
+\hyperlink{class_message_system}{Message\+System} 
+\end{DoxySeeAlso}
+
+
+Definition at line 17 of file Message.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Message@{Message}!Message@{Message}}
+\index{Message@{Message}!Message@{Message}}
+\subsubsection[{\texorpdfstring{Message(const std\+::string \&type)}{Message(const std::string &type)}}]{\setlength{\rightskip}{0pt plus 5cm}Message\+::\+Message (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{type}
+\end{DoxyParamCaption}
+)}\hypertarget{class_message_a3092661fab5b2cca2405372abf68cd91}{}\label{class_message_a3092661fab5b2cca2405372abf68cd91}
+
+
+Default constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Type identifier string \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 3 of file Message.\+cpp.
+
+\index{Message@{Message}!````~Message@{$\sim$\+Message}}
+\index{````~Message@{$\sim$\+Message}!Message@{Message}}
+\subsubsection[{\texorpdfstring{$\sim$\+Message()}{~Message()}}]{\setlength{\rightskip}{0pt plus 5cm}Message\+::$\sim$\+Message (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_message_a3f7275462831f787a861271687bcad67}{}\label{class_message_a3f7275462831f787a861271687bcad67}
+
+
+Default destructor. 
+
+
+
+Definition at line 8 of file Message.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{Message@{Message}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!Message@{Message}}
+\subsubsection[{\texorpdfstring{get\+Type() const }{getType() const }}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string\& Message\+::get\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_message_af9a175efa065d40d7bc9903f6ba2cc5d}{}\label{class_message_af9a175efa065d40d7bc9903f6ba2cc5d}
+
+
+Access the type identifier of the derived message subclass. 
+
+\begin{DoxyReturn}{Returns}
+Type identifier string 
+\end{DoxyReturn}
+
+
+Definition at line 34 of file Message.\+h.
+
+
+
+References m\+\_\+\+Type.
+
+
+
+\subsection{Member Data Documentation}
+\index{Message@{Message}!m\+\_\+\+Type@{m\+\_\+\+Type}}
+\index{m\+\_\+\+Type@{m\+\_\+\+Type}!Message@{Message}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Type}{m_Type}}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string Message\+::m\+\_\+\+Type\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_message_ae74bd8f969ef873186859fc3a7ad0e41}{}\label{class_message_ae74bd8f969ef873186859fc3a7ad0e41}
+
+
+Type identifier of the derived class. 
+
+
+
+Definition at line 39 of file Message.\+h.
+
+
+
+Referenced by get\+Type().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lunar\+Drift/engine/comms/\hyperlink{_message_8h}{Message.\+h}\item 
+Lunar\+Drift/engine/comms/\hyperlink{_message_8cpp}{Message.\+cpp}\end{DoxyCompactItemize}

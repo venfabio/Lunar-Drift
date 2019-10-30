@@ -1,0 +1,9 @@
+<map id="BaseComponent" name="BaseComponent">
+<area shape="rect" id="node2" href="$class_scene_object_component.html" title="Base class for components that are to be attached to scene objects. " alt="" coords="172,132,335,159"/>
+<area shape="rect" id="node3" href="$class_collision_component.html" title="Component that describes collision information about the parent. " alt="" coords="390,5,527,32"/>
+<area shape="rect" id="node4" href="$class_explodable_component.html" title="Attach to a scene object to make it explode upon death. " alt="" coords="383,56,535,83"/>
+<area shape="rect" id="node5" href="$class_hitpoint_component.html" title="Attach to a scene object to give it hitpoints. " alt="" coords="393,107,525,133"/>
+<area shape="rect" id="node6" href="$class_life_time_component.html" title="Attach to a scene object to give it a time limit to its existence. " alt="" coords="391,157,527,184"/>
+<area shape="rect" id="node7" href="$class_physics_component.html" title="Attach to a scene object to allow it to have physics enacted on it. " alt="" coords="391,208,526,235"/>
+<area shape="rect" id="node8" href="$class_propulsion_component.html" title="Attach to a scene object to give it physics&#45;enabled thrusters. " alt="" coords="384,259,533,285"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="Message" name="Message">
+<area shape="rect" id="node2" href="$class_collision_message.html" title="Encapsulation of the participants of a collision event. " alt="" coords="145,5,269,32"/>
+<area shape="rect" id="node3" href="$class_damage_message.html" title="Encapsulation of a damage dealt (or recovered) event. " alt="" coords="146,56,269,83"/>
+<area shape="rect" id="node4" href="$class_death_message.html" title="Encapsulation of an event pertaining an object that&#39;s died. " alt="" coords="153,107,262,133"/>
+<area shape="rect" id="node5" href="$class_exit_message.html" title="Encapsulation of a request to exit the application. " alt="" coords="158,157,257,184"/>
+<area shape="rect" id="node6" href="$class_fire_missile_message.html" title="Encapsulation of a request to fire a missile. " alt="" coords="138,208,277,235"/>
+<area shape="rect" id="node7" href="$class_input_event.html" title="Encapsulation of any input&#45;related event. " alt="" coords="166,259,249,285"/>
+<area shape="rect" id="node10" href="$class_scene_activate_message.html" title="Encapsulation of a transition to a given scene. " alt="" coords="128,309,287,336"/>
+<area shape="rect" id="node11" href="$class_score_add_message.html" title="Encapsulation of a request to modify a player&#39;s score. " alt="" coords="141,360,273,387"/>
+<area shape="rect" id="node8" href="$class_button_down_event.html" title="Encapsulation of a button&#45;down event. " alt="" coords="335,233,459,260"/>
+<area shape="rect" id="node9" href="$class_button_up_event.html" title="Encapsulation of a button&#45;up event. " alt="" coords="343,284,451,311"/>
+</map>

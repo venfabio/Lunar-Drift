@@ -1,0 +1,61 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_base_component.html" title="Abstract base class for deriving components from. " alt="" coords="5,132,124,159"/>
+<area shape="rect" id="node2" href="$class_scene_object_component.html" title="Base class for components that are to be attached to scene objects. " alt="" coords="174,132,337,159"/>
+<area shape="rect" id="node3" href="$class_collision_component.html" title="Component that describes collision information about the parent. " alt="" coords="394,5,531,32"/>
+<area shape="rect" id="node4" href="$class_explodable_component.html" title="Attach to a scene object to make it explode upon death. " alt="" coords="387,157,539,184"/>
+<area shape="rect" id="node5" href="$class_hitpoint_component.html" title="Attach to a scene object to give it hitpoints. " alt="" coords="397,208,529,235"/>
+<area shape="rect" id="node6" href="$class_life_time_component.html" title="Attach to a scene object to give it a time limit to its existence. " alt="" coords="395,107,531,133"/>
+<area shape="rect" id="node7" href="$class_physics_component.html" title="Attach to a scene object to allow it to have physics enacted on it. " alt="" coords="395,56,530,83"/>
+<area shape="rect" id="node8" href="$class_propulsion_component.html" title="Attach to a scene object to give it physics&#45;enabled thrusters. " alt="" coords="388,259,537,285"/>
+<area shape="rect" id="node10" href="$class_i_deferred_loadable.html" title="Allows a class to be loadable after the constructor has been called. " alt="" coords="193,892,318,919"/>
+<area shape="rect" id="node11" href="$class_explosion.html" title="Prefabricated explosion object. " alt="" coords="423,917,502,944"/>
+<area shape="rect" id="node12" href="$class_missile_weapon.html" title="Missile class; incomplete and not entirely functional. " alt="" coords="407,867,518,893"/>
+<area shape="rect" id="node13" href="$class_i_message_listener.html" title="Interface for handling messages sent from other entities. " alt="" coords="193,765,317,792"/>
+<area shape="rect" id="node14" href="$class_game_over_scene.html" title="Scene class for showing when the race is over. " alt="" coords="403,664,523,691"/>
+<area shape="rect" id="node15" href="$class_hoop_blue.html" title="Blue hoop; bonus to scores. " alt="" coords="423,1069,502,1096"/>
+<area shape="rect" id="node16" href="$class_hoop_green.html" title="Green hoop; bonus to velocity. " alt="" coords="419,1120,506,1147"/>
+<area shape="rect" id="node17" href="$class_hoop_red.html" title="Red hoop; penalty to velocity and score. " alt="" coords="425,1171,500,1197"/>
+<area shape="rect" id="node18" href="$class_hoop_white.html" title="White hoop; ends race as victor +10 points bonus. " alt="" coords="419,1221,506,1248"/>
+<area shape="rect" id="node19" href="$class_hoop_yellow.html" title="Yellow hoop; bonus to fuel. " alt="" coords="417,1272,508,1299"/>
+<area shape="rect" id="node20" href="$class_lunar_drift_program.html" title="Top&#45;level program class for our game. " alt="" coords="399,309,526,336"/>
+<area shape="rect" id="node21" href="$class_main_menu_scene.html" title="First scene; main menu, for choosing game modes and accessing scores. " alt="" coords="403,715,522,741"/>
+<area shape="rect" id="node22" href="$class_pause_scene.html" title="Scene class for pause menu. " alt="" coords="415,765,511,792"/>
+<area shape="rect" id="node23" href="$class_power_up.html" title="Parent class for power&#45;ups. Incomplete and not functional. " alt="" coords="425,1323,500,1349"/>
+<area shape="rect" id="node25" href="$class_race_scene.html" title="Specialised scene class for use as a parent for all tracks. " alt="" coords="418,360,507,387"/>
+<area shape="rect" id="node29" href="$class_score_display_scene.html" title="Scene class for displaying the scores when race is over. " alt="" coords="395,411,531,437"/>
+<area shape="rect" id="node30" href="$class_select_level_scene.html" title="Scene class for selecting difficulty level to race in. " alt="" coords="400,461,525,488"/>
+<area shape="rect" id="node31" href="$class_select_ship_scene.html" title="Scene class for selecting which ship to race in. " alt="" coords="401,512,524,539"/>
+<area shape="rect" id="node32" href="$class_select_track_scene.html" title="Scene class for selecting which track to race on. " alt="" coords="399,563,527,589"/>
+<area shape="rect" id="node33" href="$class_ship.html" title="Base class for ships in the game. " alt="" coords="439,968,487,995"/>
+<area shape="rect" id="node36" href="$class_test_scene.html" title="Testbed scene for testing stuff before deployment. " alt="" coords="421,613,505,640"/>
+<area shape="rect" id="node37" href="$class_test_spacecraft.html" title="Example spacecraft. " alt="" coords="408,1019,517,1045"/>
+<area shape="rect" id="node38" href="$class_test_triangle.html" title="Example flat&#45;shaded life&#45;limited exploding triangle. " alt="" coords="417,1373,509,1400"/>
+<area shape="rect" id="node39" href="$class_window_p_c.html" title="Window class for use on Windows desktop PCs. " alt="" coords="419,816,506,843"/>
+<area shape="rect" id="node24" href="$class_laser.html" title="Laser power up; incomplete and not functional. " alt="" coords="637,1323,691,1349"/>
+<area shape="rect" id="node26" href="$class_andromeda_race_scene.html" title="Scene class for Andromeda track, the middle&#45;tier track. " alt="" coords="587,309,741,336"/>
+<area shape="rect" id="node27" href="$class_antares_race_scene.html" title="Scene class for Antares track, the easy&#45;tier track. " alt="" coords="597,360,731,387"/>
+<area shape="rect" id="node28" href="$class_kessel_run_race_scene.html" title="Scene class for Kessel Run track, the hard&#45;tier track. " alt="" coords="588,411,740,437"/>
+<area shape="rect" id="node34" href="$class_derpy.html" title="Blue, bigger, and more easy to control ship. " alt="" coords="636,943,692,969"/>
+<area shape="rect" id="node35" href="$class_pinkie_pie.html" title="Pink, smaller, faster and more agile ship. " alt="" coords="625,993,703,1020"/>
+<area shape="rect" id="node40" href="$class_program.html" title="Top&#45;level program entry point class. " alt="" coords="220,309,291,336"/>
+<area shape="rect" id="node41" href="$class_scene.html" title="Scene container for managing and drawing 3D environments. " alt="" coords="226,563,285,589"/>
+<area shape="rect" id="node42" href="$class_scene_object.html" title="Base class for encapsulating self&#45;management of scene entities. " alt="" coords="207,1551,304,1577"/>
+<area shape="rect" id="node43" href="$class_arch.html" title="Arch&#45;shaped environmental decorative object. " alt="" coords="438,2235,487,2261"/>
+<area shape="rect" id="node44" href="$class_cursor.html" title="Cursor for showing the currently&#45;selected MenuBox. " alt="" coords="433,1424,493,1451"/>
+<area shape="rect" id="node45" href="$class_debugging_sphere.html" title="A visual aid for debugging collision spheres in CollisionComponent. " alt="" coords="401,1475,525,1501"/>
+<area shape="rect" id="node46" href="$class_hill.html" title="Hill&#45;shaped environmental decorative object. " alt="" coords="443,1525,483,1552"/>
+<area shape="rect" id="node47" href="$class_mars.html" title="Spinning textured Mars model, for scene decoration. " alt="" coords="437,1576,488,1603"/>
+<area shape="rect" id="node48" href="$class_menu_box.html" title="Used for rendering GUI elements in 3D space. " alt="" coords="424,1627,501,1653"/>
+<area shape="rect" id="node49" href="$class_menu_box2_d.html" title="Used for rendering GUI elements in 2D coordinates. " alt="" coords="416,1677,509,1704"/>
+<area shape="rect" id="node50" href="$class_menu_box_alt.html" title="Alternative MenuBox for showing ships. " alt="" coords="416,1728,509,1755"/>
+<area shape="rect" id="node51" href="$class_oblique_shape.html" title="Obliquely&#45;shaped environmental decorative object. " alt="" coords="411,1779,514,1805"/>
+<area shape="rect" id="node52" href="$class_particle_system.html" title="A generic particle system instance. " alt="" coords="407,1829,518,1856"/>
+<area shape="rect" id="node53" href="$class_plane.html" title="Flat plane&#45;shaped environmental decorative object. " alt="" coords="435,1880,490,1907"/>
+<area shape="rect" id="node54" href="$class_planet.html" title="Spinning planet for decorating scenes. Technically the moon at the moment. " alt="" coords="433,1931,492,1957"/>
+<area shape="rect" id="node55" href="$class_skybox.html" title="OpenGL+GLSL skybox. " alt="" coords="429,1981,496,2008"/>
+<area shape="rect" id="node56" href="$class_test_starfield.html" title="Example starfield, showing use of procedurally&#45;generated point cloud. " alt="" coords="415,2032,510,2059"/>
+<area shape="rect" id="node57" href="$class_test_textured_box.html" title="Example textured cube for showing simple use of engine. " alt="" coords="403,2083,523,2109"/>
+<area shape="rect" id="node58" href="$class_text.html" title="A prefabricated container for displaying text on the screen. " alt="" coords="439,2133,486,2160"/>
+<area shape="rect" id="node59" href="$class_w_f___bridge.html" title="Bridge&#45;shaped environmental decorative object. " alt="" coords="419,2184,506,2211"/>
+<area shape="rect" id="node60" href="$class_window.html" title="Abstract window container, for bridging the system to the program. " alt="" coords="221,816,289,843"/>
+</map>

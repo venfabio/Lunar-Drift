@@ -1,0 +1,278 @@
+\hypertarget{class_keyboard}{}\section{Keyboard Class Reference}
+\label{class_keyboard}\index{Keyboard@{Keyboard}}
+
+
+\hyperlink{class_keyboard}{Keyboard} input representation object.  
+
+
+
+
+{\ttfamily \#include $<$Keyboard.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_keyboard_ad6b0bb849d6bb7cdf63091e40b5f5f7f}{Keyboard} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_keyboard_af6a99ec66c8c722a45b967bf79167038}{$\sim$\+Keyboard} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_keyboard_a008bc2abfc7b8bf734ac414fbec0e335}{map\+Key\+To\+Input} (\hyperlink{_key_8h_ab3c7af4820830f9166ede9e5623c4e73}{Key} key, const std\+::string \&input\+Name)
+\begin{DoxyCompactList}\small\item\em Maps a given key to a \char`\"{}button-\/type\char`\"{} input class name. \end{DoxyCompactList}\item 
+void \hyperlink{class_keyboard_a33e9d448a774b273025da1254daeb3d4}{unmap\+Key\+From\+Inputs} (\hyperlink{_key_8h_ab3c7af4820830f9166ede9e5623c4e73}{Key} key)
+\begin{DoxyCompactList}\small\item\em Unmaps a given key from an input class name. \end{DoxyCompactList}\item 
+bool \hyperlink{class_keyboard_a07fef2266fd02345cafaef4d1e3eae78}{is\+Key\+Down} (const std\+::string \&input\+Name)
+\begin{DoxyCompactList}\small\item\em Query if a given key associated with an input class name is down. \end{DoxyCompactList}\item 
+void \hyperlink{class_keyboard_ab30876616db49352806d7cccd478c3cc}{set\+Key\+Down} (\hyperlink{_key_8h_ab3c7af4820830f9166ede9e5623c4e73}{Key} key)
+\begin{DoxyCompactList}\small\item\em Set a key into a down/pressed state. \end{DoxyCompactList}\item 
+void \hyperlink{class_keyboard_a6903d3be760e83604651e410805b6192}{set\+Key\+Up} (\hyperlink{_key_8h_ab3c7af4820830f9166ede9e5623c4e73}{Key} key)
+\begin{DoxyCompactList}\small\item\em Set a key into an up/released state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ bool $>$ \hyperlink{class_keyboard_ae927c3cd0e8730ab94b8e9538d44c97e}{m\+\_\+\+Key\+States}
+\begin{DoxyCompactList}\small\item\em Record of current key states. \end{DoxyCompactList}\item 
+std\+::map$<$ \hyperlink{_key_8h_ab3c7af4820830f9166ede9e5623c4e73}{Key}, std\+::string $>$ \hyperlink{class_keyboard_a9529ce9519c46b47743e643d00ab376b}{m\+\_\+\+Key\+Input\+Map}
+\begin{DoxyCompactList}\small\item\em Record of key-\/input mapping. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_keyboard}{Keyboard} input representation object. 
+
+This class manages abstract keyboard state whilst providing a mapping between hardware input state and abstract engine \char`\"{}button-\/type\char`\"{} input classes.
+
+\begin{DoxyAuthor}{Author}
+Hayley Hatton 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+13/03/2016 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_input_map}{Input\+Map} 
+\end{DoxySeeAlso}
+
+
+Definition at line 20 of file Keyboard.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Keyboard@{Keyboard}!Keyboard@{Keyboard}}
+\index{Keyboard@{Keyboard}!Keyboard@{Keyboard}}
+\subsubsection[{\texorpdfstring{Keyboard()}{Keyboard()}}]{\setlength{\rightskip}{0pt plus 5cm}Keyboard\+::\+Keyboard (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_keyboard_ad6b0bb849d6bb7cdf63091e40b5f5f7f}{}\label{class_keyboard_ad6b0bb849d6bb7cdf63091e40b5f5f7f}
+
+
+Default constructor. 
+
+
+
+Definition at line 9 of file Keyboard.\+cpp.
+
+
+
+References m\+\_\+\+Key\+States.
+
+\index{Keyboard@{Keyboard}!````~Keyboard@{$\sim$\+Keyboard}}
+\index{````~Keyboard@{$\sim$\+Keyboard}!Keyboard@{Keyboard}}
+\subsubsection[{\texorpdfstring{$\sim$\+Keyboard()}{~Keyboard()}}]{\setlength{\rightskip}{0pt plus 5cm}Keyboard\+::$\sim$\+Keyboard (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_keyboard_af6a99ec66c8c722a45b967bf79167038}{}\label{class_keyboard_af6a99ec66c8c722a45b967bf79167038}
+
+
+Default destructor. 
+
+
+
+Definition at line 14 of file Keyboard.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{Keyboard@{Keyboard}!is\+Key\+Down@{is\+Key\+Down}}
+\index{is\+Key\+Down@{is\+Key\+Down}!Keyboard@{Keyboard}}
+\subsubsection[{\texorpdfstring{is\+Key\+Down(const std\+::string \&input\+Name)}{isKeyDown(const std::string &inputName)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Keyboard\+::is\+Key\+Down (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{input\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{class_keyboard_a07fef2266fd02345cafaef4d1e3eae78}{}\label{class_keyboard_a07fef2266fd02345cafaef4d1e3eae78}
+
+
+Query if a given key associated with an input class name is down. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+Name} & Name of the input \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if pressed/down; false if released/up 
+\end{DoxyReturn}
+
+
+Definition at line 31 of file Keyboard.\+cpp.
+
+
+
+References m\+\_\+\+Key\+Input\+Map, and m\+\_\+\+Key\+States.
+
+
+
+Referenced by Test\+Scene3\+D\+::step().
+
+\index{Keyboard@{Keyboard}!map\+Key\+To\+Input@{map\+Key\+To\+Input}}
+\index{map\+Key\+To\+Input@{map\+Key\+To\+Input}!Keyboard@{Keyboard}}
+\subsubsection[{\texorpdfstring{map\+Key\+To\+Input(\+Key key, const std\+::string \&input\+Name)}{mapKeyToInput(Key key, const std::string &inputName)}}]{\setlength{\rightskip}{0pt plus 5cm}void Keyboard\+::map\+Key\+To\+Input (
+\begin{DoxyParamCaption}
+\item[{{\bf Key}}]{key, }
+\item[{const std\+::string \&}]{input\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{class_keyboard_a008bc2abfc7b8bf734ac414fbec0e335}{}\label{class_keyboard_a008bc2abfc7b8bf734ac414fbec0e335}
+
+
+Maps a given key to a \char`\"{}button-\/type\char`\"{} input class name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Key identifier \\
+\hline
+{\em input\+Name} & Name of the input \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 21 of file Keyboard.\+cpp.
+
+
+
+References m\+\_\+\+Key\+Input\+Map.
+
+
+
+Referenced by Lunar\+Drift\+Program\+::\+Lunar\+Drift\+Program().
+
+\index{Keyboard@{Keyboard}!set\+Key\+Down@{set\+Key\+Down}}
+\index{set\+Key\+Down@{set\+Key\+Down}!Keyboard@{Keyboard}}
+\subsubsection[{\texorpdfstring{set\+Key\+Down(\+Key key)}{setKeyDown(Key key)}}]{\setlength{\rightskip}{0pt plus 5cm}void Keyboard\+::set\+Key\+Down (
+\begin{DoxyParamCaption}
+\item[{{\bf Key}}]{key}
+\end{DoxyParamCaption}
+)}\hypertarget{class_keyboard_ab30876616db49352806d7cccd478c3cc}{}\label{class_keyboard_ab30876616db49352806d7cccd478c3cc}
+
+
+Set a key into a down/pressed state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Key identifier \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 43 of file Keyboard.\+cpp.
+
+
+
+References Message\+System\+::broadcast(), Message\+System\+::get\+Instance(), m\+\_\+\+Key\+Input\+Map, and m\+\_\+\+Key\+States.
+
+
+
+Referenced by Window\+P\+C\+::handle\+Win32\+Event\+Queue().
+
+\index{Keyboard@{Keyboard}!set\+Key\+Up@{set\+Key\+Up}}
+\index{set\+Key\+Up@{set\+Key\+Up}!Keyboard@{Keyboard}}
+\subsubsection[{\texorpdfstring{set\+Key\+Up(\+Key key)}{setKeyUp(Key key)}}]{\setlength{\rightskip}{0pt plus 5cm}void Keyboard\+::set\+Key\+Up (
+\begin{DoxyParamCaption}
+\item[{{\bf Key}}]{key}
+\end{DoxyParamCaption}
+)}\hypertarget{class_keyboard_a6903d3be760e83604651e410805b6192}{}\label{class_keyboard_a6903d3be760e83604651e410805b6192}
+
+
+Set a key into an up/released state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Key identifier \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 53 of file Keyboard.\+cpp.
+
+
+
+References Message\+System\+::broadcast(), Message\+System\+::get\+Instance(), m\+\_\+\+Key\+Input\+Map, and m\+\_\+\+Key\+States.
+
+
+
+Referenced by Window\+P\+C\+::handle\+Win32\+Event\+Queue().
+
+\index{Keyboard@{Keyboard}!unmap\+Key\+From\+Inputs@{unmap\+Key\+From\+Inputs}}
+\index{unmap\+Key\+From\+Inputs@{unmap\+Key\+From\+Inputs}!Keyboard@{Keyboard}}
+\subsubsection[{\texorpdfstring{unmap\+Key\+From\+Inputs(\+Key key)}{unmapKeyFromInputs(Key key)}}]{\setlength{\rightskip}{0pt plus 5cm}void Keyboard\+::unmap\+Key\+From\+Inputs (
+\begin{DoxyParamCaption}
+\item[{{\bf Key}}]{key}
+\end{DoxyParamCaption}
+)}\hypertarget{class_keyboard_a33e9d448a774b273025da1254daeb3d4}{}\label{class_keyboard_a33e9d448a774b273025da1254daeb3d4}
+
+
+Unmaps a given key from an input class name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Key identifier \\
+\hline
+{\em input\+Name} & Name of the input \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 26 of file Keyboard.\+cpp.
+
+
+
+References m\+\_\+\+Key\+Input\+Map.
+
+
+
+\subsection{Member Data Documentation}
+\index{Keyboard@{Keyboard}!m\+\_\+\+Key\+Input\+Map@{m\+\_\+\+Key\+Input\+Map}}
+\index{m\+\_\+\+Key\+Input\+Map@{m\+\_\+\+Key\+Input\+Map}!Keyboard@{Keyboard}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Key\+Input\+Map}{m_KeyInputMap}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<${\bf Key},std\+::string$>$ Keyboard\+::m\+\_\+\+Key\+Input\+Map\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_keyboard_a9529ce9519c46b47743e643d00ab376b}{}\label{class_keyboard_a9529ce9519c46b47743e643d00ab376b}
+
+
+Record of key-\/input mapping. 
+
+
+
+Definition at line 64 of file Keyboard.\+h.
+
+
+
+Referenced by is\+Key\+Down(), map\+Key\+To\+Input(), set\+Key\+Down(), set\+Key\+Up(), and unmap\+Key\+From\+Inputs().
+
+\index{Keyboard@{Keyboard}!m\+\_\+\+Key\+States@{m\+\_\+\+Key\+States}}
+\index{m\+\_\+\+Key\+States@{m\+\_\+\+Key\+States}!Keyboard@{Keyboard}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Key\+States}{m_KeyStates}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$bool$>$ Keyboard\+::m\+\_\+\+Key\+States\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_keyboard_ae927c3cd0e8730ab94b8e9538d44c97e}{}\label{class_keyboard_ae927c3cd0e8730ab94b8e9538d44c97e}
+
+
+Record of current key states. 
+
+
+
+Definition at line 63 of file Keyboard.\+h.
+
+
+
+Referenced by is\+Key\+Down(), Keyboard(), set\+Key\+Down(), and set\+Key\+Up().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lunar\+Drift/engine/input/\hyperlink{_keyboard_8h}{Keyboard.\+h}\item 
+Lunar\+Drift/engine/input/\hyperlink{_keyboard_8cpp}{Keyboard.\+cpp}\end{DoxyCompactItemize}

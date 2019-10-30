@@ -1,0 +1,230 @@
+\hypertarget{class_lunar_drift_program}{}\section{Lunar\+Drift\+Program Class Reference}
+\label{class_lunar_drift_program}\index{Lunar\+Drift\+Program@{Lunar\+Drift\+Program}}
+
+
+Top-\/level program class for our game.  
+
+
+
+
+{\ttfamily \#include $<$Lunar\+Drift\+Program.\+h$>$}
+
+Inheritance diagram for Lunar\+Drift\+Program\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_lunar_drift_program}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_lunar_drift_program_aba4856c849b3972f4d31b1469789a81b}{Lunar\+Drift\+Program} (\hyperlink{class_context}{Context} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Object-\/oriented entry point to the program. \end{DoxyCompactList}\item 
+\hyperlink{class_lunar_drift_program_a2729a6e9b131ad556a4d8b226c5d3a2e}{$\sim$\+Lunar\+Drift\+Program} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_lunar_drift_program_a3467aea42888a3eae28d587c90e5b1ff}{step} (double dt) override
+\begin{DoxyCompactList}\small\item\em Called on the stepping of the simulation state. \end{DoxyCompactList}\item 
+void \hyperlink{class_lunar_drift_program_a5db9835b135348644bc940cd7c2870be}{frame} (\hyperlink{class_context}{Context} $\ast$context) override
+\begin{DoxyCompactList}\small\item\em Called on the rendering of a frame. \end{DoxyCompactList}\item 
+void \hyperlink{class_lunar_drift_program_a6586725d0267426dae45c7c5772cffc2}{on\+Message} (std\+::shared\+\_\+ptr$<$ \hyperlink{class_message}{Message} $>$ event) override
+\begin{DoxyCompactList}\small\item\em Called when a subscribed event is raised. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const std\+::string \hyperlink{class_lunar_drift_program_a2b61915181711d5987e168c74d9beaac}{ms\+\_\+\+Name} = \char`\"{}Perpendicular\char`\"{}
+\begin{DoxyCompactList}\small\item\em Name of the program. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_renderer}{Renderer} $>$ \hyperlink{class_lunar_drift_program_a19fa2f0a909951f9e5cfdd7b5392be85}{get\+Renderer} (\hyperlink{class_context}{Context} $\ast$context) const  override
+\begin{DoxyCompactList}\small\item\em Retrieve a new renderer for a given stereo mode from the subclass. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Top-\/level program class for our game. 
+
+\begin{DoxyAuthor}{Author}
+Hayley Hatton 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+17/03/2016 
+\end{DoxyDate}
+
+
+Definition at line 12 of file Lunar\+Drift\+Program.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Lunar\+Drift\+Program@{Lunar\+Drift\+Program}!Lunar\+Drift\+Program@{Lunar\+Drift\+Program}}
+\index{Lunar\+Drift\+Program@{Lunar\+Drift\+Program}!Lunar\+Drift\+Program@{Lunar\+Drift\+Program}}
+\subsubsection[{\texorpdfstring{Lunar\+Drift\+Program(\+Context $\ast$context)}{LunarDriftProgram(Context *context)}}]{\setlength{\rightskip}{0pt plus 5cm}Lunar\+Drift\+Program\+::\+Lunar\+Drift\+Program (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context}
+\end{DoxyParamCaption}
+)}\hypertarget{class_lunar_drift_program_aba4856c849b3972f4d31b1469789a81b}{}\label{class_lunar_drift_program_aba4856c849b3972f4d31b1469789a81b}
+
+
+Object-\/oriented entry point to the program. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphics context \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 10 of file Lunar\+Drift\+Program.\+cpp.
+
+
+
+References Config\+::get(), Input\+Map\+::get\+Instance(), Input\+Map\+::get\+Keyboard(), Config\+::load(), Keyboard\+::map\+Key\+To\+Input(), Config\+::set(), and Program\+::set\+Active\+Scene().
+
+\index{Lunar\+Drift\+Program@{Lunar\+Drift\+Program}!````~Lunar\+Drift\+Program@{$\sim$\+Lunar\+Drift\+Program}}
+\index{````~Lunar\+Drift\+Program@{$\sim$\+Lunar\+Drift\+Program}!Lunar\+Drift\+Program@{Lunar\+Drift\+Program}}
+\subsubsection[{\texorpdfstring{$\sim$\+Lunar\+Drift\+Program()}{~LunarDriftProgram()}}]{\setlength{\rightskip}{0pt plus 5cm}Lunar\+Drift\+Program\+::$\sim$\+Lunar\+Drift\+Program (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_lunar_drift_program_a2729a6e9b131ad556a4d8b226c5d3a2e}{}\label{class_lunar_drift_program_a2729a6e9b131ad556a4d8b226c5d3a2e}
+
+
+Default destructor. 
+
+
+
+Definition at line 24 of file Lunar\+Drift\+Program.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{Lunar\+Drift\+Program@{Lunar\+Drift\+Program}!frame@{frame}}
+\index{frame@{frame}!Lunar\+Drift\+Program@{Lunar\+Drift\+Program}}
+\subsubsection[{\texorpdfstring{frame(\+Context $\ast$context) override}{frame(Context *context) override}}]{\setlength{\rightskip}{0pt plus 5cm}void Lunar\+Drift\+Program\+::frame (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{class_lunar_drift_program_a5db9835b135348644bc940cd7c2870be}{}\label{class_lunar_drift_program_a5db9835b135348644bc940cd7c2870be}
+
+
+Called on the rendering of a frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphical context \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_program_a3b02a58d4c366e280759bc8bbdd4b50d}{Program}.
+
+
+
+Definition at line 35 of file Lunar\+Drift\+Program.\+cpp.
+
+
+
+References Program\+::frame().
+
+\index{Lunar\+Drift\+Program@{Lunar\+Drift\+Program}!get\+Renderer@{get\+Renderer}}
+\index{get\+Renderer@{get\+Renderer}!Lunar\+Drift\+Program@{Lunar\+Drift\+Program}}
+\subsubsection[{\texorpdfstring{get\+Renderer(\+Context $\ast$context) const  override}{getRenderer(Context *context) const  override}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$ {\bf Renderer} $>$ Lunar\+Drift\+Program\+::get\+Renderer (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{class_lunar_drift_program_a19fa2f0a909951f9e5cfdd7b5392be85}{}\label{class_lunar_drift_program_a19fa2f0a909951f9e5cfdd7b5392be85}
+
+
+Retrieve a new renderer for a given stereo mode from the subclass. 
+
+\begin{DoxyReturn}{Returns}
+Smart pointer to the new appropriate renderer 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_program_a016ef26d3d6b6aeffd3b4e74dfde033e}{Program}.
+
+
+
+Definition at line 47 of file Lunar\+Drift\+Program.\+cpp.
+
+
+
+References Context\+::get\+Dimensions(), h, and w.
+
+\index{Lunar\+Drift\+Program@{Lunar\+Drift\+Program}!on\+Message@{on\+Message}}
+\index{on\+Message@{on\+Message}!Lunar\+Drift\+Program@{Lunar\+Drift\+Program}}
+\subsubsection[{\texorpdfstring{on\+Message(std\+::shared\+\_\+ptr$<$ Message $>$ event) override}{onMessage(std::shared_ptr< Message > event) override}}]{\setlength{\rightskip}{0pt plus 5cm}void Lunar\+Drift\+Program\+::on\+Message (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Message} $>$}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{class_lunar_drift_program_a6586725d0267426dae45c7c5772cffc2}{}\label{class_lunar_drift_program_a6586725d0267426dae45c7c5772cffc2}
+
+
+Called when a subscribed event is raised. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & Smart pointer to the raised event object \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_i_message_listener_aac85f64eeb587944c59e07f5457b1b82}{I\+Message\+Listener}.
+
+
+
+Definition at line 43 of file Lunar\+Drift\+Program.\+cpp.
+
+\index{Lunar\+Drift\+Program@{Lunar\+Drift\+Program}!step@{step}}
+\index{step@{step}!Lunar\+Drift\+Program@{Lunar\+Drift\+Program}}
+\subsubsection[{\texorpdfstring{step(double dt) override}{step(double dt) override}}]{\setlength{\rightskip}{0pt plus 5cm}void Lunar\+Drift\+Program\+::step (
+\begin{DoxyParamCaption}
+\item[{double}]{dt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{class_lunar_drift_program_a3467aea42888a3eae28d587c90e5b1ff}{}\label{class_lunar_drift_program_a3467aea42888a3eae28d587c90e5b1ff}
+
+
+Called on the stepping of the simulation state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta time, in seconds \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_program_a975de71413195823c525955cfd5f2ca7}{Program}.
+
+
+
+Definition at line 30 of file Lunar\+Drift\+Program.\+cpp.
+
+
+
+References Program\+::step().
+
+
+
+\subsection{Member Data Documentation}
+\index{Lunar\+Drift\+Program@{Lunar\+Drift\+Program}!ms\+\_\+\+Name@{ms\+\_\+\+Name}}
+\index{ms\+\_\+\+Name@{ms\+\_\+\+Name}!Lunar\+Drift\+Program@{Lunar\+Drift\+Program}}
+\subsubsection[{\texorpdfstring{ms\+\_\+\+Name}{ms_Name}}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string Lunar\+Drift\+Program\+::ms\+\_\+\+Name = \char`\"{}Perpendicular\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_lunar_drift_program_a2b61915181711d5987e168c74d9beaac}{}\label{class_lunar_drift_program_a2b61915181711d5987e168c74d9beaac}
+
+
+Name of the program. 
+
+
+
+Definition at line 45 of file Lunar\+Drift\+Program.\+h.
+
+
+
+Referenced by Win\+Main().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lunar\+Drift/game/\hyperlink{_lunar_drift_program_8h}{Lunar\+Drift\+Program.\+h}\item 
+Lunar\+Drift/game/\hyperlink{_lunar_drift_program_8cpp}{Lunar\+Drift\+Program.\+cpp}\end{DoxyCompactItemize}

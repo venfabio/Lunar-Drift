@@ -1,0 +1,385 @@
+\hypertarget{class_model}{}\section{Model Class Reference}
+\label{class_model}\index{Model@{Model}}
+
+
+Container for and loader of \char`\"{}model data\char`\"{} (a combination of vertex and texture data)  
+
+
+
+
+{\ttfamily \#include $<$Model.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_model_1_1_vertex}{Vertex}
+\begin{DoxyCompactList}\small\item\em Predefined vertex format for standard 3D models. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_model_abdd56a8ab376bfaad4ba8f19a06bebfb}{Model} (\hyperlink{class_context}{Context} $\ast$context, const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Constructor for loading a model from an O\+BJ file. \end{DoxyCompactList}\item 
+\hyperlink{class_model_afcac6a00d14c867c891fbdcab4b39bc2}{Model} (\hyperlink{class_context}{Context} $\ast$context, const std\+::vector$<$ \hyperlink{struct_model_1_1_vertex}{Vertex} $>$ \&vertices)
+\begin{DoxyCompactList}\small\item\em Constructor for a model using predefined vertex list. \end{DoxyCompactList}\item 
+\hyperlink{class_model_aeea356baee526151b46b30f86c158a10}{Model} (\hyperlink{class_context}{Context} $\ast$context, const std\+::vector$<$ \hyperlink{struct_model_1_1_vertex}{Vertex} $>$ \&vertices, const std\+::vector$<$ unsigned short $>$ \&indices)
+\begin{DoxyCompactList}\small\item\em Constructor for a model using predefined vertex and index lists. \end{DoxyCompactList}\item 
+\hyperlink{class_model_ad6ebd2062a0b823db841a0b88baac4c0}{$\sim$\+Model} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_model_afb320a52ec7f8f8512eb6514cfc58848}{draw} (\hyperlink{class_context}{Context} $\ast$context, std\+::shared\+\_\+ptr$<$ \hyperlink{class_shader_program}{Shader\+Program} $>$ shader) const 
+\begin{DoxyCompactList}\small\item\em Draw the model using a given shader. \end{DoxyCompactList}\item 
+void \hyperlink{class_model_a07d55d70f3ec47d819e6ea75410ceb19}{set\+Primitive\+Mode} (\hyperlink{_model_8h_a8e9638a65349c0abba4e6b97c8251994}{Primitive\+Mode} mode)
+\begin{DoxyCompactList}\small\item\em Set the typology of the model geometry for rendering. \end{DoxyCompactList}\item 
+void \hyperlink{class_model_ade683835b46ca563594c0ff243ec5f1f}{set\+Vertex\+Array\+Object} (std\+::shared\+\_\+ptr$<$ \hyperlink{class_vertex_array_object}{Vertex\+Array\+Object} $>$ vao)
+\begin{DoxyCompactList}\small\item\em Associate a given vertex array object with the model. \end{DoxyCompactList}\item 
+std\+::weak\+\_\+ptr$<$ \hyperlink{class_vertex_array_object}{Vertex\+Array\+Object} $>$ \hyperlink{class_model_aabc7313d8e1160762a3d59584724fd2e}{get\+Vertex\+Array\+Object} () const 
+\begin{DoxyCompactList}\small\item\em Access associated vertex array object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_model_a5d5259d9548f9aae5562f3ecbb2803dc}{transfer\+To\+G\+PU} (\hyperlink{class_context}{Context} $\ast$context, const std\+::vector$<$ \hyperlink{struct_model_1_1_vertex}{Vertex} $>$ \&vertices, const std\+::vector$<$ unsigned short $>$ $\ast$const indices=nullptr)
+\begin{DoxyCompactList}\small\item\em Compile model data into Open\+GL objects for managing them G\+P\+U-\/side. \end{DoxyCompactList}\item 
+void \hyperlink{class_model_a26c6176bfee61caddc5e11180f9d3741}{get\+Vertex\+Attributes} (std\+::vector$<$ \hyperlink{class_vertex_attribute}{Vertex\+Attribute} $>$ $\ast$attribs) const 
+\begin{DoxyCompactList}\small\item\em Fill a vector with vertex attributes to map the inputs to shaders. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_vertex_array_object}{Vertex\+Array\+Object} $>$ \hyperlink{class_model_a33ddd71b6e11029a482f8fd0786d064d}{m\+\_\+\+V\+AO}
+\begin{DoxyCompactList}\small\item\em Associated vertex array object. \end{DoxyCompactList}\item 
+\hyperlink{_model_8h_a8e9638a65349c0abba4e6b97c8251994}{Primitive\+Mode} \hyperlink{class_model_af07134f1b940eb354fa85c3524d70411}{m\+\_\+\+Primitive\+Mode}
+\begin{DoxyCompactList}\small\item\em Typology of the model geometry. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Container for and loader of \char`\"{}model data\char`\"{} (a combination of vertex and texture data) 
+
+\begin{DoxyPrecond}{Precondition}
+A valid Open\+GL context must be present to the program 
+\end{DoxyPrecond}
+\begin{DoxyAuthor}{Author}
+Hayley Hatton 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+06/03/2016 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_vertex_buffer_object}{Vertex\+Buffer\+Object} 
+
+\hyperlink{class_shader_program}{Shader\+Program} 
+
+\hyperlink{class_texture}{Texture} 
+
+\hyperlink{class_vertex_array_object}{Vertex\+Array\+Object} 
+\end{DoxySeeAlso}
+
+
+Definition at line 34 of file Model.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Model@{Model}!Model@{Model}}
+\index{Model@{Model}!Model@{Model}}
+\subsubsection[{\texorpdfstring{Model(\+Context $\ast$context, const std\+::string \&path)}{Model(Context *context, const std::string &path)}}]{\setlength{\rightskip}{0pt plus 5cm}Model\+::\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context, }
+\item[{const std\+::string \&}]{path}
+\end{DoxyParamCaption}
+)}\hypertarget{class_model_abdd56a8ab376bfaad4ba8f19a06bebfb}{}\label{class_model_abdd56a8ab376bfaad4ba8f19a06bebfb}
+
+
+Constructor for loading a model from an O\+BJ file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphical context \\
+\hline
+{\em path} & Path to the O\+BJ file to load model data from \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 7 of file Model.\+cpp.
+
+
+
+References Model\+Loader\+::compile(), Model\+Loader\+::get\+Num\+Vertices(), transfer\+To\+G\+P\+U(), and Triangles.
+
+\index{Model@{Model}!Model@{Model}}
+\index{Model@{Model}!Model@{Model}}
+\subsubsection[{\texorpdfstring{Model(\+Context $\ast$context, const std\+::vector$<$ Vertex $>$ \&vertices)}{Model(Context *context, const std::vector< Vertex > &vertices)}}]{\setlength{\rightskip}{0pt plus 5cm}Model\+::\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context, }
+\item[{const std\+::vector$<$ {\bf Vertex} $>$ \&}]{vertices}
+\end{DoxyParamCaption}
+)}\hypertarget{class_model_afcac6a00d14c867c891fbdcab4b39bc2}{}\label{class_model_afcac6a00d14c867c891fbdcab4b39bc2}
+
+
+Constructor for a model using predefined vertex list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphical context \\
+\hline
+{\em vertices} & List of vertices to make model from \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 33 of file Model.\+cpp.
+
+
+
+References transfer\+To\+G\+P\+U().
+
+\index{Model@{Model}!Model@{Model}}
+\index{Model@{Model}!Model@{Model}}
+\subsubsection[{\texorpdfstring{Model(\+Context $\ast$context, const std\+::vector$<$ Vertex $>$ \&vertices, const std\+::vector$<$ unsigned short $>$ \&indices)}{Model(Context *context, const std::vector< Vertex > &vertices, const std::vector< unsigned short > &indices)}}]{\setlength{\rightskip}{0pt plus 5cm}Model\+::\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context, }
+\item[{const std\+::vector$<$ {\bf Vertex} $>$ \&}]{vertices, }
+\item[{const std\+::vector$<$ unsigned short $>$ \&}]{indices}
+\end{DoxyParamCaption}
+)}\hypertarget{class_model_aeea356baee526151b46b30f86c158a10}{}\label{class_model_aeea356baee526151b46b30f86c158a10}
+
+
+Constructor for a model using predefined vertex and index lists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphical context \\
+\hline
+{\em vertices} & List of vertices to make model from \\
+\hline
+{\em indices} & List of indices to connect vertices with \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 39 of file Model.\+cpp.
+
+
+
+References transfer\+To\+G\+P\+U().
+
+\index{Model@{Model}!````~Model@{$\sim$\+Model}}
+\index{````~Model@{$\sim$\+Model}!Model@{Model}}
+\subsubsection[{\texorpdfstring{$\sim$\+Model()}{~Model()}}]{\setlength{\rightskip}{0pt plus 5cm}Model\+::$\sim$\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_model_ad6ebd2062a0b823db841a0b88baac4c0}{}\label{class_model_ad6ebd2062a0b823db841a0b88baac4c0}
+
+
+Default destructor. 
+
+
+
+Definition at line 48 of file Model.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{Model@{Model}!draw@{draw}}
+\index{draw@{draw}!Model@{Model}}
+\subsubsection[{\texorpdfstring{draw(\+Context $\ast$context, std\+::shared\+\_\+ptr$<$ Shader\+Program $>$ shader) const }{draw(Context *context, std::shared_ptr< ShaderProgram > shader) const }}]{\setlength{\rightskip}{0pt plus 5cm}void Model\+::draw (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context, }
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Shader\+Program} $>$}]{shader}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_model_afb320a52ec7f8f8512eb6514cfc58848}{}\label{class_model_afb320a52ec7f8f8512eb6514cfc58848}
+
+
+Draw the model using a given shader. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphics context \\
+\hline
+{\em shader} & Shader to draw the model with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000005}{Todo}](Hayley\#6\#03/09/16)\+: Handle different vertex connections \end{DoxyRefDesc}
+
+
+Definition at line 118 of file Model.\+cpp.
+
+
+
+References get\+Vertex\+Array\+Object(), and m\+\_\+\+Primitive\+Mode.
+
+\index{Model@{Model}!get\+Vertex\+Array\+Object@{get\+Vertex\+Array\+Object}}
+\index{get\+Vertex\+Array\+Object@{get\+Vertex\+Array\+Object}!Model@{Model}}
+\subsubsection[{\texorpdfstring{get\+Vertex\+Array\+Object() const }{getVertexArrayObject() const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::weak\+\_\+ptr$<$ {\bf Vertex\+Array\+Object} $>$ Model\+::get\+Vertex\+Array\+Object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_model_aabc7313d8e1160762a3d59584724fd2e}{}\label{class_model_aabc7313d8e1160762a3d59584724fd2e}
+
+
+Access associated vertex array object. 
+
+\begin{DoxyReturn}{Returns}
+Associated vertex array object 
+\end{DoxyReturn}
+
+
+Definition at line 113 of file Model.\+cpp.
+
+
+
+References m\+\_\+\+V\+AO.
+
+
+
+Referenced by draw().
+
+\index{Model@{Model}!get\+Vertex\+Attributes@{get\+Vertex\+Attributes}}
+\index{get\+Vertex\+Attributes@{get\+Vertex\+Attributes}!Model@{Model}}
+\subsubsection[{\texorpdfstring{get\+Vertex\+Attributes(std\+::vector$<$ Vertex\+Attribute $>$ $\ast$attribs) const }{getVertexAttributes(std::vector< VertexAttribute > *attribs) const }}]{\setlength{\rightskip}{0pt plus 5cm}void Model\+::get\+Vertex\+Attributes (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ {\bf Vertex\+Attribute} $>$ $\ast$}]{attribs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_model_a26c6176bfee61caddc5e11180f9d3741}{}\label{class_model_a26c6176bfee61caddc5e11180f9d3741}
+
+
+Fill a vector with vertex attributes to map the inputs to shaders. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Pointer} & to vector map of vertex attributes \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 80 of file Model.\+cpp.
+
+
+
+References Vertex\+Attribute\+::\+Float.
+
+
+
+Referenced by transfer\+To\+G\+P\+U().
+
+\index{Model@{Model}!set\+Primitive\+Mode@{set\+Primitive\+Mode}}
+\index{set\+Primitive\+Mode@{set\+Primitive\+Mode}!Model@{Model}}
+\subsubsection[{\texorpdfstring{set\+Primitive\+Mode(\+Primitive\+Mode mode)}{setPrimitiveMode(PrimitiveMode mode)}}]{\setlength{\rightskip}{0pt plus 5cm}void Model\+::set\+Primitive\+Mode (
+\begin{DoxyParamCaption}
+\item[{{\bf Primitive\+Mode}}]{mode}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_model_a07d55d70f3ec47d819e6ea75410ceb19}{}\label{class_model_a07d55d70f3ec47d819e6ea75410ceb19}
+
+
+Set the typology of the model geometry for rendering. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & Typology class \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 86 of file Model.\+h.
+
+\index{Model@{Model}!set\+Vertex\+Array\+Object@{set\+Vertex\+Array\+Object}}
+\index{set\+Vertex\+Array\+Object@{set\+Vertex\+Array\+Object}!Model@{Model}}
+\subsubsection[{\texorpdfstring{set\+Vertex\+Array\+Object(std\+::shared\+\_\+ptr$<$ Vertex\+Array\+Object $>$ vao)}{setVertexArrayObject(std::shared_ptr< VertexArrayObject > vao)}}]{\setlength{\rightskip}{0pt plus 5cm}void Model\+::set\+Vertex\+Array\+Object (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Vertex\+Array\+Object} $>$}]{vao}
+\end{DoxyParamCaption}
+)}\hypertarget{class_model_ade683835b46ca563594c0ff243ec5f1f}{}\label{class_model_ade683835b46ca563594c0ff243ec5f1f}
+
+
+Associate a given vertex array object with the model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vao} & \hyperlink{struct_model_1_1_vertex}{Vertex} array object to associate with \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 108 of file Model.\+cpp.
+
+
+
+References m\+\_\+\+V\+AO.
+
+
+
+Referenced by transfer\+To\+G\+P\+U().
+
+\index{Model@{Model}!transfer\+To\+G\+PU@{transfer\+To\+G\+PU}}
+\index{transfer\+To\+G\+PU@{transfer\+To\+G\+PU}!Model@{Model}}
+\subsubsection[{\texorpdfstring{transfer\+To\+G\+P\+U(\+Context $\ast$context, const std\+::vector$<$ Vertex $>$ \&vertices, const std\+::vector$<$ unsigned short $>$ $\ast$const indices=nullptr)}{transferToGPU(Context *context, const std::vector< Vertex > &vertices, const std::vector< unsigned short > *const indices=nullptr)}}]{\setlength{\rightskip}{0pt plus 5cm}void Model\+::transfer\+To\+G\+PU (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context, }
+\item[{const std\+::vector$<$ {\bf Vertex} $>$ \&}]{vertices, }
+\item[{const std\+::vector$<$ unsigned short $>$ $\ast$const}]{indices = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_model_a5d5259d9548f9aae5562f3ecbb2803dc}{}\label{class_model_a5d5259d9548f9aae5562f3ecbb2803dc}
+
+
+Compile model data into Open\+GL objects for managing them G\+P\+U-\/side. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphical context \\
+\hline
+{\em vertices} & Vector of model vertex data \\
+\hline
+{\em indices} & Ptr to vector of model index data (optional) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 54 of file Model.\+cpp.
+
+
+
+References get\+Vertex\+Attributes(), and set\+Vertex\+Array\+Object().
+
+
+
+Referenced by Model().
+
+
+
+\subsection{Member Data Documentation}
+\index{Model@{Model}!m\+\_\+\+Primitive\+Mode@{m\+\_\+\+Primitive\+Mode}}
+\index{m\+\_\+\+Primitive\+Mode@{m\+\_\+\+Primitive\+Mode}!Model@{Model}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Primitive\+Mode}{m_PrimitiveMode}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Primitive\+Mode} Model\+::m\+\_\+\+Primitive\+Mode\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_model_af07134f1b940eb354fa85c3524d70411}{}\label{class_model_af07134f1b940eb354fa85c3524d70411}
+
+
+Typology of the model geometry. 
+
+
+
+Definition at line 102 of file Model.\+h.
+
+
+
+Referenced by draw().
+
+\index{Model@{Model}!m\+\_\+\+V\+AO@{m\+\_\+\+V\+AO}}
+\index{m\+\_\+\+V\+AO@{m\+\_\+\+V\+AO}!Model@{Model}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+V\+AO}{m_VAO}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Vertex\+Array\+Object}$>$ Model\+::m\+\_\+\+V\+AO\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_model_a33ddd71b6e11029a482f8fd0786d064d}{}\label{class_model_a33ddd71b6e11029a482f8fd0786d064d}
+
+
+Associated vertex array object. 
+
+
+
+Definition at line 101 of file Model.\+h.
+
+
+
+Referenced by get\+Vertex\+Array\+Object(), and set\+Vertex\+Array\+Object().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lunar\+Drift/engine/containers/\hyperlink{_model_8h}{Model.\+h}\item 
+Lunar\+Drift/engine/containers/\hyperlink{_model_8cpp}{Model.\+cpp}\end{DoxyCompactItemize}

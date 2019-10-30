@@ -1,0 +1,37 @@
+<map id="LunarDrift/LunarDrift/game/scenes/game/AndromedaRaceScene.cpp" name="LunarDrift/LunarDrift/game/scenes/game/AndromedaRaceScene.cpp">
+<area shape="rect" id="node2" href="$_andromeda_race_scene_8h.html" title="AndromedaRaceScene.h" alt="" coords="360,117,527,143"/>
+<area shape="rect" id="node36" href="$_test_starfield_8h.html" title="../../../game/scenes\l/alphaspace/TestStarfield.h" alt="" coords="810,273,989,315"/>
+<area shape="rect" id="node37" href="$_hoop_blue_8h.html" title="hoops/HoopBlue.h" alt="" coords="1578,199,1706,225"/>
+<area shape="rect" id="node39" href="$_hoop_red_8h.html" title="hoops/HoopRed.h" alt="" coords="1269,199,1394,225"/>
+<area shape="rect" id="node40" href="$_hoop_green_8h.html" title="hoops/HoopGreen.h" alt="" coords="943,199,1080,225"/>
+<area shape="rect" id="node41" href="$_hoop_yellow_8h.html" title="hoops/HoopYellow.h" alt="" coords="1104,199,1244,225"/>
+<area shape="rect" id="node42" href="$_hoop_white_8h.html" title="hoops/HoopWhite.h" alt="" coords="1418,199,1554,225"/>
+<area shape="rect" id="node43" href="$_planet_8h.html" title="environment\\Planet.h" alt="" coords="1731,199,1874,225"/>
+<area shape="rect" id="node44" href="$_audio_player_8h.html" title="../../../engine/audio\l/AudioPlayer.h" alt="" coords="674,109,805,151"/>
+<area shape="rect" id="node45" href="$_config_8h.html" title="../../../engine/Config.h" alt="" coords="304,541,450,568"/>
+<area shape="rect" id="node3" href="$_race_scene_8h.html" title="RaceScene.h" alt="" coords="331,199,431,225"/>
+<area shape="rect" id="node4" href="$_scene_8h.html" title="../../../engine/containers\l/Scene.h" alt="" coords="272,273,432,315"/>
+<area shape="rect" id="node23" href="$_i_message_listener_8h.html" title="../../../engine/comms\l/IMessageListener.h" alt="" coords="651,363,794,404"/>
+<area shape="rect" id="node25" href="$_ship_8h.html" title="../../../game/scenes\l/game/ships/Ship.h" alt="" coords="1165,273,1301,315"/>
+<area shape="rect" id="node35" href="$_game_parameters_8h.html" title="../../GameParameters.h" alt="" coords="88,281,247,307"/>
+<area shape="rect" id="node5" href="$_context_8h.html" title="../graphics/Context.h" alt="" coords="1496,705,1639,732"/>
+<area shape="rect" id="node10" href="$_scene_object_8h.html" title="SceneObject.h" alt="" coords="1127,370,1235,397"/>
+<area shape="rect" id="node20" href="$_camera_8h.html" title="../graphics/Camera.h" alt="" coords="30,541,172,568"/>
+<area shape="rect" id="node6" href="$_open_g_l_config_8h.html" title="OpenGLConfig.h" alt="" coords="1377,780,1494,807"/>
+<area shape="rect" id="node11" href="$_scene_object_component_8h.html" title="../components/SceneObject\lComponent.h" alt="" coords="766,452,950,493"/>
+<area shape="rect" id="node17" href="$_shader_manager_8h.html" title="../managers/ShaderManager.h" alt="" coords="992,541,1189,568"/>
+<area shape="rect" id="node12" href="$_base_component_8h.html" title="BaseComponent.h" alt="" coords="787,541,916,568"/>
+<area shape="rect" id="node14" href="$_meta_manager_8h.html" title="../managers/MetaManager.h" alt="" coords="475,541,660,568"/>
+<area shape="rect" id="node15" href="$_manager_8h.html" title="Manager.h" alt="" coords="506,623,589,650"/>
+<area shape="rect" id="node18" href="$_shader_program_8h.html" title="../graphics/shaders\l/ShaderProgram.h" alt="" coords="960,616,1093,657"/>
+<area shape="rect" id="node21" href="$_shader_uniform_block_8h.html" title="../graphics/shaders\l/ShaderUniformBlock.h" alt="" coords="24,616,178,657"/>
+<area shape="rect" id="node24" href="$_message_8h.html" title="Message.h" alt="" coords="558,459,644,486"/>
+<area shape="rect" id="node26" href="$_model_8h.html" title="../../../../engine\l/containers/Model.h" alt="" coords="1317,363,1453,404"/>
+<area shape="rect" id="node27" href="$_vertex_array_object_8h.html" title="../graphics/buffers\l/VertexArrayObject.h" alt="" coords="1358,452,1502,493"/>
+<area shape="rect" id="node28" href="$_vertex_attribute_8h.html" title="VertexAttribute.h" alt="" coords="1213,541,1333,568"/>
+<area shape="rect" id="node29" href="$_vertex_buffer_object_8h.html" title="VertexBufferObject.h" alt="" coords="1567,541,1710,568"/>
+<area shape="rect" id="node34" href="$_index_buffer_object_8h.html" title="IndexBufferObject.h" alt="" coords="1408,541,1543,568"/>
+<area shape="rect" id="node30" href="$_vertex_buffer_object_base_8h.html" title="VertexBufferObjectBase.h" alt="" coords="1695,623,1867,650"/>
+<area shape="rect" id="node31" href="$_open_g_l_exception_8h.html" title="../../exceptions/OpenGLException.h" alt="" coords="1299,623,1530,650"/>
+<area shape="rect" id="node38" href="$_texture_8h.html" title="../../../../engine\l/graphics/Texture.h" alt="" coords="1578,273,1712,315"/>
+</map>

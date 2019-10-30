@@ -1,0 +1,5 @@
+<map id="PhysicsComponent" name="PhysicsComponent">
+<area shape="rect" id="node2" href="$class_scene_object_component.html" title="Base class for components that are to be attached to scene objects. " alt="" coords="49,95,211,121"/>
+<area shape="rect" id="node3" href="$class_base_component.html" title="Abstract base class for deriving components from. " alt="" coords="5,5,124,32"/>
+<area shape="rect" id="node4" href="$class_scene_object.html" title="Base class for encapsulating self&#45;management of scene entities. " alt="" coords="148,5,245,32"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="InputEvent" name="InputEvent">
+<area shape="rect" id="node3" href="$class_button_down_event.html" title="Encapsulation of a button&#45;down event. " alt="" coords="5,155,129,181"/>
+<area shape="rect" id="node4" href="$class_button_up_event.html" title="Encapsulation of a button&#45;up event. " alt="" coords="153,155,261,181"/>
+<area shape="rect" id="node2" href="$class_message.html" title="Base class for messages. " alt="" coords="99,5,174,32"/>
+</map>

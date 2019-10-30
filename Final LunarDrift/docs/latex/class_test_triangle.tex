@@ -1,0 +1,257 @@
+\hypertarget{class_test_triangle}{}\section{Test\+Triangle Class Reference}
+\label{class_test_triangle}\index{Test\+Triangle@{Test\+Triangle}}
+
+
+{\ttfamily \#include $<$Test\+Triangle.\+h$>$}
+
+Inheritance diagram for Test\+Triangle\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_test_triangle}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_test_triangle_ab15daddb4dae8e8ae52aea99afb7d440}{Test\+Triangle} (\hyperlink{class_context}{Context} $\ast$context, std\+::weak\+\_\+ptr$<$ \hyperlink{class_meta_manager}{Meta\+Manager} $>$ managers)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_test_triangle_aa58d78d1dfb839f32b62881341865ddb}{$\sim$\+Test\+Triangle} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_test_triangle_a99c4fb3e4da6d1dabf3f9cdeef5b1b31}{step} (double dt) override
+\begin{DoxyCompactList}\small\item\em Step the simulation state. \end{DoxyCompactList}\item 
+void \hyperlink{class_test_triangle_a0b7b66d114a3d97e524f2d8d9f13a9e7}{predraw} (\hyperlink{class_context}{Context} $\ast$context) override
+\begin{DoxyCompactList}\small\item\em Called before the renderer draws the scene This allows the scene objects to do updates that require a graphics context before the graphical state is drawn. \end{DoxyCompactList}\item 
+void \hyperlink{class_test_triangle_aadf5ec7f41246e3c114e7f44f009f303}{draw} (\hyperlink{class_context}{Context} $\ast$context, std\+::shared\+\_\+ptr$<$ \hyperlink{class_shader_manager}{Shader\+Manager} $>$ shaders) override
+\begin{DoxyCompactList}\small\item\em Draw the object in its current state. \end{DoxyCompactList}\item 
+void \hyperlink{class_test_triangle_ac5165e9e0ecdc4b232752b49c1ecbec0}{on\+Message} (std\+::shared\+\_\+ptr$<$ \hyperlink{class_message}{Message} $>$ event) override
+\begin{DoxyCompactList}\small\item\em Called when a subscribed event is raised. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_test_triangle_a52baa578ab64e4fe4cf7ccab89eb51a5}{setup\+Outline} (\hyperlink{class_context}{Context} $\ast$context)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_model}{Model} $>$ \hyperlink{class_test_triangle_ada9fe71091308f6e50a75f87ff56e14d}{m\+\_\+\+Model}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_model}{Model} $>$ \hyperlink{class_test_triangle_a6613fd705070b8663027cc14cd542e81}{m\+\_\+\+Outline}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 7 of file Test\+Triangle.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Test\+Triangle@{Test\+Triangle}!Test\+Triangle@{Test\+Triangle}}
+\index{Test\+Triangle@{Test\+Triangle}!Test\+Triangle@{Test\+Triangle}}
+\subsubsection[{\texorpdfstring{Test\+Triangle(\+Context $\ast$context, std\+::weak\+\_\+ptr$<$ Meta\+Manager $>$ managers)}{TestTriangle(Context *context, std::weak_ptr< MetaManager > managers)}}]{\setlength{\rightskip}{0pt plus 5cm}Test\+Triangle\+::\+Test\+Triangle (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context, }
+\item[{std\+::weak\+\_\+ptr$<$ {\bf Meta\+Manager} $>$}]{managers}
+\end{DoxyParamCaption}
+)}\hypertarget{class_test_triangle_ab15daddb4dae8e8ae52aea99afb7d440}{}\label{class_test_triangle_ab15daddb4dae8e8ae52aea99afb7d440}
+
+
+Default constructor. 
+
+
+
+Definition at line 6 of file Test\+Triangle.\+cpp.
+
+
+
+References Scene\+Object\+::add\+Component(), Model\+::\+Vertex\+::color, f, Message\+System\+::get\+Instance(), m\+\_\+\+Model, Model\+::\+Vertex\+::position, setup\+Outline(), and Message\+System\+::subscribe().
+
+\index{Test\+Triangle@{Test\+Triangle}!````~Test\+Triangle@{$\sim$\+Test\+Triangle}}
+\index{````~Test\+Triangle@{$\sim$\+Test\+Triangle}!Test\+Triangle@{Test\+Triangle}}
+\subsubsection[{\texorpdfstring{$\sim$\+Test\+Triangle()}{~TestTriangle()}}]{\setlength{\rightskip}{0pt plus 5cm}Test\+Triangle\+::$\sim$\+Test\+Triangle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_test_triangle_aa58d78d1dfb839f32b62881341865ddb}{}\label{class_test_triangle_aa58d78d1dfb839f32b62881341865ddb}
+
+
+Default destructor. 
+
+
+
+Definition at line 68 of file Test\+Triangle.\+cpp.
+
+
+
+References Message\+System\+::get\+Instance(), and Message\+System\+::unsubscribe().
+
+
+
+\subsection{Member Function Documentation}
+\index{Test\+Triangle@{Test\+Triangle}!draw@{draw}}
+\index{draw@{draw}!Test\+Triangle@{Test\+Triangle}}
+\subsubsection[{\texorpdfstring{draw(\+Context $\ast$context, std\+::shared\+\_\+ptr$<$ Shader\+Manager $>$ shaders) override}{draw(Context *context, std::shared_ptr< ShaderManager > shaders) override}}]{\setlength{\rightskip}{0pt plus 5cm}void Test\+Triangle\+::draw (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context, }
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Shader\+Manager} $>$}]{shaders}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{class_test_triangle_aadf5ec7f41246e3c114e7f44f009f303}{}\label{class_test_triangle_aadf5ec7f41246e3c114e7f44f009f303}
+
+
+Draw the object in its current state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphics context \\
+\hline
+{\em shaders} & Shader manager containing shader programs for use \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_scene_object_a9dec6a34922a4063b561d3d16d396ee6}{Scene\+Object}.
+
+
+
+Definition at line 84 of file Test\+Triangle.\+cpp.
+
+
+
+References m\+\_\+\+Model, and m\+\_\+\+Outline.
+
+\index{Test\+Triangle@{Test\+Triangle}!on\+Message@{on\+Message}}
+\index{on\+Message@{on\+Message}!Test\+Triangle@{Test\+Triangle}}
+\subsubsection[{\texorpdfstring{on\+Message(std\+::shared\+\_\+ptr$<$ Message $>$ event) override}{onMessage(std::shared_ptr< Message > event) override}}]{\setlength{\rightskip}{0pt plus 5cm}void Test\+Triangle\+::on\+Message (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Message} $>$}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{class_test_triangle_ac5165e9e0ecdc4b232752b49c1ecbec0}{}\label{class_test_triangle_ac5165e9e0ecdc4b232752b49c1ecbec0}
+
+
+Called when a subscribed event is raised. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & Smart pointer to the raised event object \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_i_message_listener_aac85f64eeb587944c59e07f5457b1b82}{I\+Message\+Listener}.
+
+
+
+Definition at line 91 of file Test\+Triangle.\+cpp.
+
+
+
+References Scene\+Object\+::set\+Dying().
+
+\index{Test\+Triangle@{Test\+Triangle}!predraw@{predraw}}
+\index{predraw@{predraw}!Test\+Triangle@{Test\+Triangle}}
+\subsubsection[{\texorpdfstring{predraw(\+Context $\ast$context) override}{predraw(Context *context) override}}]{\setlength{\rightskip}{0pt plus 5cm}void Test\+Triangle\+::predraw (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{class_test_triangle_a0b7b66d114a3d97e524f2d8d9f13a9e7}{}\label{class_test_triangle_a0b7b66d114a3d97e524f2d8d9f13a9e7}
+
+
+Called before the renderer draws the scene This allows the scene objects to do updates that require a graphics context before the graphical state is drawn. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphics context \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_scene_object_a2d5b85ae297772e2f5d0ef6fb920ddf2}{Scene\+Object}.
+
+
+
+Definition at line 79 of file Test\+Triangle.\+cpp.
+
+
+
+References Scene\+Object\+::predraw().
+
+\index{Test\+Triangle@{Test\+Triangle}!setup\+Outline@{setup\+Outline}}
+\index{setup\+Outline@{setup\+Outline}!Test\+Triangle@{Test\+Triangle}}
+\subsubsection[{\texorpdfstring{setup\+Outline(\+Context $\ast$context)}{setupOutline(Context *context)}}]{\setlength{\rightskip}{0pt plus 5cm}void Test\+Triangle\+::setup\+Outline (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_test_triangle_a52baa578ab64e4fe4cf7ccab89eb51a5}{}\label{class_test_triangle_a52baa578ab64e4fe4cf7ccab89eb51a5}
+
+
+Definition at line 41 of file Test\+Triangle.\+cpp.
+
+
+
+References Model\+::\+Vertex\+::color, f, Lines, m\+\_\+\+Outline, and Model\+::\+Vertex\+::position.
+
+
+
+Referenced by Test\+Triangle().
+
+\index{Test\+Triangle@{Test\+Triangle}!step@{step}}
+\index{step@{step}!Test\+Triangle@{Test\+Triangle}}
+\subsubsection[{\texorpdfstring{step(double dt) override}{step(double dt) override}}]{\setlength{\rightskip}{0pt plus 5cm}void Test\+Triangle\+::step (
+\begin{DoxyParamCaption}
+\item[{double}]{dt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{class_test_triangle_a99c4fb3e4da6d1dabf3f9cdeef5b1b31}{}\label{class_test_triangle_a99c4fb3e4da6d1dabf3f9cdeef5b1b31}
+
+
+Step the simulation state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta-\/time since last step call in seconds \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_scene_object_a5b69482cadd94997cd09bb145b1986d9}{Scene\+Object}.
+
+
+
+Definition at line 74 of file Test\+Triangle.\+cpp.
+
+
+
+References Scene\+Object\+::step().
+
+
+
+\subsection{Member Data Documentation}
+\index{Test\+Triangle@{Test\+Triangle}!m\+\_\+\+Model@{m\+\_\+\+Model}}
+\index{m\+\_\+\+Model@{m\+\_\+\+Model}!Test\+Triangle@{Test\+Triangle}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Model}{m_Model}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Model}$>$ Test\+Triangle\+::m\+\_\+\+Model\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_test_triangle_ada9fe71091308f6e50a75f87ff56e14d}{}\label{class_test_triangle_ada9fe71091308f6e50a75f87ff56e14d}
+
+
+Definition at line 47 of file Test\+Triangle.\+h.
+
+
+
+Referenced by draw(), and Test\+Triangle().
+
+\index{Test\+Triangle@{Test\+Triangle}!m\+\_\+\+Outline@{m\+\_\+\+Outline}}
+\index{m\+\_\+\+Outline@{m\+\_\+\+Outline}!Test\+Triangle@{Test\+Triangle}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Outline}{m_Outline}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Model}$>$ Test\+Triangle\+::m\+\_\+\+Outline\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_test_triangle_a6613fd705070b8663027cc14cd542e81}{}\label{class_test_triangle_a6613fd705070b8663027cc14cd542e81}
+
+
+Definition at line 48 of file Test\+Triangle.\+h.
+
+
+
+Referenced by draw(), and setup\+Outline().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lunar\+Drift/game/scenes/alphaspace/\hyperlink{_test_triangle_8h}{Test\+Triangle.\+h}\item 
+Lunar\+Drift/game/scenes/alphaspace/\hyperlink{_test_triangle_8cpp}{Test\+Triangle.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,159 @@
+\hypertarget{class_collision_component}{}\section{Collision\+Component Class Reference}
+\label{class_collision_component}\index{Collision\+Component@{Collision\+Component}}
+
+
+Component that describes collision information about the parent.  
+
+
+
+
+{\ttfamily \#include $<$Collision\+Component.\+h$>$}
+
+Inheritance diagram for Collision\+Component\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_collision_component}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_collision_component_a9fdf81792f07764fd9ee5d1c963aaff4}{Collision\+Component} (\hyperlink{class_scene_object}{Scene\+Object} $\ast$parent, std\+::weak\+\_\+ptr$<$ \hyperlink{class_meta_manager}{Meta\+Manager} $>$ managers, const glm\+::vec3 \&top\+Left\+Offset, const glm\+::vec3 \&bottom\+Right\+Offset)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_collision_component_a8927f6bcecb9862b870426af970ab3b7}{$\sim$\+Collision\+Component} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_collision_component_aee9d681edd938781127af2249b750125}{step} (double dt) override
+\begin{DoxyCompactList}\small\item\em Step the simulation state. \end{DoxyCompactList}\item 
+void \hyperlink{class_collision_component_a322c2d4550aef70b8284465ae34278db}{predraw} (\hyperlink{class_context}{Context} $\ast$context) override
+\begin{DoxyCompactList}\small\item\em Called before the renderer draws the scene This allows the scene objects to do updates that require a graphics context before the graphical state is drawn. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Component that describes collision information about the parent. 
+
+This is currently setup to use Axis-\/\+Aligned Bounding Boxes, but the collision subsystem for it has been gutted. \begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000001}{Todo}]Setup collision geometry\end{DoxyRefDesc}
+
+
+\begin{DoxyAuthor}{Author}
+Hayley Hatton 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+06/03/2016 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_collision_manager}{Collision\+Manager} 
+\end{DoxySeeAlso}
+
+
+Definition at line 17 of file Collision\+Component.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Collision\+Component@{Collision\+Component}!Collision\+Component@{Collision\+Component}}
+\index{Collision\+Component@{Collision\+Component}!Collision\+Component@{Collision\+Component}}
+\subsubsection[{\texorpdfstring{Collision\+Component(\+Scene\+Object $\ast$parent, std\+::weak\+\_\+ptr$<$ Meta\+Manager $>$ managers, const glm\+::vec3 \&top\+Left\+Offset, const glm\+::vec3 \&bottom\+Right\+Offset)}{CollisionComponent(SceneObject *parent, std::weak_ptr< MetaManager > managers, const glm::vec3 &topLeftOffset, const glm::vec3 &bottomRightOffset)}}]{\setlength{\rightskip}{0pt plus 5cm}Collision\+Component\+::\+Collision\+Component (
+\begin{DoxyParamCaption}
+\item[{{\bf Scene\+Object} $\ast$}]{parent, }
+\item[{std\+::weak\+\_\+ptr$<$ {\bf Meta\+Manager} $>$}]{managers, }
+\item[{const glm\+::vec3 \&}]{top\+Left\+Offset, }
+\item[{const glm\+::vec3 \&}]{bottom\+Right\+Offset}
+\end{DoxyParamCaption}
+)}\hypertarget{class_collision_component_a9fdf81792f07764fd9ee5d1c963aaff4}{}\label{class_collision_component_a9fdf81792f07764fd9ee5d1c963aaff4}
+
+
+Default constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Pointer to the scene object to attach component to \\
+\hline
+{\em managers} & Metamanager for accessing scene\textquotesingle{}s managers \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 7 of file Collision\+Component.\+cpp.
+
+
+
+References Message\+System\+::get\+Instance(), Scene\+Object\+Component\+::get\+Parent(), Collision\+Manager\+::register\+Collidable(), and Message\+System\+::subscribe().
+
+\index{Collision\+Component@{Collision\+Component}!````~Collision\+Component@{$\sim$\+Collision\+Component}}
+\index{````~Collision\+Component@{$\sim$\+Collision\+Component}!Collision\+Component@{Collision\+Component}}
+\subsubsection[{\texorpdfstring{$\sim$\+Collision\+Component()}{~CollisionComponent()}}]{\setlength{\rightskip}{0pt plus 5cm}Collision\+Component\+::$\sim$\+Collision\+Component (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_collision_component_a8927f6bcecb9862b870426af970ab3b7}{}\label{class_collision_component_a8927f6bcecb9862b870426af970ab3b7}
+
+
+Default destructor. 
+
+
+
+Definition at line 25 of file Collision\+Component.\+cpp.
+
+
+
+References Message\+System\+::get\+Instance(), Scene\+Object\+Component\+::get\+Parent(), Scene\+Object\+Component\+::m\+\_\+\+Managers, Collision\+Manager\+::unregister\+Collidable(), and Message\+System\+::unsubscribe().
+
+
+
+\subsection{Member Function Documentation}
+\index{Collision\+Component@{Collision\+Component}!predraw@{predraw}}
+\index{predraw@{predraw}!Collision\+Component@{Collision\+Component}}
+\subsubsection[{\texorpdfstring{predraw(\+Context $\ast$context) override}{predraw(Context *context) override}}]{\setlength{\rightskip}{0pt plus 5cm}void Collision\+Component\+::predraw (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{class_collision_component_a322c2d4550aef70b8284465ae34278db}{}\label{class_collision_component_a322c2d4550aef70b8284465ae34278db}
+
+
+Called before the renderer draws the scene This allows the scene objects to do updates that require a graphics context before the graphical state is drawn. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphics context \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_scene_object_component_a7110e37ad23a708c2bf9828c7fd7df2f}{Scene\+Object\+Component}.
+
+
+
+Definition at line 55 of file Collision\+Component.\+h.
+
+\index{Collision\+Component@{Collision\+Component}!step@{step}}
+\index{step@{step}!Collision\+Component@{Collision\+Component}}
+\subsubsection[{\texorpdfstring{step(double dt) override}{step(double dt) override}}]{\setlength{\rightskip}{0pt plus 5cm}void Collision\+Component\+::step (
+\begin{DoxyParamCaption}
+\item[{double}]{dt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{class_collision_component_aee9d681edd938781127af2249b750125}{}\label{class_collision_component_aee9d681edd938781127af2249b750125}
+
+
+Step the simulation state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta-\/time since last step call in seconds \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_scene_object_component_a99ebed011a6547be4d31a09927e3b810}{Scene\+Object\+Component}.
+
+
+
+Definition at line 47 of file Collision\+Component.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lunar\+Drift/engine/components/\hyperlink{_collision_component_8h}{Collision\+Component.\+h}\item 
+Lunar\+Drift/engine/components/\hyperlink{_collision_component_8cpp}{Collision\+Component.\+cpp}\end{DoxyCompactItemize}

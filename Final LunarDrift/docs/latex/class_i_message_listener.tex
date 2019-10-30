@@ -1,0 +1,96 @@
+\hypertarget{class_i_message_listener}{}\section{I\+Message\+Listener Class Reference}
+\label{class_i_message_listener}\index{I\+Message\+Listener@{I\+Message\+Listener}}
+
+
+Interface for handling messages sent from other entities.  
+
+
+
+
+{\ttfamily \#include $<$I\+Message\+Listener.\+h$>$}
+
+Inheritance diagram for I\+Message\+Listener\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_message_listener}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_i_message_listener_af09a1fa8b00d182a92f357ad89a024a5}{$\sim$\+I\+Message\+Listener} ()
+\item 
+virtual void \hyperlink{class_i_message_listener_aac85f64eeb587944c59e07f5457b1b82}{on\+Message} (std\+::shared\+\_\+ptr$<$ \hyperlink{class_message}{Message} $>$ msg)=0
+\begin{DoxyCompactList}\small\item\em Called when a message is sent to this entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface for handling messages sent from other entities. 
+
+Messages are packets of data sent between entities in the program. Events operate in a broadcast fashion, messages operate in a unicast fashion with a sender and a receiver at the point of handling.
+
+\begin{DoxyAuthor}{Author}
+Hayley Hatton 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/03/2016 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_message}{Message} 
+
+\hyperlink{class_message_system}{Message\+System} 
+\end{DoxySeeAlso}
+
+
+Definition at line 18 of file I\+Message\+Listener.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{I\+Message\+Listener@{I\+Message\+Listener}!````~I\+Message\+Listener@{$\sim$\+I\+Message\+Listener}}
+\index{````~I\+Message\+Listener@{$\sim$\+I\+Message\+Listener}!I\+Message\+Listener@{I\+Message\+Listener}}
+\subsubsection[{\texorpdfstring{$\sim$\+I\+Message\+Listener()}{~IMessageListener()}}]{\setlength{\rightskip}{0pt plus 5cm}virtual I\+Message\+Listener\+::$\sim$\+I\+Message\+Listener (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_i_message_listener_af09a1fa8b00d182a92f357ad89a024a5}{}\label{class_i_message_listener_af09a1fa8b00d182a92f357ad89a024a5}
+
+
+Definition at line 21 of file I\+Message\+Listener.\+h.
+
+
+
+References on\+Message().
+
+
+
+\subsection{Member Function Documentation}
+\index{I\+Message\+Listener@{I\+Message\+Listener}!on\+Message@{on\+Message}}
+\index{on\+Message@{on\+Message}!I\+Message\+Listener@{I\+Message\+Listener}}
+\subsubsection[{\texorpdfstring{on\+Message(std\+::shared\+\_\+ptr$<$ Message $>$ msg)=0}{onMessage(std::shared_ptr< Message > msg)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void I\+Message\+Listener\+::on\+Message (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Message} $>$}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_i_message_listener_aac85f64eeb587944c59e07f5457b1b82}{}\label{class_i_message_listener_aac85f64eeb587944c59e07f5457b1b82}
+
+
+Called when a message is sent to this entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & Smart pointer to the received message object \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_test_scene3_d_aa5c6527ffc929e51eb3303431bfc6f7d}{Test\+Scene3D}, \hyperlink{class_lunar_drift_program_a6586725d0267426dae45c7c5772cffc2}{Lunar\+Drift\+Program}, \hyperlink{class_test_triangle_ac5165e9e0ecdc4b232752b49c1ecbec0}{Test\+Triangle}, and \hyperlink{class_hitpoint_component_a86ab4e66b47a675b56c0c3eaa8ff07d9}{Hitpoint\+Component}.
+
+
+
+Referenced by Life\+Time\+Component\+::step(), and $\sim$\+I\+Message\+Listener().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Lunar\+Drift/engine/comms/\hyperlink{_i_message_listener_8h}{I\+Message\+Listener.\+h}\end{DoxyCompactItemize}

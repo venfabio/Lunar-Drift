@@ -1,0 +1,178 @@
+\hypertarget{class_context}{}\section{Context Class Reference}
+\label{class_context}\index{Context@{Context}}
+
+
+Open\+GL context wrapper and provider.  
+
+
+
+
+{\ttfamily \#include $<$Context.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_context_a652cdcd2eedc8dbd9110bd284c5d5cf0}{Context} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_context_a2d34e4556448e40693f61d15e091b604}{$\sim$\+Context} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_context_aa307eab2bab2f1c8fa6f75e507040c67}{set\+Dimensions} (G\+Lsizei width, G\+Lsizei height)
+\begin{DoxyCompactList}\small\item\em Set the dimensions of the full rendering context. \end{DoxyCompactList}\item 
+void \hyperlink{class_context_a88746b0b9d89b5d7f4e2112440e9bdb3}{get\+Dimensions} (G\+Lsizei $\ast$width, G\+Lsizei $\ast$height) const 
+\begin{DoxyCompactList}\small\item\em Access the dimensions of the full rendering context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G\+Lsizei \hyperlink{class_context_a1813b1a12aaf96ec0ec501194bd56b41}{m\+\_\+\+Width}
+\item 
+G\+Lsizei \hyperlink{class_context_a78dabc1cab62e8b36ac7330f7c8e4c4b}{m\+\_\+\+Height}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Open\+GL context wrapper and provider. 
+
+This is practically empty due to the fact Open\+GL\textquotesingle{}s functions and context states are passed around through the thread stack, unlike Direct3D, which has I\+D3\+D11\+Device\+Context and related objects for accessing graphical A\+PI states and calls. However, this should be {\itshape treated} in a similar manner\+: do $<$u$>$not$<$/u$>$ call Open\+GL functions unless a \hyperlink{class_context}{Context} object is present. An exception can be made for Destructors, where parameters cannot be passed in, of course (just be sure to terminate objects on a thread with an Open\+GL context available or Open\+GL delete functions will crash!). Essentially\+: does the function or procedure have a non-\/null \hyperlink{class_context}{Context}? If yes\+: safe to use Open\+GL functions! If no\+: do so at your own risk.
+
+\begin{DoxyAuthor}{Author}
+Hayley Hatton 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/02/2016 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_renderer}{Renderer} 
+\end{DoxySeeAlso}
+
+
+Definition at line 24 of file Context.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Context@{Context}!Context@{Context}}
+\index{Context@{Context}!Context@{Context}}
+\subsubsection[{\texorpdfstring{Context()}{Context()}}]{\setlength{\rightskip}{0pt plus 5cm}Context\+::\+Context (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_context_a652cdcd2eedc8dbd9110bd284c5d5cf0}{}\label{class_context_a652cdcd2eedc8dbd9110bd284c5d5cf0}
+
+
+Default constructor. 
+
+
+
+Definition at line 3 of file Context.\+cpp.
+
+\index{Context@{Context}!````~Context@{$\sim$\+Context}}
+\index{````~Context@{$\sim$\+Context}!Context@{Context}}
+\subsubsection[{\texorpdfstring{$\sim$\+Context()}{~Context()}}]{\setlength{\rightskip}{0pt plus 5cm}Context\+::$\sim$\+Context (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_context_a2d34e4556448e40693f61d15e091b604}{}\label{class_context_a2d34e4556448e40693f61d15e091b604}
+
+
+Default destructor. 
+
+
+
+Definition at line 8 of file Context.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{Context@{Context}!get\+Dimensions@{get\+Dimensions}}
+\index{get\+Dimensions@{get\+Dimensions}!Context@{Context}}
+\subsubsection[{\texorpdfstring{get\+Dimensions(\+G\+Lsizei $\ast$width, G\+Lsizei $\ast$height) const }{getDimensions(GLsizei *width, GLsizei *height) const }}]{\setlength{\rightskip}{0pt plus 5cm}void Context\+::get\+Dimensions (
+\begin{DoxyParamCaption}
+\item[{G\+Lsizei $\ast$}]{width, }
+\item[{G\+Lsizei $\ast$}]{height}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_context_a88746b0b9d89b5d7f4e2112440e9bdb3}{}\label{class_context_a88746b0b9d89b5d7f4e2112440e9bdb3}
+
+
+Access the dimensions of the full rendering context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Pointer to store width in pixels \\
+\hline
+{\em height} & Pointer to store height in pixels \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 20 of file Context.\+cpp.
+
+
+
+References m\+\_\+\+Height, and m\+\_\+\+Width.
+
+
+
+Referenced by Lunar\+Drift\+Program\+::get\+Renderer(), and Test\+Scene3\+D\+::\+Test\+Scene3\+D().
+
+\index{Context@{Context}!set\+Dimensions@{set\+Dimensions}}
+\index{set\+Dimensions@{set\+Dimensions}!Context@{Context}}
+\subsubsection[{\texorpdfstring{set\+Dimensions(\+G\+Lsizei width, G\+Lsizei height)}{setDimensions(GLsizei width, GLsizei height)}}]{\setlength{\rightskip}{0pt plus 5cm}void Context\+::set\+Dimensions (
+\begin{DoxyParamCaption}
+\item[{G\+Lsizei}]{width, }
+\item[{G\+Lsizei}]{height}
+\end{DoxyParamCaption}
+)}\hypertarget{class_context_aa307eab2bab2f1c8fa6f75e507040c67}{}\label{class_context_aa307eab2bab2f1c8fa6f75e507040c67}
+
+
+Set the dimensions of the full rendering context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Width in pixels \\
+\hline
+{\em height} & Height in pixels \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 14 of file Context.\+cpp.
+
+
+
+References m\+\_\+\+Height, and m\+\_\+\+Width.
+
+
+
+Referenced by Window\+P\+C\+::create\+Window(), and Window\+P\+C\+::\+Window\+P\+C().
+
+
+
+\subsection{Member Data Documentation}
+\index{Context@{Context}!m\+\_\+\+Height@{m\+\_\+\+Height}}
+\index{m\+\_\+\+Height@{m\+\_\+\+Height}!Context@{Context}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Height}{m_Height}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lsizei Context\+::m\+\_\+\+Height\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_context_a78dabc1cab62e8b36ac7330f7c8e4c4b}{}\label{class_context_a78dabc1cab62e8b36ac7330f7c8e4c4b}
+
+
+Definition at line 51 of file Context.\+h.
+
+
+
+Referenced by get\+Dimensions(), and set\+Dimensions().
+
+\index{Context@{Context}!m\+\_\+\+Width@{m\+\_\+\+Width}}
+\index{m\+\_\+\+Width@{m\+\_\+\+Width}!Context@{Context}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Width}{m_Width}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lsizei Context\+::m\+\_\+\+Width\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_context_a1813b1a12aaf96ec0ec501194bd56b41}{}\label{class_context_a1813b1a12aaf96ec0ec501194bd56b41}
+
+
+Definition at line 51 of file Context.\+h.
+
+
+
+Referenced by get\+Dimensions(), and set\+Dimensions().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lunar\+Drift/engine/graphics/\hyperlink{_context_8h}{Context.\+h}\item 
+Lunar\+Drift/engine/graphics/\hyperlink{_context_8cpp}{Context.\+cpp}\end{DoxyCompactItemize}

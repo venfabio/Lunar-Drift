@@ -1,0 +1,276 @@
+\hypertarget{class_model_loader}{}\section{Model\+Loader Class Reference}
+\label{class_model_loader}\index{Model\+Loader@{Model\+Loader}}
+
+
+Loads a Wavefront Object file and allows the model to be modified.  
+
+
+
+
+{\ttfamily \#include $<$Model\+Loader.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_model_loader_1_1_vertex}{Vertex}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_model_loader_a5892e5788d106f1e57124a73cdb2ddb5}{Model\+Loader} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_model_loader_a7bcce27e8a2d6aa701c3ec3f8e1fbd8a}{Model\+Loader} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Load model from path. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_model_loader_a4015291af96be2ea657577bdf4fb29f4}{$\sim$\+Model\+Loader} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_model_loader_a865094ab1e7314bee70da29ce86073ca}{load} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Load model from path. \end{DoxyCompactList}\item 
+int \hyperlink{class_model_loader_aba7cba73fbff78ec25a218c102ed1822}{get\+Num\+Vertices} () const 
+\begin{DoxyCompactList}\small\item\em Return the number of vertices loaded. \end{DoxyCompactList}\item 
+bool \hyperlink{class_model_loader_a59aad7ebbcddd1a5bbfed8d2835d4043}{compile} (int stride, int position\+Offset, int normal\+Offset, int tex\+Offset, int color\+Offset, int $\ast$elements, void $\ast$$\ast$output) const 
+\begin{DoxyCompactList}\small\item\em Compile the loaded model into a custom interleaved structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_model_loader_a1df1d3b0fae85b6c1d4cd9bdf07ec780}{load\+Materials} (std\+::map$<$ std\+::string, glm\+::vec3 $>$ \&buffer, const std\+::string \&filepath) const 
+\begin{DoxyCompactList}\small\item\em Load the color information from an external material file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ std\+::string, std\+::vector$<$ \hyperlink{struct_model_loader_1_1_vertex}{Vertex} $>$ $>$ \hyperlink{class_model_loader_a4e239d555b06365c128cec1b70a5f0fa}{m\+\_\+\+Vertex\+Groups}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Loads a Wavefront Object file and allows the model to be modified. 
+
+Wavefront Object Files are free, license-\/free, text-\/based model-\/storing file format.
+
+\begin{DoxyAuthor}{Author}
+Hayley Hatton 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+06/03/2016 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_model}{Model} 
+\end{DoxySeeAlso}
+
+
+Definition at line 19 of file Model\+Loader.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Model\+Loader@{Model\+Loader}!Model\+Loader@{Model\+Loader}}
+\index{Model\+Loader@{Model\+Loader}!Model\+Loader@{Model\+Loader}}
+\subsubsection[{\texorpdfstring{Model\+Loader()}{ModelLoader()}}]{\setlength{\rightskip}{0pt plus 5cm}Model\+Loader\+::\+Model\+Loader (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_model_loader_a5892e5788d106f1e57124a73cdb2ddb5}{}\label{class_model_loader_a5892e5788d106f1e57124a73cdb2ddb5}
+
+
+Default constructor. 
+
+
+
+Definition at line 23 of file Model\+Loader.\+h.
+
+
+
+References compile(), get\+Num\+Vertices(), load(), and $\sim$\+Model\+Loader().
+
+\index{Model\+Loader@{Model\+Loader}!Model\+Loader@{Model\+Loader}}
+\index{Model\+Loader@{Model\+Loader}!Model\+Loader@{Model\+Loader}}
+\subsubsection[{\texorpdfstring{Model\+Loader(const std\+::string \&path)}{ModelLoader(const std::string &path)}}]{\setlength{\rightskip}{0pt plus 5cm}Model\+Loader\+::\+Model\+Loader (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{path}
+\end{DoxyParamCaption}
+)}\hypertarget{class_model_loader_a7bcce27e8a2d6aa701c3ec3f8e1fbd8a}{}\label{class_model_loader_a7bcce27e8a2d6aa701c3ec3f8e1fbd8a}
+
+
+Load model from path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Location of model file. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 10 of file Model\+Loader.\+cpp.
+
+
+
+References load().
+
+\index{Model\+Loader@{Model\+Loader}!````~Model\+Loader@{$\sim$\+Model\+Loader}}
+\index{````~Model\+Loader@{$\sim$\+Model\+Loader}!Model\+Loader@{Model\+Loader}}
+\subsubsection[{\texorpdfstring{$\sim$\+Model\+Loader()}{~ModelLoader()}}]{\setlength{\rightskip}{0pt plus 5cm}Model\+Loader\+::$\sim$\+Model\+Loader (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_model_loader_a4015291af96be2ea657577bdf4fb29f4}{}\label{class_model_loader_a4015291af96be2ea657577bdf4fb29f4}
+
+
+Default destructor. 
+
+
+
+Definition at line 15 of file Model\+Loader.\+cpp.
+
+
+
+Referenced by Model\+Loader().
+
+
+
+\subsection{Member Function Documentation}
+\index{Model\+Loader@{Model\+Loader}!compile@{compile}}
+\index{compile@{compile}!Model\+Loader@{Model\+Loader}}
+\subsubsection[{\texorpdfstring{compile(int stride, int position\+Offset, int normal\+Offset, int tex\+Offset, int color\+Offset, int $\ast$elements, void $\ast$$\ast$output) const }{compile(int stride, int positionOffset, int normalOffset, int texOffset, int colorOffset, int *elements, void **output) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Model\+Loader\+::compile (
+\begin{DoxyParamCaption}
+\item[{int}]{stride, }
+\item[{int}]{position\+Offset, }
+\item[{int}]{normal\+Offset, }
+\item[{int}]{tex\+Offset, }
+\item[{int}]{color\+Offset, }
+\item[{int $\ast$}]{elements, }
+\item[{void $\ast$$\ast$}]{output}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_model_loader_a59aad7ebbcddd1a5bbfed8d2835d4043}{}\label{class_model_loader_a59aad7ebbcddd1a5bbfed8d2835d4043}
+
+
+Compile the loaded model into a custom interleaved structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stride} & The size of the structure \\
+\hline
+{\em position\+Offset} & The offset to the position vector in the structure \\
+\hline
+{\em normal\+Offset} & The offset to the normal vector in the structure \\
+\hline
+{\em tex\+Offset} & The offset to the texture coordinates in the structure \\
+\hline
+{\em color\+Offset} & The offset to the color vectors in the structure \\
+\hline
+{\em elements} & Pointer to the number of elements loaded \\
+\hline
+{\em output} & Pointer to store a pointer to the compiled data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error status. True if success, false if fail 
+\end{DoxyReturn}
+
+
+Definition at line 148 of file Model\+Loader.\+cpp.
+
+
+
+References Model\+Loader\+::\+Vertex\+::color, g, get\+Num\+Vertices(), i, m\+\_\+\+Vertex\+Groups, Model\+Loader\+::\+Vertex\+::normal, Model\+Loader\+::\+Vertex\+::position, and Model\+Loader\+::\+Vertex\+::tex\+Coord.
+
+
+
+Referenced by Model\+::\+Model(), and Model\+Loader().
+
+\index{Model\+Loader@{Model\+Loader}!get\+Num\+Vertices@{get\+Num\+Vertices}}
+\index{get\+Num\+Vertices@{get\+Num\+Vertices}!Model\+Loader@{Model\+Loader}}
+\subsubsection[{\texorpdfstring{get\+Num\+Vertices() const }{getNumVertices() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Model\+Loader\+::get\+Num\+Vertices (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_model_loader_aba7cba73fbff78ec25a218c102ed1822}{}\label{class_model_loader_aba7cba73fbff78ec25a218c102ed1822}
+
+
+Return the number of vertices loaded. 
+
+
+
+Definition at line 137 of file Model\+Loader.\+cpp.
+
+
+
+References m\+\_\+\+Vertex\+Groups.
+
+
+
+Referenced by compile(), Model\+::\+Model(), and Model\+Loader().
+
+\index{Model\+Loader@{Model\+Loader}!load@{load}}
+\index{load@{load}!Model\+Loader@{Model\+Loader}}
+\subsubsection[{\texorpdfstring{load(const std\+::string \&path)}{load(const std::string &path)}}]{\setlength{\rightskip}{0pt plus 5cm}void Model\+Loader\+::load (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{path}
+\end{DoxyParamCaption}
+)}\hypertarget{class_model_loader_a865094ab1e7314bee70da29ce86073ca}{}\label{class_model_loader_a865094ab1e7314bee70da29ce86073ca}
+
+
+Load model from path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Location of model file. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 21 of file Model\+Loader.\+cpp.
+
+
+
+References Model\+Loader\+::\+Vertex\+::color, i, j, load\+Materials(), m\+\_\+\+Vertex\+Groups, model\+Path, Model\+Loader\+::\+Vertex\+::normal, Model\+Loader\+::\+Vertex\+::position, and Model\+Loader\+::\+Vertex\+::tex\+Coord.
+
+
+
+Referenced by Model\+Loader().
+
+\index{Model\+Loader@{Model\+Loader}!load\+Materials@{load\+Materials}}
+\index{load\+Materials@{load\+Materials}!Model\+Loader@{Model\+Loader}}
+\subsubsection[{\texorpdfstring{load\+Materials(std\+::map$<$ std\+::string, glm\+::vec3 $>$ \&buffer, const std\+::string \&filepath) const }{loadMaterials(std::map< std::string, glm::vec3 > &buffer, const std::string &filepath) const }}]{\setlength{\rightskip}{0pt plus 5cm}void Model\+Loader\+::load\+Materials (
+\begin{DoxyParamCaption}
+\item[{std\+::map$<$ std\+::string, glm\+::vec3 $>$ \&}]{buffer, }
+\item[{const std\+::string \&}]{filepath}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_model_loader_a1df1d3b0fae85b6c1d4cd9bdf07ec780}{}\label{class_model_loader_a1df1d3b0fae85b6c1d4cd9bdf07ec780}
+
+
+Load the color information from an external material file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Reference to map to store the material information. \\
+\hline
+{\em filepath} & Location of material file. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 198 of file Model\+Loader.\+cpp.
+
+
+
+Referenced by load().
+
+
+
+\subsection{Member Data Documentation}
+\index{Model\+Loader@{Model\+Loader}!m\+\_\+\+Vertex\+Groups@{m\+\_\+\+Vertex\+Groups}}
+\index{m\+\_\+\+Vertex\+Groups@{m\+\_\+\+Vertex\+Groups}!Model\+Loader@{Model\+Loader}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Vertex\+Groups}{m_VertexGroups}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$std\+::string, std\+::vector$<${\bf Vertex}$>$ $>$ Model\+Loader\+::m\+\_\+\+Vertex\+Groups\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_model_loader_a4e239d555b06365c128cec1b70a5f0fa}{}\label{class_model_loader_a4e239d555b06365c128cec1b70a5f0fa}
+
+
+Definition at line 72 of file Model\+Loader.\+h.
+
+
+
+Referenced by compile(), get\+Num\+Vertices(), and load().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lunar\+Drift/engine/containers/\hyperlink{_model_loader_8h}{Model\+Loader.\+h}\item 
+Lunar\+Drift/engine/containers/\hyperlink{_model_loader_8cpp}{Model\+Loader.\+cpp}\end{DoxyCompactItemize}

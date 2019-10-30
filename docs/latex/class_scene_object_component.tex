@@ -1,0 +1,231 @@
+\hypertarget{class_scene_object_component}{}\section{Scene\+Object\+Component Class Reference}
+\label{class_scene_object_component}\index{Scene\+Object\+Component@{Scene\+Object\+Component}}
+
+
+Base class for components that are to be attached to scene objects.  
+
+
+
+
+{\ttfamily \#include $<$Scene\+Object\+Component.\+h$>$}
+
+Inheritance diagram for Scene\+Object\+Component\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_scene_object_component}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_scene_object_component_a8bcfb5bc3d3bdb01faa9ad1286b8585f}{Scene\+Object\+Component} (const std\+::string \&name, \hyperlink{class_scene_object}{Scene\+Object} $\ast$parent, std\+::weak\+\_\+ptr$<$ \hyperlink{class_meta_manager}{Meta\+Manager} $>$ managers)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_scene_object_component_a2832eebdd71efb588d47be60ba95e49f}{$\sim$\+Scene\+Object\+Component} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_scene_object_component_a99ebed011a6547be4d31a09927e3b810}{step} (double dt)=0
+\begin{DoxyCompactList}\small\item\em Step the simulation state. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_scene_object_component_a7110e37ad23a708c2bf9828c7fd7df2f}{predraw} (\hyperlink{class_context}{Context} $\ast$context)=0
+\begin{DoxyCompactList}\small\item\em Called before the renderer draws the scene This allows the scene objects to do updates that require a graphics context before the graphical state is drawn. \end{DoxyCompactList}\item 
+\hyperlink{class_scene_object}{Scene\+Object} $\ast$ \hyperlink{class_scene_object_component_ab4e4f580e5257b8f9064f7b594b97ac9}{get\+Parent} ()
+\begin{DoxyCompactList}\small\item\em Access the parent class that owns this component. \end{DoxyCompactList}\item 
+std\+::weak\+\_\+ptr$<$ \hyperlink{class_meta_manager}{Meta\+Manager} $>$ \hyperlink{class_scene_object_component_a6b2b0732ce70a245bbea15d6ad58f35d}{get\+Meta\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Access the metamanager for the scene that the parent is a part of. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::weak\+\_\+ptr$<$ \hyperlink{class_meta_manager}{Meta\+Manager} $>$ \hyperlink{class_scene_object_component_ae37257f842b003aa25ca634565d2f1e4}{m\+\_\+\+Managers}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_scene}{Scene}\textquotesingle{}s managers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_scene_object}{Scene\+Object} $\ast$ \hyperlink{class_scene_object_component_ad7992ff4976be980767939e44eba2b2f}{m\+\_\+\+Parent}
+\begin{DoxyCompactList}\small\item\em Class that has ownership of this component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for components that are to be attached to scene objects. 
+
+\begin{DoxyAuthor}{Author}
+Hayley Hatton 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+06/03/2016 
+\end{DoxyDate}
+
+
+Definition at line 15 of file Scene\+Object\+Component.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Scene\+Object\+Component@{Scene\+Object\+Component}!Scene\+Object\+Component@{Scene\+Object\+Component}}
+\index{Scene\+Object\+Component@{Scene\+Object\+Component}!Scene\+Object\+Component@{Scene\+Object\+Component}}
+\subsubsection[{\texorpdfstring{Scene\+Object\+Component(const std\+::string \&name, Scene\+Object $\ast$parent, std\+::weak\+\_\+ptr$<$ Meta\+Manager $>$ managers)}{SceneObjectComponent(const std::string &name, SceneObject *parent, std::weak_ptr< MetaManager > managers)}}]{\setlength{\rightskip}{0pt plus 5cm}Scene\+Object\+Component\+::\+Scene\+Object\+Component (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{{\bf Scene\+Object} $\ast$}]{parent, }
+\item[{std\+::weak\+\_\+ptr$<$ {\bf Meta\+Manager} $>$}]{managers}
+\end{DoxyParamCaption}
+)}\hypertarget{class_scene_object_component_a8bcfb5bc3d3bdb01faa9ad1286b8585f}{}\label{class_scene_object_component_a8bcfb5bc3d3bdb01faa9ad1286b8585f}
+
+
+Default constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Identifying name of the component class \\
+\hline
+{\em parent} & Pointer to the scene object to attach component to \\
+\hline
+{\em managers} & Metamanager for accessing scene\textquotesingle{}s managers \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 5 of file Scene\+Object\+Component.\+cpp.
+
+\index{Scene\+Object\+Component@{Scene\+Object\+Component}!````~Scene\+Object\+Component@{$\sim$\+Scene\+Object\+Component}}
+\index{````~Scene\+Object\+Component@{$\sim$\+Scene\+Object\+Component}!Scene\+Object\+Component@{Scene\+Object\+Component}}
+\subsubsection[{\texorpdfstring{$\sim$\+Scene\+Object\+Component()}{~SceneObjectComponent()}}]{\setlength{\rightskip}{0pt plus 5cm}Scene\+Object\+Component\+::$\sim$\+Scene\+Object\+Component (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_scene_object_component_a2832eebdd71efb588d47be60ba95e49f}{}\label{class_scene_object_component_a2832eebdd71efb588d47be60ba95e49f}
+
+
+Default destructor. 
+
+
+
+Definition at line 16 of file Scene\+Object\+Component.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{Scene\+Object\+Component@{Scene\+Object\+Component}!get\+Meta\+Manager@{get\+Meta\+Manager}}
+\index{get\+Meta\+Manager@{get\+Meta\+Manager}!Scene\+Object\+Component@{Scene\+Object\+Component}}
+\subsubsection[{\texorpdfstring{get\+Meta\+Manager()}{getMetaManager()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::weak\+\_\+ptr$<${\bf Meta\+Manager}$>$ Scene\+Object\+Component\+::get\+Meta\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_scene_object_component_a6b2b0732ce70a245bbea15d6ad58f35d}{}\label{class_scene_object_component_a6b2b0732ce70a245bbea15d6ad58f35d}
+
+
+Access the metamanager for the scene that the parent is a part of. 
+
+\begin{DoxyReturn}{Returns}
+Weakly-\/referenced pointer to the owning scene\textquotesingle{}s metamanager 
+\end{DoxyReturn}
+
+
+Definition at line 57 of file Scene\+Object\+Component.\+h.
+
+
+
+References m\+\_\+\+Managers.
+
+\index{Scene\+Object\+Component@{Scene\+Object\+Component}!get\+Parent@{get\+Parent}}
+\index{get\+Parent@{get\+Parent}!Scene\+Object\+Component@{Scene\+Object\+Component}}
+\subsubsection[{\texorpdfstring{get\+Parent()}{getParent()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Scene\+Object}$\ast$ Scene\+Object\+Component\+::get\+Parent (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_scene_object_component_ab4e4f580e5257b8f9064f7b594b97ac9}{}\label{class_scene_object_component_ab4e4f580e5257b8f9064f7b594b97ac9}
+
+
+Access the parent class that owns this component. 
+
+\begin{DoxyReturn}{Returns}
+Reference to the parent class 
+\end{DoxyReturn}
+
+
+Definition at line 51 of file Scene\+Object\+Component.\+h.
+
+
+
+References m\+\_\+\+Parent.
+
+
+
+Referenced by Collision\+Component\+::\+Collision\+Component(), Hitpoint\+Component\+::on\+Message(), Life\+Time\+Component\+::step(), and Collision\+Component\+::$\sim$\+Collision\+Component().
+
+\index{Scene\+Object\+Component@{Scene\+Object\+Component}!predraw@{predraw}}
+\index{predraw@{predraw}!Scene\+Object\+Component@{Scene\+Object\+Component}}
+\subsubsection[{\texorpdfstring{predraw(\+Context $\ast$context)=0}{predraw(Context *context)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Scene\+Object\+Component\+::predraw (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_scene_object_component_a7110e37ad23a708c2bf9828c7fd7df2f}{}\label{class_scene_object_component_a7110e37ad23a708c2bf9828c7fd7df2f}
+
+
+Called before the renderer draws the scene This allows the scene objects to do updates that require a graphics context before the graphical state is drawn. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphics context \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_collision_component_a322c2d4550aef70b8284465ae34278db}{Collision\+Component}, \hyperlink{class_life_time_component_a206515c60de0d9bc07062daf8d24446e}{Life\+Time\+Component}, and \hyperlink{class_hitpoint_component_a3210abfca24e1bc9827f56533ab798af}{Hitpoint\+Component}.
+
+\index{Scene\+Object\+Component@{Scene\+Object\+Component}!step@{step}}
+\index{step@{step}!Scene\+Object\+Component@{Scene\+Object\+Component}}
+\subsubsection[{\texorpdfstring{step(double dt)=0}{step(double dt)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Scene\+Object\+Component\+::step (
+\begin{DoxyParamCaption}
+\item[{double}]{dt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_scene_object_component_a99ebed011a6547be4d31a09927e3b810}{}\label{class_scene_object_component_a99ebed011a6547be4d31a09927e3b810}
+
+
+Step the simulation state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta-\/time since last step call in seconds \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_collision_component_aee9d681edd938781127af2249b750125}{Collision\+Component}, \hyperlink{class_life_time_component_a709b9485f9bce5c7a6cec8f000bcb905}{Life\+Time\+Component}, and \hyperlink{class_hitpoint_component_ab293fcc4d167a4fa9cd27cbf1ba42018}{Hitpoint\+Component}.
+
+
+
+\subsection{Member Data Documentation}
+\index{Scene\+Object\+Component@{Scene\+Object\+Component}!m\+\_\+\+Managers@{m\+\_\+\+Managers}}
+\index{m\+\_\+\+Managers@{m\+\_\+\+Managers}!Scene\+Object\+Component@{Scene\+Object\+Component}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Managers}{m_Managers}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::weak\+\_\+ptr$<${\bf Meta\+Manager}$>$ Scene\+Object\+Component\+::m\+\_\+\+Managers\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_scene_object_component_ae37257f842b003aa25ca634565d2f1e4}{}\label{class_scene_object_component_ae37257f842b003aa25ca634565d2f1e4}
+
+
+\hyperlink{class_scene}{Scene}\textquotesingle{}s managers. 
+
+
+
+Definition at line 60 of file Scene\+Object\+Component.\+h.
+
+
+
+Referenced by get\+Meta\+Manager(), and Collision\+Component\+::$\sim$\+Collision\+Component().
+
+\index{Scene\+Object\+Component@{Scene\+Object\+Component}!m\+\_\+\+Parent@{m\+\_\+\+Parent}}
+\index{m\+\_\+\+Parent@{m\+\_\+\+Parent}!Scene\+Object\+Component@{Scene\+Object\+Component}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Parent}{m_Parent}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Scene\+Object}$\ast$ Scene\+Object\+Component\+::m\+\_\+\+Parent\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_scene_object_component_ad7992ff4976be980767939e44eba2b2f}{}\label{class_scene_object_component_ad7992ff4976be980767939e44eba2b2f}
+
+
+Class that has ownership of this component. 
+
+
+
+Definition at line 63 of file Scene\+Object\+Component.\+h.
+
+
+
+Referenced by get\+Parent().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lunar\+Drift/engine/components/\hyperlink{_scene_object_component_8h}{Scene\+Object\+Component.\+h}\item 
+Lunar\+Drift/engine/components/\hyperlink{_scene_object_component_8cpp}{Scene\+Object\+Component.\+cpp}\end{DoxyCompactItemize}

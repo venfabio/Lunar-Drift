@@ -1,0 +1,5 @@
+<map id="AndromedaRaceScene" name="AndromedaRaceScene">
+<area shape="rect" id="node2" href="$class_race_scene.html" title="Specialised scene class for use as a parent for all tracks. " alt="" coords="47,80,137,107"/>
+<area shape="rect" id="node3" href="$class_scene.html" title="Scene container for managing and drawing 3D environments. " alt="" coords="5,5,64,32"/>
+<area shape="rect" id="node4" href="$class_i_message_listener.html" title="Interface for handling messages sent from other entities. " alt="" coords="89,5,213,32"/>
+</map>

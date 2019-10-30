@@ -1,0 +1,165 @@
+\hypertarget{class_window}{}\section{Window Class Reference}
+\label{class_window}\index{Window@{Window}}
+
+
+Abstract window container, for bridging the system to the program.  
+
+
+
+
+{\ttfamily \#include $<$Window.\+h$>$}
+
+Inheritance diagram for Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_window}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_window_a74e6087da23d3c24e9fac0245e5ec92c}{Window} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_window_a245d821e6016fa1f6970ccbbedd635f6}{$\sim$\+Window} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{_window_8h_ae189a3c432aa37137a55df8c91c579ed}{Exit\+Status} \hyperlink{class_window_ad98ff66251be5270bdf3fe2e731dec0b}{run} (std\+::unique\+\_\+ptr$<$ \hyperlink{class_program}{Program} $>$ program)=0
+\begin{DoxyCompactList}\small\item\em Main execution point for the window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_program}{Program} $\ast$ \hyperlink{class_window_afbdf70548ae7b866e0b535cef8282c62}{get\+Program} ()
+\begin{DoxyCompactList}\small\item\em Access the currently-\/executing program instance. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_window_a0d02e0859c746105a40bf8b60584908d}{get\+G\+P\+U\+Name} () const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_program}{Program} $\ast$ \hyperlink{class_window_afcae84b6b4fbc790bae19b794809f98b}{m\+\_\+\+Program}
+\begin{DoxyCompactList}\small\item\em Pointer to program class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract window container, for bridging the system to the program. 
+
+\begin{DoxyAuthor}{Author}
+Hayley Hatton 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+06/03/2016 
+\end{DoxyDate}
+
+
+Definition at line 19 of file Window.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Window@{Window}!Window@{Window}}
+\index{Window@{Window}!Window@{Window}}
+\subsubsection[{\texorpdfstring{Window()}{Window()}}]{\setlength{\rightskip}{0pt plus 5cm}Window\+::\+Window (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_window_a74e6087da23d3c24e9fac0245e5ec92c}{}\label{class_window_a74e6087da23d3c24e9fac0245e5ec92c}
+
+
+Default constructor. 
+
+
+
+Definition at line 3 of file Window.\+cpp.
+
+\index{Window@{Window}!````~Window@{$\sim$\+Window}}
+\index{````~Window@{$\sim$\+Window}!Window@{Window}}
+\subsubsection[{\texorpdfstring{$\sim$\+Window()}{~Window()}}]{\setlength{\rightskip}{0pt plus 5cm}Window\+::$\sim$\+Window (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_window_a245d821e6016fa1f6970ccbbedd635f6}{}\label{class_window_a245d821e6016fa1f6970ccbbedd635f6}
+
+
+Default destructor. 
+
+
+
+Definition at line 8 of file Window.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{Window@{Window}!get\+G\+P\+U\+Name@{get\+G\+P\+U\+Name}}
+\index{get\+G\+P\+U\+Name@{get\+G\+P\+U\+Name}!Window@{Window}}
+\subsubsection[{\texorpdfstring{get\+G\+P\+U\+Name() const }{getGPUName() const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Window\+::get\+G\+P\+U\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_window_a0d02e0859c746105a40bf8b60584908d}{}\label{class_window_a0d02e0859c746105a40bf8b60584908d}
+
+
+Definition at line 20 of file Window.\+cpp.
+
+
+
+Referenced by Window\+P\+C\+::\+Window\+P\+C().
+
+\index{Window@{Window}!get\+Program@{get\+Program}}
+\index{get\+Program@{get\+Program}!Window@{Window}}
+\subsubsection[{\texorpdfstring{get\+Program()}{getProgram()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Program}$\ast$ Window\+::get\+Program (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{class_window_afbdf70548ae7b866e0b535cef8282c62}{}\label{class_window_afbdf70548ae7b866e0b535cef8282c62}
+
+
+Access the currently-\/executing program instance. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the currently-\/executing program; nullptr if none 
+\end{DoxyReturn}
+
+
+Definition at line 40 of file Window.\+h.
+
+\index{Window@{Window}!run@{run}}
+\index{run@{run}!Window@{Window}}
+\subsubsection[{\texorpdfstring{run(std\+::unique\+\_\+ptr$<$ Program $>$ program)=0}{run(std::unique_ptr< Program > program)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Exit\+Status} Window\+::run (
+\begin{DoxyParamCaption}
+\item[{std\+::unique\+\_\+ptr$<$ {\bf Program} $>$}]{program}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_window_ad98ff66251be5270bdf3fe2e731dec0b}{}\label{class_window_ad98ff66251be5270bdf3fe2e731dec0b}
+
+
+Main execution point for the window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em program} & Pointer to program to execute \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+State indicator to inform the desktop whether execution succeeded 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_window_p_c_a37f3734410e8a9d99b5de80de7c14bf5}{Window\+PC}.
+
+
+
+\subsection{Member Data Documentation}
+\index{Window@{Window}!m\+\_\+\+Program@{m\+\_\+\+Program}}
+\index{m\+\_\+\+Program@{m\+\_\+\+Program}!Window@{Window}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Program}{m_Program}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Program}$\ast$ Window\+::m\+\_\+\+Program\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_window_afcae84b6b4fbc790bae19b794809f98b}{}\label{class_window_afcae84b6b4fbc790bae19b794809f98b}
+
+
+Pointer to program class. 
+
+
+
+Definition at line 45 of file Window.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lunar\+Drift/engine/containers/\hyperlink{_window_8h}{Window.\+h}\item 
+Lunar\+Drift/engine/containers/\hyperlink{_window_8cpp}{Window.\+cpp}\end{DoxyCompactItemize}

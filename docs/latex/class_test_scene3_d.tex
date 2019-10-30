@@ -1,0 +1,229 @@
+\hypertarget{class_test_scene3_d}{}\section{Test\+Scene3D Class Reference}
+\label{class_test_scene3_d}\index{Test\+Scene3D@{Test\+Scene3D}}
+
+
+{\ttfamily \#include $<$Test\+Scene3\+D.\+h$>$}
+
+Inheritance diagram for Test\+Scene3D\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_test_scene3_d}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_test_scene3_d_a0e6437d4668fbb54f7d62d408e0a99ea}{Test\+Scene3D} (\hyperlink{class_context}{Context} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_test_scene3_d_a912bd9b4b8561d3ed9caab3ad42d2693}{$\sim$\+Test\+Scene3D} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_test_scene3_d_ab762c0baa39e323b598f08945d50bb1f}{set\+Size} (G\+Lsizei width, G\+Lsizei height) override
+\begin{DoxyCompactList}\small\item\em Called to update scene elements with the viewport information. \end{DoxyCompactList}\item 
+void \hyperlink{class_test_scene3_d_aebf275cd7c567dca7d8662ff859d2acf}{step} (double dt) override
+\begin{DoxyCompactList}\small\item\em Step the scene\textquotesingle{}s simulation state. \end{DoxyCompactList}\item 
+void \hyperlink{class_test_scene3_d_ab87089331bf0fb71d09361624dc1c53e}{predraw} (\hyperlink{class_context}{Context} $\ast$context) override
+\begin{DoxyCompactList}\small\item\em Called before the renderer draws the scene This allows the scene and its constituent objects to do updates that require a graphics context before the graphical state is drawn. \end{DoxyCompactList}\item 
+void \hyperlink{class_test_scene3_d_aa5c6527ffc929e51eb3303431bfc6f7d}{on\+Message} (std\+::shared\+\_\+ptr$<$ \hyperlink{class_message}{Message} $>$ event) override
+\begin{DoxyCompactList}\small\item\em Called when a subscribed event is raised. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G\+Lfloat \hyperlink{class_test_scene3_d_ad645a73819745449c00db8b800417565}{m\+\_\+\+Distance}
+\item 
+G\+Lfloat \hyperlink{class_test_scene3_d_ac4a67a6b4358d147b417c4dcf9735ad4}{m\+\_\+\+Offset}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 6 of file Test\+Scene3\+D.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Test\+Scene3D@{Test\+Scene3D}!Test\+Scene3D@{Test\+Scene3D}}
+\index{Test\+Scene3D@{Test\+Scene3D}!Test\+Scene3D@{Test\+Scene3D}}
+\subsubsection[{\texorpdfstring{Test\+Scene3\+D(\+Context $\ast$context)}{TestScene3D(Context *context)}}]{\setlength{\rightskip}{0pt plus 5cm}Test\+Scene3\+D\+::\+Test\+Scene3D (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context}
+\end{DoxyParamCaption}
+)}\hypertarget{class_test_scene3_d_a0e6437d4668fbb54f7d62d408e0a99ea}{}\label{class_test_scene3_d_a0e6437d4668fbb54f7d62d408e0a99ea}
+
+
+Default constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphics context \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 8 of file Test\+Scene3\+D.\+cpp.
+
+
+
+References Scene\+::add\+Object(), f, Config\+::get(), Context\+::get\+Dimensions(), Config\+::get\+Float(), Message\+System\+::get\+Instance(), Scene\+::get\+Managers(), m\+\_\+\+Distance, Scene\+::set\+Active\+Camera(), and Message\+System\+::subscribe().
+
+\index{Test\+Scene3D@{Test\+Scene3D}!````~Test\+Scene3D@{$\sim$\+Test\+Scene3D}}
+\index{````~Test\+Scene3D@{$\sim$\+Test\+Scene3D}!Test\+Scene3D@{Test\+Scene3D}}
+\subsubsection[{\texorpdfstring{$\sim$\+Test\+Scene3\+D()}{~TestScene3D()}}]{\setlength{\rightskip}{0pt plus 5cm}Test\+Scene3\+D\+::$\sim$\+Test\+Scene3D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_test_scene3_d_a912bd9b4b8561d3ed9caab3ad42d2693}{}\label{class_test_scene3_d_a912bd9b4b8561d3ed9caab3ad42d2693}
+
+
+Default destructor. 
+
+
+
+Definition at line 32 of file Test\+Scene3\+D.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{Test\+Scene3D@{Test\+Scene3D}!on\+Message@{on\+Message}}
+\index{on\+Message@{on\+Message}!Test\+Scene3D@{Test\+Scene3D}}
+\subsubsection[{\texorpdfstring{on\+Message(std\+::shared\+\_\+ptr$<$ Message $>$ event) override}{onMessage(std::shared_ptr< Message > event) override}}]{\setlength{\rightskip}{0pt plus 5cm}void Test\+Scene3\+D\+::on\+Message (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Message} $>$}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{class_test_scene3_d_aa5c6527ffc929e51eb3303431bfc6f7d}{}\label{class_test_scene3_d_aa5c6527ffc929e51eb3303431bfc6f7d}
+
+
+Called when a subscribed event is raised. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & Smart pointer to the raised event object \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_i_message_listener_aac85f64eeb587944c59e07f5457b1b82}{I\+Message\+Listener}.
+
+
+
+Definition at line 75 of file Test\+Scene3\+D.\+cpp.
+
+\index{Test\+Scene3D@{Test\+Scene3D}!predraw@{predraw}}
+\index{predraw@{predraw}!Test\+Scene3D@{Test\+Scene3D}}
+\subsubsection[{\texorpdfstring{predraw(\+Context $\ast$context) override}{predraw(Context *context) override}}]{\setlength{\rightskip}{0pt plus 5cm}void Test\+Scene3\+D\+::predraw (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{class_test_scene3_d_ab87089331bf0fb71d09361624dc1c53e}{}\label{class_test_scene3_d_ab87089331bf0fb71d09361624dc1c53e}
+
+
+Called before the renderer draws the scene This allows the scene and its constituent objects to do updates that require a graphics context before the graphical state is drawn. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphics context \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_scene_a5c993df1c224d17fc3fd618d413e3f87}{Scene}.
+
+
+
+Definition at line 70 of file Test\+Scene3\+D.\+cpp.
+
+
+
+References Scene\+::predraw().
+
+\index{Test\+Scene3D@{Test\+Scene3D}!set\+Size@{set\+Size}}
+\index{set\+Size@{set\+Size}!Test\+Scene3D@{Test\+Scene3D}}
+\subsubsection[{\texorpdfstring{set\+Size(\+G\+Lsizei width, G\+Lsizei height) override}{setSize(GLsizei width, GLsizei height) override}}]{\setlength{\rightskip}{0pt plus 5cm}void Test\+Scene3\+D\+::set\+Size (
+\begin{DoxyParamCaption}
+\item[{G\+Lsizei}]{width, }
+\item[{G\+Lsizei}]{height}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{class_test_scene3_d_ab762c0baa39e323b598f08945d50bb1f}{}\label{class_test_scene3_d_ab762c0baa39e323b598f08945d50bb1f}
+
+
+Called to update scene elements with the viewport information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Width of the viewport in pixels \\
+\hline
+{\em height} & Height of the viewport in pixels \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_scene_adc13fd7e44ebc5cb6165cb25853420c7}{Scene}.
+
+
+
+Definition at line 38 of file Test\+Scene3\+D.\+cpp.
+
+
+
+References Config\+::get(), Scene\+::get\+Active\+Camera(), and Config\+::get\+Float().
+
+\index{Test\+Scene3D@{Test\+Scene3D}!step@{step}}
+\index{step@{step}!Test\+Scene3D@{Test\+Scene3D}}
+\subsubsection[{\texorpdfstring{step(double dt) override}{step(double dt) override}}]{\setlength{\rightskip}{0pt plus 5cm}void Test\+Scene3\+D\+::step (
+\begin{DoxyParamCaption}
+\item[{double}]{dt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{class_test_scene3_d_aebf275cd7c567dca7d8662ff859d2acf}{}\label{class_test_scene3_d_aebf275cd7c567dca7d8662ff859d2acf}
+
+
+Step the scene\textquotesingle{}s simulation state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta-\/time since last step call in seconds \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_scene_aa9597b193a1cd70a276ca2480c01adea}{Scene}.
+
+
+
+Definition at line 48 of file Test\+Scene3\+D.\+cpp.
+
+
+
+References f, Scene\+::get\+Active\+Camera(), Input\+Map\+::get\+Instance(), Input\+Map\+::get\+Keyboard(), Keyboard\+::is\+Key\+Down(), m\+\_\+\+Distance, m\+\_\+\+Offset, and Scene\+::step().
+
+
+
+\subsection{Member Data Documentation}
+\index{Test\+Scene3D@{Test\+Scene3D}!m\+\_\+\+Distance@{m\+\_\+\+Distance}}
+\index{m\+\_\+\+Distance@{m\+\_\+\+Distance}!Test\+Scene3D@{Test\+Scene3D}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Distance}{m_Distance}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lfloat Test\+Scene3\+D\+::m\+\_\+\+Distance\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_test_scene3_d_ad645a73819745449c00db8b800417565}{}\label{class_test_scene3_d_ad645a73819745449c00db8b800417565}
+
+
+Definition at line 50 of file Test\+Scene3\+D.\+h.
+
+
+
+Referenced by step(), and Test\+Scene3\+D().
+
+\index{Test\+Scene3D@{Test\+Scene3D}!m\+\_\+\+Offset@{m\+\_\+\+Offset}}
+\index{m\+\_\+\+Offset@{m\+\_\+\+Offset}!Test\+Scene3D@{Test\+Scene3D}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Offset}{m_Offset}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lfloat Test\+Scene3\+D\+::m\+\_\+\+Offset\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_test_scene3_d_ac4a67a6b4358d147b417c4dcf9735ad4}{}\label{class_test_scene3_d_ac4a67a6b4358d147b417c4dcf9735ad4}
+
+
+Definition at line 50 of file Test\+Scene3\+D.\+h.
+
+
+
+Referenced by step().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lunar\+Drift/game/scenes/alphaspace/\hyperlink{_test_scene3_d_8h}{Test\+Scene3\+D.\+h}\item 
+Lunar\+Drift/game/scenes/alphaspace/\hyperlink{_test_scene3_d_8cpp}{Test\+Scene3\+D.\+cpp}\end{DoxyCompactItemize}

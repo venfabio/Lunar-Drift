@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_manager.html" title="Parent class for managers to derive from. " alt="" coords="5,81,77,108"/>
+<area shape="rect" id="node2" href="$class_collision_manager.html" title="A manager class for encapsulating collision detection processes. " alt="" coords="138,5,259,32"/>
+<area shape="rect" id="node3" href="$class_model_manager.html" title="A manager class for handling and passing around model data. " alt="" coords="145,56,252,83"/>
+<area shape="rect" id="node4" href="$class_scene_object_manager.html" title="A manager class for handling and passing around scene objects. " alt="" coords="125,107,272,133"/>
+<area shape="rect" id="node5" href="$class_texture_manager.html" title="A manager class for handling and passing around texture data. " alt="" coords="141,157,256,184"/>
+</map>

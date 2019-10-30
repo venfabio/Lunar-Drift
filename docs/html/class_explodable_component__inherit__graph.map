@@ -1,0 +1,5 @@
+<map id="ExplodableComponent" name="ExplodableComponent">
+<area shape="rect" id="node2" href="$class_scene_object_component.html" title="Base class for components that are to be attached to scene objects. " alt="" coords="5,80,168,107"/>
+<area shape="rect" id="node3" href="$class_base_component.html" title="Abstract base class for deriving components from. " alt="" coords="27,5,146,32"/>
+<area shape="rect" id="node4" href="$class_i_message_listener.html" title="Interface for handling messages sent from other entities. " alt="" coords="193,80,317,107"/>
+</map>

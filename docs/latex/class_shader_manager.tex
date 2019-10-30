@@ -1,0 +1,185 @@
+\hypertarget{class_shader_manager}{}\section{Shader\+Manager Class Reference}
+\label{class_shader_manager}\index{Shader\+Manager@{Shader\+Manager}}
+
+
+Container for associating shader programs with shading class key names.  
+
+
+
+
+{\ttfamily \#include $<$Shader\+Manager.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_shader_manager_aca25f81fd10a02b3e97e9c459b864186}{Shader\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_shader_manager_a7603399f16432b94223b9fa78f74fb87}{$\sim$\+Shader\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_shader_manager_a9a39a329a279db43c84fce10fee9a706}{set} (const std\+::string \&key, std\+::shared\+\_\+ptr$<$ \hyperlink{class_shader_program}{Shader\+Program} $>$ shader)
+\begin{DoxyCompactList}\small\item\em Associate a shader program with a shading class key. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_shader_program}{Shader\+Program} $>$ \hyperlink{class_shader_manager_a42a3df3ac4d2bce3153fff3d967fd97f}{get} (const std\+::string \&key)
+\begin{DoxyCompactList}\small\item\em Return an associated shader program from a given shading class. \end{DoxyCompactList}\item 
+void \hyperlink{class_shader_manager_a8288a4814f4a4fd228262ea3bef18673}{get} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{class_shader_program}{Shader\+Program} $>$$>$ $\ast$shaders) const 
+\begin{DoxyCompactList}\small\item\em Get a list of all the shader programs in the manager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ \hyperlink{class_shader_program}{Shader\+Program} $>$ $>$ \hyperlink{class_shader_manager_a8b3bab142565af9177794f380db932e7}{m\+\_\+\+Shader\+Map}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Container for associating shader programs with shading class key names. 
+
+This class thus encapsulates shader management away from the renderers, and allows a map of shader programs associated with shading classes to be passed around easily.
+
+\begin{DoxyAuthor}{Author}
+Hayley Hatton 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+07/03/2016 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_shader_program}{Shader\+Program} 
+
+\hyperlink{class_renderer}{Renderer} 
+\end{DoxySeeAlso}
+
+
+Definition at line 19 of file Shader\+Manager.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Shader\+Manager@{Shader\+Manager}!Shader\+Manager@{Shader\+Manager}}
+\index{Shader\+Manager@{Shader\+Manager}!Shader\+Manager@{Shader\+Manager}}
+\subsubsection[{\texorpdfstring{Shader\+Manager()}{ShaderManager()}}]{\setlength{\rightskip}{0pt plus 5cm}Shader\+Manager\+::\+Shader\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_shader_manager_aca25f81fd10a02b3e97e9c459b864186}{}\label{class_shader_manager_aca25f81fd10a02b3e97e9c459b864186}
+
+
+Default constructor. 
+
+
+
+Definition at line 4 of file Shader\+Manager.\+cpp.
+
+\index{Shader\+Manager@{Shader\+Manager}!````~Shader\+Manager@{$\sim$\+Shader\+Manager}}
+\index{````~Shader\+Manager@{$\sim$\+Shader\+Manager}!Shader\+Manager@{Shader\+Manager}}
+\subsubsection[{\texorpdfstring{$\sim$\+Shader\+Manager()}{~ShaderManager()}}]{\setlength{\rightskip}{0pt plus 5cm}Shader\+Manager\+::$\sim$\+Shader\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_shader_manager_a7603399f16432b94223b9fa78f74fb87}{}\label{class_shader_manager_a7603399f16432b94223b9fa78f74fb87}
+
+
+Default destructor. 
+
+
+
+Definition at line 9 of file Shader\+Manager.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{Shader\+Manager@{Shader\+Manager}!get@{get}}
+\index{get@{get}!Shader\+Manager@{Shader\+Manager}}
+\subsubsection[{\texorpdfstring{get(const std\+::string \&key)}{get(const std::string &key)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$ {\bf Shader\+Program} $>$ Shader\+Manager\+::get (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{key}
+\end{DoxyParamCaption}
+)}\hypertarget{class_shader_manager_a42a3df3ac4d2bce3153fff3d967fd97f}{}\label{class_shader_manager_a42a3df3ac4d2bce3153fff3d967fd97f}
+
+
+Return an associated shader program from a given shading class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Shading class name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Associated shader program 
+\end{DoxyReturn}
+
+
+Definition at line 22 of file Shader\+Manager.\+cpp.
+
+
+
+References m\+\_\+\+Shader\+Map.
+
+\index{Shader\+Manager@{Shader\+Manager}!get@{get}}
+\index{get@{get}!Shader\+Manager@{Shader\+Manager}}
+\subsubsection[{\texorpdfstring{get(std\+::vector$<$ std\+::shared\+\_\+ptr$<$ Shader\+Program $>$$>$ $\ast$shaders) const }{get(std::vector< std::shared_ptr< ShaderProgram >> *shaders) const }}]{\setlength{\rightskip}{0pt plus 5cm}void Shader\+Manager\+::get (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ {\bf Shader\+Program} $>$$>$ $\ast$}]{shaders}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_shader_manager_a8288a4814f4a4fd228262ea3bef18673}{}\label{class_shader_manager_a8288a4814f4a4fd228262ea3bef18673}
+
+
+Get a list of all the shader programs in the manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shaders} & Pointer to a vector class to hold the shader programs \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 30 of file Shader\+Manager.\+cpp.
+
+
+
+References m\+\_\+\+Shader\+Map.
+
+\index{Shader\+Manager@{Shader\+Manager}!set@{set}}
+\index{set@{set}!Shader\+Manager@{Shader\+Manager}}
+\subsubsection[{\texorpdfstring{set(const std\+::string \&key, std\+::shared\+\_\+ptr$<$ Shader\+Program $>$ shader)}{set(const std::string &key, std::shared_ptr< ShaderProgram > shader)}}]{\setlength{\rightskip}{0pt plus 5cm}void Shader\+Manager\+::set (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{key, }
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Shader\+Program} $>$}]{shader}
+\end{DoxyParamCaption}
+)}\hypertarget{class_shader_manager_a9a39a329a279db43c84fce10fee9a706}{}\label{class_shader_manager_a9a39a329a279db43c84fce10fee9a706}
+
+
+Associate a shader program with a shading class key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Shading class name \\
+\hline
+{\em shader} & Shader program to associate \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 15 of file Shader\+Manager.\+cpp.
+
+
+
+References m\+\_\+\+Shader\+Map.
+
+
+
+\subsection{Member Data Documentation}
+\index{Shader\+Manager@{Shader\+Manager}!m\+\_\+\+Shader\+Map@{m\+\_\+\+Shader\+Map}}
+\index{m\+\_\+\+Shader\+Map@{m\+\_\+\+Shader\+Map}!Shader\+Manager@{Shader\+Manager}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Shader\+Map}{m_ShaderMap}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$std\+::string,std\+::shared\+\_\+ptr$<${\bf Shader\+Program}$>$ $>$ Shader\+Manager\+::m\+\_\+\+Shader\+Map\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_shader_manager_a8b3bab142565af9177794f380db932e7}{}\label{class_shader_manager_a8b3bab142565af9177794f380db932e7}
+
+
+Definition at line 50 of file Shader\+Manager.\+h.
+
+
+
+Referenced by get(), and set().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lunar\+Drift/engine/managers/\hyperlink{_shader_manager_8h}{Shader\+Manager.\+h}\item 
+Lunar\+Drift/engine/managers/\hyperlink{_shader_manager_8cpp}{Shader\+Manager.\+cpp}\end{DoxyCompactItemize}

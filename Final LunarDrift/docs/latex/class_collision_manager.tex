@@ -1,0 +1,188 @@
+\hypertarget{class_collision_manager}{}\section{Collision\+Manager Class Reference}
+\label{class_collision_manager}\index{Collision\+Manager@{Collision\+Manager}}
+
+
+A manager class for encapsulating collision detection processes.  
+
+
+
+
+{\ttfamily \#include $<$Collision\+Manager.\+h$>$}
+
+Inheritance diagram for Collision\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_collision_manager}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_collision_manager_a81f0b3f0cc0268c80f54714cd7ddb55f}{Collision\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_collision_manager_acdbb3c842f0ef1c7a028d3f080855766}{$\sim$\+Collision\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_collision_manager_ac25d21cc6d3b44fc6b2fcc1dca9ca3f7}{register\+Collidable} (std\+::weak\+\_\+ptr$<$ \hyperlink{class_collision_component}{Collision\+Component} $>$ collidable)
+\begin{DoxyCompactList}\small\item\em Set a collision component to be checked for collisions. \end{DoxyCompactList}\item 
+void \hyperlink{class_collision_manager_ad54a09438c86f207fe69694fb49a15d4}{unregister\+Collidable} (std\+::weak\+\_\+ptr$<$ \hyperlink{class_collision_component}{Collision\+Component} $>$ collidable)
+\begin{DoxyCompactList}\small\item\em Remove a collision component from being checked for collisions. \end{DoxyCompactList}\item 
+void \hyperlink{class_collision_manager_ab10987e9a5f454973aa5eec45229d17a}{do\+Collisions} ()
+\begin{DoxyCompactList}\small\item\em Check for collisions and dispatch appropriate messages. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::list$<$ std\+::weak\+\_\+ptr$<$ \hyperlink{class_collision_component}{Collision\+Component} $>$ $>$ \hyperlink{class_collision_manager_a1e8ca739d58f92f5bae1d4dea802adcc}{m\+\_\+\+Collidables}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A manager class for encapsulating collision detection processes. 
+
+\begin{DoxyAuthor}{Author}
+Hayley Hatton 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+13/03/2016 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_scene}{Scene} 
+\end{DoxySeeAlso}
+
+
+Definition at line 14 of file Collision\+Manager.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Collision\+Manager@{Collision\+Manager}!Collision\+Manager@{Collision\+Manager}}
+\index{Collision\+Manager@{Collision\+Manager}!Collision\+Manager@{Collision\+Manager}}
+\subsubsection[{\texorpdfstring{Collision\+Manager()}{CollisionManager()}}]{\setlength{\rightskip}{0pt plus 5cm}Collision\+Manager\+::\+Collision\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_collision_manager_a81f0b3f0cc0268c80f54714cd7ddb55f}{}\label{class_collision_manager_a81f0b3f0cc0268c80f54714cd7ddb55f}
+
+
+Default constructor. 
+
+
+
+Definition at line 6 of file Collision\+Manager.\+cpp.
+
+\index{Collision\+Manager@{Collision\+Manager}!````~Collision\+Manager@{$\sim$\+Collision\+Manager}}
+\index{````~Collision\+Manager@{$\sim$\+Collision\+Manager}!Collision\+Manager@{Collision\+Manager}}
+\subsubsection[{\texorpdfstring{$\sim$\+Collision\+Manager()}{~CollisionManager()}}]{\setlength{\rightskip}{0pt plus 5cm}Collision\+Manager\+::$\sim$\+Collision\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_collision_manager_acdbb3c842f0ef1c7a028d3f080855766}{}\label{class_collision_manager_acdbb3c842f0ef1c7a028d3f080855766}
+
+
+Default destructor. 
+
+
+
+Definition at line 10 of file Collision\+Manager.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{Collision\+Manager@{Collision\+Manager}!do\+Collisions@{do\+Collisions}}
+\index{do\+Collisions@{do\+Collisions}!Collision\+Manager@{Collision\+Manager}}
+\subsubsection[{\texorpdfstring{do\+Collisions()}{doCollisions()}}]{\setlength{\rightskip}{0pt plus 5cm}void Collision\+Manager\+::do\+Collisions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_collision_manager_ab10987e9a5f454973aa5eec45229d17a}{}\label{class_collision_manager_ab10987e9a5f454973aa5eec45229d17a}
+
+
+Check for collisions and dispatch appropriate messages. 
+
+
+
+Definition at line 38 of file Collision\+Manager.\+cpp.
+
+
+
+References m\+\_\+\+Collidables.
+
+
+
+Referenced by Scene\+::step().
+
+\index{Collision\+Manager@{Collision\+Manager}!register\+Collidable@{register\+Collidable}}
+\index{register\+Collidable@{register\+Collidable}!Collision\+Manager@{Collision\+Manager}}
+\subsubsection[{\texorpdfstring{register\+Collidable(std\+::weak\+\_\+ptr$<$ Collision\+Component $>$ collidable)}{registerCollidable(std::weak_ptr< CollisionComponent > collidable)}}]{\setlength{\rightskip}{0pt plus 5cm}void Collision\+Manager\+::register\+Collidable (
+\begin{DoxyParamCaption}
+\item[{std\+::weak\+\_\+ptr$<$ {\bf Collision\+Component} $>$}]{collidable}
+\end{DoxyParamCaption}
+)}\hypertarget{class_collision_manager_ac25d21cc6d3b44fc6b2fcc1dca9ca3f7}{}\label{class_collision_manager_ac25d21cc6d3b44fc6b2fcc1dca9ca3f7}
+
+
+Set a collision component to be checked for collisions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collidable} & Reference to a component for describing collisions \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 15 of file Collision\+Manager.\+cpp.
+
+
+
+References m\+\_\+\+Collidables.
+
+
+
+Referenced by Collision\+Component\+::\+Collision\+Component().
+
+\index{Collision\+Manager@{Collision\+Manager}!unregister\+Collidable@{unregister\+Collidable}}
+\index{unregister\+Collidable@{unregister\+Collidable}!Collision\+Manager@{Collision\+Manager}}
+\subsubsection[{\texorpdfstring{unregister\+Collidable(std\+::weak\+\_\+ptr$<$ Collision\+Component $>$ collidable)}{unregisterCollidable(std::weak_ptr< CollisionComponent > collidable)}}]{\setlength{\rightskip}{0pt plus 5cm}void Collision\+Manager\+::unregister\+Collidable (
+\begin{DoxyParamCaption}
+\item[{std\+::weak\+\_\+ptr$<$ {\bf Collision\+Component} $>$}]{collidable}
+\end{DoxyParamCaption}
+)}\hypertarget{class_collision_manager_ad54a09438c86f207fe69694fb49a15d4}{}\label{class_collision_manager_ad54a09438c86f207fe69694fb49a15d4}
+
+
+Remove a collision component from being checked for collisions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em collidable} & Reference to a component for describing collisions \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 21 of file Collision\+Manager.\+cpp.
+
+
+
+References c, and m\+\_\+\+Collidables.
+
+
+
+Referenced by Collision\+Component\+::$\sim$\+Collision\+Component().
+
+
+
+\subsection{Member Data Documentation}
+\index{Collision\+Manager@{Collision\+Manager}!m\+\_\+\+Collidables@{m\+\_\+\+Collidables}}
+\index{m\+\_\+\+Collidables@{m\+\_\+\+Collidables}!Collision\+Manager@{Collision\+Manager}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Collidables}{m_Collidables}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::list$<$std\+::weak\+\_\+ptr$<${\bf Collision\+Component}$>$ $>$ Collision\+Manager\+::m\+\_\+\+Collidables\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_collision_manager_a1e8ca739d58f92f5bae1d4dea802adcc}{}\label{class_collision_manager_a1e8ca739d58f92f5bae1d4dea802adcc}
+
+
+Definition at line 45 of file Collision\+Manager.\+h.
+
+
+
+Referenced by do\+Collisions(), register\+Collidable(), and unregister\+Collidable().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lunar\+Drift/engine/managers/\hyperlink{_collision_manager_8h}{Collision\+Manager.\+h}\item 
+Lunar\+Drift/engine/managers/\hyperlink{_collision_manager_8cpp}{Collision\+Manager.\+cpp}\end{DoxyCompactItemize}

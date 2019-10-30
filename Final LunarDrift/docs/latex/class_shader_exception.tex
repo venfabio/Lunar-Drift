@@ -1,0 +1,220 @@
+\hypertarget{class_shader_exception}{}\section{Shader\+Exception Class Reference}
+\label{class_shader_exception}\index{Shader\+Exception@{Shader\+Exception}}
+
+
+Exception raised whenever a shader operation fails.  
+
+
+
+
+{\ttfamily \#include $<$Shader\+Exception.\+h$>$}
+
+Inheritance diagram for Shader\+Exception\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_shader_exception}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_shader_exception_a049037e52e22d2a229def811ca6713fd}{Shader\+Exception} (const std\+::string \&file, const std\+::string \&component, const std\+::string \&stage, const std\+::string \&error\+Log)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+const std\+::string \& \hyperlink{class_shader_exception_a1e3806a87d7707f9da52095d8f4de530}{get\+File} () const 
+\item 
+const std\+::string \& \hyperlink{class_shader_exception_a634ea552b39aa510aef3436df9c5c95d}{get\+Component} () const 
+\item 
+const std\+::string \& \hyperlink{class_shader_exception_a855c9f2b9363c2ce6f2439b4b44a2380}{get\+Stage} () const 
+\item 
+const std\+::string \& \hyperlink{class_shader_exception_a34911ad17ca116d95d41c45f4faccc7c}{get\+Error\+Log} () const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::string \hyperlink{class_shader_exception_a0f130003946a31fb9f79258f5b2978c6}{m\+\_\+\+File}
+\item 
+const std\+::string \hyperlink{class_shader_exception_aa87a250d03b97c4080d3e287fbda9dd1}{m\+\_\+\+Component}
+\item 
+const std\+::string \hyperlink{class_shader_exception_aa6b0663a6cca810a07367f21f77a9c43}{m\+\_\+\+Stage}
+\item 
+const std\+::string \hyperlink{class_shader_exception_ad8b59e0d8c6bda3add539cb0386579d2}{m\+\_\+\+Error\+Log}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Exception raised whenever a shader operation fails. 
+
+\begin{DoxyAuthor}{Author}
+Hayley Hatton 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/02/2016 
+\end{DoxyDate}
+
+
+Definition at line 12 of file Shader\+Exception.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Shader\+Exception@{Shader\+Exception}!Shader\+Exception@{Shader\+Exception}}
+\index{Shader\+Exception@{Shader\+Exception}!Shader\+Exception@{Shader\+Exception}}
+\subsubsection[{\texorpdfstring{Shader\+Exception(const std\+::string \&file, const std\+::string \&component, const std\+::string \&stage, const std\+::string \&error\+Log)}{ShaderException(const std::string &file, const std::string &component, const std::string &stage, const std::string &errorLog)}}]{\setlength{\rightskip}{0pt plus 5cm}Shader\+Exception\+::\+Shader\+Exception (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{file, }
+\item[{const std\+::string \&}]{component, }
+\item[{const std\+::string \&}]{stage, }
+\item[{const std\+::string \&}]{error\+Log}
+\end{DoxyParamCaption}
+)}\hypertarget{class_shader_exception_a049037e52e22d2a229def811ca6713fd}{}\label{class_shader_exception_a049037e52e22d2a229def811ca6713fd}
+
+
+Default constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & File where the error was raised \\
+\hline
+{\em component} & Shader component of the program where it went wrong \\
+\hline
+{\em stage} & Stage of the shader pipeline where the error was raised \\
+\hline
+{\em error\+Log} & Generated error log \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 3 of file Shader\+Exception.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{Shader\+Exception@{Shader\+Exception}!get\+Component@{get\+Component}}
+\index{get\+Component@{get\+Component}!Shader\+Exception@{Shader\+Exception}}
+\subsubsection[{\texorpdfstring{get\+Component() const }{getComponent() const }}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string\& Shader\+Exception\+::get\+Component (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_shader_exception_a634ea552b39aa510aef3436df9c5c95d}{}\label{class_shader_exception_a634ea552b39aa510aef3436df9c5c95d}
+
+
+Definition at line 31 of file Shader\+Exception.\+h.
+
+
+
+References m\+\_\+\+Component.
+
+
+
+Referenced by Window\+P\+C\+::rendering\+Thread(), and Win\+Main().
+
+\index{Shader\+Exception@{Shader\+Exception}!get\+Error\+Log@{get\+Error\+Log}}
+\index{get\+Error\+Log@{get\+Error\+Log}!Shader\+Exception@{Shader\+Exception}}
+\subsubsection[{\texorpdfstring{get\+Error\+Log() const }{getErrorLog() const }}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string\& Shader\+Exception\+::get\+Error\+Log (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_shader_exception_a34911ad17ca116d95d41c45f4faccc7c}{}\label{class_shader_exception_a34911ad17ca116d95d41c45f4faccc7c}
+
+
+Definition at line 35 of file Shader\+Exception.\+h.
+
+
+
+References m\+\_\+\+Error\+Log.
+
+
+
+Referenced by Window\+P\+C\+::rendering\+Thread(), and Win\+Main().
+
+\index{Shader\+Exception@{Shader\+Exception}!get\+File@{get\+File}}
+\index{get\+File@{get\+File}!Shader\+Exception@{Shader\+Exception}}
+\subsubsection[{\texorpdfstring{get\+File() const }{getFile() const }}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string\& Shader\+Exception\+::get\+File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_shader_exception_a1e3806a87d7707f9da52095d8f4de530}{}\label{class_shader_exception_a1e3806a87d7707f9da52095d8f4de530}
+
+
+Definition at line 29 of file Shader\+Exception.\+h.
+
+
+
+References m\+\_\+\+File.
+
+
+
+Referenced by Window\+P\+C\+::rendering\+Thread(), and Win\+Main().
+
+\index{Shader\+Exception@{Shader\+Exception}!get\+Stage@{get\+Stage}}
+\index{get\+Stage@{get\+Stage}!Shader\+Exception@{Shader\+Exception}}
+\subsubsection[{\texorpdfstring{get\+Stage() const }{getStage() const }}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string\& Shader\+Exception\+::get\+Stage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_shader_exception_a855c9f2b9363c2ce6f2439b4b44a2380}{}\label{class_shader_exception_a855c9f2b9363c2ce6f2439b4b44a2380}
+
+
+Definition at line 33 of file Shader\+Exception.\+h.
+
+
+
+References m\+\_\+\+Stage.
+
+
+
+Referenced by Window\+P\+C\+::rendering\+Thread(), and Win\+Main().
+
+
+
+\subsection{Member Data Documentation}
+\index{Shader\+Exception@{Shader\+Exception}!m\+\_\+\+Component@{m\+\_\+\+Component}}
+\index{m\+\_\+\+Component@{m\+\_\+\+Component}!Shader\+Exception@{Shader\+Exception}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Component}{m_Component}}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string Shader\+Exception\+::m\+\_\+\+Component\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_shader_exception_aa87a250d03b97c4080d3e287fbda9dd1}{}\label{class_shader_exception_aa87a250d03b97c4080d3e287fbda9dd1}
+
+
+Definition at line 40 of file Shader\+Exception.\+h.
+
+
+
+Referenced by get\+Component().
+
+\index{Shader\+Exception@{Shader\+Exception}!m\+\_\+\+Error\+Log@{m\+\_\+\+Error\+Log}}
+\index{m\+\_\+\+Error\+Log@{m\+\_\+\+Error\+Log}!Shader\+Exception@{Shader\+Exception}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Error\+Log}{m_ErrorLog}}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string Shader\+Exception\+::m\+\_\+\+Error\+Log\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_shader_exception_ad8b59e0d8c6bda3add539cb0386579d2}{}\label{class_shader_exception_ad8b59e0d8c6bda3add539cb0386579d2}
+
+
+Definition at line 42 of file Shader\+Exception.\+h.
+
+
+
+Referenced by get\+Error\+Log().
+
+\index{Shader\+Exception@{Shader\+Exception}!m\+\_\+\+File@{m\+\_\+\+File}}
+\index{m\+\_\+\+File@{m\+\_\+\+File}!Shader\+Exception@{Shader\+Exception}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+File}{m_File}}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string Shader\+Exception\+::m\+\_\+\+File\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_shader_exception_a0f130003946a31fb9f79258f5b2978c6}{}\label{class_shader_exception_a0f130003946a31fb9f79258f5b2978c6}
+
+
+Definition at line 39 of file Shader\+Exception.\+h.
+
+
+
+Referenced by get\+File().
+
+\index{Shader\+Exception@{Shader\+Exception}!m\+\_\+\+Stage@{m\+\_\+\+Stage}}
+\index{m\+\_\+\+Stage@{m\+\_\+\+Stage}!Shader\+Exception@{Shader\+Exception}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Stage}{m_Stage}}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string Shader\+Exception\+::m\+\_\+\+Stage\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_shader_exception_aa6b0663a6cca810a07367f21f77a9c43}{}\label{class_shader_exception_aa6b0663a6cca810a07367f21f77a9c43}
+
+
+Definition at line 41 of file Shader\+Exception.\+h.
+
+
+
+Referenced by get\+Stage().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lunar\+Drift/engine/exceptions/\hyperlink{_shader_exception_8h}{Shader\+Exception.\+h}\item 
+Lunar\+Drift/engine/exceptions/\hyperlink{_shader_exception_8cpp}{Shader\+Exception.\+cpp}\end{DoxyCompactItemize}

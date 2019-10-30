@@ -1,0 +1,33 @@
+<map id="IMessageListener" name="IMessageListener">
+<area shape="rect" id="node2" href="$class_explodable_component.html" title="Attach to a scene object to make it explode upon death. " alt="" coords="177,5,329,32"/>
+<area shape="rect" id="node3" href="$class_explosion.html" title="Prefabricated explosion object. " alt="" coords="214,56,293,83"/>
+<area shape="rect" id="node4" href="$class_game_over_scene.html" title="Scene class for showing when the race is over. " alt="" coords="193,107,313,133"/>
+<area shape="rect" id="node5" href="$class_hitpoint_component.html" title="Attach to a scene object to give it hitpoints. " alt="" coords="187,157,319,184"/>
+<area shape="rect" id="node6" href="$class_hoop_blue.html" title="Blue hoop; bonus to scores. " alt="" coords="214,208,293,235"/>
+<area shape="rect" id="node7" href="$class_hoop_green.html" title="Green hoop; bonus to velocity. " alt="" coords="210,259,297,285"/>
+<area shape="rect" id="node8" href="$class_hoop_red.html" title="Red hoop; penalty to velocity and score. " alt="" coords="216,309,291,336"/>
+<area shape="rect" id="node9" href="$class_hoop_white.html" title="White hoop; ends race as victor +10 points bonus. " alt="" coords="210,360,297,387"/>
+<area shape="rect" id="node10" href="$class_hoop_yellow.html" title="Yellow hoop; bonus to fuel. " alt="" coords="208,411,299,437"/>
+<area shape="rect" id="node11" href="$class_lunar_drift_program.html" title="Top&#45;level program class for our game. " alt="" coords="190,461,317,488"/>
+<area shape="rect" id="node12" href="$class_main_menu_scene.html" title="First scene; main menu, for choosing game modes and accessing scores. " alt="" coords="194,512,313,539"/>
+<area shape="rect" id="node13" href="$class_missile_weapon.html" title="Missile class; incomplete and not entirely functional. " alt="" coords="198,563,309,589"/>
+<area shape="rect" id="node14" href="$class_pause_scene.html" title="Scene class for pause menu. " alt="" coords="205,613,301,640"/>
+<area shape="rect" id="node15" href="$class_power_up.html" title="Parent class for power&#45;ups. Incomplete and not functional. " alt="" coords="216,664,291,691"/>
+<area shape="rect" id="node17" href="$class_propulsion_component.html" title="Attach to a scene object to give it physics&#45;enabled thrusters. " alt="" coords="179,715,328,741"/>
+<area shape="rect" id="node18" href="$class_race_scene.html" title="Specialised scene class for use as a parent for all tracks. " alt="" coords="209,765,298,792"/>
+<area shape="rect" id="node22" href="$class_score_display_scene.html" title="Scene class for displaying the scores when race is over. " alt="" coords="185,816,321,843"/>
+<area shape="rect" id="node23" href="$class_select_level_scene.html" title="Scene class for selecting difficulty level to race in. " alt="" coords="191,867,316,893"/>
+<area shape="rect" id="node24" href="$class_select_ship_scene.html" title="Scene class for selecting which ship to race in. " alt="" coords="192,917,315,944"/>
+<area shape="rect" id="node25" href="$class_select_track_scene.html" title="Scene class for selecting which track to race on. " alt="" coords="189,968,317,995"/>
+<area shape="rect" id="node26" href="$class_ship.html" title="Base class for ships in the game. " alt="" coords="229,1019,277,1045"/>
+<area shape="rect" id="node29" href="$class_test_scene.html" title="Testbed scene for testing stuff before deployment. " alt="" coords="211,1069,295,1096"/>
+<area shape="rect" id="node30" href="$class_test_spacecraft.html" title="Example spacecraft. " alt="" coords="199,1120,308,1147"/>
+<area shape="rect" id="node31" href="$class_test_triangle.html" title="Example flat&#45;shaded life&#45;limited exploding triangle. " alt="" coords="207,1171,299,1197"/>
+<area shape="rect" id="node32" href="$class_window_p_c.html" title="Window class for use on Windows desktop PCs. " alt="" coords="210,1221,297,1248"/>
+<area shape="rect" id="node16" href="$class_laser.html" title="Laser power up; incomplete and not functional. " alt="" coords="427,664,482,691"/>
+<area shape="rect" id="node19" href="$class_andromeda_race_scene.html" title="Scene class for Andromeda track, the middle&#45;tier track. " alt="" coords="377,715,532,741"/>
+<area shape="rect" id="node20" href="$class_antares_race_scene.html" title="Scene class for Antares track, the easy&#45;tier track. " alt="" coords="387,765,522,792"/>
+<area shape="rect" id="node21" href="$class_kessel_run_race_scene.html" title="Scene class for Kessel Run track, the hard&#45;tier track. " alt="" coords="379,816,531,843"/>
+<area shape="rect" id="node27" href="$class_derpy.html" title="Blue, bigger, and more easy to control ship. " alt="" coords="427,993,483,1020"/>
+<area shape="rect" id="node28" href="$class_pinkie_pie.html" title="Pink, smaller, faster and more agile ship. " alt="" coords="416,1044,493,1071"/>
+</map>

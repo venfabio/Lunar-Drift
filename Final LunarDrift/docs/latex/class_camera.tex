@@ -1,0 +1,512 @@
+\hypertarget{class_camera}{}\section{Camera Class Reference}
+\label{class_camera}\index{Camera@{Camera}}
+
+
+Describes a camera for viewing a scene.  
+
+
+
+
+{\ttfamily \#include $<$Camera.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_camera_ac817e3c9d822bca54936a3bc70245137}{Camera} (G\+Luint width, G\+Luint height, G\+Lfloat nearZ, G\+Lfloat farZ)
+\begin{DoxyCompactList}\small\item\em Create a camera with an orthogonal lens. \end{DoxyCompactList}\item 
+\hyperlink{class_camera_a25980407bbf15173f5dbcf34260ac841}{Camera} (G\+Luint width, G\+Luint height, G\+Lfloat nearZ, G\+Lfloat farZ, G\+Lfloat fovy)
+\begin{DoxyCompactList}\small\item\em Create a camera with a perspective lens. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_camera_ad1897942d0ccf91052386388a497349f}{$\sim$\+Camera} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_camera_a163d38c1b0f1690a55e677cf7861b457}{set\+Orthogonal} (G\+Luint width, G\+Luint height, G\+Lfloat nearZ, G\+Lfloat farZ)
+\begin{DoxyCompactList}\small\item\em Set an orthogonal lens for the camera. \end{DoxyCompactList}\item 
+void \hyperlink{class_camera_a2488706c1ca5e9c4bc92dfef65c91aae}{set\+Perspective} (G\+Luint width, G\+Luint height, G\+Lfloat nearZ, G\+Lfloat farZ, G\+Lfloat fovy)
+\begin{DoxyCompactList}\small\item\em Set a perspective lens for the camera. \end{DoxyCompactList}\item 
+void \hyperlink{class_camera_af04cfb4727b7b20e4728e0cdebf8e1c9}{look\+At} (const glm\+::vec3 \&eye, const glm\+::vec3 \&focus, const glm\+::vec3 \&up)
+\begin{DoxyCompactList}\small\item\em Set the camera in the scene using classic \char`\"{}look-\/at\char`\"{} descriptors. \end{DoxyCompactList}\item 
+void \hyperlink{class_camera_a84aef2b61721b9246414a89a09fac235}{pan} (const glm\+::vec3 \&dp)
+\begin{DoxyCompactList}\small\item\em Pan the camera. \end{DoxyCompactList}\item 
+void \hyperlink{class_camera_add2cd15792f3a290a56311334d736898}{rotateX} (G\+Lfloat theta)
+\begin{DoxyCompactList}\small\item\em Rotate through the Y-\/Z plane (\char`\"{}\+X-\/axis\char`\"{}/\char`\"{}pitch\char`\"{}) \end{DoxyCompactList}\item 
+void \hyperlink{class_camera_ae2354566eb8c0420537b3f61350a8c6f}{rotateY} (G\+Lfloat theta)
+\begin{DoxyCompactList}\small\item\em Rotate through the X-\/Z plane (\char`\"{}\+Y-\/axis\char`\"{}/\char`\"{}yaw\char`\"{}) \end{DoxyCompactList}\item 
+void \hyperlink{class_camera_a83b1b32ad7a7746a91ab855c160b6c19}{rotateZ} (G\+Lfloat theta)
+\begin{DoxyCompactList}\small\item\em Rotate through the X-\/Y plane (\char`\"{}\+Z-\/axis\char`\"{}/\char`\"{}roll\char`\"{}) \end{DoxyCompactList}\item 
+const glm\+::vec3 \& \hyperlink{class_camera_ac3f20f73b8e37f445da786bfe9e33690}{get\+Position} () const 
+\begin{DoxyCompactList}\small\item\em Access the position of the camera. \end{DoxyCompactList}\item 
+const glm\+::mat4 \& \hyperlink{class_camera_a8770289592db9df6f7ab08de42d6fa9c}{get\+View\+Matrix} () const 
+\begin{DoxyCompactList}\small\item\em Access the current view matrix state. \end{DoxyCompactList}\item 
+const glm\+::mat4 \& \hyperlink{class_camera_a02898d27ba55e88b3bed38d41be55215}{get\+Projection\+Matrix} () const 
+\begin{DoxyCompactList}\small\item\em Access the current projection matrix state. \end{DoxyCompactList}\item 
+void \hyperlink{class_camera_a390070b89f45af162d48fca2e70ea299}{apply} (\hyperlink{class_context}{Context} $\ast$context, \hyperlink{class_shader_program}{Shader\+Program} $\ast$shader) const 
+\begin{DoxyCompactList}\small\item\em Upload the camera matrices to a given shader program\textquotesingle{}s uniforms. \end{DoxyCompactList}\item 
+void \hyperlink{class_camera_a05a6d1c771d22375d60cdf249fbb2492}{apply} (\hyperlink{class_context}{Context} $\ast$context, \hyperlink{class_shader_uniform_block}{Shader\+Uniform\+Block} $\ast$buffer) const 
+\begin{DoxyCompactList}\small\item\em Upload the camera matrices to a uniform buffer across all shaders. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+glm\+::mat4 \hyperlink{class_camera_a678ced6db61f473f65734c8a1522ea80}{m\+\_\+\+View\+Matrix}
+\begin{DoxyCompactList}\small\item\em Current view matrix state. \end{DoxyCompactList}\item 
+glm\+::mat4 \hyperlink{class_camera_a60d7a52ef114cb65fd2a079deceb5ccf}{m\+\_\+\+Proj\+Matrix}
+\begin{DoxyCompactList}\small\item\em Current projection matrix state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Describes a camera for viewing a scene. 
+
+\begin{DoxyAuthor}{Author}
+Hayley Hatton 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+07/03/2016 
+\end{DoxyDate}
+
+
+Definition at line 13 of file Camera.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Camera@{Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Camera@{Camera}}
+\subsubsection[{\texorpdfstring{Camera(\+G\+Luint width, G\+Luint height, G\+Lfloat near\+Z, G\+Lfloat far\+Z)}{Camera(GLuint width, GLuint height, GLfloat nearZ, GLfloat farZ)}}]{\setlength{\rightskip}{0pt plus 5cm}Camera\+::\+Camera (
+\begin{DoxyParamCaption}
+\item[{G\+Luint}]{width, }
+\item[{G\+Luint}]{height, }
+\item[{G\+Lfloat}]{nearZ, }
+\item[{G\+Lfloat}]{farZ}
+\end{DoxyParamCaption}
+)}\hypertarget{class_camera_ac817e3c9d822bca54936a3bc70245137}{}\label{class_camera_ac817e3c9d822bca54936a3bc70245137}
+
+
+Create a camera with an orthogonal lens. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Width of the viewport \\
+\hline
+{\em height} & Height of the viewport \\
+\hline
+{\em nearZ} & Near-\/plane Z coordinate \\
+\hline
+{\em farZ} & Far-\/plane Z coordinate \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 5 of file Camera.\+cpp.
+
+
+
+References set\+Orthogonal().
+
+\index{Camera@{Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Camera@{Camera}}
+\subsubsection[{\texorpdfstring{Camera(\+G\+Luint width, G\+Luint height, G\+Lfloat near\+Z, G\+Lfloat far\+Z, G\+Lfloat fovy)}{Camera(GLuint width, GLuint height, GLfloat nearZ, GLfloat farZ, GLfloat fovy)}}]{\setlength{\rightskip}{0pt plus 5cm}Camera\+::\+Camera (
+\begin{DoxyParamCaption}
+\item[{G\+Luint}]{width, }
+\item[{G\+Luint}]{height, }
+\item[{G\+Lfloat}]{nearZ, }
+\item[{G\+Lfloat}]{farZ, }
+\item[{G\+Lfloat}]{fovy}
+\end{DoxyParamCaption}
+)}\hypertarget{class_camera_a25980407bbf15173f5dbcf34260ac841}{}\label{class_camera_a25980407bbf15173f5dbcf34260ac841}
+
+
+Create a camera with a perspective lens. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Width of the viewport \\
+\hline
+{\em height} & Height of the viewport \\
+\hline
+{\em nearZ} & Near-\/plane Z coordinate \\
+\hline
+{\em farZ} & Far-\/plane Z coordinate \\
+\hline
+{\em fovy} & Field-\/of-\/view, in degrees \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 12 of file Camera.\+cpp.
+
+
+
+References set\+Perspective().
+
+\index{Camera@{Camera}!````~Camera@{$\sim$\+Camera}}
+\index{````~Camera@{$\sim$\+Camera}!Camera@{Camera}}
+\subsubsection[{\texorpdfstring{$\sim$\+Camera()}{~Camera()}}]{\setlength{\rightskip}{0pt plus 5cm}Camera\+::$\sim$\+Camera (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_camera_ad1897942d0ccf91052386388a497349f}{}\label{class_camera_ad1897942d0ccf91052386388a497349f}
+
+
+Default destructor. 
+
+
+
+Definition at line 20 of file Camera.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{Camera@{Camera}!apply@{apply}}
+\index{apply@{apply}!Camera@{Camera}}
+\subsubsection[{\texorpdfstring{apply(\+Context $\ast$context, Shader\+Program $\ast$shader) const }{apply(Context *context, ShaderProgram *shader) const }}]{\setlength{\rightskip}{0pt plus 5cm}void Camera\+::apply (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context, }
+\item[{{\bf Shader\+Program} $\ast$}]{shader}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_camera_a390070b89f45af162d48fca2e70ea299}{}\label{class_camera_a390070b89f45af162d48fca2e70ea299}
+
+
+Upload the camera matrices to a given shader program\textquotesingle{}s uniforms. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphics context \\
+\hline
+{\em shader} & Ptr to the shader program to upload matrices to \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 76 of file Camera.\+cpp.
+
+
+
+References Shader\+Program\+::get\+Uniform\+Location(), m\+\_\+\+Proj\+Matrix, m\+\_\+\+View\+Matrix, and Shader\+Program\+::use().
+
+
+
+Referenced by get\+Projection\+Matrix().
+
+\index{Camera@{Camera}!apply@{apply}}
+\index{apply@{apply}!Camera@{Camera}}
+\subsubsection[{\texorpdfstring{apply(\+Context $\ast$context, Shader\+Uniform\+Block $\ast$buffer) const }{apply(Context *context, ShaderUniformBlock *buffer) const }}]{\setlength{\rightskip}{0pt plus 5cm}void Camera\+::apply (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context, }
+\item[{{\bf Shader\+Uniform\+Block} $\ast$}]{buffer}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_camera_a05a6d1c771d22375d60cdf249fbb2492}{}\label{class_camera_a05a6d1c771d22375d60cdf249fbb2492}
+
+
+Upload the camera matrices to a uniform buffer across all shaders. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphics context \\
+\hline
+{\em shader} & Ptr to the uniform buffer to upload matrices to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000009}{Todo}](Hayley\#6\#03/08/16)\+: Uploading of camera state to shader uniform blocks \end{DoxyRefDesc}
+
+
+Definition at line 95 of file Camera.\+cpp.
+
+\index{Camera@{Camera}!get\+Position@{get\+Position}}
+\index{get\+Position@{get\+Position}!Camera@{Camera}}
+\subsubsection[{\texorpdfstring{get\+Position() const }{getPosition() const }}]{\setlength{\rightskip}{0pt plus 5cm}const glm\+::vec3\& Camera\+::get\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_camera_ac3f20f73b8e37f445da786bfe9e33690}{}\label{class_camera_ac3f20f73b8e37f445da786bfe9e33690}
+
+
+Access the position of the camera. 
+
+\begin{DoxyReturn}{Returns}
+3-\/component vector of the position in space 
+\end{DoxyReturn}
+\index{Camera@{Camera}!get\+Projection\+Matrix@{get\+Projection\+Matrix}}
+\index{get\+Projection\+Matrix@{get\+Projection\+Matrix}!Camera@{Camera}}
+\subsubsection[{\texorpdfstring{get\+Projection\+Matrix() const }{getProjectionMatrix() const }}]{\setlength{\rightskip}{0pt plus 5cm}const glm\+::mat4\& Camera\+::get\+Projection\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_camera_a02898d27ba55e88b3bed38d41be55215}{}\label{class_camera_a02898d27ba55e88b3bed38d41be55215}
+
+
+Access the current projection matrix state. 
+
+\begin{DoxyReturn}{Returns}
+Projection matrix (4x4) 
+\end{DoxyReturn}
+
+
+Definition at line 117 of file Camera.\+h.
+
+
+
+References apply(), and m\+\_\+\+Proj\+Matrix.
+
+\index{Camera@{Camera}!get\+View\+Matrix@{get\+View\+Matrix}}
+\index{get\+View\+Matrix@{get\+View\+Matrix}!Camera@{Camera}}
+\subsubsection[{\texorpdfstring{get\+View\+Matrix() const }{getViewMatrix() const }}]{\setlength{\rightskip}{0pt plus 5cm}const glm\+::mat4\& Camera\+::get\+View\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_camera_a8770289592db9df6f7ab08de42d6fa9c}{}\label{class_camera_a8770289592db9df6f7ab08de42d6fa9c}
+
+
+Access the current view matrix state. 
+
+\begin{DoxyReturn}{Returns}
+View matrix (4x4) 
+\end{DoxyReturn}
+
+
+Definition at line 111 of file Camera.\+h.
+
+
+
+References m\+\_\+\+View\+Matrix.
+
+\index{Camera@{Camera}!look\+At@{look\+At}}
+\index{look\+At@{look\+At}!Camera@{Camera}}
+\subsubsection[{\texorpdfstring{look\+At(const glm\+::vec3 \&eye, const glm\+::vec3 \&focus, const glm\+::vec3 \&up)}{lookAt(const glm::vec3 &eye, const glm::vec3 &focus, const glm::vec3 &up)}}]{\setlength{\rightskip}{0pt plus 5cm}void Camera\+::look\+At (
+\begin{DoxyParamCaption}
+\item[{const glm\+::vec3 \&}]{eye, }
+\item[{const glm\+::vec3 \&}]{focus, }
+\item[{const glm\+::vec3 \&}]{up}
+\end{DoxyParamCaption}
+)}\hypertarget{class_camera_af04cfb4727b7b20e4728e0cdebf8e1c9}{}\label{class_camera_af04cfb4727b7b20e4728e0cdebf8e1c9}
+
+
+Set the camera in the scene using classic \char`\"{}look-\/at\char`\"{} descriptors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em eye} & Position of the camera in the scene \\
+\hline
+{\em focus} & Where the camera is looking at in the scene \\
+\hline
+{\em up} & Up-\/vector defining the orientation of the camera \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 48 of file Camera.\+cpp.
+
+
+
+References m\+\_\+\+View\+Matrix.
+
+\index{Camera@{Camera}!pan@{pan}}
+\index{pan@{pan}!Camera@{Camera}}
+\subsubsection[{\texorpdfstring{pan(const glm\+::vec3 \&dp)}{pan(const glm::vec3 &dp)}}]{\setlength{\rightskip}{0pt plus 5cm}void Camera\+::pan (
+\begin{DoxyParamCaption}
+\item[{const glm\+::vec3 \&}]{dp}
+\end{DoxyParamCaption}
+)}\hypertarget{class_camera_a84aef2b61721b9246414a89a09fac235}{}\label{class_camera_a84aef2b61721b9246414a89a09fac235}
+
+
+Pan the camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dp} & Delta-\/position \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 56 of file Camera.\+cpp.
+
+
+
+References m\+\_\+\+View\+Matrix.
+
+\index{Camera@{Camera}!rotateX@{rotateX}}
+\index{rotateX@{rotateX}!Camera@{Camera}}
+\subsubsection[{\texorpdfstring{rotate\+X(\+G\+Lfloat theta)}{rotateX(GLfloat theta)}}]{\setlength{\rightskip}{0pt plus 5cm}void Camera\+::rotateX (
+\begin{DoxyParamCaption}
+\item[{G\+Lfloat}]{theta}
+\end{DoxyParamCaption}
+)}\hypertarget{class_camera_add2cd15792f3a290a56311334d736898}{}\label{class_camera_add2cd15792f3a290a56311334d736898}
+
+
+Rotate through the Y-\/Z plane (\char`\"{}\+X-\/axis\char`\"{}/\char`\"{}pitch\char`\"{}) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em theta} & Angle in degrees through which to rotate the camera \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 61 of file Camera.\+cpp.
+
+
+
+References f, and m\+\_\+\+View\+Matrix.
+
+\index{Camera@{Camera}!rotateY@{rotateY}}
+\index{rotateY@{rotateY}!Camera@{Camera}}
+\subsubsection[{\texorpdfstring{rotate\+Y(\+G\+Lfloat theta)}{rotateY(GLfloat theta)}}]{\setlength{\rightskip}{0pt plus 5cm}void Camera\+::rotateY (
+\begin{DoxyParamCaption}
+\item[{G\+Lfloat}]{theta}
+\end{DoxyParamCaption}
+)}\hypertarget{class_camera_ae2354566eb8c0420537b3f61350a8c6f}{}\label{class_camera_ae2354566eb8c0420537b3f61350a8c6f}
+
+
+Rotate through the X-\/Z plane (\char`\"{}\+Y-\/axis\char`\"{}/\char`\"{}yaw\char`\"{}) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em theta} & Angle in degrees through which to rotate the camera \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 66 of file Camera.\+cpp.
+
+
+
+References f, and m\+\_\+\+View\+Matrix.
+
+\index{Camera@{Camera}!rotateZ@{rotateZ}}
+\index{rotateZ@{rotateZ}!Camera@{Camera}}
+\subsubsection[{\texorpdfstring{rotate\+Z(\+G\+Lfloat theta)}{rotateZ(GLfloat theta)}}]{\setlength{\rightskip}{0pt plus 5cm}void Camera\+::rotateZ (
+\begin{DoxyParamCaption}
+\item[{G\+Lfloat}]{theta}
+\end{DoxyParamCaption}
+)}\hypertarget{class_camera_a83b1b32ad7a7746a91ab855c160b6c19}{}\label{class_camera_a83b1b32ad7a7746a91ab855c160b6c19}
+
+
+Rotate through the X-\/Y plane (\char`\"{}\+Z-\/axis\char`\"{}/\char`\"{}roll\char`\"{}) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em theta} & Angle in degrees through which to rotate the camera \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 71 of file Camera.\+cpp.
+
+
+
+References f, and m\+\_\+\+View\+Matrix.
+
+\index{Camera@{Camera}!set\+Orthogonal@{set\+Orthogonal}}
+\index{set\+Orthogonal@{set\+Orthogonal}!Camera@{Camera}}
+\subsubsection[{\texorpdfstring{set\+Orthogonal(\+G\+Luint width, G\+Luint height, G\+Lfloat near\+Z, G\+Lfloat far\+Z)}{setOrthogonal(GLuint width, GLuint height, GLfloat nearZ, GLfloat farZ)}}]{\setlength{\rightskip}{0pt plus 5cm}void Camera\+::set\+Orthogonal (
+\begin{DoxyParamCaption}
+\item[{G\+Luint}]{width, }
+\item[{G\+Luint}]{height, }
+\item[{G\+Lfloat}]{nearZ, }
+\item[{G\+Lfloat}]{farZ}
+\end{DoxyParamCaption}
+)}\hypertarget{class_camera_a163d38c1b0f1690a55e677cf7861b457}{}\label{class_camera_a163d38c1b0f1690a55e677cf7861b457}
+
+
+Set an orthogonal lens for the camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Width of the viewport \\
+\hline
+{\em height} & Height of the viewport \\
+\hline
+{\em nearZ} & Near-\/plane Z coordinate \\
+\hline
+{\em farZ} & Far-\/plane Z coordinate \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 26 of file Camera.\+cpp.
+
+
+
+References f, and m\+\_\+\+Proj\+Matrix.
+
+
+
+Referenced by Camera().
+
+\index{Camera@{Camera}!set\+Perspective@{set\+Perspective}}
+\index{set\+Perspective@{set\+Perspective}!Camera@{Camera}}
+\subsubsection[{\texorpdfstring{set\+Perspective(\+G\+Luint width, G\+Luint height, G\+Lfloat near\+Z, G\+Lfloat far\+Z, G\+Lfloat fovy)}{setPerspective(GLuint width, GLuint height, GLfloat nearZ, GLfloat farZ, GLfloat fovy)}}]{\setlength{\rightskip}{0pt plus 5cm}void Camera\+::set\+Perspective (
+\begin{DoxyParamCaption}
+\item[{G\+Luint}]{width, }
+\item[{G\+Luint}]{height, }
+\item[{G\+Lfloat}]{nearZ, }
+\item[{G\+Lfloat}]{farZ, }
+\item[{G\+Lfloat}]{fovy}
+\end{DoxyParamCaption}
+)}\hypertarget{class_camera_a2488706c1ca5e9c4bc92dfef65c91aae}{}\label{class_camera_a2488706c1ca5e9c4bc92dfef65c91aae}
+
+
+Set a perspective lens for the camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Width of the viewport \\
+\hline
+{\em height} & Height of the viewport \\
+\hline
+{\em nearZ} & Near-\/plane Z coordinate \\
+\hline
+{\em farZ} & Far-\/plane Z coordinate \\
+\hline
+{\em fovy} & Field-\/of-\/view, in degrees \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 36 of file Camera.\+cpp.
+
+
+
+References h, m\+\_\+\+Proj\+Matrix, and w.
+
+
+
+Referenced by Camera().
+
+
+
+\subsection{Member Data Documentation}
+\index{Camera@{Camera}!m\+\_\+\+Proj\+Matrix@{m\+\_\+\+Proj\+Matrix}}
+\index{m\+\_\+\+Proj\+Matrix@{m\+\_\+\+Proj\+Matrix}!Camera@{Camera}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Proj\+Matrix}{m_ProjMatrix}}]{\setlength{\rightskip}{0pt plus 5cm}glm\+::mat4 Camera\+::m\+\_\+\+Proj\+Matrix\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_camera_a60d7a52ef114cb65fd2a079deceb5ccf}{}\label{class_camera_a60d7a52ef114cb65fd2a079deceb5ccf}
+
+
+Current projection matrix state. 
+
+
+
+Definition at line 135 of file Camera.\+h.
+
+
+
+Referenced by apply(), get\+Projection\+Matrix(), set\+Orthogonal(), and set\+Perspective().
+
+\index{Camera@{Camera}!m\+\_\+\+View\+Matrix@{m\+\_\+\+View\+Matrix}}
+\index{m\+\_\+\+View\+Matrix@{m\+\_\+\+View\+Matrix}!Camera@{Camera}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+View\+Matrix}{m_ViewMatrix}}]{\setlength{\rightskip}{0pt plus 5cm}glm\+::mat4 Camera\+::m\+\_\+\+View\+Matrix\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_camera_a678ced6db61f473f65734c8a1522ea80}{}\label{class_camera_a678ced6db61f473f65734c8a1522ea80}
+
+
+Current view matrix state. 
+
+
+
+Definition at line 134 of file Camera.\+h.
+
+
+
+Referenced by apply(), get\+View\+Matrix(), look\+At(), pan(), rotate\+X(), rotate\+Y(), and rotate\+Z().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lunar\+Drift/engine/graphics/\hyperlink{_camera_8h}{Camera.\+h}\item 
+Lunar\+Drift/engine/graphics/\hyperlink{_camera_8cpp}{Camera.\+cpp}\end{DoxyCompactItemize}

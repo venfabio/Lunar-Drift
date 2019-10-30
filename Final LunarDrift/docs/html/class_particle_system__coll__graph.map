@@ -1,0 +1,4 @@
+<map id="ParticleSystem" name="ParticleSystem">
+<area shape="rect" id="node2" href="$class_scene_object.html" title="Base class for encapsulating self&#45;management of scene entities. " alt="" coords="5,5,103,32"/>
+<area shape="rect" id="node3" href="$struct_p_a_r_t_i_c_l_e___u_n_i_f_o_r_m_s.html" title="Uniform state for the particle engine shaders. " alt="" coords="127,5,285,32"/>
+</map>

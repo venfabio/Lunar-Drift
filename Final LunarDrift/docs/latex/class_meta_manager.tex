@@ -1,0 +1,178 @@
+\hypertarget{class_meta_manager}{}\section{Meta\+Manager Class Reference}
+\label{class_meta_manager}\index{Meta\+Manager@{Meta\+Manager}}
+
+
+A manager class for managing and passing around managers.  
+
+
+
+
+{\ttfamily \#include $<$Meta\+Manager.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_meta_manager_a7f75a78a1470d64c7e3caf41644061c5}{Meta\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_meta_manager_ad0b66bed6144ddc320d2c5930046ab73}{$\sim$\+Meta\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_meta_manager_a3b1c68062b4591c10a5fbcb1550e50d6}{add} (std\+::shared\+\_\+ptr$<$ \hyperlink{class_manager}{Manager} $>$ manager)
+\begin{DoxyCompactList}\small\item\em Add a manager to be managed by the metamanager. \end{DoxyCompactList}\item 
+void \hyperlink{class_meta_manager_a3de340f9eec8f318b53088f7633e68cd}{remove} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Remove a manager from the metamanager, if it exists. \end{DoxyCompactList}\item 
+std\+::weak\+\_\+ptr$<$ \hyperlink{class_manager}{Manager} $>$ \hyperlink{class_meta_manager_a7e2c87f000842d51f835a9831a950332}{get} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Access a manager managed by the metamanager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ \hyperlink{class_manager}{Manager} $>$ $>$ \hyperlink{class_meta_manager_a5b914ef44240c7fa97778b2240c318e3}{m\+\_\+\+Managers}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A manager class for managing and passing around managers. 
+
+\begin{DoxyAuthor}{Author}
+Hayley Hatton 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+13/03/2016 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_manager}{Manager} 
+\end{DoxySeeAlso}
+
+
+Definition at line 14 of file Meta\+Manager.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Meta\+Manager@{Meta\+Manager}!Meta\+Manager@{Meta\+Manager}}
+\index{Meta\+Manager@{Meta\+Manager}!Meta\+Manager@{Meta\+Manager}}
+\subsubsection[{\texorpdfstring{Meta\+Manager()}{MetaManager()}}]{\setlength{\rightskip}{0pt plus 5cm}Meta\+Manager\+::\+Meta\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_meta_manager_a7f75a78a1470d64c7e3caf41644061c5}{}\label{class_meta_manager_a7f75a78a1470d64c7e3caf41644061c5}
+
+
+Default constructor. 
+
+
+
+Definition at line 5 of file Meta\+Manager.\+cpp.
+
+\index{Meta\+Manager@{Meta\+Manager}!````~Meta\+Manager@{$\sim$\+Meta\+Manager}}
+\index{````~Meta\+Manager@{$\sim$\+Meta\+Manager}!Meta\+Manager@{Meta\+Manager}}
+\subsubsection[{\texorpdfstring{$\sim$\+Meta\+Manager()}{~MetaManager()}}]{\setlength{\rightskip}{0pt plus 5cm}Meta\+Manager\+::$\sim$\+Meta\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_meta_manager_ad0b66bed6144ddc320d2c5930046ab73}{}\label{class_meta_manager_ad0b66bed6144ddc320d2c5930046ab73}
+
+
+Default destructor. 
+
+
+
+Definition at line 9 of file Meta\+Manager.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{Meta\+Manager@{Meta\+Manager}!add@{add}}
+\index{add@{add}!Meta\+Manager@{Meta\+Manager}}
+\subsubsection[{\texorpdfstring{add(std\+::shared\+\_\+ptr$<$ Manager $>$ manager)}{add(std::shared_ptr< Manager > manager)}}]{\setlength{\rightskip}{0pt plus 5cm}void Meta\+Manager\+::add (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Manager} $>$}]{manager}
+\end{DoxyParamCaption}
+)}\hypertarget{class_meta_manager_a3b1c68062b4591c10a5fbcb1550e50d6}{}\label{class_meta_manager_a3b1c68062b4591c10a5fbcb1550e50d6}
+
+
+Add a manager to be managed by the metamanager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em manager} & Smart ptr to the manager to handle \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 14 of file Meta\+Manager.\+cpp.
+
+
+
+References m\+\_\+\+Managers.
+
+\index{Meta\+Manager@{Meta\+Manager}!get@{get}}
+\index{get@{get}!Meta\+Manager@{Meta\+Manager}}
+\subsubsection[{\texorpdfstring{get(const std\+::string \&name)}{get(const std::string &name)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::weak\+\_\+ptr$<$ {\bf Manager} $>$ Meta\+Manager\+::get (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{class_meta_manager_a7e2c87f000842d51f835a9831a950332}{}\label{class_meta_manager_a7e2c87f000842d51f835a9831a950332}
+
+
+Access a manager managed by the metamanager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Identifier name of the manager to acquire \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Weakly managed ptr to the manager; nullptr if not available 
+\end{DoxyReturn}
+
+
+Definition at line 25 of file Meta\+Manager.\+cpp.
+
+
+
+References m\+\_\+\+Managers.
+
+\index{Meta\+Manager@{Meta\+Manager}!remove@{remove}}
+\index{remove@{remove}!Meta\+Manager@{Meta\+Manager}}
+\subsubsection[{\texorpdfstring{remove(const std\+::string \&name)}{remove(const std::string &name)}}]{\setlength{\rightskip}{0pt plus 5cm}void Meta\+Manager\+::remove (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{class_meta_manager_a3de340f9eec8f318b53088f7633e68cd}{}\label{class_meta_manager_a3de340f9eec8f318b53088f7633e68cd}
+
+
+Remove a manager from the metamanager, if it exists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Identifier name of the manager to remove \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 20 of file Meta\+Manager.\+cpp.
+
+
+
+References m\+\_\+\+Managers.
+
+
+
+\subsection{Member Data Documentation}
+\index{Meta\+Manager@{Meta\+Manager}!m\+\_\+\+Managers@{m\+\_\+\+Managers}}
+\index{m\+\_\+\+Managers@{m\+\_\+\+Managers}!Meta\+Manager@{Meta\+Manager}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Managers}{m_Managers}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$std\+::string, std\+::shared\+\_\+ptr$<${\bf Manager}$>$ $>$ Meta\+Manager\+::m\+\_\+\+Managers\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_meta_manager_a5b914ef44240c7fa97778b2240c318e3}{}\label{class_meta_manager_a5b914ef44240c7fa97778b2240c318e3}
+
+
+Definition at line 44 of file Meta\+Manager.\+h.
+
+
+
+Referenced by add(), get(), and remove().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lunar\+Drift/engine/managers/\hyperlink{_meta_manager_8h}{Meta\+Manager.\+h}\item 
+Lunar\+Drift/engine/managers/\hyperlink{_meta_manager_8cpp}{Meta\+Manager.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,246 @@
+\hypertarget{class_model_manager}{}\section{Model\+Manager Class Reference}
+\label{class_model_manager}\index{Model\+Manager@{Model\+Manager}}
+
+
+A manager class for handling and passing around model data.  
+
+
+
+
+{\ttfamily \#include $<$Model\+Manager.\+h$>$}
+
+Inheritance diagram for Model\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_model_manager}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_model_manager_a9b0d22b1baf59c5b566e82fcd8ca424a}{Model\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_model_manager_a93f4eea50036cc5453014234aa921c7c}{$\sim$\+Model\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+std\+::weak\+\_\+ptr$<$ \hyperlink{class_model}{Model} $>$ \hyperlink{class_model_manager_a2c4b109b70055b540c47ca202d2accf8}{load\+Model} (\hyperlink{class_context}{Context} $\ast$context, const std\+::string \&id, const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Load a model from an O\+BJ file at a given path. \end{DoxyCompactList}\item 
+void \hyperlink{class_model_manager_a38d48d14d9e917b233bb115ebac2809b}{add\+Model} (const std\+::string \&id, std\+::shared\+\_\+ptr$<$ \hyperlink{class_model}{Model} $>$ model)
+\begin{DoxyCompactList}\small\item\em Add a model to the manager. \end{DoxyCompactList}\item 
+std\+::weak\+\_\+ptr$<$ \hyperlink{class_model}{Model} $>$ \hyperlink{class_model_manager_ae85e1de097acb0c11ba546af7f86d60a}{get\+Model} (const std\+::string \&id)
+\begin{DoxyCompactList}\small\item\em Access a model from inside the manager. \end{DoxyCompactList}\item 
+void \hyperlink{class_model_manager_af18912c600422fbdaddf25e169006dac}{remove\+Model} (const std\+::string \&id)
+\begin{DoxyCompactList}\small\item\em Remove a model from the manager (and kill if applicable) \end{DoxyCompactList}\item 
+void \hyperlink{class_model_manager_a7e0bb3438ed9c054ab76297ae71ac78e}{remove\+All\+Models} ()
+\begin{DoxyCompactList}\small\item\em Remove all models from the manager (and kill if applicable) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ \hyperlink{class_model}{Model} $>$ $>$ \hyperlink{class_model_manager_a3ce5116dfeff87737e315a4df49bde54}{m\+\_\+\+Models}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A manager class for handling and passing around model data. 
+
+\begin{DoxyAuthor}{Author}
+Hayley Hatton 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+13/03/2016 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_manager}{Manager} 
+\end{DoxySeeAlso}
+
+
+Definition at line 14 of file Model\+Manager.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Model\+Manager@{Model\+Manager}!Model\+Manager@{Model\+Manager}}
+\index{Model\+Manager@{Model\+Manager}!Model\+Manager@{Model\+Manager}}
+\subsubsection[{\texorpdfstring{Model\+Manager()}{ModelManager()}}]{\setlength{\rightskip}{0pt plus 5cm}Model\+Manager\+::\+Model\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_model_manager_a9b0d22b1baf59c5b566e82fcd8ca424a}{}\label{class_model_manager_a9b0d22b1baf59c5b566e82fcd8ca424a}
+
+
+Default constructor. 
+
+
+
+Definition at line 4 of file Model\+Manager.\+cpp.
+
+\index{Model\+Manager@{Model\+Manager}!````~Model\+Manager@{$\sim$\+Model\+Manager}}
+\index{````~Model\+Manager@{$\sim$\+Model\+Manager}!Model\+Manager@{Model\+Manager}}
+\subsubsection[{\texorpdfstring{$\sim$\+Model\+Manager()}{~ModelManager()}}]{\setlength{\rightskip}{0pt plus 5cm}Model\+Manager\+::$\sim$\+Model\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_model_manager_a93f4eea50036cc5453014234aa921c7c}{}\label{class_model_manager_a93f4eea50036cc5453014234aa921c7c}
+
+
+Default destructor. 
+
+
+
+Definition at line 8 of file Model\+Manager.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{Model\+Manager@{Model\+Manager}!add\+Model@{add\+Model}}
+\index{add\+Model@{add\+Model}!Model\+Manager@{Model\+Manager}}
+\subsubsection[{\texorpdfstring{add\+Model(const std\+::string \&id, std\+::shared\+\_\+ptr$<$ Model $>$ model)}{addModel(const std::string &id, std::shared_ptr< Model > model)}}]{\setlength{\rightskip}{0pt plus 5cm}void Model\+Manager\+::add\+Model (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{id, }
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Model} $>$}]{model}
+\end{DoxyParamCaption}
+)}\hypertarget{class_model_manager_a38d48d14d9e917b233bb115ebac2809b}{}\label{class_model_manager_a38d48d14d9e917b233bb115ebac2809b}
+
+
+Add a model to the manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Identifying name of the model \\
+\hline
+{\em model} & Smart pointer to the model data class \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 31 of file Model\+Manager.\+cpp.
+
+
+
+References m\+\_\+\+Models.
+
+\index{Model\+Manager@{Model\+Manager}!get\+Model@{get\+Model}}
+\index{get\+Model@{get\+Model}!Model\+Manager@{Model\+Manager}}
+\subsubsection[{\texorpdfstring{get\+Model(const std\+::string \&id)}{getModel(const std::string &id)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::weak\+\_\+ptr$<$ {\bf Model} $>$ Model\+Manager\+::get\+Model (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{class_model_manager_ae85e1de097acb0c11ba546af7f86d60a}{}\label{class_model_manager_ae85e1de097acb0c11ba546af7f86d60a}
+
+
+Access a model from inside the manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Identifying name of the model \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Weak-\/managed pointer to the model data class; empty if not found 
+\end{DoxyReturn}
+
+
+Definition at line 38 of file Model\+Manager.\+cpp.
+
+
+
+References m\+\_\+\+Models.
+
+\index{Model\+Manager@{Model\+Manager}!load\+Model@{load\+Model}}
+\index{load\+Model@{load\+Model}!Model\+Manager@{Model\+Manager}}
+\subsubsection[{\texorpdfstring{load\+Model(\+Context $\ast$context, const std\+::string \&id, const std\+::string \&path)}{loadModel(Context *context, const std::string &id, const std::string &path)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::weak\+\_\+ptr$<$ {\bf Model} $>$ Model\+Manager\+::load\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context, }
+\item[{const std\+::string \&}]{id, }
+\item[{const std\+::string \&}]{path}
+\end{DoxyParamCaption}
+)}\hypertarget{class_model_manager_a2c4b109b70055b540c47ca202d2accf8}{}\label{class_model_manager_a2c4b109b70055b540c47ca202d2accf8}
+
+
+Load a model from an O\+BJ file at a given path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphics context \\
+\hline
+{\em id} & Identifying name of the model \\
+\hline
+{\em path} & Path to the O\+BJ file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Weak-\/managed pointer to the model data class 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_model_loader}{Model\+Loader} 
+\end{DoxySeeAlso}
+
+
+Definition at line 13 of file Model\+Manager.\+cpp.
+
+
+
+References m\+\_\+\+Models.
+
+\index{Model\+Manager@{Model\+Manager}!remove\+All\+Models@{remove\+All\+Models}}
+\index{remove\+All\+Models@{remove\+All\+Models}!Model\+Manager@{Model\+Manager}}
+\subsubsection[{\texorpdfstring{remove\+All\+Models()}{removeAllModels()}}]{\setlength{\rightskip}{0pt plus 5cm}void Model\+Manager\+::remove\+All\+Models (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_model_manager_a7e0bb3438ed9c054ab76297ae71ac78e}{}\label{class_model_manager_a7e0bb3438ed9c054ab76297ae71ac78e}
+
+
+Remove all models from the manager (and kill if applicable) 
+
+
+
+Definition at line 52 of file Model\+Manager.\+cpp.
+
+
+
+References m\+\_\+\+Models.
+
+\index{Model\+Manager@{Model\+Manager}!remove\+Model@{remove\+Model}}
+\index{remove\+Model@{remove\+Model}!Model\+Manager@{Model\+Manager}}
+\subsubsection[{\texorpdfstring{remove\+Model(const std\+::string \&id)}{removeModel(const std::string &id)}}]{\setlength{\rightskip}{0pt plus 5cm}void Model\+Manager\+::remove\+Model (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{id}
+\end{DoxyParamCaption}
+)}\hypertarget{class_model_manager_af18912c600422fbdaddf25e169006dac}{}\label{class_model_manager_af18912c600422fbdaddf25e169006dac}
+
+
+Remove a model from the manager (and kill if applicable) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Identifying name of the model \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 47 of file Model\+Manager.\+cpp.
+
+
+
+References m\+\_\+\+Models.
+
+
+
+\subsection{Member Data Documentation}
+\index{Model\+Manager@{Model\+Manager}!m\+\_\+\+Models@{m\+\_\+\+Models}}
+\index{m\+\_\+\+Models@{m\+\_\+\+Models}!Model\+Manager@{Model\+Manager}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Models}{m_Models}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$std\+::string, std\+::shared\+\_\+ptr$<${\bf Model}$>$ $>$ Model\+Manager\+::m\+\_\+\+Models\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_model_manager_a3ce5116dfeff87737e315a4df49bde54}{}\label{class_model_manager_a3ce5116dfeff87737e315a4df49bde54}
+
+
+Definition at line 65 of file Model\+Manager.\+h.
+
+
+
+Referenced by add\+Model(), get\+Model(), load\+Model(), remove\+All\+Models(), and remove\+Model().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lunar\+Drift/engine/managers/\hyperlink{_model_manager_8h}{Model\+Manager.\+h}\item 
+Lunar\+Drift/engine/managers/\hyperlink{_model_manager_8cpp}{Model\+Manager.\+cpp}\end{DoxyCompactItemize}

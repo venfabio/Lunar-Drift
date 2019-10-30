@@ -1,0 +1,3 @@
+<map id="GameRenderer" name="GameRenderer">
+<area shape="rect" id="node2" href="$class_renderer.html" title="Base renderer for drawing scenes within a given graphics context. " alt="" coords="23,5,97,32"/>
+</map>

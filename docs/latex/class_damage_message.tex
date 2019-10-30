@@ -1,0 +1,158 @@
+\hypertarget{class_damage_message}{}\section{Damage\+Message Class Reference}
+\label{class_damage_message}\index{Damage\+Message@{Damage\+Message}}
+
+
+{\ttfamily \#include $<$Damage\+Message.\+h$>$}
+
+Inheritance diagram for Damage\+Message\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_damage_message}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_damage_message_a26d1bff48f200de36e3401133026c94a}{Damage\+Message} (\hyperlink{class_scene_object}{Scene\+Object} $\ast$target, int damage, \hyperlink{class_scene_object}{Scene\+Object} $\ast$source=nullptr)
+\item 
+virtual \hyperlink{class_damage_message_a0fffc9a2df40368c8ac11b34078d5067}{$\sim$\+Damage\+Message} ()
+\item 
+\hyperlink{class_scene_object}{Scene\+Object} $\ast$ \hyperlink{class_damage_message_a10fd1ad5f3ca88a6c0d75bfa7a65db8b}{get\+Target} ()
+\item 
+\hyperlink{class_scene_object}{Scene\+Object} $\ast$ \hyperlink{class_damage_message_a2bacfef6bb9a3862abf968a8fc704724}{get\+Source} ()
+\item 
+int \hyperlink{class_damage_message_a5d7f2a29ad64c0f8650866827f6281bf}{get\+Damage} () const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_scene_object}{Scene\+Object} $\ast$ \hyperlink{class_damage_message_aa0b42b74f7243b8636d4b4b467f76d8e}{m\+\_\+\+Target}
+\item 
+\hyperlink{class_scene_object}{Scene\+Object} $\ast$ \hyperlink{class_damage_message_a6b0e3e9316ba34f864e93fa73b8cba67}{m\+\_\+\+Source}
+\item 
+int \hyperlink{class_damage_message_a13210e9d91fcac17df553f1f3d029275}{m\+\_\+\+Damage}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 6 of file Damage\+Message.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Damage\+Message@{Damage\+Message}!Damage\+Message@{Damage\+Message}}
+\index{Damage\+Message@{Damage\+Message}!Damage\+Message@{Damage\+Message}}
+\subsubsection[{\texorpdfstring{Damage\+Message(\+Scene\+Object $\ast$target, int damage, Scene\+Object $\ast$source=nullptr)}{DamageMessage(SceneObject *target, int damage, SceneObject *source=nullptr)}}]{\setlength{\rightskip}{0pt plus 5cm}Damage\+Message\+::\+Damage\+Message (
+\begin{DoxyParamCaption}
+\item[{{\bf Scene\+Object} $\ast$}]{target, }
+\item[{int}]{damage, }
+\item[{{\bf Scene\+Object} $\ast$}]{source = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+)}\hypertarget{class_damage_message_a26d1bff48f200de36e3401133026c94a}{}\label{class_damage_message_a26d1bff48f200de36e3401133026c94a}
+
+
+Definition at line 4 of file Damage\+Message.\+cpp.
+
+\index{Damage\+Message@{Damage\+Message}!````~Damage\+Message@{$\sim$\+Damage\+Message}}
+\index{````~Damage\+Message@{$\sim$\+Damage\+Message}!Damage\+Message@{Damage\+Message}}
+\subsubsection[{\texorpdfstring{$\sim$\+Damage\+Message()}{~DamageMessage()}}]{\setlength{\rightskip}{0pt plus 5cm}Damage\+Message\+::$\sim$\+Damage\+Message (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_damage_message_a0fffc9a2df40368c8ac11b34078d5067}{}\label{class_damage_message_a0fffc9a2df40368c8ac11b34078d5067}
+
+
+Definition at line 15 of file Damage\+Message.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{Damage\+Message@{Damage\+Message}!get\+Damage@{get\+Damage}}
+\index{get\+Damage@{get\+Damage}!Damage\+Message@{Damage\+Message}}
+\subsubsection[{\texorpdfstring{get\+Damage() const }{getDamage() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Damage\+Message\+::get\+Damage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_damage_message_a5d7f2a29ad64c0f8650866827f6281bf}{}\label{class_damage_message_a5d7f2a29ad64c0f8650866827f6281bf}
+
+
+Definition at line 22 of file Damage\+Message.\+h.
+
+
+
+References m\+\_\+\+Damage.
+
+\index{Damage\+Message@{Damage\+Message}!get\+Source@{get\+Source}}
+\index{get\+Source@{get\+Source}!Damage\+Message@{Damage\+Message}}
+\subsubsection[{\texorpdfstring{get\+Source()}{getSource()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Scene\+Object}$\ast$ Damage\+Message\+::get\+Source (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_damage_message_a2bacfef6bb9a3862abf968a8fc704724}{}\label{class_damage_message_a2bacfef6bb9a3862abf968a8fc704724}
+
+
+Definition at line 20 of file Damage\+Message.\+h.
+
+
+
+References m\+\_\+\+Source.
+
+\index{Damage\+Message@{Damage\+Message}!get\+Target@{get\+Target}}
+\index{get\+Target@{get\+Target}!Damage\+Message@{Damage\+Message}}
+\subsubsection[{\texorpdfstring{get\+Target()}{getTarget()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Scene\+Object}$\ast$ Damage\+Message\+::get\+Target (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_damage_message_a10fd1ad5f3ca88a6c0d75bfa7a65db8b}{}\label{class_damage_message_a10fd1ad5f3ca88a6c0d75bfa7a65db8b}
+
+
+Definition at line 18 of file Damage\+Message.\+h.
+
+
+
+References m\+\_\+\+Target.
+
+
+
+\subsection{Member Data Documentation}
+\index{Damage\+Message@{Damage\+Message}!m\+\_\+\+Damage@{m\+\_\+\+Damage}}
+\index{m\+\_\+\+Damage@{m\+\_\+\+Damage}!Damage\+Message@{Damage\+Message}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Damage}{m_Damage}}]{\setlength{\rightskip}{0pt plus 5cm}int Damage\+Message\+::m\+\_\+\+Damage\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_damage_message_a13210e9d91fcac17df553f1f3d029275}{}\label{class_damage_message_a13210e9d91fcac17df553f1f3d029275}
+
+
+Definition at line 27 of file Damage\+Message.\+h.
+
+
+
+Referenced by get\+Damage().
+
+\index{Damage\+Message@{Damage\+Message}!m\+\_\+\+Source@{m\+\_\+\+Source}}
+\index{m\+\_\+\+Source@{m\+\_\+\+Source}!Damage\+Message@{Damage\+Message}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Source}{m_Source}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Scene\+Object}$\ast$ Damage\+Message\+::m\+\_\+\+Source\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_damage_message_a6b0e3e9316ba34f864e93fa73b8cba67}{}\label{class_damage_message_a6b0e3e9316ba34f864e93fa73b8cba67}
+
+
+Definition at line 26 of file Damage\+Message.\+h.
+
+
+
+Referenced by get\+Source().
+
+\index{Damage\+Message@{Damage\+Message}!m\+\_\+\+Target@{m\+\_\+\+Target}}
+\index{m\+\_\+\+Target@{m\+\_\+\+Target}!Damage\+Message@{Damage\+Message}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Target}{m_Target}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Scene\+Object}$\ast$ Damage\+Message\+::m\+\_\+\+Target\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_damage_message_aa0b42b74f7243b8636d4b4b467f76d8e}{}\label{class_damage_message_aa0b42b74f7243b8636d4b4b467f76d8e}
+
+
+Definition at line 25 of file Damage\+Message.\+h.
+
+
+
+Referenced by get\+Target().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lunar\+Drift/engine/comms/predefined/\hyperlink{_damage_message_8h}{Damage\+Message.\+h}\item 
+Lunar\+Drift/engine/comms/predefined/\hyperlink{_damage_message_8cpp}{Damage\+Message.\+cpp}\end{DoxyCompactItemize}

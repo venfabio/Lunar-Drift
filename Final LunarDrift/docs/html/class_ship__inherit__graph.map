@@ -1,0 +1,6 @@
+<map id="Ship" name="Ship">
+<area shape="rect" id="node4" href="$class_derpy.html" title="Blue, bigger, and more easy to control ship. " alt="" coords="47,155,103,181"/>
+<area shape="rect" id="node5" href="$class_pinkie_pie.html" title="Pink, smaller, faster and more agile ship. " alt="" coords="127,155,205,181"/>
+<area shape="rect" id="node2" href="$class_scene_object.html" title="Base class for encapsulating self&#45;management of scene entities. " alt="" coords="5,5,103,32"/>
+<area shape="rect" id="node3" href="$class_i_message_listener.html" title="Interface for handling messages sent from other entities. " alt="" coords="127,5,251,32"/>
+</map>

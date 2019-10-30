@@ -1,0 +1,364 @@
+\hypertarget{class_scene}{}\section{Scene Class Reference}
+\label{class_scene}\index{Scene@{Scene}}
+
+
+\hyperlink{class_scene}{Scene} container for managing and drawing 3D environments.  
+
+
+
+
+{\ttfamily \#include $<$Scene.\+h$>$}
+
+Inheritance diagram for Scene\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_scene}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_scene_ae40169557308d8af0bd57d3f814b1937}{Scene} (\hyperlink{class_context}{Context} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_scene_a3b8cec2e32546713915f8c6303c951f1}{$\sim$\+Scene} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_scene_af0990031fb81e2bec0391a5923911fc3}{get\+Objects} (std\+::list$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{class_scene_object}{Scene\+Object} $>$ $>$ $\ast$objects)
+\begin{DoxyCompactList}\small\item\em Retrieve the list of objects in the scene. \end{DoxyCompactList}\item 
+const std\+::weak\+\_\+ptr$<$ \hyperlink{class_camera}{Camera} $>$ \hyperlink{class_scene_a314aabca592a5979069563b0845bac2f}{get\+Active\+Camera} () const 
+\begin{DoxyCompactList}\small\item\em Access the currently active camera. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_scene_adc13fd7e44ebc5cb6165cb25853420c7}{set\+Size} (G\+Lsizei width, G\+Lsizei height)
+\begin{DoxyCompactList}\small\item\em Called to update scene elements with the viewport information. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_scene_aa9597b193a1cd70a276ca2480c01adea}{step} (double dt)
+\begin{DoxyCompactList}\small\item\em Step the scene\textquotesingle{}s simulation state. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_scene_a5c993df1c224d17fc3fd618d413e3f87}{predraw} (\hyperlink{class_context}{Context} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Called before the renderer draws the scene This allows the scene and its constituent objects to do updates that require a graphics context before the graphical state is drawn. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_scene_a4f683b6add0466a6b3fa1357fc27baa3}{add\+Object} (std\+::shared\+\_\+ptr$<$ \hyperlink{class_scene_object}{Scene\+Object} $>$ object)
+\begin{DoxyCompactList}\small\item\em Add an object to be managed by the scene. \end{DoxyCompactList}\item 
+void \hyperlink{class_scene_a8822b7f23dbd84390024545192779516}{set\+Active\+Camera} (std\+::shared\+\_\+ptr$<$ \hyperlink{class_camera}{Camera} $>$ camera)
+\begin{DoxyCompactList}\small\item\em Set the active camera for the scene. \end{DoxyCompactList}\item 
+std\+::weak\+\_\+ptr$<$ \hyperlink{class_meta_manager}{Meta\+Manager} $>$ \hyperlink{class_scene_ae0da6dc6945a84f338a4d1907fef0dbc}{get\+Managers} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_meta_manager}{Meta\+Manager} $>$ \hyperlink{class_scene_a40f1ffc374bb488c2ec2599289793316}{m\+\_\+\+Managers}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_camera}{Camera} $>$ \hyperlink{class_scene_a14eae4c46620f2eac7f3efcc8a8ec0e2}{m\+\_\+\+Active\+Camera}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_camera}{Camera} currently in use. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_scene}{Scene} container for managing and drawing 3D environments. 
+
+\begin{DoxyPrecond}{Precondition}
+A valid Open\+GL context must be present to the program 
+\end{DoxyPrecond}
+\begin{DoxyAuthor}{Author}
+Hayley Hatton 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+06/03/2016 
+\end{DoxyDate}
+
+
+Definition at line 15 of file Scene.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Scene@{Scene}!Scene@{Scene}}
+\index{Scene@{Scene}!Scene@{Scene}}
+\subsubsection[{\texorpdfstring{Scene(\+Context $\ast$context)}{Scene(Context *context)}}]{\setlength{\rightskip}{0pt plus 5cm}Scene\+::\+Scene (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context}
+\end{DoxyParamCaption}
+)}\hypertarget{class_scene_ae40169557308d8af0bd57d3f814b1937}{}\label{class_scene_ae40169557308d8af0bd57d3f814b1937}
+
+
+Default constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphics context \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 6 of file Scene.\+cpp.
+
+
+
+References m\+\_\+\+Managers.
+
+\index{Scene@{Scene}!````~Scene@{$\sim$\+Scene}}
+\index{````~Scene@{$\sim$\+Scene}!Scene@{Scene}}
+\subsubsection[{\texorpdfstring{$\sim$\+Scene()}{~Scene()}}]{\setlength{\rightskip}{0pt plus 5cm}Scene\+::$\sim$\+Scene (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_scene_a3b8cec2e32546713915f8c6303c951f1}{}\label{class_scene_a3b8cec2e32546713915f8c6303c951f1}
+
+
+Default destructor. 
+
+
+
+Definition at line 14 of file Scene.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{Scene@{Scene}!add\+Object@{add\+Object}}
+\index{add\+Object@{add\+Object}!Scene@{Scene}}
+\subsubsection[{\texorpdfstring{add\+Object(std\+::shared\+\_\+ptr$<$ Scene\+Object $>$ object)}{addObject(std::shared_ptr< SceneObject > object)}}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+::add\+Object (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Scene\+Object} $>$}]{object}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_scene_a4f683b6add0466a6b3fa1357fc27baa3}{}\label{class_scene_a4f683b6add0466a6b3fa1357fc27baa3}
+
+
+Add an object to be managed by the scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & Smart pointer to the scene object \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 28 of file Scene.\+cpp.
+
+
+
+References Scene\+Object\+Manager\+::add\+Scene\+Object(), and m\+\_\+\+Managers.
+
+
+
+Referenced by Test\+Scene3\+D\+::\+Test\+Scene3\+D().
+
+\index{Scene@{Scene}!get\+Active\+Camera@{get\+Active\+Camera}}
+\index{get\+Active\+Camera@{get\+Active\+Camera}!Scene@{Scene}}
+\subsubsection[{\texorpdfstring{get\+Active\+Camera() const }{getActiveCamera() const }}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::weak\+\_\+ptr$<$ {\bf Camera} $>$ Scene\+::get\+Active\+Camera (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_scene_a314aabca592a5979069563b0845bac2f}{}\label{class_scene_a314aabca592a5979069563b0845bac2f}
+
+
+Access the currently active camera. 
+
+\begin{DoxyReturn}{Returns}
+Managed pointer to the currently active camera 
+\end{DoxyReturn}
+
+
+Definition at line 62 of file Scene.\+cpp.
+
+
+
+References m\+\_\+\+Active\+Camera.
+
+
+
+Referenced by Test\+Scene3\+D\+::set\+Size(), and Test\+Scene3\+D\+::step().
+
+\index{Scene@{Scene}!get\+Managers@{get\+Managers}}
+\index{get\+Managers@{get\+Managers}!Scene@{Scene}}
+\subsubsection[{\texorpdfstring{get\+Managers()}{getManagers()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::weak\+\_\+ptr$<${\bf Meta\+Manager}$>$ Scene\+::get\+Managers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\hypertarget{class_scene_ae0da6dc6945a84f338a4d1907fef0dbc}{}\label{class_scene_ae0da6dc6945a84f338a4d1907fef0dbc}
+
+
+Definition at line 75 of file Scene.\+h.
+
+
+
+References m\+\_\+\+Managers.
+
+
+
+Referenced by Test\+Scene3\+D\+::\+Test\+Scene3\+D().
+
+\index{Scene@{Scene}!get\+Objects@{get\+Objects}}
+\index{get\+Objects@{get\+Objects}!Scene@{Scene}}
+\subsubsection[{\texorpdfstring{get\+Objects(std\+::list$<$ std\+::shared\+\_\+ptr$<$ Scene\+Object $>$ $>$ $\ast$objects)}{getObjects(std::list< std::shared_ptr< SceneObject > > *objects)}}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+::get\+Objects (
+\begin{DoxyParamCaption}
+\item[{std\+::list$<$ std\+::shared\+\_\+ptr$<$ {\bf Scene\+Object} $>$ $>$ $\ast$}]{objects}
+\end{DoxyParamCaption}
+)}\hypertarget{class_scene_af0990031fb81e2bec0391a5923911fc3}{}\label{class_scene_af0990031fb81e2bec0391a5923911fc3}
+
+
+Retrieve the list of objects in the scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em objects} & Pointer to list to fill with scene objects \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 20 of file Scene.\+cpp.
+
+
+
+References Scene\+Object\+Manager\+::get\+Objects(), and m\+\_\+\+Managers.
+
+\index{Scene@{Scene}!predraw@{predraw}}
+\index{predraw@{predraw}!Scene@{Scene}}
+\subsubsection[{\texorpdfstring{predraw(\+Context $\ast$context)}{predraw(Context *context)}}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+::predraw (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_scene_a5c993df1c224d17fc3fd618d413e3f87}{}\label{class_scene_a5c993df1c224d17fc3fd618d413e3f87}
+
+
+Called before the renderer draws the scene This allows the scene and its constituent objects to do updates that require a graphics context before the graphical state is drawn. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphics context \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_test_scene3_d_ab87089331bf0fb71d09361624dc1c53e}{Test\+Scene3D}.
+
+
+
+Definition at line 49 of file Scene.\+cpp.
+
+
+
+References m\+\_\+\+Managers, and Scene\+Object\+Manager\+::predraw().
+
+
+
+Referenced by Test\+Scene3\+D\+::predraw().
+
+\index{Scene@{Scene}!set\+Active\+Camera@{set\+Active\+Camera}}
+\index{set\+Active\+Camera@{set\+Active\+Camera}!Scene@{Scene}}
+\subsubsection[{\texorpdfstring{set\+Active\+Camera(std\+::shared\+\_\+ptr$<$ Camera $>$ camera)}{setActiveCamera(std::shared_ptr< Camera > camera)}}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+::set\+Active\+Camera (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Camera} $>$}]{camera}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_scene_a8822b7f23dbd84390024545192779516}{}\label{class_scene_a8822b7f23dbd84390024545192779516}
+
+
+Set the active camera for the scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em camera} & Smart pointer to the camera to make active \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 57 of file Scene.\+cpp.
+
+
+
+References m\+\_\+\+Active\+Camera.
+
+
+
+Referenced by Test\+Scene3\+D\+::\+Test\+Scene3\+D().
+
+\index{Scene@{Scene}!set\+Size@{set\+Size}}
+\index{set\+Size@{set\+Size}!Scene@{Scene}}
+\subsubsection[{\texorpdfstring{set\+Size(\+G\+Lsizei width, G\+Lsizei height)}{setSize(GLsizei width, GLsizei height)}}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+::set\+Size (
+\begin{DoxyParamCaption}
+\item[{G\+Lsizei}]{width, }
+\item[{G\+Lsizei}]{height}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_scene_adc13fd7e44ebc5cb6165cb25853420c7}{}\label{class_scene_adc13fd7e44ebc5cb6165cb25853420c7}
+
+
+Called to update scene elements with the viewport information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Width of the viewport in pixels \\
+\hline
+{\em height} & Height of the viewport in pixels \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_test_scene3_d_ab762c0baa39e323b598f08945d50bb1f}{Test\+Scene3D}.
+
+
+
+Definition at line 67 of file Scene.\+cpp.
+
+\index{Scene@{Scene}!step@{step}}
+\index{step@{step}!Scene@{Scene}}
+\subsubsection[{\texorpdfstring{step(double dt)}{step(double dt)}}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+::step (
+\begin{DoxyParamCaption}
+\item[{double}]{dt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_scene_aa9597b193a1cd70a276ca2480c01adea}{}\label{class_scene_aa9597b193a1cd70a276ca2480c01adea}
+
+
+Step the scene\textquotesingle{}s simulation state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta-\/time since last step call in seconds \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_test_scene3_d_aebf275cd7c567dca7d8662ff859d2acf}{Test\+Scene3D}.
+
+
+
+Definition at line 36 of file Scene.\+cpp.
+
+
+
+References Collision\+Manager\+::do\+Collisions(), m\+\_\+\+Managers, and Scene\+Object\+Manager\+::step().
+
+
+
+Referenced by Test\+Scene3\+D\+::step().
+
+
+
+\subsection{Member Data Documentation}
+\index{Scene@{Scene}!m\+\_\+\+Active\+Camera@{m\+\_\+\+Active\+Camera}}
+\index{m\+\_\+\+Active\+Camera@{m\+\_\+\+Active\+Camera}!Scene@{Scene}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Active\+Camera}{m_ActiveCamera}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Camera}$>$ Scene\+::m\+\_\+\+Active\+Camera\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_scene_a14eae4c46620f2eac7f3efcc8a8ec0e2}{}\label{class_scene_a14eae4c46620f2eac7f3efcc8a8ec0e2}
+
+
+\hyperlink{class_camera}{Camera} currently in use. 
+
+
+
+Definition at line 79 of file Scene.\+h.
+
+
+
+Referenced by get\+Active\+Camera(), and set\+Active\+Camera().
+
+\index{Scene@{Scene}!m\+\_\+\+Managers@{m\+\_\+\+Managers}}
+\index{m\+\_\+\+Managers@{m\+\_\+\+Managers}!Scene@{Scene}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Managers}{m_Managers}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Meta\+Manager}$>$ Scene\+::m\+\_\+\+Managers\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_scene_a40f1ffc374bb488c2ec2599289793316}{}\label{class_scene_a40f1ffc374bb488c2ec2599289793316}
+
+
+Definition at line 78 of file Scene.\+h.
+
+
+
+Referenced by add\+Object(), get\+Managers(), get\+Objects(), predraw(), Scene(), and step().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lunar\+Drift/engine/containers/\hyperlink{_scene_8h}{Scene.\+h}\item 
+Lunar\+Drift/engine/containers/\hyperlink{_scene_8cpp}{Scene.\+cpp}\end{DoxyCompactItemize}

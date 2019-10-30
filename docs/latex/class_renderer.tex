@@ -1,0 +1,491 @@
+\hypertarget{class_renderer}{}\section{Renderer Class Reference}
+\label{class_renderer}\index{Renderer@{Renderer}}
+
+
+Abstract renderer for drawing scenes with a given graphics context.  
+
+
+
+
+{\ttfamily \#include $<$Renderer.\+h$>$}
+
+Inheritance diagram for Renderer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_renderer}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_renderer_a21f9183202b351da1d4c9d20fbf6a7db}{Renderer} (\hyperlink{class_context}{Context} $\ast$context, G\+Lsizei width, G\+Lsizei height)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_renderer_afeee408862d5bd6255a6882d47e6d5cd}{$\sim$\+Renderer} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_renderer_a3a63289ee0d3b291b43f8c99d445140a}{get\+Dimensions} (G\+Lsizei $\ast$width, G\+Lsizei $\ast$height) const 
+\begin{DoxyCompactList}\small\item\em Access the dimensions of the full rendering context. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_renderer_a73b37f476662d7dcbc8f02b1ee8b7e66}{pre\+Frame} (\hyperlink{class_context}{Context} $\ast$context, std\+::shared\+\_\+ptr$<$ \hyperlink{class_scene}{Scene} $>$ scene)
+\begin{DoxyCompactList}\small\item\em Called before the frame is drawn; useful for setting up the frame. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_renderer_ac6bd2531e087c99d44298100a1db7631}{frame} (\hyperlink{class_context}{Context} $\ast$context, std\+::shared\+\_\+ptr$<$ \hyperlink{class_scene}{Scene} $>$ scene)
+\begin{DoxyCompactList}\small\item\em Called to draw the frame. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_renderer_affc664549db066d9219579f8fd5cd657}{post\+Frame} (\hyperlink{class_context}{Context} $\ast$context, std\+::shared\+\_\+ptr$<$ \hyperlink{class_scene}{Scene} $>$ scene)
+\begin{DoxyCompactList}\small\item\em Called after the frame is drawn; useful for posting the frame. \end{DoxyCompactList}\item 
+void \hyperlink{class_renderer_a8dd7e25ac4d1930cfa6a4533ed80557d}{set\+Clear\+Color} (const glm\+::vec4 \&color)
+\item 
+void \hyperlink{class_renderer_a8c77522a011a90dfc30929b8d9d3cf1e}{resize} (G\+Lsizei width, G\+Lsizei height)
+\begin{DoxyCompactList}\small\item\em Resize the renderer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_renderer_a9efd7bd25d602491adbd823b0b7d311c}{set\+Size} (\hyperlink{class_context}{Context} $\ast$context, std\+::shared\+\_\+ptr$<$ \hyperlink{class_scene}{Scene} $>$ scene)
+\begin{DoxyCompactList}\small\item\em Update the viewport and echo changes to the scene. \end{DoxyCompactList}\item 
+virtual std\+::shared\+\_\+ptr$<$ \hyperlink{class_shader_manager}{Shader\+Manager} $>$ \hyperlink{class_renderer_a18aeed0fc26835778f23a2ff7406446b}{load\+Standard\+Shaders} (\hyperlink{class_context}{Context} $\ast$context)=0
+\begin{DoxyCompactList}\small\item\em Create and return a shader manager containing the standard shaders. \end{DoxyCompactList}\item 
+void \hyperlink{class_renderer_a14aeed9016bcd66be47862ed3749d7dc}{load} (\hyperlink{class_context}{Context} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Load the renderer. \end{DoxyCompactList}\item 
+void \hyperlink{class_renderer_aa9ca4685f6e82578dec01db053ceef8d}{update\+Shader\+States} (\hyperlink{class_context}{Context} $\ast$context, std\+::shared\+\_\+ptr$<$ \hyperlink{class_scene}{Scene} $>$ scene, std\+::shared\+\_\+ptr$<$ \hyperlink{class_shader_manager}{Shader\+Manager} $>$ shaders)
+\begin{DoxyCompactList}\small\item\em Update the shader states of all the shaders in a shader manager. \end{DoxyCompactList}\item 
+void \hyperlink{class_renderer_af3ebba8a1565bca7359944b72f56d719}{draw\+Scene} (\hyperlink{class_context}{Context} $\ast$context, std\+::shared\+\_\+ptr$<$ \hyperlink{class_scene}{Scene} $>$ scene, std\+::shared\+\_\+ptr$<$ \hyperlink{class_shader_manager}{Shader\+Manager} $>$ shaders)
+\begin{DoxyCompactList}\small\item\em Draw a scene using a given shader manager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G\+Lsizei \hyperlink{class_renderer_ad70df586fdb171b32e3c5b4a31a5104b}{m\+\_\+\+Width\+Px}
+\item 
+G\+Lsizei \hyperlink{class_renderer_a6a89127b886568aceb1ad94f1c2584e9}{m\+\_\+\+Height\+Px}
+\item 
+bool \hyperlink{class_renderer_a7b739cc1443319e00d0c675a27c7e17b}{m\+\_\+\+Resized}
+\item 
+glm\+::vec4 \hyperlink{class_renderer_a9d5ab43b148e3d440e43cf0d7325dec7}{m\+\_\+\+Clear\+Color}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_shader_manager}{Shader\+Manager} $>$ \hyperlink{class_renderer_a45692735f3f2562d55f8d51c4bc5fd1c}{m\+\_\+\+Standard\+Shaders}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract renderer for drawing scenes with a given graphics context. 
+
+\begin{DoxyAuthor}{Author}
+Hayley Hatton 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/02/2016 
+\end{DoxyDate}
+
+
+Definition at line 13 of file Renderer.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Renderer@{Renderer}!Renderer@{Renderer}}
+\index{Renderer@{Renderer}!Renderer@{Renderer}}
+\subsubsection[{\texorpdfstring{Renderer(\+Context $\ast$context, G\+Lsizei width, G\+Lsizei height)}{Renderer(Context *context, GLsizei width, GLsizei height)}}]{\setlength{\rightskip}{0pt plus 5cm}Renderer\+::\+Renderer (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context, }
+\item[{G\+Lsizei}]{width, }
+\item[{G\+Lsizei}]{height}
+\end{DoxyParamCaption}
+)}\hypertarget{class_renderer_a21f9183202b351da1d4c9d20fbf6a7db}{}\label{class_renderer_a21f9183202b351da1d4c9d20fbf6a7db}
+
+
+Default constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphics context \\
+\hline
+{\em width} & Width of context in pixels \\
+\hline
+{\em height} & Height of context in pixels \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 4 of file Renderer.\+cpp.
+
+
+
+References f.
+
+\index{Renderer@{Renderer}!````~Renderer@{$\sim$\+Renderer}}
+\index{````~Renderer@{$\sim$\+Renderer}!Renderer@{Renderer}}
+\subsubsection[{\texorpdfstring{$\sim$\+Renderer()}{~Renderer()}}]{\setlength{\rightskip}{0pt plus 5cm}Renderer\+::$\sim$\+Renderer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_renderer_afeee408862d5bd6255a6882d47e6d5cd}{}\label{class_renderer_afeee408862d5bd6255a6882d47e6d5cd}
+
+
+Default destructor. 
+
+
+
+Definition at line 12 of file Renderer.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{Renderer@{Renderer}!draw\+Scene@{draw\+Scene}}
+\index{draw\+Scene@{draw\+Scene}!Renderer@{Renderer}}
+\subsubsection[{\texorpdfstring{draw\+Scene(\+Context $\ast$context, std\+::shared\+\_\+ptr$<$ Scene $>$ scene, std\+::shared\+\_\+ptr$<$ Shader\+Manager $>$ shaders)}{drawScene(Context *context, std::shared_ptr< Scene > scene, std::shared_ptr< ShaderManager > shaders)}}]{\setlength{\rightskip}{0pt plus 5cm}void Renderer\+::draw\+Scene (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context, }
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Scene} $>$}]{scene, }
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Shader\+Manager} $>$}]{shaders}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_renderer_af3ebba8a1565bca7359944b72f56d719}{}\label{class_renderer_af3ebba8a1565bca7359944b72f56d719}
+
+
+Draw a scene using a given shader manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphics context \\
+\hline
+{\em scene} & Smart pointer to the scene instance to draw \\
+\hline
+{\em shaders} & Smart pointer to the shader manager to draw scene with \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 68 of file Renderer.\+cpp.
+
+
+
+Referenced by frame(), and set\+Clear\+Color().
+
+\index{Renderer@{Renderer}!frame@{frame}}
+\index{frame@{frame}!Renderer@{Renderer}}
+\subsubsection[{\texorpdfstring{frame(\+Context $\ast$context, std\+::shared\+\_\+ptr$<$ Scene $>$ scene)}{frame(Context *context, std::shared_ptr< Scene > scene)}}]{\setlength{\rightskip}{0pt plus 5cm}void Renderer\+::frame (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context, }
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Scene} $>$}]{scene}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_renderer_ac6bd2531e087c99d44298100a1db7631}{}\label{class_renderer_ac6bd2531e087c99d44298100a1db7631}
+
+
+Called to draw the frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphics context \\
+\hline
+{\em scene} & Smart pointer to the scene to render \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 84 of file Renderer.\+cpp.
+
+
+
+References draw\+Scene(), m\+\_\+\+Resized, m\+\_\+\+Standard\+Shaders, set\+Size(), and update\+Shader\+States().
+
+\index{Renderer@{Renderer}!get\+Dimensions@{get\+Dimensions}}
+\index{get\+Dimensions@{get\+Dimensions}!Renderer@{Renderer}}
+\subsubsection[{\texorpdfstring{get\+Dimensions(\+G\+Lsizei $\ast$width, G\+Lsizei $\ast$height) const }{getDimensions(GLsizei *width, GLsizei *height) const }}]{\setlength{\rightskip}{0pt plus 5cm}void Renderer\+::get\+Dimensions (
+\begin{DoxyParamCaption}
+\item[{G\+Lsizei $\ast$}]{width, }
+\item[{G\+Lsizei $\ast$}]{height}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_renderer_a3a63289ee0d3b291b43f8c99d445140a}{}\label{class_renderer_a3a63289ee0d3b291b43f8c99d445140a}
+
+
+Access the dimensions of the full rendering context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Pointer to store width in pixels \\
+\hline
+{\em height} & Pointer to store height in pixels \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 18 of file Renderer.\+cpp.
+
+
+
+References m\+\_\+\+Height\+Px, and m\+\_\+\+Width\+Px.
+
+
+
+Referenced by set\+Size().
+
+\index{Renderer@{Renderer}!load@{load}}
+\index{load@{load}!Renderer@{Renderer}}
+\subsubsection[{\texorpdfstring{load(\+Context $\ast$context)}{load(Context *context)}}]{\setlength{\rightskip}{0pt plus 5cm}void Renderer\+::load (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_renderer_a14aeed9016bcd66be47862ed3749d7dc}{}\label{class_renderer_a14aeed9016bcd66be47862ed3749d7dc}
+
+
+Load the renderer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphics context \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 101 of file Renderer.\+cpp.
+
+
+
+References load\+Standard\+Shaders(), and m\+\_\+\+Standard\+Shaders.
+
+
+
+Referenced by Game\+Renderer\+::\+Game\+Renderer(), and set\+Clear\+Color().
+
+\index{Renderer@{Renderer}!load\+Standard\+Shaders@{load\+Standard\+Shaders}}
+\index{load\+Standard\+Shaders@{load\+Standard\+Shaders}!Renderer@{Renderer}}
+\subsubsection[{\texorpdfstring{load\+Standard\+Shaders(\+Context $\ast$context)=0}{loadStandardShaders(Context *context)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\+::shared\+\_\+ptr$<${\bf Shader\+Manager}$>$ Renderer\+::load\+Standard\+Shaders (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{class_renderer_a18aeed0fc26835778f23a2ff7406446b}{}\label{class_renderer_a18aeed0fc26835778f23a2ff7406446b}
+
+
+Create and return a shader manager containing the standard shaders. 
+
+\begin{DoxyReturn}{Returns}
+Managed pointer of a default shader manager 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_game_renderer_ac01f6745a9dd800dfe4c5fb12d46bc38}{Game\+Renderer}.
+
+
+
+Referenced by load(), and set\+Clear\+Color().
+
+\index{Renderer@{Renderer}!post\+Frame@{post\+Frame}}
+\index{post\+Frame@{post\+Frame}!Renderer@{Renderer}}
+\subsubsection[{\texorpdfstring{post\+Frame(\+Context $\ast$context, std\+::shared\+\_\+ptr$<$ Scene $>$ scene)}{postFrame(Context *context, std::shared_ptr< Scene > scene)}}]{\setlength{\rightskip}{0pt plus 5cm}void Renderer\+::post\+Frame (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context, }
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Scene} $>$}]{scene}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_renderer_affc664549db066d9219579f8fd5cd657}{}\label{class_renderer_affc664549db066d9219579f8fd5cd657}
+
+
+Called after the frame is drawn; useful for posting the frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphics context \\
+\hline
+{\em scene} & Smart pointer to the scene to render \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 96 of file Renderer.\+cpp.
+
+\index{Renderer@{Renderer}!pre\+Frame@{pre\+Frame}}
+\index{pre\+Frame@{pre\+Frame}!Renderer@{Renderer}}
+\subsubsection[{\texorpdfstring{pre\+Frame(\+Context $\ast$context, std\+::shared\+\_\+ptr$<$ Scene $>$ scene)}{preFrame(Context *context, std::shared_ptr< Scene > scene)}}]{\setlength{\rightskip}{0pt plus 5cm}void Renderer\+::pre\+Frame (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context, }
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Scene} $>$}]{scene}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_renderer_a73b37f476662d7dcbc8f02b1ee8b7e66}{}\label{class_renderer_a73b37f476662d7dcbc8f02b1ee8b7e66}
+
+
+Called before the frame is drawn; useful for setting up the frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphics context \\
+\hline
+{\em scene} & Smart pointer to the scene to render \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 46 of file Renderer.\+cpp.
+
+
+
+References m\+\_\+\+Clear\+Color.
+
+\index{Renderer@{Renderer}!resize@{resize}}
+\index{resize@{resize}!Renderer@{Renderer}}
+\subsubsection[{\texorpdfstring{resize(\+G\+Lsizei width, G\+Lsizei height)}{resize(GLsizei width, GLsizei height)}}]{\setlength{\rightskip}{0pt plus 5cm}void Renderer\+::resize (
+\begin{DoxyParamCaption}
+\item[{G\+Lsizei}]{width, }
+\item[{G\+Lsizei}]{height}
+\end{DoxyParamCaption}
+)}\hypertarget{class_renderer_a8c77522a011a90dfc30929b8d9d3cf1e}{}\label{class_renderer_a8c77522a011a90dfc30929b8d9d3cf1e}
+
+
+Resize the renderer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & New width of GL context in pixels \\
+\hline
+{\em height} & New height of GL context in pixels \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 24 of file Renderer.\+cpp.
+
+
+
+References m\+\_\+\+Height\+Px, m\+\_\+\+Resized, and m\+\_\+\+Width\+Px.
+
+
+
+Referenced by set\+Clear\+Color().
+
+\index{Renderer@{Renderer}!set\+Clear\+Color@{set\+Clear\+Color}}
+\index{set\+Clear\+Color@{set\+Clear\+Color}!Renderer@{Renderer}}
+\subsubsection[{\texorpdfstring{set\+Clear\+Color(const glm\+::vec4 \&color)}{setClearColor(const glm::vec4 &color)}}]{\setlength{\rightskip}{0pt plus 5cm}void Renderer\+::set\+Clear\+Color (
+\begin{DoxyParamCaption}
+\item[{const glm\+::vec4 \&}]{color}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_renderer_a8dd7e25ac4d1930cfa6a4533ed80557d}{}\label{class_renderer_a8dd7e25ac4d1930cfa6a4533ed80557d}
+
+
+Definition at line 56 of file Renderer.\+h.
+
+
+
+References draw\+Scene(), load(), load\+Standard\+Shaders(), m\+\_\+\+Clear\+Color, resize(), set\+Size(), and update\+Shader\+States().
+
+
+
+Referenced by Game\+Renderer\+::\+Game\+Renderer().
+
+\index{Renderer@{Renderer}!set\+Size@{set\+Size}}
+\index{set\+Size@{set\+Size}!Renderer@{Renderer}}
+\subsubsection[{\texorpdfstring{set\+Size(\+Context $\ast$context, std\+::shared\+\_\+ptr$<$ Scene $>$ scene)}{setSize(Context *context, std::shared_ptr< Scene > scene)}}]{\setlength{\rightskip}{0pt plus 5cm}void Renderer\+::set\+Size (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context, }
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Scene} $>$}]{scene}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_renderer_a9efd7bd25d602491adbd823b0b7d311c}{}\label{class_renderer_a9efd7bd25d602491adbd823b0b7d311c}
+
+
+Update the viewport and echo changes to the scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphics context \\
+\hline
+{\em scene} & Smart pointer to the scene to resize \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 31 of file Renderer.\+cpp.
+
+
+
+References get\+Dimensions(), h, m\+\_\+\+Resized, and w.
+
+
+
+Referenced by frame(), and set\+Clear\+Color().
+
+\index{Renderer@{Renderer}!update\+Shader\+States@{update\+Shader\+States}}
+\index{update\+Shader\+States@{update\+Shader\+States}!Renderer@{Renderer}}
+\subsubsection[{\texorpdfstring{update\+Shader\+States(\+Context $\ast$context, std\+::shared\+\_\+ptr$<$ Scene $>$ scene, std\+::shared\+\_\+ptr$<$ Shader\+Manager $>$ shaders)}{updateShaderStates(Context *context, std::shared_ptr< Scene > scene, std::shared_ptr< ShaderManager > shaders)}}]{\setlength{\rightskip}{0pt plus 5cm}void Renderer\+::update\+Shader\+States (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context, }
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Scene} $>$}]{scene, }
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Shader\+Manager} $>$}]{shaders}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_renderer_aa9ca4685f6e82578dec01db053ceef8d}{}\label{class_renderer_aa9ca4685f6e82578dec01db053ceef8d}
+
+
+Update the shader states of all the shaders in a shader manager. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphics context \\
+\hline
+{\em scene} & Smart pointer to the scene instance to use \\
+\hline
+{\em shaders} & Smart pointer to the shader manager to update states with \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 55 of file Renderer.\+cpp.
+
+
+
+Referenced by frame(), and set\+Clear\+Color().
+
+
+
+\subsection{Member Data Documentation}
+\index{Renderer@{Renderer}!m\+\_\+\+Clear\+Color@{m\+\_\+\+Clear\+Color}}
+\index{m\+\_\+\+Clear\+Color@{m\+\_\+\+Clear\+Color}!Renderer@{Renderer}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Clear\+Color}{m_ClearColor}}]{\setlength{\rightskip}{0pt plus 5cm}glm\+::vec4 Renderer\+::m\+\_\+\+Clear\+Color\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_renderer_a9d5ab43b148e3d440e43cf0d7325dec7}{}\label{class_renderer_a9d5ab43b148e3d440e43cf0d7325dec7}
+
+
+Definition at line 111 of file Renderer.\+h.
+
+
+
+Referenced by pre\+Frame(), and set\+Clear\+Color().
+
+\index{Renderer@{Renderer}!m\+\_\+\+Height\+Px@{m\+\_\+\+Height\+Px}}
+\index{m\+\_\+\+Height\+Px@{m\+\_\+\+Height\+Px}!Renderer@{Renderer}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Height\+Px}{m_HeightPx}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lsizei Renderer\+::m\+\_\+\+Height\+Px\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_renderer_a6a89127b886568aceb1ad94f1c2584e9}{}\label{class_renderer_a6a89127b886568aceb1ad94f1c2584e9}
+
+
+Definition at line 109 of file Renderer.\+h.
+
+
+
+Referenced by get\+Dimensions(), and resize().
+
+\index{Renderer@{Renderer}!m\+\_\+\+Resized@{m\+\_\+\+Resized}}
+\index{m\+\_\+\+Resized@{m\+\_\+\+Resized}!Renderer@{Renderer}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Resized}{m_Resized}}]{\setlength{\rightskip}{0pt plus 5cm}bool Renderer\+::m\+\_\+\+Resized\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_renderer_a7b739cc1443319e00d0c675a27c7e17b}{}\label{class_renderer_a7b739cc1443319e00d0c675a27c7e17b}
+
+
+Definition at line 110 of file Renderer.\+h.
+
+
+
+Referenced by frame(), resize(), and set\+Size().
+
+\index{Renderer@{Renderer}!m\+\_\+\+Standard\+Shaders@{m\+\_\+\+Standard\+Shaders}}
+\index{m\+\_\+\+Standard\+Shaders@{m\+\_\+\+Standard\+Shaders}!Renderer@{Renderer}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Standard\+Shaders}{m_StandardShaders}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Shader\+Manager}$>$ Renderer\+::m\+\_\+\+Standard\+Shaders\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_renderer_a45692735f3f2562d55f8d51c4bc5fd1c}{}\label{class_renderer_a45692735f3f2562d55f8d51c4bc5fd1c}
+
+
+Definition at line 112 of file Renderer.\+h.
+
+
+
+Referenced by frame(), and load().
+
+\index{Renderer@{Renderer}!m\+\_\+\+Width\+Px@{m\+\_\+\+Width\+Px}}
+\index{m\+\_\+\+Width\+Px@{m\+\_\+\+Width\+Px}!Renderer@{Renderer}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Width\+Px}{m_WidthPx}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lsizei Renderer\+::m\+\_\+\+Width\+Px\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_renderer_ad70df586fdb171b32e3c5b4a31a5104b}{}\label{class_renderer_ad70df586fdb171b32e3c5b4a31a5104b}
+
+
+Definition at line 109 of file Renderer.\+h.
+
+
+
+Referenced by get\+Dimensions(), and resize().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lunar\+Drift/engine/graphics/renderers/\hyperlink{_renderer_8h}{Renderer.\+h}\item 
+Lunar\+Drift/engine/graphics/renderers/\hyperlink{_renderer_8cpp}{Renderer.\+cpp}\end{DoxyCompactItemize}

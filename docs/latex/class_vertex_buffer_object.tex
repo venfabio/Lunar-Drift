@@ -1,0 +1,210 @@
+\hypertarget{class_vertex_buffer_object}{}\section{Vertex\+Buffer\+Object$<$ V $>$ Class Template Reference}
+\label{class_vertex_buffer_object}\index{Vertex\+Buffer\+Object$<$ V $>$@{Vertex\+Buffer\+Object$<$ V $>$}}
+
+
+Specialized \hyperlink{class_vertex_buffer_object}{Vertex\+Buffer\+Object} template, for handling generic vertices.  
+
+
+
+
+{\ttfamily \#include $<$Vertex\+Buffer\+Object.\+h$>$}
+
+Inheritance diagram for Vertex\+Buffer\+Object$<$ V $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_vertex_buffer_object}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_vertex_buffer_object_ac6b700895db0b5f7aaee6e17f6b0db13}{Vertex\+Buffer\+Object} (\hyperlink{class_context}{Context} $\ast$context, const std\+::vector$<$ V $>$ \&vertices)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_vertex_buffer_object_a196fb9f8c90cff926f4bda372b71f23b}{$\sim$\+Vertex\+Buffer\+Object} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+const V \& \hyperlink{class_vertex_buffer_object_a166710d3d7526c9bfb7f99de1b8057a4}{get\+Vertex} (unsigned int index) const 
+\begin{DoxyCompactList}\small\item\em Access the vertex at a given offset/index in the buffer. \end{DoxyCompactList}\item 
+G\+Lsizei \hyperlink{class_vertex_buffer_object_ab31e996068d871acaa6bb6b5117dd2c3}{get\+Vertex\+Size} () const  override
+\begin{DoxyCompactList}\small\item\em Retrieve the size of the individual vertices in this object. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_vertex_buffer_object_a9c6c36c1711d4fd1d1aae6916c35c9db}{size} () const  override
+\begin{DoxyCompactList}\small\item\em Retrieve the size of the vertex buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ V $>$ \hyperlink{class_vertex_buffer_object_aa8ccd2ec2c067c5fff5bb2dded70fcc6}{m\+\_\+\+Vertices}
+\begin{DoxyCompactList}\small\item\em C\+P\+U-\/side buffer of vertices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename V$>$\\*
+class Vertex\+Buffer\+Object$<$ V $>$}
+
+Specialized \hyperlink{class_vertex_buffer_object}{Vertex\+Buffer\+Object} template, for handling generic vertices. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em V} & Generic vertex parameter to use for the buffer\\
+\hline
+\end{DoxyTemplParams}
+Whereas the \hyperlink{class_vertex_buffer_object_base}{Vertex\+Buffer\+Object\+Base} allows V\+B\+Os to be represented generically, this class acts as a template for providing vertices to the V\+BO. Consequently, when making a V\+BO, this class template should be used and parameterized with the vertex type used. When using V\+B\+Os in the abstract, consider passing around \hyperlink{class_vertex_buffer_object_base}{Vertex\+Buffer\+Object\+Base} objects instead.
+
+\begin{DoxyPrecond}{Precondition}
+A valid Open\+GL context must be present to the program 
+\end{DoxyPrecond}
+\begin{DoxyAuthor}{Author}
+Hayley Hatton 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/02/2016 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_vertex_buffer_object_base}{Vertex\+Buffer\+Object\+Base} 
+\end{DoxySeeAlso}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000007}{Todo}](Hayley\#6\#02/22/16)\+: Handling of dynamic buffers and syncronicity between C\+PU and G\+PU \end{DoxyRefDesc}
+
+
+Definition at line 25 of file Vertex\+Buffer\+Object.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Vertex\+Buffer\+Object@{Vertex\+Buffer\+Object}!Vertex\+Buffer\+Object@{Vertex\+Buffer\+Object}}
+\index{Vertex\+Buffer\+Object@{Vertex\+Buffer\+Object}!Vertex\+Buffer\+Object@{Vertex\+Buffer\+Object}}
+\subsubsection[{\texorpdfstring{Vertex\+Buffer\+Object(\+Context $\ast$context, const std\+::vector$<$ V $>$ \&vertices)}{VertexBufferObject(Context *context, const std::vector< V > &vertices)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename V $>$ {\bf Vertex\+Buffer\+Object}$<$ V $>$\+::{\bf Vertex\+Buffer\+Object} (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context, }
+\item[{const std\+::vector$<$ V $>$ \&}]{vertices}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_vertex_buffer_object_ac6b700895db0b5f7aaee6e17f6b0db13}{}\label{class_vertex_buffer_object_ac6b700895db0b5f7aaee6e17f6b0db13}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphics context \\
+\hline
+{\em vertices} & Array of vertices to initially initialize buffer with \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 33 of file Vertex\+Buffer\+Object.\+h.
+
+\index{Vertex\+Buffer\+Object@{Vertex\+Buffer\+Object}!````~Vertex\+Buffer\+Object@{$\sim$\+Vertex\+Buffer\+Object}}
+\index{````~Vertex\+Buffer\+Object@{$\sim$\+Vertex\+Buffer\+Object}!Vertex\+Buffer\+Object@{Vertex\+Buffer\+Object}}
+\subsubsection[{\texorpdfstring{$\sim$\+Vertex\+Buffer\+Object()}{~VertexBufferObject()}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename V $>$ virtual {\bf Vertex\+Buffer\+Object}$<$ V $>$\+::$\sim${\bf Vertex\+Buffer\+Object} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_vertex_buffer_object_a196fb9f8c90cff926f4bda372b71f23b}{}\label{class_vertex_buffer_object_a196fb9f8c90cff926f4bda372b71f23b}
+
+
+Default destructor. 
+
+
+
+Definition at line 54 of file Vertex\+Buffer\+Object.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\index{Vertex\+Buffer\+Object@{Vertex\+Buffer\+Object}!get\+Vertex@{get\+Vertex}}
+\index{get\+Vertex@{get\+Vertex}!Vertex\+Buffer\+Object@{Vertex\+Buffer\+Object}}
+\subsubsection[{\texorpdfstring{get\+Vertex(unsigned int index) const }{getVertex(unsigned int index) const }}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename V $>$ const V\& {\bf Vertex\+Buffer\+Object}$<$ V $>$\+::get\+Vertex (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{index}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_vertex_buffer_object_a166710d3d7526c9bfb7f99de1b8057a4}{}\label{class_vertex_buffer_object_a166710d3d7526c9bfb7f99de1b8057a4}
+
+
+Access the vertex at a given offset/index in the buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Zero-\/based index in the buffer to access vertex \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Accessed vertex 
+\end{DoxyReturn}
+
+
+Definition at line 62 of file Vertex\+Buffer\+Object.\+h.
+
+
+
+References Vertex\+Buffer\+Object$<$ V $>$\+::m\+\_\+\+Vertices.
+
+\index{Vertex\+Buffer\+Object@{Vertex\+Buffer\+Object}!get\+Vertex\+Size@{get\+Vertex\+Size}}
+\index{get\+Vertex\+Size@{get\+Vertex\+Size}!Vertex\+Buffer\+Object@{Vertex\+Buffer\+Object}}
+\subsubsection[{\texorpdfstring{get\+Vertex\+Size() const  override}{getVertexSize() const  override}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename V $>$ G\+Lsizei {\bf Vertex\+Buffer\+Object}$<$ V $>$\+::get\+Vertex\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{class_vertex_buffer_object_ab31e996068d871acaa6bb6b5117dd2c3}{}\label{class_vertex_buffer_object_ab31e996068d871acaa6bb6b5117dd2c3}
+
+
+Retrieve the size of the individual vertices in this object. 
+
+\begin{DoxyReturn}{Returns}
+Size of a vertex, in G\+L-\/casted format 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_vertex_buffer_object_base_aff976ee272a27c43b95ee0c6cb0a7506}{Vertex\+Buffer\+Object\+Base}.
+
+
+
+Definition at line 68 of file Vertex\+Buffer\+Object.\+h.
+
+\index{Vertex\+Buffer\+Object@{Vertex\+Buffer\+Object}!size@{size}}
+\index{size@{size}!Vertex\+Buffer\+Object@{Vertex\+Buffer\+Object}}
+\subsubsection[{\texorpdfstring{size() const  override}{size() const  override}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename V $>$ unsigned int {\bf Vertex\+Buffer\+Object}$<$ V $>$\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{class_vertex_buffer_object_a9c6c36c1711d4fd1d1aae6916c35c9db}{}\label{class_vertex_buffer_object_a9c6c36c1711d4fd1d1aae6916c35c9db}
+
+
+Retrieve the size of the vertex buffer. 
+
+\begin{DoxyReturn}{Returns}
+Number of vertices in the C\+P\+U-\/side buffer 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_vertex_buffer_object_base_ab11e9eae754a9b12012242042d9637f0}{Vertex\+Buffer\+Object\+Base}.
+
+
+
+Definition at line 74 of file Vertex\+Buffer\+Object.\+h.
+
+
+
+References Vertex\+Buffer\+Object$<$ V $>$\+::m\+\_\+\+Vertices.
+
+
+
+\subsection{Member Data Documentation}
+\index{Vertex\+Buffer\+Object@{Vertex\+Buffer\+Object}!m\+\_\+\+Vertices@{m\+\_\+\+Vertices}}
+\index{m\+\_\+\+Vertices@{m\+\_\+\+Vertices}!Vertex\+Buffer\+Object@{Vertex\+Buffer\+Object}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Vertices}{m_Vertices}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename V $>$ std\+::vector$<$V$>$ {\bf Vertex\+Buffer\+Object}$<$ V $>$\+::m\+\_\+\+Vertices\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_vertex_buffer_object_aa8ccd2ec2c067c5fff5bb2dded70fcc6}{}\label{class_vertex_buffer_object_aa8ccd2ec2c067c5fff5bb2dded70fcc6}
+
+
+C\+P\+U-\/side buffer of vertices. 
+
+
+
+Definition at line 77 of file Vertex\+Buffer\+Object.\+h.
+
+
+
+Referenced by Vertex\+Buffer\+Object$<$ V $>$\+::get\+Vertex(), and Vertex\+Buffer\+Object$<$ V $>$\+::size().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Lunar\+Drift/engine/graphics/buffers/\hyperlink{_vertex_buffer_object_8h}{Vertex\+Buffer\+Object.\+h}\end{DoxyCompactItemize}

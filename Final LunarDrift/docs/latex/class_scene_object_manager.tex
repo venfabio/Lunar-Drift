@@ -1,0 +1,274 @@
+\hypertarget{class_scene_object_manager}{}\section{Scene\+Object\+Manager Class Reference}
+\label{class_scene_object_manager}\index{Scene\+Object\+Manager@{Scene\+Object\+Manager}}
+
+
+A manager class for handling and passing around scene objects.  
+
+
+
+
+{\ttfamily \#include $<$Scene\+Object\+Manager.\+h$>$}
+
+Inheritance diagram for Scene\+Object\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_scene_object_manager}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_scene_object_manager_a589afc363b4e3f7d04f253c43205763a}{Scene\+Object\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_scene_object_manager_adffb8c511196411d515c9b230b85c8e5}{$\sim$\+Scene\+Object\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_scene_object_manager_a4231d373cedd650cd5a6ee7930f76994}{add\+Scene\+Object} (std\+::shared\+\_\+ptr$<$ \hyperlink{class_scene_object}{Scene\+Object} $>$ object)
+\begin{DoxyCompactList}\small\item\em Add a scene object to the scene. \end{DoxyCompactList}\item 
+void \hyperlink{class_scene_object_manager_a00b65df9f837802b33150a51e3315278}{remove\+Scene\+Object} (std\+::shared\+\_\+ptr$<$ \hyperlink{class_scene_object}{Scene\+Object} $>$ object)
+\begin{DoxyCompactList}\small\item\em Remove a scene object from the scene (and destroy if applicable) \end{DoxyCompactList}\item 
+void \hyperlink{class_scene_object_manager_ae760816e4028cc680dce44dde42ced52}{get\+Objects} (std\+::list$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{class_scene_object}{Scene\+Object} $>$$>$ $\ast$objects)
+\begin{DoxyCompactList}\small\item\em Retrieve the list of objects in the scene. \end{DoxyCompactList}\item 
+void \hyperlink{class_scene_object_manager_a95eb6fa59723180a1ced2775249a0afe}{step} (double dt)
+\begin{DoxyCompactList}\small\item\em Step the scene\textquotesingle{}s simulation state. \end{DoxyCompactList}\item 
+void \hyperlink{class_scene_object_manager_a895153bc766085c9f94e4be72733b807}{predraw} (\hyperlink{class_context}{Context} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Called before the renderer draws the scene This allows the scene and its constituent objects to do updates that require a graphics context before the graphical state is drawn. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_scene_object_manager_a09f307f2c9fde4b85995f62fc21f731a}{cleanup\+Dying\+Objects} ()
+\begin{DoxyCompactList}\small\item\em Finalize the death and cleanup of objects marked as dying. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::list$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{class_scene_object}{Scene\+Object} $>$ $>$ \hyperlink{class_scene_object_manager_a3fec371160b895369edb7c694e205050}{m\+\_\+\+Scene\+Objects}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A manager class for handling and passing around scene objects. 
+
+\begin{DoxyAuthor}{Author}
+Hayley Hatton 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/03/2016 
+\end{DoxyDate}
+
+
+Definition at line 13 of file Scene\+Object\+Manager.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Scene\+Object\+Manager@{Scene\+Object\+Manager}!Scene\+Object\+Manager@{Scene\+Object\+Manager}}
+\index{Scene\+Object\+Manager@{Scene\+Object\+Manager}!Scene\+Object\+Manager@{Scene\+Object\+Manager}}
+\subsubsection[{\texorpdfstring{Scene\+Object\+Manager()}{SceneObjectManager()}}]{\setlength{\rightskip}{0pt plus 5cm}Scene\+Object\+Manager\+::\+Scene\+Object\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_scene_object_manager_a589afc363b4e3f7d04f253c43205763a}{}\label{class_scene_object_manager_a589afc363b4e3f7d04f253c43205763a}
+
+
+Default constructor. 
+
+
+
+Definition at line 4 of file Scene\+Object\+Manager.\+cpp.
+
+\index{Scene\+Object\+Manager@{Scene\+Object\+Manager}!````~Scene\+Object\+Manager@{$\sim$\+Scene\+Object\+Manager}}
+\index{````~Scene\+Object\+Manager@{$\sim$\+Scene\+Object\+Manager}!Scene\+Object\+Manager@{Scene\+Object\+Manager}}
+\subsubsection[{\texorpdfstring{$\sim$\+Scene\+Object\+Manager()}{~SceneObjectManager()}}]{\setlength{\rightskip}{0pt plus 5cm}Scene\+Object\+Manager\+::$\sim$\+Scene\+Object\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_scene_object_manager_adffb8c511196411d515c9b230b85c8e5}{}\label{class_scene_object_manager_adffb8c511196411d515c9b230b85c8e5}
+
+
+Default destructor. 
+
+
+
+Definition at line 8 of file Scene\+Object\+Manager.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{Scene\+Object\+Manager@{Scene\+Object\+Manager}!add\+Scene\+Object@{add\+Scene\+Object}}
+\index{add\+Scene\+Object@{add\+Scene\+Object}!Scene\+Object\+Manager@{Scene\+Object\+Manager}}
+\subsubsection[{\texorpdfstring{add\+Scene\+Object(std\+::shared\+\_\+ptr$<$ Scene\+Object $>$ object)}{addSceneObject(std::shared_ptr< SceneObject > object)}}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+Object\+Manager\+::add\+Scene\+Object (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Scene\+Object} $>$}]{object}
+\end{DoxyParamCaption}
+)}\hypertarget{class_scene_object_manager_a4231d373cedd650cd5a6ee7930f76994}{}\label{class_scene_object_manager_a4231d373cedd650cd5a6ee7930f76994}
+
+
+Add a scene object to the scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & Smart ptr to the scene object \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 13 of file Scene\+Object\+Manager.\+cpp.
+
+
+
+References m\+\_\+\+Scene\+Objects.
+
+
+
+Referenced by Scene\+::add\+Object().
+
+\index{Scene\+Object\+Manager@{Scene\+Object\+Manager}!cleanup\+Dying\+Objects@{cleanup\+Dying\+Objects}}
+\index{cleanup\+Dying\+Objects@{cleanup\+Dying\+Objects}!Scene\+Object\+Manager@{Scene\+Object\+Manager}}
+\subsubsection[{\texorpdfstring{cleanup\+Dying\+Objects()}{cleanupDyingObjects()}}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+Object\+Manager\+::cleanup\+Dying\+Objects (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_scene_object_manager_a09f307f2c9fde4b85995f62fc21f731a}{}\label{class_scene_object_manager_a09f307f2c9fde4b85995f62fc21f731a}
+
+
+Finalize the death and cleanup of objects marked as dying. 
+
+
+
+Definition at line 41 of file Scene\+Object\+Manager.\+cpp.
+
+
+
+References Scene\+Object\+::\+Dying, and m\+\_\+\+Scene\+Objects.
+
+
+
+Referenced by predraw().
+
+\index{Scene\+Object\+Manager@{Scene\+Object\+Manager}!get\+Objects@{get\+Objects}}
+\index{get\+Objects@{get\+Objects}!Scene\+Object\+Manager@{Scene\+Object\+Manager}}
+\subsubsection[{\texorpdfstring{get\+Objects(std\+::list$<$ std\+::shared\+\_\+ptr$<$ Scene\+Object $>$$>$ $\ast$objects)}{getObjects(std::list< std::shared_ptr< SceneObject >> *objects)}}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+Object\+Manager\+::get\+Objects (
+\begin{DoxyParamCaption}
+\item[{std\+::list$<$ std\+::shared\+\_\+ptr$<$ {\bf Scene\+Object} $>$$>$ $\ast$}]{objects}
+\end{DoxyParamCaption}
+)}\hypertarget{class_scene_object_manager_ae760816e4028cc680dce44dde42ced52}{}\label{class_scene_object_manager_ae760816e4028cc680dce44dde42ced52}
+
+
+Retrieve the list of objects in the scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em objects} & Pointer to list to fill with scene objects \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 25 of file Scene\+Object\+Manager.\+cpp.
+
+
+
+References m\+\_\+\+Scene\+Objects.
+
+
+
+Referenced by Scene\+::get\+Objects().
+
+\index{Scene\+Object\+Manager@{Scene\+Object\+Manager}!predraw@{predraw}}
+\index{predraw@{predraw}!Scene\+Object\+Manager@{Scene\+Object\+Manager}}
+\subsubsection[{\texorpdfstring{predraw(\+Context $\ast$context)}{predraw(Context *context)}}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+Object\+Manager\+::predraw (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context}
+\end{DoxyParamCaption}
+)}\hypertarget{class_scene_object_manager_a895153bc766085c9f94e4be72733b807}{}\label{class_scene_object_manager_a895153bc766085c9f94e4be72733b807}
+
+
+Called before the renderer draws the scene This allows the scene and its constituent objects to do updates that require a graphics context before the graphical state is drawn. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphics context \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 57 of file Scene\+Object\+Manager.\+cpp.
+
+
+
+References cleanup\+Dying\+Objects(), m\+\_\+\+Scene\+Objects, and Scene\+Object\+::\+Ready.
+
+
+
+Referenced by Scene\+::predraw().
+
+\index{Scene\+Object\+Manager@{Scene\+Object\+Manager}!remove\+Scene\+Object@{remove\+Scene\+Object}}
+\index{remove\+Scene\+Object@{remove\+Scene\+Object}!Scene\+Object\+Manager@{Scene\+Object\+Manager}}
+\subsubsection[{\texorpdfstring{remove\+Scene\+Object(std\+::shared\+\_\+ptr$<$ Scene\+Object $>$ object)}{removeSceneObject(std::shared_ptr< SceneObject > object)}}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+Object\+Manager\+::remove\+Scene\+Object (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Scene\+Object} $>$}]{object}
+\end{DoxyParamCaption}
+)}\hypertarget{class_scene_object_manager_a00b65df9f837802b33150a51e3315278}{}\label{class_scene_object_manager_a00b65df9f837802b33150a51e3315278}
+
+
+Remove a scene object from the scene (and destroy if applicable) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & Smart ptr to the scene object to remove \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 19 of file Scene\+Object\+Manager.\+cpp.
+
+
+
+References m\+\_\+\+Scene\+Objects.
+
+\index{Scene\+Object\+Manager@{Scene\+Object\+Manager}!step@{step}}
+\index{step@{step}!Scene\+Object\+Manager@{Scene\+Object\+Manager}}
+\subsubsection[{\texorpdfstring{step(double dt)}{step(double dt)}}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+Object\+Manager\+::step (
+\begin{DoxyParamCaption}
+\item[{double}]{dt}
+\end{DoxyParamCaption}
+)}\hypertarget{class_scene_object_manager_a95eb6fa59723180a1ced2775249a0afe}{}\label{class_scene_object_manager_a95eb6fa59723180a1ced2775249a0afe}
+
+
+Step the scene\textquotesingle{}s simulation state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta-\/time since last step call in seconds \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 31 of file Scene\+Object\+Manager.\+cpp.
+
+
+
+References m\+\_\+\+Scene\+Objects.
+
+
+
+Referenced by Scene\+::step().
+
+
+
+\subsection{Member Data Documentation}
+\index{Scene\+Object\+Manager@{Scene\+Object\+Manager}!m\+\_\+\+Scene\+Objects@{m\+\_\+\+Scene\+Objects}}
+\index{m\+\_\+\+Scene\+Objects@{m\+\_\+\+Scene\+Objects}!Scene\+Object\+Manager@{Scene\+Object\+Manager}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Scene\+Objects}{m_SceneObjects}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::list$<$std\+::shared\+\_\+ptr$<${\bf Scene\+Object}$>$ $>$ Scene\+Object\+Manager\+::m\+\_\+\+Scene\+Objects\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_scene_object_manager_a3fec371160b895369edb7c694e205050}{}\label{class_scene_object_manager_a3fec371160b895369edb7c694e205050}
+
+
+Definition at line 56 of file Scene\+Object\+Manager.\+h.
+
+
+
+Referenced by add\+Scene\+Object(), cleanup\+Dying\+Objects(), get\+Objects(), predraw(), remove\+Scene\+Object(), and step().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lunar\+Drift/engine/managers/\hyperlink{_scene_object_manager_8h}{Scene\+Object\+Manager.\+h}\item 
+Lunar\+Drift/engine/managers/\hyperlink{_scene_object_manager_8cpp}{Scene\+Object\+Manager.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,679 @@
+\hypertarget{class_scene_object}{}\section{Scene\+Object Class Reference}
+\label{class_scene_object}\index{Scene\+Object@{Scene\+Object}}
+
+
+Abstract class for encapsulating self-\/management of scene entities.  
+
+
+
+
+{\ttfamily \#include $<$Scene\+Object.\+h$>$}
+
+Inheritance diagram for Scene\+Object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_scene_object}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_scene_object_a3e12c3bc61287395d2fb63c370690dc9}{State} \{ \hyperlink{class_scene_object_a3e12c3bc61287395d2fb63c370690dc9ae7d31fc0602fb2ede144d18cdffd816b}{State\+::\+Ready}, 
+\hyperlink{class_scene_object_a3e12c3bc61287395d2fb63c370690dc9a2ef54119c1f0d131a1a60e7776fa78f0}{State\+::\+Dying}, 
+\hyperlink{class_scene_object_a3e12c3bc61287395d2fb63c370690dc9a183b62c7f067711f9c5a54913c054617}{State\+::\+Dead}
+ \}\begin{DoxyCompactList}\small\item\em Enumeration for scene object lifetime states. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_scene_object_a4dc2616525cc46ff3138a6d10f600aad}{Scene\+Object} (\hyperlink{class_context}{Context} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_scene_object_ab258d6b94e982d5ae71ad4d7652381f4}{$\sim$\+Scene\+Object} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+\hyperlink{class_scene_object_a3e12c3bc61287395d2fb63c370690dc9}{State} \hyperlink{class_scene_object_a8fd37f24e816c489f7af19510a4b5431}{get\+State} () const 
+\begin{DoxyCompactList}\small\item\em Retrieve the current lifetime stage the object is in. \end{DoxyCompactList}\item 
+void \hyperlink{class_scene_object_af1ce5eea77fe8015f3eeae73adbe0253}{set\+Dying} ()
+\begin{DoxyCompactList}\small\item\em Set the scene object to begin the dying process. \end{DoxyCompactList}\item 
+bool \hyperlink{class_scene_object_ab8635d3673dc8a91d71ba18402902314}{add\+Component} (std\+::shared\+\_\+ptr$<$ \hyperlink{class_scene_object_component}{Scene\+Object\+Component} $>$ component)
+\begin{DoxyCompactList}\small\item\em Add a component to the scene object. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_scene_object_component}{Scene\+Object\+Component} $>$ \hyperlink{class_scene_object_a08c8437b836366cc1832f92af096ebc0}{get\+Component} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Access a component attached to the scene object. \end{DoxyCompactList}\item 
+void \hyperlink{class_scene_object_af36a3463b19299b7d7cca2b476c36870}{set\+Position} (const glm\+::vec3 \&pos)
+\begin{DoxyCompactList}\small\item\em Set the position of the entity within the scene. \end{DoxyCompactList}\item 
+const glm\+::vec3 \& \hyperlink{class_scene_object_a91736aa3f5e06edb68c7c19ce9fbee85}{get\+Position} () const 
+\begin{DoxyCompactList}\small\item\em Access the current position of the entity in the scene. \end{DoxyCompactList}\item 
+void \hyperlink{class_scene_object_a07c1e8cb533c089560eb4d2cb319c629}{set\+Pitch} (G\+Lfloat angle)
+\begin{DoxyCompactList}\small\item\em Set the pitch angle of the entity (\char`\"{}\+X-\/\+Axis Rotation\char`\"{}) \end{DoxyCompactList}\item 
+G\+Lfloat \hyperlink{class_scene_object_a1a9a56ef5f3599892b14909dba70baa2}{get\+Pitch} () const 
+\begin{DoxyCompactList}\small\item\em Get the pitch angle of the entity (\char`\"{}\+X-\/\+Axis Rotation\char`\"{}) \end{DoxyCompactList}\item 
+void \hyperlink{class_scene_object_a92e89c65e5d427333919e7b6e5d1ce8c}{set\+Yaw} (G\+Lfloat angle)
+\begin{DoxyCompactList}\small\item\em Set the yaw angle of the entity (\char`\"{}\+Y-\/\+Axis Rotation\char`\"{}) \end{DoxyCompactList}\item 
+G\+Lfloat \hyperlink{class_scene_object_a61c445c541ab50f0f4e859d43926d71e}{get\+Yaw} () const 
+\begin{DoxyCompactList}\small\item\em Get the yaw angle of the entity (\char`\"{}\+Y-\/\+Axis Rotation\char`\"{}) \end{DoxyCompactList}\item 
+void \hyperlink{class_scene_object_aceabc31f66aa4929b7d7901da5660b1d}{set\+Roll} (G\+Lfloat angle)
+\begin{DoxyCompactList}\small\item\em Set the roll angle of the entity (\char`\"{}\+Z-\/\+Axis Rotation\char`\"{}) \end{DoxyCompactList}\item 
+G\+Lfloat \hyperlink{class_scene_object_a9c408db9660d645a86dd911abf96de11}{get\+Roll} () const 
+\begin{DoxyCompactList}\small\item\em Get the roll angle of the entity (\char`\"{}\+Z-\/\+Axis Rotation\char`\"{}) \end{DoxyCompactList}\item 
+void \hyperlink{class_scene_object_aece4f04fd597dd289c388b40fb9ed738}{set\+Rotations} (const glm\+::vec3 \&angles)
+\begin{DoxyCompactList}\small\item\em Set all the rotation states of the entity at once. \end{DoxyCompactList}\item 
+const glm\+::vec3 \& \hyperlink{class_scene_object_a1ff492a410e4338306462bae5f248ca1}{get\+Rotations} () const 
+\begin{DoxyCompactList}\small\item\em Get all the rotation states of the entity at once. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_scene_object_a5b69482cadd94997cd09bb145b1986d9}{step} (double dt)
+\begin{DoxyCompactList}\small\item\em Step the simulation state. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_scene_object_a2d5b85ae297772e2f5d0ef6fb920ddf2}{predraw} (\hyperlink{class_context}{Context} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Called before the renderer draws the scene This allows the scene objects to do updates that require a graphics context before the graphical state is drawn. \end{DoxyCompactList}\item 
+void \hyperlink{class_scene_object_acbb90a879014f50ba44ad16e56436347}{update\+Model\+Matrix\+State} (\hyperlink{class_context}{Context} $\ast$context, std\+::shared\+\_\+ptr$<$ \hyperlink{class_shader_program}{Shader\+Program} $>$ shader) const 
+\begin{DoxyCompactList}\small\item\em Use the standard position and rotation states as a model matrix This constructs a model matrix representing the position and rotation state, and tries to upload it into the u\+\_\+\+Model\+Matrix uniform in the presented shader, taking away the effort of doing this on every object from the programmers. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_scene_object_a9dec6a34922a4063b561d3d16d396ee6}{draw} (\hyperlink{class_context}{Context} $\ast$context, std\+::shared\+\_\+ptr$<$ \hyperlink{class_shader_manager}{Shader\+Manager} $>$ shaders)=0
+\begin{DoxyCompactList}\small\item\em Draw the object in its current state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ \hyperlink{class_scene_object_component}{Scene\+Object\+Component} $>$ $>$ \hyperlink{class_scene_object_a0e464a9eadb58928b80413b11437fa8b}{m\+\_\+\+Components}
+\item 
+glm\+::vec3 \hyperlink{class_scene_object_ad657befa8278678b73cafb62dec70b7a}{m\+\_\+\+Position}
+\item 
+glm\+::vec3 \hyperlink{class_scene_object_a925acd4f041f1f1796652cabf917ca90}{m\+\_\+\+Rotation}
+\item 
+\hyperlink{class_scene_object_a3e12c3bc61287395d2fb63c370690dc9}{State} \hyperlink{class_scene_object_a3648197f2a904ef0f7cc379ee0858e79}{m\+\_\+\+State}
+\begin{DoxyCompactList}\small\item\em Current life-\/stage state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract class for encapsulating self-\/management of scene entities. 
+
+\begin{DoxyPrecond}{Precondition}
+A valid Open\+GL context must be present to the program 
+\end{DoxyPrecond}
+\begin{DoxyAuthor}{Author}
+Hayley Hatton 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+06/03/2016 
+\end{DoxyDate}
+
+
+Definition at line 14 of file Scene\+Object.\+h.
+
+
+
+\subsection{Member Enumeration Documentation}
+\index{Scene\+Object@{Scene\+Object}!State@{State}}
+\index{State@{State}!Scene\+Object@{Scene\+Object}}
+\subsubsection[{\texorpdfstring{State}{State}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Scene\+Object\+::\+State}\hspace{0.3cm}{\ttfamily [strong]}}\hypertarget{class_scene_object_a3e12c3bc61287395d2fb63c370690dc9}{}\label{class_scene_object_a3e12c3bc61287395d2fb63c370690dc9}
+
+
+Enumeration for scene object lifetime states. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Ready@{Ready}!Scene\+Object@{Scene\+Object}}\index{Scene\+Object@{Scene\+Object}!Ready@{Ready}}\item[{\em 
+Ready\hypertarget{class_scene_object_a3e12c3bc61287395d2fb63c370690dc9ae7d31fc0602fb2ede144d18cdffd816b}{}\label{class_scene_object_a3e12c3bc61287395d2fb63c370690dc9ae7d31fc0602fb2ede144d18cdffd816b}
+}]Loaded and ready for use. \index{Dying@{Dying}!Scene\+Object@{Scene\+Object}}\index{Scene\+Object@{Scene\+Object}!Dying@{Dying}}\item[{\em 
+Dying\hypertarget{class_scene_object_a3e12c3bc61287395d2fb63c370690dc9a2ef54119c1f0d131a1a60e7776fa78f0}{}\label{class_scene_object_a3e12c3bc61287395d2fb63c370690dc9a2ef54119c1f0d131a1a60e7776fa78f0}
+}]Loaded, but marked as dead and needing cleanup. \index{Dead@{Dead}!Scene\+Object@{Scene\+Object}}\index{Scene\+Object@{Scene\+Object}!Dead@{Dead}}\item[{\em 
+Dead\hypertarget{class_scene_object_a3e12c3bc61287395d2fb63c370690dc9a183b62c7f067711f9c5a54913c054617}{}\label{class_scene_object_a3e12c3bc61287395d2fb63c370690dc9a183b62c7f067711f9c5a54913c054617}
+}]Cleaned up and finished; pending dtor. \end{description}
+\end{Desc}
+
+
+Definition at line 28 of file Scene\+Object.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Scene\+Object@{Scene\+Object}!Scene\+Object@{Scene\+Object}}
+\index{Scene\+Object@{Scene\+Object}!Scene\+Object@{Scene\+Object}}
+\subsubsection[{\texorpdfstring{Scene\+Object(\+Context $\ast$context)}{SceneObject(Context *context)}}]{\setlength{\rightskip}{0pt plus 5cm}Scene\+Object\+::\+Scene\+Object (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context}
+\end{DoxyParamCaption}
+)}\hypertarget{class_scene_object_a4dc2616525cc46ff3138a6d10f600aad}{}\label{class_scene_object_a4dc2616525cc46ff3138a6d10f600aad}
+
+
+Default constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphics context \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 6 of file Scene\+Object.\+cpp.
+
+\index{Scene\+Object@{Scene\+Object}!````~Scene\+Object@{$\sim$\+Scene\+Object}}
+\index{````~Scene\+Object@{$\sim$\+Scene\+Object}!Scene\+Object@{Scene\+Object}}
+\subsubsection[{\texorpdfstring{$\sim$\+Scene\+Object()}{~SceneObject()}}]{\setlength{\rightskip}{0pt plus 5cm}Scene\+Object\+::$\sim$\+Scene\+Object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_scene_object_ab258d6b94e982d5ae71ad4d7652381f4}{}\label{class_scene_object_ab258d6b94e982d5ae71ad4d7652381f4}
+
+
+Default destructor. 
+
+
+
+Definition at line 12 of file Scene\+Object.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{Scene\+Object@{Scene\+Object}!add\+Component@{add\+Component}}
+\index{add\+Component@{add\+Component}!Scene\+Object@{Scene\+Object}}
+\subsubsection[{\texorpdfstring{add\+Component(std\+::shared\+\_\+ptr$<$ Scene\+Object\+Component $>$ component)}{addComponent(std::shared_ptr< SceneObjectComponent > component)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Scene\+Object\+::add\+Component (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Scene\+Object\+Component} $>$}]{component}
+\end{DoxyParamCaption}
+)}\hypertarget{class_scene_object_ab8635d3673dc8a91d71ba18402902314}{}\label{class_scene_object_ab8635d3673dc8a91d71ba18402902314}
+
+
+Add a component to the scene object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em component} & Smart pointer to the component \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if added; false if already exists 
+\end{DoxyReturn}
+
+
+Definition at line 18 of file Scene\+Object.\+cpp.
+
+
+
+References m\+\_\+\+Components.
+
+
+
+Referenced by set\+Dying(), and Test\+Triangle\+::\+Test\+Triangle().
+
+\index{Scene\+Object@{Scene\+Object}!draw@{draw}}
+\index{draw@{draw}!Scene\+Object@{Scene\+Object}}
+\subsubsection[{\texorpdfstring{draw(\+Context $\ast$context, std\+::shared\+\_\+ptr$<$ Shader\+Manager $>$ shaders)=0}{draw(Context *context, std::shared_ptr< ShaderManager > shaders)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Scene\+Object\+::draw (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context, }
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Shader\+Manager} $>$}]{shaders}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_scene_object_a9dec6a34922a4063b561d3d16d396ee6}{}\label{class_scene_object_a9dec6a34922a4063b561d3d16d396ee6}
+
+
+Draw the object in its current state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphics context \\
+\hline
+{\em shaders} & Shader manager containing shader programs for use \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_test_triangle_aadf5ec7f41246e3c114e7f44f009f303}{Test\+Triangle}.
+
+
+
+Referenced by get\+Rotations().
+
+\index{Scene\+Object@{Scene\+Object}!get\+Component@{get\+Component}}
+\index{get\+Component@{get\+Component}!Scene\+Object@{Scene\+Object}}
+\subsubsection[{\texorpdfstring{get\+Component(const std\+::string \&name)}{getComponent(const std::string &name)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$ {\bf Scene\+Object\+Component} $>$ Scene\+Object\+::get\+Component (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{class_scene_object_a08c8437b836366cc1832f92af096ebc0}{}\label{class_scene_object_a08c8437b836366cc1832f92af096ebc0}
+
+
+Access a component attached to the scene object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Identifying name of the component type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Smart pointer to the component; nullptr if none of that type 
+\end{DoxyReturn}
+
+
+Definition at line 30 of file Scene\+Object.\+cpp.
+
+
+
+References m\+\_\+\+Components.
+
+
+
+Referenced by set\+Dying().
+
+\index{Scene\+Object@{Scene\+Object}!get\+Pitch@{get\+Pitch}}
+\index{get\+Pitch@{get\+Pitch}!Scene\+Object@{Scene\+Object}}
+\subsubsection[{\texorpdfstring{get\+Pitch() const }{getPitch() const }}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lfloat Scene\+Object\+::get\+Pitch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_scene_object_a1a9a56ef5f3599892b14909dba70baa2}{}\label{class_scene_object_a1a9a56ef5f3599892b14909dba70baa2}
+
+
+Get the pitch angle of the entity (\char`\"{}\+X-\/\+Axis Rotation\char`\"{}) 
+
+\begin{DoxyReturn}{Returns}
+Current pitch angle 
+\end{DoxyReturn}
+
+
+Definition at line 80 of file Scene\+Object.\+h.
+
+
+
+References m\+\_\+\+Rotation.
+
+\index{Scene\+Object@{Scene\+Object}!get\+Position@{get\+Position}}
+\index{get\+Position@{get\+Position}!Scene\+Object@{Scene\+Object}}
+\subsubsection[{\texorpdfstring{get\+Position() const }{getPosition() const }}]{\setlength{\rightskip}{0pt plus 5cm}const glm\+::vec3\& Scene\+Object\+::get\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_scene_object_a91736aa3f5e06edb68c7c19ce9fbee85}{}\label{class_scene_object_a91736aa3f5e06edb68c7c19ce9fbee85}
+
+
+Access the current position of the entity in the scene. 
+
+\begin{DoxyReturn}{Returns}
+Current position 
+\end{DoxyReturn}
+
+
+Definition at line 68 of file Scene\+Object.\+h.
+
+
+
+References m\+\_\+\+Position.
+
+\index{Scene\+Object@{Scene\+Object}!get\+Roll@{get\+Roll}}
+\index{get\+Roll@{get\+Roll}!Scene\+Object@{Scene\+Object}}
+\subsubsection[{\texorpdfstring{get\+Roll() const }{getRoll() const }}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lfloat Scene\+Object\+::get\+Roll (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_scene_object_a9c408db9660d645a86dd911abf96de11}{}\label{class_scene_object_a9c408db9660d645a86dd911abf96de11}
+
+
+Get the roll angle of the entity (\char`\"{}\+Z-\/\+Axis Rotation\char`\"{}) 
+
+\begin{DoxyReturn}{Returns}
+Current roll angle 
+\end{DoxyReturn}
+
+
+Definition at line 104 of file Scene\+Object.\+h.
+
+
+
+References m\+\_\+\+Rotation.
+
+\index{Scene\+Object@{Scene\+Object}!get\+Rotations@{get\+Rotations}}
+\index{get\+Rotations@{get\+Rotations}!Scene\+Object@{Scene\+Object}}
+\subsubsection[{\texorpdfstring{get\+Rotations() const }{getRotations() const }}]{\setlength{\rightskip}{0pt plus 5cm}const glm\+::vec3\& Scene\+Object\+::get\+Rotations (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_scene_object_a1ff492a410e4338306462bae5f248ca1}{}\label{class_scene_object_a1ff492a410e4338306462bae5f248ca1}
+
+
+Get all the rotation states of the entity at once. 
+
+\begin{DoxyReturn}{Returns}
+Current rotation angles as a vector 
+\end{DoxyReturn}
+
+
+Definition at line 116 of file Scene\+Object.\+h.
+
+
+
+References draw(), m\+\_\+\+Rotation, predraw(), step(), and update\+Model\+Matrix\+State().
+
+\index{Scene\+Object@{Scene\+Object}!get\+State@{get\+State}}
+\index{get\+State@{get\+State}!Scene\+Object@{Scene\+Object}}
+\subsubsection[{\texorpdfstring{get\+State() const }{getState() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf State} Scene\+Object\+::get\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_scene_object_a8fd37f24e816c489f7af19510a4b5431}{}\label{class_scene_object_a8fd37f24e816c489f7af19510a4b5431}
+
+
+Retrieve the current lifetime stage the object is in. 
+
+\begin{DoxyReturn}{Returns}
+Current life-\/stage state 
+\end{DoxyReturn}
+
+
+Definition at line 39 of file Scene\+Object.\+h.
+
+
+
+References m\+\_\+\+State.
+
+\index{Scene\+Object@{Scene\+Object}!get\+Yaw@{get\+Yaw}}
+\index{get\+Yaw@{get\+Yaw}!Scene\+Object@{Scene\+Object}}
+\subsubsection[{\texorpdfstring{get\+Yaw() const }{getYaw() const }}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lfloat Scene\+Object\+::get\+Yaw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_scene_object_a61c445c541ab50f0f4e859d43926d71e}{}\label{class_scene_object_a61c445c541ab50f0f4e859d43926d71e}
+
+
+Get the yaw angle of the entity (\char`\"{}\+Y-\/\+Axis Rotation\char`\"{}) 
+
+\begin{DoxyReturn}{Returns}
+Current yaw angle 
+\end{DoxyReturn}
+
+
+Definition at line 92 of file Scene\+Object.\+h.
+
+
+
+References m\+\_\+\+Rotation.
+
+\index{Scene\+Object@{Scene\+Object}!predraw@{predraw}}
+\index{predraw@{predraw}!Scene\+Object@{Scene\+Object}}
+\subsubsection[{\texorpdfstring{predraw(\+Context $\ast$context)}{predraw(Context *context)}}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+Object\+::predraw (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_scene_object_a2d5b85ae297772e2f5d0ef6fb920ddf2}{}\label{class_scene_object_a2d5b85ae297772e2f5d0ef6fb920ddf2}
+
+
+Called before the renderer draws the scene This allows the scene objects to do updates that require a graphics context before the graphical state is drawn. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphics context \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_test_triangle_a0b7b66d114a3d97e524f2d8d9f13a9e7}{Test\+Triangle}.
+
+
+
+Definition at line 45 of file Scene\+Object.\+cpp.
+
+
+
+References m\+\_\+\+Components.
+
+
+
+Referenced by get\+Rotations(), and Test\+Triangle\+::predraw().
+
+\index{Scene\+Object@{Scene\+Object}!set\+Dying@{set\+Dying}}
+\index{set\+Dying@{set\+Dying}!Scene\+Object@{Scene\+Object}}
+\subsubsection[{\texorpdfstring{set\+Dying()}{setDying()}}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+Object\+::set\+Dying (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_scene_object_af1ce5eea77fe8015f3eeae73adbe0253}{}\label{class_scene_object_af1ce5eea77fe8015f3eeae73adbe0253}
+
+
+Set the scene object to begin the dying process. 
+
+
+
+Definition at line 42 of file Scene\+Object.\+h.
+
+
+
+References add\+Component(), Dying, get\+Component(), and m\+\_\+\+State.
+
+
+
+Referenced by Test\+Triangle\+::on\+Message().
+
+\index{Scene\+Object@{Scene\+Object}!set\+Pitch@{set\+Pitch}}
+\index{set\+Pitch@{set\+Pitch}!Scene\+Object@{Scene\+Object}}
+\subsubsection[{\texorpdfstring{set\+Pitch(\+G\+Lfloat angle)}{setPitch(GLfloat angle)}}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+Object\+::set\+Pitch (
+\begin{DoxyParamCaption}
+\item[{G\+Lfloat}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_scene_object_a07c1e8cb533c089560eb4d2cb319c629}{}\label{class_scene_object_a07c1e8cb533c089560eb4d2cb319c629}
+
+
+Set the pitch angle of the entity (\char`\"{}\+X-\/\+Axis Rotation\char`\"{}) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & New pitch angle \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 74 of file Scene\+Object.\+h.
+
+
+
+References m\+\_\+\+Rotation.
+
+\index{Scene\+Object@{Scene\+Object}!set\+Position@{set\+Position}}
+\index{set\+Position@{set\+Position}!Scene\+Object@{Scene\+Object}}
+\subsubsection[{\texorpdfstring{set\+Position(const glm\+::vec3 \&pos)}{setPosition(const glm::vec3 &pos)}}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+Object\+::set\+Position (
+\begin{DoxyParamCaption}
+\item[{const glm\+::vec3 \&}]{pos}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_scene_object_af36a3463b19299b7d7cca2b476c36870}{}\label{class_scene_object_af36a3463b19299b7d7cca2b476c36870}
+
+
+Set the position of the entity within the scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & New position \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 62 of file Scene\+Object.\+h.
+
+
+
+References m\+\_\+\+Position.
+
+\index{Scene\+Object@{Scene\+Object}!set\+Roll@{set\+Roll}}
+\index{set\+Roll@{set\+Roll}!Scene\+Object@{Scene\+Object}}
+\subsubsection[{\texorpdfstring{set\+Roll(\+G\+Lfloat angle)}{setRoll(GLfloat angle)}}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+Object\+::set\+Roll (
+\begin{DoxyParamCaption}
+\item[{G\+Lfloat}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_scene_object_aceabc31f66aa4929b7d7901da5660b1d}{}\label{class_scene_object_aceabc31f66aa4929b7d7901da5660b1d}
+
+
+Set the roll angle of the entity (\char`\"{}\+Z-\/\+Axis Rotation\char`\"{}) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & New roll angle \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 98 of file Scene\+Object.\+h.
+
+
+
+References m\+\_\+\+Rotation.
+
+\index{Scene\+Object@{Scene\+Object}!set\+Rotations@{set\+Rotations}}
+\index{set\+Rotations@{set\+Rotations}!Scene\+Object@{Scene\+Object}}
+\subsubsection[{\texorpdfstring{set\+Rotations(const glm\+::vec3 \&angles)}{setRotations(const glm::vec3 &angles)}}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+Object\+::set\+Rotations (
+\begin{DoxyParamCaption}
+\item[{const glm\+::vec3 \&}]{angles}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_scene_object_aece4f04fd597dd289c388b40fb9ed738}{}\label{class_scene_object_aece4f04fd597dd289c388b40fb9ed738}
+
+
+Set all the rotation states of the entity at once. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angles} & New rotation angles as a vector \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 110 of file Scene\+Object.\+h.
+
+
+
+References m\+\_\+\+Rotation.
+
+\index{Scene\+Object@{Scene\+Object}!set\+Yaw@{set\+Yaw}}
+\index{set\+Yaw@{set\+Yaw}!Scene\+Object@{Scene\+Object}}
+\subsubsection[{\texorpdfstring{set\+Yaw(\+G\+Lfloat angle)}{setYaw(GLfloat angle)}}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+Object\+::set\+Yaw (
+\begin{DoxyParamCaption}
+\item[{G\+Lfloat}]{angle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_scene_object_a92e89c65e5d427333919e7b6e5d1ce8c}{}\label{class_scene_object_a92e89c65e5d427333919e7b6e5d1ce8c}
+
+
+Set the yaw angle of the entity (\char`\"{}\+Y-\/\+Axis Rotation\char`\"{}) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & New yaw angle \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 86 of file Scene\+Object.\+h.
+
+
+
+References m\+\_\+\+Rotation.
+
+\index{Scene\+Object@{Scene\+Object}!step@{step}}
+\index{step@{step}!Scene\+Object@{Scene\+Object}}
+\subsubsection[{\texorpdfstring{step(double dt)}{step(double dt)}}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+Object\+::step (
+\begin{DoxyParamCaption}
+\item[{double}]{dt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_scene_object_a5b69482cadd94997cd09bb145b1986d9}{}\label{class_scene_object_a5b69482cadd94997cd09bb145b1986d9}
+
+
+Step the simulation state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta-\/time since last step call in seconds \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_test_triangle_a99c4fb3e4da6d1dabf3f9cdeef5b1b31}{Test\+Triangle}.
+
+
+
+Definition at line 39 of file Scene\+Object.\+cpp.
+
+
+
+References m\+\_\+\+Components.
+
+
+
+Referenced by get\+Rotations(), and Test\+Triangle\+::step().
+
+\index{Scene\+Object@{Scene\+Object}!update\+Model\+Matrix\+State@{update\+Model\+Matrix\+State}}
+\index{update\+Model\+Matrix\+State@{update\+Model\+Matrix\+State}!Scene\+Object@{Scene\+Object}}
+\subsubsection[{\texorpdfstring{update\+Model\+Matrix\+State(\+Context $\ast$context, std\+::shared\+\_\+ptr$<$ Shader\+Program $>$ shader) const }{updateModelMatrixState(Context *context, std::shared_ptr< ShaderProgram > shader) const }}]{\setlength{\rightskip}{0pt plus 5cm}void Scene\+Object\+::update\+Model\+Matrix\+State (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context, }
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Shader\+Program} $>$}]{shader}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_scene_object_acbb90a879014f50ba44ad16e56436347}{}\label{class_scene_object_acbb90a879014f50ba44ad16e56436347}
+
+
+Use the standard position and rotation states as a model matrix This constructs a model matrix representing the position and rotation state, and tries to upload it into the u\+\_\+\+Model\+Matrix uniform in the presented shader, taking away the effort of doing this on every object from the programmers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphics context \\
+\hline
+{\em shader} & Shader program to upload model matrix to \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 51 of file Scene\+Object.\+cpp.
+
+
+
+References m\+\_\+\+Position, and m\+\_\+\+Rotation.
+
+
+
+Referenced by get\+Rotations().
+
+
+
+\subsection{Member Data Documentation}
+\index{Scene\+Object@{Scene\+Object}!m\+\_\+\+Components@{m\+\_\+\+Components}}
+\index{m\+\_\+\+Components@{m\+\_\+\+Components}!Scene\+Object@{Scene\+Object}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Components}{m_Components}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$std\+::string, std\+::shared\+\_\+ptr$<${\bf Scene\+Object\+Component}$>$ $>$ Scene\+Object\+::m\+\_\+\+Components\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_scene_object_a0e464a9eadb58928b80413b11437fa8b}{}\label{class_scene_object_a0e464a9eadb58928b80413b11437fa8b}
+
+
+Definition at line 155 of file Scene\+Object.\+h.
+
+
+
+Referenced by add\+Component(), get\+Component(), predraw(), and step().
+
+\index{Scene\+Object@{Scene\+Object}!m\+\_\+\+Position@{m\+\_\+\+Position}}
+\index{m\+\_\+\+Position@{m\+\_\+\+Position}!Scene\+Object@{Scene\+Object}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Position}{m_Position}}]{\setlength{\rightskip}{0pt plus 5cm}glm\+::vec3 Scene\+Object\+::m\+\_\+\+Position\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_scene_object_ad657befa8278678b73cafb62dec70b7a}{}\label{class_scene_object_ad657befa8278678b73cafb62dec70b7a}
+
+
+Definition at line 156 of file Scene\+Object.\+h.
+
+
+
+Referenced by get\+Position(), set\+Position(), and update\+Model\+Matrix\+State().
+
+\index{Scene\+Object@{Scene\+Object}!m\+\_\+\+Rotation@{m\+\_\+\+Rotation}}
+\index{m\+\_\+\+Rotation@{m\+\_\+\+Rotation}!Scene\+Object@{Scene\+Object}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Rotation}{m_Rotation}}]{\setlength{\rightskip}{0pt plus 5cm}glm\+::vec3 Scene\+Object\+::m\+\_\+\+Rotation\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_scene_object_a925acd4f041f1f1796652cabf917ca90}{}\label{class_scene_object_a925acd4f041f1f1796652cabf917ca90}
+
+
+Definition at line 157 of file Scene\+Object.\+h.
+
+
+
+Referenced by get\+Pitch(), get\+Roll(), get\+Rotations(), get\+Yaw(), set\+Pitch(), set\+Roll(), set\+Rotations(), set\+Yaw(), and update\+Model\+Matrix\+State().
+
+\index{Scene\+Object@{Scene\+Object}!m\+\_\+\+State@{m\+\_\+\+State}}
+\index{m\+\_\+\+State@{m\+\_\+\+State}!Scene\+Object@{Scene\+Object}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+State}{m_State}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf State} Scene\+Object\+::m\+\_\+\+State\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_scene_object_a3648197f2a904ef0f7cc379ee0858e79}{}\label{class_scene_object_a3648197f2a904ef0f7cc379ee0858e79}
+
+
+Current life-\/stage state. 
+
+
+
+Definition at line 158 of file Scene\+Object.\+h.
+
+
+
+Referenced by get\+State(), and set\+Dying().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lunar\+Drift/engine/containers/\hyperlink{_scene_object_8h}{Scene\+Object.\+h}\item 
+Lunar\+Drift/engine/containers/\hyperlink{_scene_object_8cpp}{Scene\+Object.\+cpp}\end{DoxyCompactItemize}

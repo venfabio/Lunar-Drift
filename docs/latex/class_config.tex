@@ -1,0 +1,557 @@
+\hypertarget{class_config}{}\section{Config Class Reference}
+\label{class_config}\index{Config@{Config}}
+
+
+A singleton that aggregates and encaspsulates access to config files.  
+
+
+
+
+{\ttfamily \#include $<$Config.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_config_a8198223ee3542b0754720c28f1ca8e42}{load} (const std\+::string \&file)
+\begin{DoxyCompactList}\small\item\em Load an I\+NI file into the configuration settings database. \end{DoxyCompactList}\item 
+void \hyperlink{class_config_a095b729166d151267aea1e969e02a5e0}{save} (const std\+::string \&file)
+\begin{DoxyCompactList}\small\item\em Save to an I\+NI file from the configuration settings database. \end{DoxyCompactList}\item 
+void \hyperlink{class_config_a8159645eaab244229fb539bd7f23d365}{save\+All} ()
+\begin{DoxyCompactList}\small\item\em Save all loaded configuration files with current settings. \end{DoxyCompactList}\item 
+const std\+::string \& \hyperlink{class_config_a14108dcb3ce428431483cd4107fb6074}{get} (const std\+::string \&file, const std\+::string \&name) const 
+\begin{DoxyCompactList}\small\item\em Access a setting from a loaded configuration file. \end{DoxyCompactList}\item 
+int \hyperlink{class_config_a385fbc7610cfa7fa4fb11b11d6fad26a}{get\+Int} (const std\+::string \&file, const std\+::string \&name) const 
+\begin{DoxyCompactList}\small\item\em Access a setting from a loaded configuration file. \end{DoxyCompactList}\item 
+bool \hyperlink{class_config_a28fdb5bcf67d57b5df952e9f667f313f}{get\+Bool} (const std\+::string \&file, const std\+::string \&name, bool unknown\+Is\+False=true) const 
+\begin{DoxyCompactList}\small\item\em Access a setting from a loaded configuration file. \end{DoxyCompactList}\item 
+double \hyperlink{class_config_aaa35e0251f6920bf5cb42c8c1edad6f7}{get\+Double} (const std\+::string \&file, const std\+::string \&name) const 
+\begin{DoxyCompactList}\small\item\em Access a setting from a loaded configuration file. \end{DoxyCompactList}\item 
+float \hyperlink{class_config_acd8be5c460303ba4a5df8036f99e5935}{get\+Float} (const std\+::string \&file, const std\+::string \&name) const 
+\begin{DoxyCompactList}\small\item\em Access a setting from a loaded configuration file. \end{DoxyCompactList}\item 
+void \hyperlink{class_config_a95d6afbbffc9cfa02a9d1171d48c9e8b}{set} (const std\+::string \&file, const std\+::string \&name, const std\+::string value)
+\begin{DoxyCompactList}\small\item\em Set a setting in the configuration database. \end{DoxyCompactList}\item 
+void \hyperlink{class_config_a3cd33d32e89a8831a7047653c217d760}{set} (const std\+::string \&file, const std\+::string \&name, int value)
+\begin{DoxyCompactList}\small\item\em Set a setting in the configuration database. \end{DoxyCompactList}\item 
+void \hyperlink{class_config_ac2b0c38ab146ff4e2de8dbe10fc08b36}{set} (const std\+::string \&file, const std\+::string \&name, bool value)
+\begin{DoxyCompactList}\small\item\em Set a setting in the configuration database. \end{DoxyCompactList}\item 
+void \hyperlink{class_config_adc58efca4fe18f3338b82b3cbe7d6f94}{set} (const std\+::string \&file, const std\+::string \&name, double value)
+\begin{DoxyCompactList}\small\item\em Set a setting in the configuration database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_config}{Config} \& \hyperlink{class_config_a5154d96acc76c1fae8c564f3705fe197}{get} ()
+\begin{DoxyCompactList}\small\item\em Access the singleton instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_config_abd0c571c116924871e30444b192b792a}{Config} ()
+\item 
+\hyperlink{class_config_a43fa97921860bb03437dde7461310459}{Config} (\hyperlink{class_config}{Config} const \&)
+\item 
+void \hyperlink{class_config_a9b6a7f8721a8789102928869dc1e186c}{operator=} (\hyperlink{class_config}{Config} const \&)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ std\+::string, std\+::map$<$ std\+::string, std\+::string $>$ $>$ \hyperlink{class_config_a5c864239797e10af1a62b292d7ededad}{m\+\_\+\+File\+Data}
+\begin{DoxyCompactList}\small\item\em Settings database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A singleton that aggregates and encaspsulates access to config files. 
+
+Most projects utilize .I\+NI files to configure the program. They provide convenient storage places for configuration variables, and are both easily readable and modifiable by users from outside of the program. This singleton class allows these I\+NI files to be conveniently handled and interfaced for easier use by programmers.
+
+\begin{DoxyNote}{Note}
+\char`\"{}\+\_\+engine\char`\"{} file is a virtual file for representing internal engine configuration states
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+Hayley Hatton 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/02/2016 
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000004}{Todo}](Hayley\#3\#20/02/16)\+: Directory control. 
+
+(Hayley\#2\#20/02/16)\+: Access via \mbox{[}\mbox{]} operators? \end{DoxyRefDesc}
+
+
+Definition at line 22 of file Config.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Config@{Config}!Config@{Config}}
+\index{Config@{Config}!Config@{Config}}
+\subsubsection[{\texorpdfstring{Config()}{Config()}}]{\setlength{\rightskip}{0pt plus 5cm}Config\+::\+Config (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{class_config_abd0c571c116924871e30444b192b792a}{}\label{class_config_abd0c571c116924871e30444b192b792a}
+
+
+Definition at line 160 of file Config.\+h.
+
+
+
+References operator=().
+
+\index{Config@{Config}!Config@{Config}}
+\index{Config@{Config}!Config@{Config}}
+\subsubsection[{\texorpdfstring{Config(\+Config const \&)}{Config(Config const &)}}]{\setlength{\rightskip}{0pt plus 5cm}Config\+::\+Config (
+\begin{DoxyParamCaption}
+\item[{{\bf Config} const \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_config_a43fa97921860bb03437dde7461310459}{}\label{class_config_a43fa97921860bb03437dde7461310459}
+
+
+\subsection{Member Function Documentation}
+\index{Config@{Config}!get@{get}}
+\index{get@{get}!Config@{Config}}
+\subsubsection[{\texorpdfstring{get()}{get()}}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Config}\& Config\+::get (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{class_config_a5154d96acc76c1fae8c564f3705fe197}{}\label{class_config_a5154d96acc76c1fae8c564f3705fe197}
+
+
+Access the singleton instance. 
+
+\begin{DoxyReturn}{Returns}
+The actual \hyperlink{class_config}{Config} instance. 
+\end{DoxyReturn}
+
+
+Definition at line 29 of file Config.\+h.
+
+
+
+References get\+Bool(), get\+Double(), get\+Float(), get\+Int(), load(), save(), and save\+All().
+
+
+
+Referenced by Lunar\+Drift\+Program\+::\+Lunar\+Drift\+Program(), Shader\+Program\+::read\+Shader\+File(), Test\+Scene3\+D\+::set\+Size(), and Test\+Scene3\+D\+::\+Test\+Scene3\+D().
+
+\index{Config@{Config}!get@{get}}
+\index{get@{get}!Config@{Config}}
+\subsubsection[{\texorpdfstring{get(const std\+::string \&file, const std\+::string \&name) const }{get(const std::string &file, const std::string &name) const }}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string \& Config\+::get (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{file, }
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_config_a14108dcb3ce428431483cd4107fb6074}{}\label{class_config_a14108dcb3ce428431483cd4107fb6074}
+
+
+Access a setting from a loaded configuration file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & Name of the I\+NI file, without the .ini extension. \\
+\hline
+{\em name} & Configuration setting to query. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String value associated with the queried setting. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_configuration_exception}{Configuration\+Exception}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 124 of file Config.\+cpp.
+
+
+
+References m\+\_\+\+File\+Data.
+
+\index{Config@{Config}!get\+Bool@{get\+Bool}}
+\index{get\+Bool@{get\+Bool}!Config@{Config}}
+\subsubsection[{\texorpdfstring{get\+Bool(const std\+::string \&file, const std\+::string \&name, bool unknown\+Is\+False=true) const }{getBool(const std::string &file, const std::string &name, bool unknownIsFalse=true) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Config\+::get\+Bool (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{file, }
+\item[{const std\+::string \&}]{name, }
+\item[{bool}]{unknown\+Is\+False = {\ttfamily true}}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_config_a28fdb5bcf67d57b5df952e9f667f313f}{}\label{class_config_a28fdb5bcf67d57b5df952e9f667f313f}
+
+
+Access a setting from a loaded configuration file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & Name of the I\+NI file, without the .ini extension. \\
+\hline
+{\em name} & Configuration setting to query. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True/false value associated with the queried setting. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_configuration_exception}{Configuration\+Exception}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 163 of file Config.\+cpp.
+
+
+
+Referenced by get().
+
+\index{Config@{Config}!get\+Double@{get\+Double}}
+\index{get\+Double@{get\+Double}!Config@{Config}}
+\subsubsection[{\texorpdfstring{get\+Double(const std\+::string \&file, const std\+::string \&name) const }{getDouble(const std::string &file, const std::string &name) const }}]{\setlength{\rightskip}{0pt plus 5cm}double Config\+::get\+Double (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{file, }
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_config_aaa35e0251f6920bf5cb42c8c1edad6f7}{}\label{class_config_aaa35e0251f6920bf5cb42c8c1edad6f7}
+
+
+Access a setting from a loaded configuration file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & Name of the I\+NI file, without the .ini extension. \\
+\hline
+{\em name} & Configuration setting to query. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Double-\/precision decimal associated with the queried setting. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_configuration_exception}{Configuration\+Exception}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 194 of file Config.\+cpp.
+
+
+
+Referenced by get().
+
+\index{Config@{Config}!get\+Float@{get\+Float}}
+\index{get\+Float@{get\+Float}!Config@{Config}}
+\subsubsection[{\texorpdfstring{get\+Float(const std\+::string \&file, const std\+::string \&name) const }{getFloat(const std::string &file, const std::string &name) const }}]{\setlength{\rightskip}{0pt plus 5cm}float Config\+::get\+Float (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{file, }
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_config_acd8be5c460303ba4a5df8036f99e5935}{}\label{class_config_acd8be5c460303ba4a5df8036f99e5935}
+
+
+Access a setting from a loaded configuration file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & Name of the I\+NI file, without the .ini extension. \\
+\hline
+{\em name} & Configuration setting to query. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Floating-\/point decimal associated with the queried setting. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_configuration_exception}{Configuration\+Exception}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 211 of file Config.\+cpp.
+
+
+
+Referenced by get(), Test\+Scene3\+D\+::set\+Size(), and Test\+Scene3\+D\+::\+Test\+Scene3\+D().
+
+\index{Config@{Config}!get\+Int@{get\+Int}}
+\index{get\+Int@{get\+Int}!Config@{Config}}
+\subsubsection[{\texorpdfstring{get\+Int(const std\+::string \&file, const std\+::string \&name) const }{getInt(const std::string &file, const std::string &name) const }}]{\setlength{\rightskip}{0pt plus 5cm}int Config\+::get\+Int (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{file, }
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_config_a385fbc7610cfa7fa4fb11b11d6fad26a}{}\label{class_config_a385fbc7610cfa7fa4fb11b11d6fad26a}
+
+
+Access a setting from a loaded configuration file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & Name of the I\+NI file, without the .ini extension. \\
+\hline
+{\em name} & Configuration setting to query. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Signed integer associated with the queried setting. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_configuration_exception}{Configuration\+Exception}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 146 of file Config.\+cpp.
+
+
+
+Referenced by get().
+
+\index{Config@{Config}!load@{load}}
+\index{load@{load}!Config@{Config}}
+\subsubsection[{\texorpdfstring{load(const std\+::string \&file)}{load(const std::string &file)}}]{\setlength{\rightskip}{0pt plus 5cm}void Config\+::load (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{file}
+\end{DoxyParamCaption}
+)}\hypertarget{class_config_a8198223ee3542b0754720c28f1ca8e42}{}\label{class_config_a8198223ee3542b0754720c28f1ca8e42}
+
+
+Load an I\+NI file into the configuration settings database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & Name of the I\+NI file, without the .ini extension. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_file_i_o_exception}{File\+I\+O\+Exception}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 27 of file Config.\+cpp.
+
+
+
+References m\+\_\+\+File\+Data, and trim().
+
+
+
+Referenced by get(), and Lunar\+Drift\+Program\+::\+Lunar\+Drift\+Program().
+
+\index{Config@{Config}!operator=@{operator=}}
+\index{operator=@{operator=}!Config@{Config}}
+\subsubsection[{\texorpdfstring{operator=(\+Config const \&)}{operator=(Config const &)}}]{\setlength{\rightskip}{0pt plus 5cm}void Config\+::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf Config} const \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_config_a9b6a7f8721a8789102928869dc1e186c}{}\label{class_config_a9b6a7f8721a8789102928869dc1e186c}
+
+
+Referenced by Config().
+
+\index{Config@{Config}!save@{save}}
+\index{save@{save}!Config@{Config}}
+\subsubsection[{\texorpdfstring{save(const std\+::string \&file)}{save(const std::string &file)}}]{\setlength{\rightskip}{0pt plus 5cm}void Config\+::save (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{file}
+\end{DoxyParamCaption}
+)}\hypertarget{class_config_a095b729166d151267aea1e969e02a5e0}{}\label{class_config_a095b729166d151267aea1e969e02a5e0}
+
+
+Save to an I\+NI file from the configuration settings database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & Name of the I\+NI file, without the .ini extension. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_file_i_o_exception}{File\+I\+O\+Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000003}{Todo}](Hayley\#2\#09/24/15)\+: Put I\+NI sections together to obey the standards better \end{DoxyRefDesc}
+
+
+Definition at line 78 of file Config.\+cpp.
+
+
+
+References m\+\_\+\+File\+Data.
+
+
+
+Referenced by get(), and save\+All().
+
+\index{Config@{Config}!save\+All@{save\+All}}
+\index{save\+All@{save\+All}!Config@{Config}}
+\subsubsection[{\texorpdfstring{save\+All()}{saveAll()}}]{\setlength{\rightskip}{0pt plus 5cm}void Config\+::save\+All (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_config_a8159645eaab244229fb539bd7f23d365}{}\label{class_config_a8159645eaab244229fb539bd7f23d365}
+
+
+Save all loaded configuration files with current settings. 
+
+
+
+Definition at line 118 of file Config.\+cpp.
+
+
+
+References m\+\_\+\+File\+Data, and save().
+
+
+
+Referenced by get().
+
+\index{Config@{Config}!set@{set}}
+\index{set@{set}!Config@{Config}}
+\subsubsection[{\texorpdfstring{set(const std\+::string \&file, const std\+::string \&name, const std\+::string value)}{set(const std::string &file, const std::string &name, const std::string value)}}]{\setlength{\rightskip}{0pt plus 5cm}void Config\+::set (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{file, }
+\item[{const std\+::string \&}]{name, }
+\item[{const std\+::string}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{class_config_a95d6afbbffc9cfa02a9d1171d48c9e8b}{}\label{class_config_a95d6afbbffc9cfa02a9d1171d48c9e8b}
+
+
+Set a setting in the configuration database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & Name of the I\+NI file, without the .ini extension. \\
+\hline
+{\em name} & Configuration setting to set value of. \\
+\hline
+{\em value} & String to set the setting to. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 228 of file Config.\+cpp.
+
+
+
+References m\+\_\+\+File\+Data.
+
+
+
+Referenced by Lunar\+Drift\+Program\+::\+Lunar\+Drift\+Program().
+
+\index{Config@{Config}!set@{set}}
+\index{set@{set}!Config@{Config}}
+\subsubsection[{\texorpdfstring{set(const std\+::string \&file, const std\+::string \&name, int value)}{set(const std::string &file, const std::string &name, int value)}}]{\setlength{\rightskip}{0pt plus 5cm}void Config\+::set (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{file, }
+\item[{const std\+::string \&}]{name, }
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{class_config_a3cd33d32e89a8831a7047653c217d760}{}\label{class_config_a3cd33d32e89a8831a7047653c217d760}
+
+
+Set a setting in the configuration database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & Name of the I\+NI file, without the .ini extension. \\
+\hline
+{\em name} & Configuration setting to set value of. \\
+\hline
+{\em value} & Signed integer to set the setting to. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 239 of file Config.\+cpp.
+
+
+
+References to\+\_\+wstring().
+
+\index{Config@{Config}!set@{set}}
+\index{set@{set}!Config@{Config}}
+\subsubsection[{\texorpdfstring{set(const std\+::string \&file, const std\+::string \&name, bool value)}{set(const std::string &file, const std::string &name, bool value)}}]{\setlength{\rightskip}{0pt plus 5cm}void Config\+::set (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{file, }
+\item[{const std\+::string \&}]{name, }
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{class_config_ac2b0c38ab146ff4e2de8dbe10fc08b36}{}\label{class_config_ac2b0c38ab146ff4e2de8dbe10fc08b36}
+
+
+Set a setting in the configuration database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & Name of the I\+NI file, without the .ini extension. \\
+\hline
+{\em name} & Configuration setting to set value of. \\
+\hline
+{\em value} & True/false value to set the setting to. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 250 of file Config.\+cpp.
+
+\index{Config@{Config}!set@{set}}
+\index{set@{set}!Config@{Config}}
+\subsubsection[{\texorpdfstring{set(const std\+::string \&file, const std\+::string \&name, double value)}{set(const std::string &file, const std::string &name, double value)}}]{\setlength{\rightskip}{0pt plus 5cm}void Config\+::set (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{file, }
+\item[{const std\+::string \&}]{name, }
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}\hypertarget{class_config_adc58efca4fe18f3338b82b3cbe7d6f94}{}\label{class_config_adc58efca4fe18f3338b82b3cbe7d6f94}
+
+
+Set a setting in the configuration database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & Name of the I\+NI file, without the .ini extension. \\
+\hline
+{\em name} & Configuration setting to set value of. \\
+\hline
+{\em value} & Double-\/precision decimal to set the setting to. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 262 of file Config.\+cpp.
+
+
+
+References to\+\_\+wstring().
+
+
+
+\subsection{Member Data Documentation}
+\index{Config@{Config}!m\+\_\+\+File\+Data@{m\+\_\+\+File\+Data}}
+\index{m\+\_\+\+File\+Data@{m\+\_\+\+File\+Data}!Config@{Config}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+File\+Data}{m_FileData}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$std\+::string, std\+::map$<$std\+::string, std\+::string$>$ $>$ Config\+::m\+\_\+\+File\+Data\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_config_a5c864239797e10af1a62b292d7ededad}{}\label{class_config_a5c864239797e10af1a62b292d7ededad}
+
+
+Settings database. 
+
+
+
+Definition at line 157 of file Config.\+h.
+
+
+
+Referenced by get(), load(), save(), save\+All(), and set().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lunar\+Drift/engine/\hyperlink{_config_8h}{Config.\+h}\item 
+Lunar\+Drift/engine/\hyperlink{_config_8cpp}{Config.\+cpp}\end{DoxyCompactItemize}

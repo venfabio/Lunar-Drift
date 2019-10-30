@@ -1,0 +1,372 @@
+\hypertarget{class_vertex_array_object}{}\section{Vertex\+Array\+Object Class Reference}
+\label{class_vertex_array_object}\index{Vertex\+Array\+Object@{Vertex\+Array\+Object}}
+
+
+A buffer object that aggregates V\+B\+Os, Vertex Attributes and I\+B\+Os.  
+
+
+
+
+{\ttfamily \#include $<$Vertex\+Array\+Object.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_vertex_array_object_a6fab9649bd299f89f64b8bcc9d6173dd}{Vertex\+Array\+Object} (\hyperlink{class_context}{Context} $\ast$context, std\+::shared\+\_\+ptr$<$ \hyperlink{class_vertex_buffer_object_base}{Vertex\+Buffer\+Object\+Base} $>$ vbo, const std\+::vector$<$ \hyperlink{class_vertex_attribute}{Vertex\+Attribute} $>$ \&attributes, std\+::shared\+\_\+ptr$<$ \hyperlink{class_index_buffer_object}{Index\+Buffer\+Object} $>$ ibo=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructs a V\+AO and associates it with the V\+BO and/or I\+BO. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_vertex_array_object_a37ca7e8bff292e3f334544dd6ba4ab37}{$\sim$\+Vertex\+Array\+Object} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_vertex_array_object_aa830fc54932a907bec1858847668734f}{set\+Vertex\+Buffer} (std\+::shared\+\_\+ptr$<$ \hyperlink{class_vertex_buffer_object_base}{Vertex\+Buffer\+Object\+Base} $>$ vbo)
+\begin{DoxyCompactList}\small\item\em Associate a \hyperlink{class_vertex_buffer_object}{Vertex\+Buffer\+Object} with the V\+AO. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_vertex_buffer_object_base}{Vertex\+Buffer\+Object\+Base} $>$ \hyperlink{class_vertex_array_object_adf92ade27ac0b57911d1dc1b707fc454}{get\+Vertex\+Buffer} ()
+\begin{DoxyCompactList}\small\item\em Access the \hyperlink{class_vertex_buffer_object}{Vertex\+Buffer\+Object} associated with the V\+AO. \end{DoxyCompactList}\item 
+void \hyperlink{class_vertex_array_object_aafc38c6ce0a65051996a3eaadb2febcc}{set\+Attribute\+Map} (const std\+::vector$<$ \hyperlink{class_vertex_attribute}{Vertex\+Attribute} $>$ \&attributes)
+\begin{DoxyCompactList}\small\item\em Set a new map of attributes to describe the associated vertex data. \end{DoxyCompactList}\item 
+const std\+::vector$<$ \hyperlink{class_vertex_attribute}{Vertex\+Attribute} $>$ \& \hyperlink{class_vertex_array_object_a91c81009eb2ab054c57a7053b974421b}{get\+Attribute\+Map} () const 
+\begin{DoxyCompactList}\small\item\em Access the map of attributes that describe the vertex data. \end{DoxyCompactList}\item 
+void \hyperlink{class_vertex_array_object_a074da4a3d5d45cc4935458b1e5441d61}{set\+Index\+Buffer} (std\+::shared\+\_\+ptr$<$ \hyperlink{class_index_buffer_object}{Index\+Buffer\+Object} $>$ ibo)
+\begin{DoxyCompactList}\small\item\em Associate or disassociate an \hyperlink{class_index_buffer_object}{Index\+Buffer\+Object} with the V\+AO. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_index_buffer_object}{Index\+Buffer\+Object} $>$ \hyperlink{class_vertex_array_object_ab1b5d2c13e89a77ff2da97dc3a072ec4}{get\+Index\+Buffer} ()
+\begin{DoxyCompactList}\small\item\em Access the \hyperlink{class_index_buffer_object}{Index\+Buffer\+Object} associated with the V\+AO. \end{DoxyCompactList}\item 
+void \hyperlink{class_vertex_array_object_a9228fcd314372296db91b65c792f412c}{bind} (\hyperlink{class_context}{Context} $\ast$context, std\+::shared\+\_\+ptr$<$ \hyperlink{class_shader_program}{Shader\+Program} $>$ shader)
+\begin{DoxyCompactList}\small\item\em Bind the V\+AO to the Open\+GL state pipeline. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \hyperlink{class_vertex_attribute}{Vertex\+Attribute} $>$ \hyperlink{class_vertex_array_object_aacb321d71b55ce0f75dfe5b28e8c748c}{m\+\_\+\+Attributes}
+\begin{DoxyCompactList}\small\item\em Attribute map for shaders. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_vertex_buffer_object_base}{Vertex\+Buffer\+Object\+Base} $>$ \hyperlink{class_vertex_array_object_a2e6040e6adfc2bbcf29d48013c48af04}{m\+\_\+\+Vertex\+Buffer}
+\begin{DoxyCompactList}\small\item\em V\+BO ptr. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_index_buffer_object}{Index\+Buffer\+Object} $>$ \hyperlink{class_vertex_array_object_acd24cb60a9b2efe8e81cf50f1a6ebe1a}{m\+\_\+\+Index\+Buffer}
+\begin{DoxyCompactList}\small\item\em I\+BO ptr. \end{DoxyCompactList}\item 
+G\+Luint \hyperlink{class_vertex_array_object_a9def0a990bac4db152e962d4d1a84f0f}{m\+\_\+\+V\+AO}
+\begin{DoxyCompactList}\small\item\em Open\+G\+L-\/provided V\+AO handle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A buffer object that aggregates V\+B\+Os, Vertex Attributes and I\+B\+Os. 
+
+\begin{DoxyPrecond}{Precondition}
+A valid Open\+GL context must be present to the program 
+\end{DoxyPrecond}
+\begin{DoxyAuthor}{Author}
+Hayley Hatton 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/02/2016 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_index_buffer_object}{Index\+Buffer\+Object} 
+
+\hyperlink{class_vertex_buffer_object}{Vertex\+Buffer\+Object} 
+
+\hyperlink{class_vertex_attribute}{Vertex\+Attribute} 
+\end{DoxySeeAlso}
+
+
+Definition at line 17 of file Vertex\+Array\+Object.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Vertex\+Array\+Object@{Vertex\+Array\+Object}!Vertex\+Array\+Object@{Vertex\+Array\+Object}}
+\index{Vertex\+Array\+Object@{Vertex\+Array\+Object}!Vertex\+Array\+Object@{Vertex\+Array\+Object}}
+\subsubsection[{\texorpdfstring{Vertex\+Array\+Object(\+Context $\ast$context, std\+::shared\+\_\+ptr$<$ Vertex\+Buffer\+Object\+Base $>$ vbo, const std\+::vector$<$ Vertex\+Attribute $>$ \&attributes, std\+::shared\+\_\+ptr$<$ Index\+Buffer\+Object $>$ ibo=nullptr)}{VertexArrayObject(Context *context, std::shared_ptr< VertexBufferObjectBase > vbo, const std::vector< VertexAttribute > &attributes, std::shared_ptr< IndexBufferObject > ibo=nullptr)}}]{\setlength{\rightskip}{0pt plus 5cm}Vertex\+Array\+Object\+::\+Vertex\+Array\+Object (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context, }
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Vertex\+Buffer\+Object\+Base} $>$}]{vbo, }
+\item[{const std\+::vector$<$ {\bf Vertex\+Attribute} $>$ \&}]{attributes, }
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Index\+Buffer\+Object} $>$}]{ibo = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+)}\hypertarget{class_vertex_array_object_a6fab9649bd299f89f64b8bcc9d6173dd}{}\label{class_vertex_array_object_a6fab9649bd299f89f64b8bcc9d6173dd}
+
+
+Constructs a V\+AO and associates it with the V\+BO and/or I\+BO. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphics context \\
+\hline
+{\em vbo} & Vertex buffer object ptr to associate with V\+AO \\
+\hline
+{\em attributes} & Attribute map for describing vertex input to shaders \\
+\hline
+{\em ibo} & Index buffer object ptr to associate with V\+AO \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 5 of file Vertex\+Array\+Object.\+cpp.
+
+
+
+References m\+\_\+\+V\+AO.
+
+\index{Vertex\+Array\+Object@{Vertex\+Array\+Object}!````~Vertex\+Array\+Object@{$\sim$\+Vertex\+Array\+Object}}
+\index{````~Vertex\+Array\+Object@{$\sim$\+Vertex\+Array\+Object}!Vertex\+Array\+Object@{Vertex\+Array\+Object}}
+\subsubsection[{\texorpdfstring{$\sim$\+Vertex\+Array\+Object()}{~VertexArrayObject()}}]{\setlength{\rightskip}{0pt plus 5cm}Vertex\+Array\+Object\+::$\sim$\+Vertex\+Array\+Object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_vertex_array_object_a37ca7e8bff292e3f334544dd6ba4ab37}{}\label{class_vertex_array_object_a37ca7e8bff292e3f334544dd6ba4ab37}
+
+
+Default destructor. 
+
+
+
+Definition at line 30 of file Vertex\+Array\+Object.\+cpp.
+
+
+
+References m\+\_\+\+V\+AO.
+
+
+
+\subsection{Member Function Documentation}
+\index{Vertex\+Array\+Object@{Vertex\+Array\+Object}!bind@{bind}}
+\index{bind@{bind}!Vertex\+Array\+Object@{Vertex\+Array\+Object}}
+\subsubsection[{\texorpdfstring{bind(\+Context $\ast$context, std\+::shared\+\_\+ptr$<$ Shader\+Program $>$ shader)}{bind(Context *context, std::shared_ptr< ShaderProgram > shader)}}]{\setlength{\rightskip}{0pt plus 5cm}void Vertex\+Array\+Object\+::bind (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context, }
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Shader\+Program} $>$}]{shader}
+\end{DoxyParamCaption}
+)}\hypertarget{class_vertex_array_object_a9228fcd314372296db91b65c792f412c}{}\label{class_vertex_array_object_a9228fcd314372296db91b65c792f412c}
+
+
+Bind the V\+AO to the Open\+GL state pipeline. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphics context \\
+\hline
+{\em shader} & Shader program to use with the V\+AO \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 54 of file Vertex\+Array\+Object.\+cpp.
+
+
+
+References m\+\_\+\+Attributes, m\+\_\+\+Index\+Buffer, m\+\_\+\+V\+AO, and m\+\_\+\+Vertex\+Buffer.
+
+
+
+Referenced by get\+Index\+Buffer().
+
+\index{Vertex\+Array\+Object@{Vertex\+Array\+Object}!get\+Attribute\+Map@{get\+Attribute\+Map}}
+\index{get\+Attribute\+Map@{get\+Attribute\+Map}!Vertex\+Array\+Object@{Vertex\+Array\+Object}}
+\subsubsection[{\texorpdfstring{get\+Attribute\+Map() const }{getAttributeMap() const }}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::vector$<${\bf Vertex\+Attribute}$>$\& Vertex\+Array\+Object\+::get\+Attribute\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_vertex_array_object_a91c81009eb2ab054c57a7053b974421b}{}\label{class_vertex_array_object_a91c81009eb2ab054c57a7053b974421b}
+
+
+Access the map of attributes that describe the vertex data. 
+
+\begin{DoxyReturn}{Returns}
+Vector of attribute descriptors 
+\end{DoxyReturn}
+
+
+Definition at line 61 of file Vertex\+Array\+Object.\+h.
+
+
+
+References m\+\_\+\+Attributes, and set\+Index\+Buffer().
+
+\index{Vertex\+Array\+Object@{Vertex\+Array\+Object}!get\+Index\+Buffer@{get\+Index\+Buffer}}
+\index{get\+Index\+Buffer@{get\+Index\+Buffer}!Vertex\+Array\+Object@{Vertex\+Array\+Object}}
+\subsubsection[{\texorpdfstring{get\+Index\+Buffer()}{getIndexBuffer()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Index\+Buffer\+Object}$>$ Vertex\+Array\+Object\+::get\+Index\+Buffer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_vertex_array_object_ab1b5d2c13e89a77ff2da97dc3a072ec4}{}\label{class_vertex_array_object_ab1b5d2c13e89a77ff2da97dc3a072ec4}
+
+
+Access the \hyperlink{class_index_buffer_object}{Index\+Buffer\+Object} associated with the V\+AO. 
+
+\begin{DoxyReturn}{Returns}
+Smart ptr (or nullptr) to the underlying \hyperlink{class_index_buffer_object}{Index\+Buffer\+Object} 
+\end{DoxyReturn}
+
+
+Definition at line 75 of file Vertex\+Array\+Object.\+h.
+
+
+
+References bind(), and m\+\_\+\+Index\+Buffer.
+
+\index{Vertex\+Array\+Object@{Vertex\+Array\+Object}!get\+Vertex\+Buffer@{get\+Vertex\+Buffer}}
+\index{get\+Vertex\+Buffer@{get\+Vertex\+Buffer}!Vertex\+Array\+Object@{Vertex\+Array\+Object}}
+\subsubsection[{\texorpdfstring{get\+Vertex\+Buffer()}{getVertexBuffer()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Vertex\+Buffer\+Object\+Base}$>$ Vertex\+Array\+Object\+::get\+Vertex\+Buffer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_vertex_array_object_adf92ade27ac0b57911d1dc1b707fc454}{}\label{class_vertex_array_object_adf92ade27ac0b57911d1dc1b707fc454}
+
+
+Access the \hyperlink{class_vertex_buffer_object}{Vertex\+Buffer\+Object} associated with the V\+AO. 
+
+\begin{DoxyReturn}{Returns}
+Smart ptr to the underlying \hyperlink{class_vertex_buffer_object}{Vertex\+Buffer\+Object} 
+\end{DoxyReturn}
+
+
+Definition at line 47 of file Vertex\+Array\+Object.\+h.
+
+
+
+References m\+\_\+\+Vertex\+Buffer, and set\+Attribute\+Map().
+
+\index{Vertex\+Array\+Object@{Vertex\+Array\+Object}!set\+Attribute\+Map@{set\+Attribute\+Map}}
+\index{set\+Attribute\+Map@{set\+Attribute\+Map}!Vertex\+Array\+Object@{Vertex\+Array\+Object}}
+\subsubsection[{\texorpdfstring{set\+Attribute\+Map(const std\+::vector$<$ Vertex\+Attribute $>$ \&attributes)}{setAttributeMap(const std::vector< VertexAttribute > &attributes)}}]{\setlength{\rightskip}{0pt plus 5cm}void Vertex\+Array\+Object\+::set\+Attribute\+Map (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ {\bf Vertex\+Attribute} $>$ \&}]{attributes}
+\end{DoxyParamCaption}
+)}\hypertarget{class_vertex_array_object_aafc38c6ce0a65051996a3eaadb2febcc}{}\label{class_vertex_array_object_aafc38c6ce0a65051996a3eaadb2febcc}
+
+
+Set a new map of attributes to describe the associated vertex data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em attributes} & Attribute map for describing vertex input to shaders \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 36 of file Vertex\+Array\+Object.\+cpp.
+
+
+
+References m\+\_\+\+Attributes.
+
+
+
+Referenced by get\+Vertex\+Buffer().
+
+\index{Vertex\+Array\+Object@{Vertex\+Array\+Object}!set\+Index\+Buffer@{set\+Index\+Buffer}}
+\index{set\+Index\+Buffer@{set\+Index\+Buffer}!Vertex\+Array\+Object@{Vertex\+Array\+Object}}
+\subsubsection[{\texorpdfstring{set\+Index\+Buffer(std\+::shared\+\_\+ptr$<$ Index\+Buffer\+Object $>$ ibo)}{setIndexBuffer(std::shared_ptr< IndexBufferObject > ibo)}}]{\setlength{\rightskip}{0pt plus 5cm}void Vertex\+Array\+Object\+::set\+Index\+Buffer (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Index\+Buffer\+Object} $>$}]{ibo}
+\end{DoxyParamCaption}
+)}\hypertarget{class_vertex_array_object_a074da4a3d5d45cc4935458b1e5441d61}{}\label{class_vertex_array_object_a074da4a3d5d45cc4935458b1e5441d61}
+
+
+Associate or disassociate an \hyperlink{class_index_buffer_object}{Index\+Buffer\+Object} with the V\+AO. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ibo} & \hyperlink{class_index_buffer_object}{Index\+Buffer\+Object} ptr (or nullptr) to associate with the V\+AO \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 48 of file Vertex\+Array\+Object.\+cpp.
+
+
+
+References m\+\_\+\+Index\+Buffer.
+
+
+
+Referenced by get\+Attribute\+Map().
+
+\index{Vertex\+Array\+Object@{Vertex\+Array\+Object}!set\+Vertex\+Buffer@{set\+Vertex\+Buffer}}
+\index{set\+Vertex\+Buffer@{set\+Vertex\+Buffer}!Vertex\+Array\+Object@{Vertex\+Array\+Object}}
+\subsubsection[{\texorpdfstring{set\+Vertex\+Buffer(std\+::shared\+\_\+ptr$<$ Vertex\+Buffer\+Object\+Base $>$ vbo)}{setVertexBuffer(std::shared_ptr< VertexBufferObjectBase > vbo)}}]{\setlength{\rightskip}{0pt plus 5cm}void Vertex\+Array\+Object\+::set\+Vertex\+Buffer (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Vertex\+Buffer\+Object\+Base} $>$}]{vbo}
+\end{DoxyParamCaption}
+)}\hypertarget{class_vertex_array_object_aa830fc54932a907bec1858847668734f}{}\label{class_vertex_array_object_aa830fc54932a907bec1858847668734f}
+
+
+Associate a \hyperlink{class_vertex_buffer_object}{Vertex\+Buffer\+Object} with the V\+AO. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vbo} & \hyperlink{class_vertex_buffer_object}{Vertex\+Buffer\+Object} ptr to associate with the V\+AO \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 42 of file Vertex\+Array\+Object.\+cpp.
+
+
+
+References m\+\_\+\+Vertex\+Buffer.
+
+
+
+\subsection{Member Data Documentation}
+\index{Vertex\+Array\+Object@{Vertex\+Array\+Object}!m\+\_\+\+Attributes@{m\+\_\+\+Attributes}}
+\index{m\+\_\+\+Attributes@{m\+\_\+\+Attributes}!Vertex\+Array\+Object@{Vertex\+Array\+Object}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Attributes}{m_Attributes}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Vertex\+Attribute}$>$ Vertex\+Array\+Object\+::m\+\_\+\+Attributes\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_vertex_array_object_aacb321d71b55ce0f75dfe5b28e8c748c}{}\label{class_vertex_array_object_aacb321d71b55ce0f75dfe5b28e8c748c}
+
+
+Attribute map for shaders. 
+
+
+
+Definition at line 87 of file Vertex\+Array\+Object.\+h.
+
+
+
+Referenced by bind(), get\+Attribute\+Map(), and set\+Attribute\+Map().
+
+\index{Vertex\+Array\+Object@{Vertex\+Array\+Object}!m\+\_\+\+Index\+Buffer@{m\+\_\+\+Index\+Buffer}}
+\index{m\+\_\+\+Index\+Buffer@{m\+\_\+\+Index\+Buffer}!Vertex\+Array\+Object@{Vertex\+Array\+Object}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Index\+Buffer}{m_IndexBuffer}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Index\+Buffer\+Object}$>$ Vertex\+Array\+Object\+::m\+\_\+\+Index\+Buffer\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_vertex_array_object_acd24cb60a9b2efe8e81cf50f1a6ebe1a}{}\label{class_vertex_array_object_acd24cb60a9b2efe8e81cf50f1a6ebe1a}
+
+
+I\+BO ptr. 
+
+
+
+Definition at line 89 of file Vertex\+Array\+Object.\+h.
+
+
+
+Referenced by bind(), get\+Index\+Buffer(), and set\+Index\+Buffer().
+
+\index{Vertex\+Array\+Object@{Vertex\+Array\+Object}!m\+\_\+\+V\+AO@{m\+\_\+\+V\+AO}}
+\index{m\+\_\+\+V\+AO@{m\+\_\+\+V\+AO}!Vertex\+Array\+Object@{Vertex\+Array\+Object}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+V\+AO}{m_VAO}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Vertex\+Array\+Object\+::m\+\_\+\+V\+AO\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_vertex_array_object_a9def0a990bac4db152e962d4d1a84f0f}{}\label{class_vertex_array_object_a9def0a990bac4db152e962d4d1a84f0f}
+
+
+Open\+G\+L-\/provided V\+AO handle. 
+
+
+
+Definition at line 90 of file Vertex\+Array\+Object.\+h.
+
+
+
+Referenced by bind(), Vertex\+Array\+Object(), and $\sim$\+Vertex\+Array\+Object().
+
+\index{Vertex\+Array\+Object@{Vertex\+Array\+Object}!m\+\_\+\+Vertex\+Buffer@{m\+\_\+\+Vertex\+Buffer}}
+\index{m\+\_\+\+Vertex\+Buffer@{m\+\_\+\+Vertex\+Buffer}!Vertex\+Array\+Object@{Vertex\+Array\+Object}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Vertex\+Buffer}{m_VertexBuffer}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Vertex\+Buffer\+Object\+Base}$>$ Vertex\+Array\+Object\+::m\+\_\+\+Vertex\+Buffer\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_vertex_array_object_a2e6040e6adfc2bbcf29d48013c48af04}{}\label{class_vertex_array_object_a2e6040e6adfc2bbcf29d48013c48af04}
+
+
+V\+BO ptr. 
+
+
+
+Definition at line 88 of file Vertex\+Array\+Object.\+h.
+
+
+
+Referenced by bind(), get\+Vertex\+Buffer(), and set\+Vertex\+Buffer().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lunar\+Drift/engine/graphics/buffers/\hyperlink{_vertex_array_object_8h}{Vertex\+Array\+Object.\+h}\item 
+Lunar\+Drift/engine/graphics/buffers/\hyperlink{_vertex_array_object_8cpp}{Vertex\+Array\+Object.\+cpp}\end{DoxyCompactItemize}

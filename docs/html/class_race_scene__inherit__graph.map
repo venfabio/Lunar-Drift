@@ -1,0 +1,7 @@
+<map id="RaceScene" name="RaceScene">
+<area shape="rect" id="node4" href="$class_andromeda_race_scene.html" title="Scene class for Andromeda track, the middle&#45;tier track. " alt="" coords="5,155,160,181"/>
+<area shape="rect" id="node5" href="$class_antares_race_scene.html" title="Scene class for Antares track, the easy&#45;tier track. " alt="" coords="185,155,319,181"/>
+<area shape="rect" id="node6" href="$class_kessel_run_race_scene.html" title="Scene class for Kessel Run track, the hard&#45;tier track. " alt="" coords="344,155,496,181"/>
+<area shape="rect" id="node2" href="$class_scene.html" title="Scene container for managing and drawing 3D environments. " alt="" coords="165,5,224,32"/>
+<area shape="rect" id="node3" href="$class_i_message_listener.html" title="Interface for handling messages sent from other entities. " alt="" coords="249,5,373,32"/>
+</map>

@@ -1,0 +1,114 @@
+\hypertarget{class_texture_manager}{}\section{Texture\+Manager Class Reference}
+\label{class_texture_manager}\index{Texture\+Manager@{Texture\+Manager}}
+
+
+{\ttfamily \#include $<$Texture\+Manager.\+h$>$}
+
+Inheritance diagram for Texture\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_texture_manager}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_texture_manager_ad76abb178b37cedf4514eb0154349935}{Texture\+Manager} ()
+\item 
+\hyperlink{class_texture_manager_a001d6d74674961db79987e3222682576}{$\sim$\+Texture\+Manager} ()
+\item 
+std\+::weak\+\_\+ptr$<$ \hyperlink{class_texture}{Texture} $>$ \hyperlink{class_texture_manager_ace3da9513d2c0cb1bdcec6652a6318f9}{get\+Tex} (\hyperlink{class_context}{Context} $\ast$context, const std\+::string \&path)
+\item 
+std\+::weak\+\_\+ptr$<$ \hyperlink{class_texture}{Texture} $>$ \hyperlink{class_texture_manager_aba074bba0c567f28c94d0c88678fff97}{get\+Tex} (const std\+::string \&path)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ \hyperlink{class_texture}{Texture} $>$ $>$ \hyperlink{class_texture_manager_a7cf0073a30a272f5dd4660026de58b08}{m\+\_\+\+Textures}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 7 of file Texture\+Manager.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Texture\+Manager@{Texture\+Manager}!Texture\+Manager@{Texture\+Manager}}
+\index{Texture\+Manager@{Texture\+Manager}!Texture\+Manager@{Texture\+Manager}}
+\subsubsection[{\texorpdfstring{Texture\+Manager()}{TextureManager()}}]{\setlength{\rightskip}{0pt plus 5cm}Texture\+Manager\+::\+Texture\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_texture_manager_ad76abb178b37cedf4514eb0154349935}{}\label{class_texture_manager_ad76abb178b37cedf4514eb0154349935}
+
+
+Definition at line 4 of file Texture\+Manager.\+cpp.
+
+\index{Texture\+Manager@{Texture\+Manager}!````~Texture\+Manager@{$\sim$\+Texture\+Manager}}
+\index{````~Texture\+Manager@{$\sim$\+Texture\+Manager}!Texture\+Manager@{Texture\+Manager}}
+\subsubsection[{\texorpdfstring{$\sim$\+Texture\+Manager()}{~TextureManager()}}]{\setlength{\rightskip}{0pt plus 5cm}Texture\+Manager\+::$\sim$\+Texture\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_texture_manager_a001d6d74674961db79987e3222682576}{}\label{class_texture_manager_a001d6d74674961db79987e3222682576}
+
+
+Definition at line 8 of file Texture\+Manager.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{Texture\+Manager@{Texture\+Manager}!get\+Tex@{get\+Tex}}
+\index{get\+Tex@{get\+Tex}!Texture\+Manager@{Texture\+Manager}}
+\subsubsection[{\texorpdfstring{get\+Tex(\+Context $\ast$context, const std\+::string \&path)}{getTex(Context *context, const std::string &path)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::weak\+\_\+ptr$<$ {\bf Texture} $>$ Texture\+Manager\+::get\+Tex (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context, }
+\item[{const std\+::string \&}]{path}
+\end{DoxyParamCaption}
+)}\hypertarget{class_texture_manager_ace3da9513d2c0cb1bdcec6652a6318f9}{}\label{class_texture_manager_ace3da9513d2c0cb1bdcec6652a6318f9}
+
+
+Definition at line 13 of file Texture\+Manager.\+cpp.
+
+
+
+References m\+\_\+\+Textures.
+
+\index{Texture\+Manager@{Texture\+Manager}!get\+Tex@{get\+Tex}}
+\index{get\+Tex@{get\+Tex}!Texture\+Manager@{Texture\+Manager}}
+\subsubsection[{\texorpdfstring{get\+Tex(const std\+::string \&path)}{getTex(const std::string &path)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::weak\+\_\+ptr$<$ {\bf Texture} $>$ Texture\+Manager\+::get\+Tex (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{path}
+\end{DoxyParamCaption}
+)}\hypertarget{class_texture_manager_aba074bba0c567f28c94d0c88678fff97}{}\label{class_texture_manager_aba074bba0c567f28c94d0c88678fff97}
+
+
+Definition at line 32 of file Texture\+Manager.\+cpp.
+
+
+
+References m\+\_\+\+Textures.
+
+
+
+\subsection{Member Data Documentation}
+\index{Texture\+Manager@{Texture\+Manager}!m\+\_\+\+Textures@{m\+\_\+\+Textures}}
+\index{m\+\_\+\+Textures@{m\+\_\+\+Textures}!Texture\+Manager@{Texture\+Manager}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Textures}{m_Textures}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$std\+::string, std\+::shared\+\_\+ptr$<${\bf Texture}$>$ $>$ Texture\+Manager\+::m\+\_\+\+Textures\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_texture_manager_a7cf0073a30a272f5dd4660026de58b08}{}\label{class_texture_manager_a7cf0073a30a272f5dd4660026de58b08}
+
+
+Definition at line 20 of file Texture\+Manager.\+h.
+
+
+
+Referenced by get\+Tex().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lunar\+Drift/engine/managers/\hyperlink{_texture_manager_8h}{Texture\+Manager.\+h}\item 
+Lunar\+Drift/engine/managers/\hyperlink{_texture_manager_8cpp}{Texture\+Manager.\+cpp}\end{DoxyCompactItemize}

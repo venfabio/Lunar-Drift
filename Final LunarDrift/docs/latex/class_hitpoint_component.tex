@@ -1,0 +1,269 @@
+\hypertarget{class_hitpoint_component}{}\section{Hitpoint\+Component Class Reference}
+\label{class_hitpoint_component}\index{Hitpoint\+Component@{Hitpoint\+Component}}
+
+
+{\ttfamily \#include $<$Hitpoint\+Component.\+h$>$}
+
+Inheritance diagram for Hitpoint\+Component\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_hitpoint_component}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_hitpoint_component_aa2c60ad44ae7a6cb4afdc00e6ab58ae0}{Hitpoint\+Component} (\hyperlink{class_scene_object}{Scene\+Object} $\ast$parent, std\+::weak\+\_\+ptr$<$ \hyperlink{class_meta_manager}{Meta\+Manager} $>$ managers, int hitpoints)
+\item 
+virtual \hyperlink{class_hitpoint_component_ac860c282a3524863215e0e21a9a2c18d}{$\sim$\+Hitpoint\+Component} ()
+\item 
+void \hyperlink{class_hitpoint_component_ab293fcc4d167a4fa9cd27cbf1ba42018}{step} (double dt) override
+\begin{DoxyCompactList}\small\item\em Step the simulation state. \end{DoxyCompactList}\item 
+void \hyperlink{class_hitpoint_component_a3210abfca24e1bc9827f56533ab798af}{predraw} (\hyperlink{class_context}{Context} $\ast$context) override
+\begin{DoxyCompactList}\small\item\em Called before the renderer draws the scene This allows the scene objects to do updates that require a graphics context before the graphical state is drawn. \end{DoxyCompactList}\item 
+void \hyperlink{class_hitpoint_component_a86ab4e66b47a675b56c0c3eaa8ff07d9}{on\+Message} (std\+::shared\+\_\+ptr$<$ \hyperlink{class_message}{Message} $>$ msg) override
+\begin{DoxyCompactList}\small\item\em Called when a message is sent to this entity. \end{DoxyCompactList}\item 
+void \hyperlink{class_hitpoint_component_a7bd62f6391f68e2c8d4501372bcaf87a}{set\+Hitpoints} (int hp)
+\item 
+int \hyperlink{class_hitpoint_component_ae61e3e3d6c63ea20d4a54bff2e24a488}{get\+Hitpoints} () const 
+\item 
+void \hyperlink{class_hitpoint_component_a26d9300824f96d8dc70b0d1a6d6b74de}{deduct\+Hitpoints} (int hp)
+\item 
+int \hyperlink{class_hitpoint_component_a2e81eb14804005b2956f9d21caa912f0}{get\+Max\+Hitpoints} () const 
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_hitpoint_component_a03ea97c4936474b35819c315fe2f65cb}{m\+\_\+\+Max\+Hitpoints}
+\item 
+int \hyperlink{class_hitpoint_component_ae113cd6a7771b75ac8a22ae1b66cfeec}{m\+\_\+\+Hitpoints}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 6 of file Hitpoint\+Component.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Hitpoint\+Component@{Hitpoint\+Component}!Hitpoint\+Component@{Hitpoint\+Component}}
+\index{Hitpoint\+Component@{Hitpoint\+Component}!Hitpoint\+Component@{Hitpoint\+Component}}
+\subsubsection[{\texorpdfstring{Hitpoint\+Component(\+Scene\+Object $\ast$parent, std\+::weak\+\_\+ptr$<$ Meta\+Manager $>$ managers, int hitpoints)}{HitpointComponent(SceneObject *parent, std::weak_ptr< MetaManager > managers, int hitpoints)}}]{\setlength{\rightskip}{0pt plus 5cm}Hitpoint\+Component\+::\+Hitpoint\+Component (
+\begin{DoxyParamCaption}
+\item[{{\bf Scene\+Object} $\ast$}]{parent, }
+\item[{std\+::weak\+\_\+ptr$<$ {\bf Meta\+Manager} $>$}]{managers, }
+\item[{int}]{hitpoints}
+\end{DoxyParamCaption}
+)}\hypertarget{class_hitpoint_component_aa2c60ad44ae7a6cb4afdc00e6ab58ae0}{}\label{class_hitpoint_component_aa2c60ad44ae7a6cb4afdc00e6ab58ae0}
+
+
+Definition at line 8 of file Hitpoint\+Component.\+cpp.
+
+
+
+References Message\+System\+::get\+Instance(), and Message\+System\+::subscribe().
+
+\index{Hitpoint\+Component@{Hitpoint\+Component}!````~Hitpoint\+Component@{$\sim$\+Hitpoint\+Component}}
+\index{````~Hitpoint\+Component@{$\sim$\+Hitpoint\+Component}!Hitpoint\+Component@{Hitpoint\+Component}}
+\subsubsection[{\texorpdfstring{$\sim$\+Hitpoint\+Component()}{~HitpointComponent()}}]{\setlength{\rightskip}{0pt plus 5cm}Hitpoint\+Component\+::$\sim$\+Hitpoint\+Component (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_hitpoint_component_ac860c282a3524863215e0e21a9a2c18d}{}\label{class_hitpoint_component_ac860c282a3524863215e0e21a9a2c18d}
+
+
+Definition at line 19 of file Hitpoint\+Component.\+cpp.
+
+
+
+References Message\+System\+::get\+Instance(), and Message\+System\+::unsubscribe().
+
+
+
+\subsection{Member Function Documentation}
+\index{Hitpoint\+Component@{Hitpoint\+Component}!deduct\+Hitpoints@{deduct\+Hitpoints}}
+\index{deduct\+Hitpoints@{deduct\+Hitpoints}!Hitpoint\+Component@{Hitpoint\+Component}}
+\subsubsection[{\texorpdfstring{deduct\+Hitpoints(int hp)}{deductHitpoints(int hp)}}]{\setlength{\rightskip}{0pt plus 5cm}void Hitpoint\+Component\+::deduct\+Hitpoints (
+\begin{DoxyParamCaption}
+\item[{int}]{hp}
+\end{DoxyParamCaption}
+)}\hypertarget{class_hitpoint_component_a26d9300824f96d8dc70b0d1a6d6b74de}{}\label{class_hitpoint_component_a26d9300824f96d8dc70b0d1a6d6b74de}
+
+
+Definition at line 52 of file Hitpoint\+Component.\+cpp.
+
+
+
+References m\+\_\+\+Hitpoints, and m\+\_\+\+Max\+Hitpoints.
+
+
+
+Referenced by get\+Hitpoints(), and on\+Message().
+
+\index{Hitpoint\+Component@{Hitpoint\+Component}!get\+Hitpoints@{get\+Hitpoints}}
+\index{get\+Hitpoints@{get\+Hitpoints}!Hitpoint\+Component@{Hitpoint\+Component}}
+\subsubsection[{\texorpdfstring{get\+Hitpoints() const }{getHitpoints() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Hitpoint\+Component\+::get\+Hitpoints (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_hitpoint_component_ae61e3e3d6c63ea20d4a54bff2e24a488}{}\label{class_hitpoint_component_ae61e3e3d6c63ea20d4a54bff2e24a488}
+
+
+Definition at line 26 of file Hitpoint\+Component.\+h.
+
+
+
+References deduct\+Hitpoints(), and m\+\_\+\+Hitpoints.
+
+\index{Hitpoint\+Component@{Hitpoint\+Component}!get\+Max\+Hitpoints@{get\+Max\+Hitpoints}}
+\index{get\+Max\+Hitpoints@{get\+Max\+Hitpoints}!Hitpoint\+Component@{Hitpoint\+Component}}
+\subsubsection[{\texorpdfstring{get\+Max\+Hitpoints() const }{getMaxHitpoints() const }}]{\setlength{\rightskip}{0pt plus 5cm}int Hitpoint\+Component\+::get\+Max\+Hitpoints (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_hitpoint_component_a2e81eb14804005b2956f9d21caa912f0}{}\label{class_hitpoint_component_a2e81eb14804005b2956f9d21caa912f0}
+
+
+Definition at line 30 of file Hitpoint\+Component.\+h.
+
+
+
+References m\+\_\+\+Max\+Hitpoints.
+
+\index{Hitpoint\+Component@{Hitpoint\+Component}!on\+Message@{on\+Message}}
+\index{on\+Message@{on\+Message}!Hitpoint\+Component@{Hitpoint\+Component}}
+\subsubsection[{\texorpdfstring{on\+Message(std\+::shared\+\_\+ptr$<$ Message $>$ msg) override}{onMessage(std::shared_ptr< Message > msg) override}}]{\setlength{\rightskip}{0pt plus 5cm}void Hitpoint\+Component\+::on\+Message (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Message} $>$}]{msg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{class_hitpoint_component_a86ab4e66b47a675b56c0c3eaa8ff07d9}{}\label{class_hitpoint_component_a86ab4e66b47a675b56c0c3eaa8ff07d9}
+
+
+Called when a message is sent to this entity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & Smart pointer to the received message object \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_i_message_listener_aac85f64eeb587944c59e07f5457b1b82}{I\+Message\+Listener}.
+
+
+
+Definition at line 25 of file Hitpoint\+Component.\+cpp.
+
+
+
+References Message\+System\+::broadcast(), deduct\+Hitpoints(), Message\+System\+::get\+Instance(), Scene\+Object\+Component\+::get\+Parent(), and m\+\_\+\+Hitpoints.
+
+
+
+Referenced by predraw().
+
+\index{Hitpoint\+Component@{Hitpoint\+Component}!predraw@{predraw}}
+\index{predraw@{predraw}!Hitpoint\+Component@{Hitpoint\+Component}}
+\subsubsection[{\texorpdfstring{predraw(\+Context $\ast$context) override}{predraw(Context *context) override}}]{\setlength{\rightskip}{0pt plus 5cm}void Hitpoint\+Component\+::predraw (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{class_hitpoint_component_a3210abfca24e1bc9827f56533ab798af}{}\label{class_hitpoint_component_a3210abfca24e1bc9827f56533ab798af}
+
+
+Called before the renderer draws the scene This allows the scene objects to do updates that require a graphics context before the graphical state is drawn. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphics context \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_scene_object_component_a7110e37ad23a708c2bf9828c7fd7df2f}{Scene\+Object\+Component}.
+
+
+
+Definition at line 20 of file Hitpoint\+Component.\+h.
+
+
+
+References on\+Message(), and set\+Hitpoints().
+
+\index{Hitpoint\+Component@{Hitpoint\+Component}!set\+Hitpoints@{set\+Hitpoints}}
+\index{set\+Hitpoints@{set\+Hitpoints}!Hitpoint\+Component@{Hitpoint\+Component}}
+\subsubsection[{\texorpdfstring{set\+Hitpoints(int hp)}{setHitpoints(int hp)}}]{\setlength{\rightskip}{0pt plus 5cm}void Hitpoint\+Component\+::set\+Hitpoints (
+\begin{DoxyParamCaption}
+\item[{int}]{hp}
+\end{DoxyParamCaption}
+)}\hypertarget{class_hitpoint_component_a7bd62f6391f68e2c8d4501372bcaf87a}{}\label{class_hitpoint_component_a7bd62f6391f68e2c8d4501372bcaf87a}
+
+
+Definition at line 45 of file Hitpoint\+Component.\+cpp.
+
+
+
+References m\+\_\+\+Hitpoints, and m\+\_\+\+Max\+Hitpoints.
+
+
+
+Referenced by predraw().
+
+\index{Hitpoint\+Component@{Hitpoint\+Component}!step@{step}}
+\index{step@{step}!Hitpoint\+Component@{Hitpoint\+Component}}
+\subsubsection[{\texorpdfstring{step(double dt) override}{step(double dt) override}}]{\setlength{\rightskip}{0pt plus 5cm}void Hitpoint\+Component\+::step (
+\begin{DoxyParamCaption}
+\item[{double}]{dt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{class_hitpoint_component_ab293fcc4d167a4fa9cd27cbf1ba42018}{}\label{class_hitpoint_component_ab293fcc4d167a4fa9cd27cbf1ba42018}
+
+
+Step the simulation state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt} & Delta-\/time since last step call in seconds \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_scene_object_component_a99ebed011a6547be4d31a09927e3b810}{Scene\+Object\+Component}.
+
+
+
+Definition at line 18 of file Hitpoint\+Component.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\index{Hitpoint\+Component@{Hitpoint\+Component}!m\+\_\+\+Hitpoints@{m\+\_\+\+Hitpoints}}
+\index{m\+\_\+\+Hitpoints@{m\+\_\+\+Hitpoints}!Hitpoint\+Component@{Hitpoint\+Component}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Hitpoints}{m_Hitpoints}}]{\setlength{\rightskip}{0pt plus 5cm}int Hitpoint\+Component\+::m\+\_\+\+Hitpoints\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_hitpoint_component_ae113cd6a7771b75ac8a22ae1b66cfeec}{}\label{class_hitpoint_component_ae113cd6a7771b75ac8a22ae1b66cfeec}
+
+
+Definition at line 34 of file Hitpoint\+Component.\+h.
+
+
+
+Referenced by deduct\+Hitpoints(), get\+Hitpoints(), on\+Message(), and set\+Hitpoints().
+
+\index{Hitpoint\+Component@{Hitpoint\+Component}!m\+\_\+\+Max\+Hitpoints@{m\+\_\+\+Max\+Hitpoints}}
+\index{m\+\_\+\+Max\+Hitpoints@{m\+\_\+\+Max\+Hitpoints}!Hitpoint\+Component@{Hitpoint\+Component}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Max\+Hitpoints}{m_MaxHitpoints}}]{\setlength{\rightskip}{0pt plus 5cm}int Hitpoint\+Component\+::m\+\_\+\+Max\+Hitpoints\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_hitpoint_component_a03ea97c4936474b35819c315fe2f65cb}{}\label{class_hitpoint_component_a03ea97c4936474b35819c315fe2f65cb}
+
+
+Definition at line 33 of file Hitpoint\+Component.\+h.
+
+
+
+Referenced by deduct\+Hitpoints(), get\+Max\+Hitpoints(), and set\+Hitpoints().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lunar\+Drift/engine/components/\hyperlink{_hitpoint_component_8h}{Hitpoint\+Component.\+h}\item 
+Lunar\+Drift/engine/components/\hyperlink{_hitpoint_component_8cpp}{Hitpoint\+Component.\+cpp}\end{DoxyCompactItemize}

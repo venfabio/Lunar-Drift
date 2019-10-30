@@ -1,0 +1,572 @@
+\hypertarget{class_window_p_c}{}\section{Window\+PC Class Reference}
+\label{class_window_p_c}\index{Window\+PC@{Window\+PC}}
+
+
+\hyperlink{class_window}{Window} class for use on Windows desktop P\+Cs.  
+
+
+
+
+{\ttfamily \#include $<$Window\+P\+C.\+h$>$}
+
+Inheritance diagram for Window\+PC\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_window_p_c}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_window_p_c_1_1_w_i_n32___e_v_e_n_t}{W\+I\+N32\+\_\+\+E\+V\+E\+NT}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_window_p_c_a96a4c01f2eaa2a07d3ad67e993c241c8}{Window\+PC} (const std\+::string \&title, H\+I\+N\+S\+T\+A\+N\+CE h\+Instance, L\+P\+S\+TR lp\+Cmd\+Line, int n\+Cmd\+Show, unsigned int width, unsigned int height)
+\begin{DoxyCompactList}\small\item\em Default constructor; sets up the environment. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_window_p_c_a0524b2e9b75c81207d4874809f687110}{$\sim$\+Window\+PC} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+\hyperlink{class_context}{Context} $\ast$ \hyperlink{class_window_p_c_af211b371f3cbe8cda20dbeb47ad9a359}{get\+Context} ()
+\begin{DoxyCompactList}\small\item\em Access the underlying graphics context. \end{DoxyCompactList}\item 
+\hyperlink{_window_8h_ae189a3c432aa37137a55df8c91c579ed}{Exit\+Status} \hyperlink{class_window_p_c_a37f3734410e8a9d99b5de80de7c14bf5}{run} (std\+::unique\+\_\+ptr$<$ \hyperlink{class_program}{Program} $>$ program) override
+\begin{DoxyCompactList}\small\item\em Running environment, with the final return status. \end{DoxyCompactList}\item 
+void \hyperlink{class_window_p_c_ae12f24716fa0b959e65580aead8f3fc9}{simulation\+Thread} (\hyperlink{class_program}{Program} $\ast$program)
+\begin{DoxyCompactList}\small\item\em Simulation thread function. \end{DoxyCompactList}\item 
+void \hyperlink{class_window_p_c_a329f37bb75b5ed1c5303fde8b7cef63f}{rendering\+Thread} (\hyperlink{class_context}{Context} $\ast$context, \hyperlink{class_program}{Program} $\ast$program)
+\begin{DoxyCompactList}\small\item\em Rendering thread function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static L\+R\+E\+S\+U\+LT C\+A\+L\+L\+B\+A\+CK \hyperlink{class_window_p_c_a135d3ecba5245fd810c2e3e3d9cf8cf9}{Window\+Proc} (H\+W\+ND h\+Wnd, U\+I\+NT message, W\+P\+A\+R\+AM w\+Param, L\+P\+A\+R\+AM l\+Param)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_window_p_c_a50f059f9690a597769035c9d1a81e994}{pre\+Frame} (\hyperlink{class_context}{Context} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Do anything that needs to be done immediately before rendering. \end{DoxyCompactList}\item 
+void \hyperlink{class_window_p_c_aa910bf9e32d41941f48eec5f2872ee80}{post\+Frame} (\hyperlink{class_context}{Context} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Do anything that needs to be done immediately after rendering A prime example of this is the swapping of back-\/buffer to the display. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_window_p_c_a18c8c102251f65235f83b733d248ed15}{post\+Win32\+Event\+To\+Queue} (\hyperlink{struct_window_p_c_1_1_w_i_n32___e_v_e_n_t}{W\+I\+N32\+\_\+\+E\+V\+E\+NT} \&wievent)
+\item 
+void \hyperlink{class_window_p_c_abd03ac9a2e3e653a3762374b2ed6f250}{handle\+Win32\+Event\+Queue} ()
+\item 
+void \hyperlink{class_window_p_c_ae90444398408f0b3e2248a1bcaf1f87f}{temp\+Window\+Stuff} (const std\+::string \&title, H\+I\+N\+S\+T\+A\+N\+CE h\+Instance)
+\item 
+void \hyperlink{class_window_p_c_aa3d6fac4c045f2eaf5caa0a73bc8f8b5}{init\+GL} (H\+W\+ND h\+Wnd, bool v\+Sync=false)
+\item 
+H\+W\+ND \hyperlink{class_window_p_c_abefc415a2ebea795117000822c1d4c6f}{create\+Window} (const std\+::string \&title, unsigned int width, unsigned int height, bool show, H\+I\+N\+S\+T\+A\+N\+CE h\+Instance)
+\item 
+H\+W\+ND \hyperlink{class_window_p_c_aafe0e02b17a2e11418d9957e7f2aaae9}{create\+Window} (const std\+::string \&title, H\+I\+N\+S\+T\+A\+N\+CE h\+Instance)
+\item 
+void \hyperlink{class_window_p_c_a2f3d974dc86bee64deeec258ec0bf548}{destroy\+Window} (H\+W\+ND h\+Wnd)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+H\+W\+ND \hyperlink{class_window_p_c_a49b7d0fb393f4316e78dc753946fd5f9}{m\+\_\+\+H\+Wnd}
+\item 
+H\+DC \hyperlink{class_window_p_c_af536c182db956b1e87d6f5ba20beb172}{m\+\_\+\+H\+DC}
+\item 
+H\+G\+L\+RC \hyperlink{class_window_p_c_a5818491db2c9d38e13d4022cf2451889}{m\+\_\+\+H\+RC}
+\item 
+std\+::queue$<$ \hyperlink{struct_window_p_c_1_1_w_i_n32___e_v_e_n_t}{W\+I\+N32\+\_\+\+E\+V\+E\+NT} $>$ \hyperlink{class_window_p_c_aae73501b77c9ab90594bd9dde22e7416}{m\+\_\+\+Event\+Queue}
+\item 
+std\+::mutex \hyperlink{class_window_p_c_a1a277bf91c4c052094e7d6ec2005a2c1}{m\+\_\+\+Event\+Mtx}
+\begin{DoxyCompactList}\small\item\em Mutex for controlling queue access. \end{DoxyCompactList}\item 
+\hyperlink{class_context}{Context} \hyperlink{class_window_p_c_a7610d9a18a51203367a34c4391b170e9}{m\+\_\+\+Context}
+\begin{DoxyCompactList}\small\item\em Custom context. \end{DoxyCompactList}\item 
+bool \hyperlink{class_window_p_c_a8fa7bd25448521da92f5b12a45392ded}{m\+\_\+\+Loaded}
+\begin{DoxyCompactList}\small\item\em If false, constructor failed. \end{DoxyCompactList}\item 
+std\+::atomic$<$ bool $>$ \hyperlink{class_window_p_c_a5a79f6bf453401d1e1027e1de926083c}{m\+\_\+\+Running}
+\begin{DoxyCompactList}\small\item\em Whilst true, keep threads running. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_window}{Window} class for use on Windows desktop P\+Cs. 
+
+\begin{DoxyPrecond}{Precondition}
+Win32 A\+PI support must be available to the compiler and running environments 
+\end{DoxyPrecond}
+\begin{DoxyAuthor}{Author}
+Hayley Hatton 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+06/03/2016 
+\end{DoxyDate}
+
+
+Definition at line 17 of file Window\+P\+C.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Window\+PC@{Window\+PC}!Window\+PC@{Window\+PC}}
+\index{Window\+PC@{Window\+PC}!Window\+PC@{Window\+PC}}
+\subsubsection[{\texorpdfstring{Window\+P\+C(const std\+::string \&title, H\+I\+N\+S\+T\+A\+N\+C\+E h\+Instance, L\+P\+S\+T\+R lp\+Cmd\+Line, int n\+Cmd\+Show, unsigned int width, unsigned int height)}{WindowPC(const std::string &title, HINSTANCE hInstance, LPSTR lpCmdLine, int nCmdShow, unsigned int width, unsigned int height)}}]{\setlength{\rightskip}{0pt plus 5cm}Window\+P\+C\+::\+Window\+PC (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{title, }
+\item[{H\+I\+N\+S\+T\+A\+N\+CE}]{h\+Instance, }
+\item[{L\+P\+S\+TR}]{lp\+Cmd\+Line, }
+\item[{int}]{n\+Cmd\+Show, }
+\item[{unsigned int}]{width, }
+\item[{unsigned int}]{height}
+\end{DoxyParamCaption}
+)}\hypertarget{class_window_p_c_a96a4c01f2eaa2a07d3ad67e993c241c8}{}\label{class_window_p_c_a96a4c01f2eaa2a07d3ad67e993c241c8}
+
+
+Default constructor; sets up the environment. 
+
+
+
+Definition at line 10 of file Window\+P\+C.\+cpp.
+
+
+
+References create\+Window(), Window\+::get\+G\+P\+U\+Name(), init\+G\+L(), m\+\_\+\+Context, m\+\_\+\+H\+Wnd, Context\+::set\+Dimensions(), temp\+Window\+Stuff(), and Window\+Proc().
+
+\index{Window\+PC@{Window\+PC}!````~Window\+PC@{$\sim$\+Window\+PC}}
+\index{````~Window\+PC@{$\sim$\+Window\+PC}!Window\+PC@{Window\+PC}}
+\subsubsection[{\texorpdfstring{$\sim$\+Window\+P\+C()}{~WindowPC()}}]{\setlength{\rightskip}{0pt plus 5cm}Window\+P\+C\+::$\sim$\+Window\+PC (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_window_p_c_a0524b2e9b75c81207d4874809f687110}{}\label{class_window_p_c_a0524b2e9b75c81207d4874809f687110}
+
+
+Default destructor. 
+
+
+
+Definition at line 58 of file Window\+P\+C.\+cpp.
+
+
+
+References destroy\+Window(), m\+\_\+\+H\+DC, m\+\_\+\+H\+RC, and m\+\_\+\+H\+Wnd.
+
+
+
+\subsection{Member Function Documentation}
+\index{Window\+PC@{Window\+PC}!create\+Window@{create\+Window}}
+\index{create\+Window@{create\+Window}!Window\+PC@{Window\+PC}}
+\subsubsection[{\texorpdfstring{create\+Window(const std\+::string \&title, unsigned int width, unsigned int height, bool show, H\+I\+N\+S\+T\+A\+N\+C\+E h\+Instance)}{createWindow(const std::string &title, unsigned int width, unsigned int height, bool show, HINSTANCE hInstance)}}]{\setlength{\rightskip}{0pt plus 5cm}H\+W\+ND Window\+P\+C\+::create\+Window (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{title, }
+\item[{unsigned int}]{width, }
+\item[{unsigned int}]{height, }
+\item[{bool}]{show, }
+\item[{H\+I\+N\+S\+T\+A\+N\+CE}]{h\+Instance}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_window_p_c_abefc415a2ebea795117000822c1d4c6f}{}\label{class_window_p_c_abefc415a2ebea795117000822c1d4c6f}
+
+
+Definition at line 74 of file Window\+P\+C.\+cpp.
+
+
+
+Referenced by temp\+Window\+Stuff(), and Window\+P\+C().
+
+\index{Window\+PC@{Window\+PC}!create\+Window@{create\+Window}}
+\index{create\+Window@{create\+Window}!Window\+PC@{Window\+PC}}
+\subsubsection[{\texorpdfstring{create\+Window(const std\+::string \&title, H\+I\+N\+S\+T\+A\+N\+C\+E h\+Instance)}{createWindow(const std::string &title, HINSTANCE hInstance)}}]{\setlength{\rightskip}{0pt plus 5cm}H\+W\+ND Window\+P\+C\+::create\+Window (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{title, }
+\item[{H\+I\+N\+S\+T\+A\+N\+CE}]{h\+Instance}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_window_p_c_aafe0e02b17a2e11418d9957e7f2aaae9}{}\label{class_window_p_c_aafe0e02b17a2e11418d9957e7f2aaae9}
+
+
+Definition at line 122 of file Window\+P\+C.\+cpp.
+
+
+
+References m\+\_\+\+Context, and Context\+::set\+Dimensions().
+
+\index{Window\+PC@{Window\+PC}!destroy\+Window@{destroy\+Window}}
+\index{destroy\+Window@{destroy\+Window}!Window\+PC@{Window\+PC}}
+\subsubsection[{\texorpdfstring{destroy\+Window(\+H\+W\+N\+D h\+Wnd)}{destroyWindow(HWND hWnd)}}]{\setlength{\rightskip}{0pt plus 5cm}void Window\+P\+C\+::destroy\+Window (
+\begin{DoxyParamCaption}
+\item[{H\+W\+ND}]{h\+Wnd}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_window_p_c_a2f3d974dc86bee64deeec258ec0bf548}{}\label{class_window_p_c_a2f3d974dc86bee64deeec258ec0bf548}
+
+
+Definition at line 171 of file Window\+P\+C.\+cpp.
+
+
+
+Referenced by run(), temp\+Window\+Stuff(), and $\sim$\+Window\+P\+C().
+
+\index{Window\+PC@{Window\+PC}!get\+Context@{get\+Context}}
+\index{get\+Context@{get\+Context}!Window\+PC@{Window\+PC}}
+\subsubsection[{\texorpdfstring{get\+Context()}{getContext()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Context}$\ast$ Window\+P\+C\+::get\+Context (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_window_p_c_af211b371f3cbe8cda20dbeb47ad9a359}{}\label{class_window_p_c_af211b371f3cbe8cda20dbeb47ad9a359}
+
+
+Access the underlying graphics context. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the underlying graphics context object 
+\end{DoxyReturn}
+
+
+Definition at line 37 of file Window\+P\+C.\+h.
+
+
+
+References m\+\_\+\+Context, post\+Frame(), pre\+Frame(), rendering\+Thread(), run(), simulation\+Thread(), and Window\+Proc().
+
+
+
+Referenced by Win\+Main().
+
+\index{Window\+PC@{Window\+PC}!handle\+Win32\+Event\+Queue@{handle\+Win32\+Event\+Queue}}
+\index{handle\+Win32\+Event\+Queue@{handle\+Win32\+Event\+Queue}!Window\+PC@{Window\+PC}}
+\subsubsection[{\texorpdfstring{handle\+Win32\+Event\+Queue()}{handleWin32EventQueue()}}]{\setlength{\rightskip}{0pt plus 5cm}void Window\+P\+C\+::handle\+Win32\+Event\+Queue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_window_p_c_abd03ac9a2e3e653a3762374b2ed6f250}{}\label{class_window_p_c_abd03ac9a2e3e653a3762374b2ed6f250}
+
+
+Definition at line 408 of file Window\+P\+C.\+cpp.
+
+
+
+References Input\+Map\+::get\+Instance(), Input\+Map\+::get\+Keyboard(), m\+\_\+\+Event\+Queue, Window\+P\+C\+::\+W\+I\+N32\+\_\+\+E\+V\+E\+N\+T\+::message, Keyboard\+::set\+Key\+Down(), Keyboard\+::set\+Key\+Up(), and Window\+P\+C\+::\+W\+I\+N32\+\_\+\+E\+V\+E\+N\+T\+::w\+Param.
+
+
+
+Referenced by rendering\+Thread().
+
+\index{Window\+PC@{Window\+PC}!init\+GL@{init\+GL}}
+\index{init\+GL@{init\+GL}!Window\+PC@{Window\+PC}}
+\subsubsection[{\texorpdfstring{init\+G\+L(\+H\+W\+N\+D h\+Wnd, bool v\+Sync=false)}{initGL(HWND hWnd, bool vSync=false)}}]{\setlength{\rightskip}{0pt plus 5cm}void Window\+P\+C\+::init\+GL (
+\begin{DoxyParamCaption}
+\item[{H\+W\+ND}]{h\+Wnd, }
+\item[{bool}]{v\+Sync = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_window_p_c_aa3d6fac4c045f2eaf5caa0a73bc8f8b5}{}\label{class_window_p_c_aa3d6fac4c045f2eaf5caa0a73bc8f8b5}
+T\+O\+DO\+: Multisampling! 
+
+Definition at line 238 of file Window\+P\+C.\+cpp.
+
+
+
+References add\+Attribute(), G\+L\+C\+O\+N\+F\+I\+G\+\_\+\+A\+L\+P\+H\+A\+\_\+\+B\+I\+TS, G\+L\+C\+O\+N\+F\+I\+G\+\_\+\+C\+O\+L\+O\+R\+\_\+\+B\+I\+TS, G\+L\+C\+O\+N\+F\+I\+G\+\_\+\+D\+E\+P\+T\+H\+\_\+\+B\+I\+TS, G\+L\+C\+O\+N\+F\+I\+G\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON, G\+L\+C\+O\+N\+F\+I\+G\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON, G\+L\+C\+O\+N\+F\+I\+G\+\_\+\+S\+T\+E\+N\+C\+I\+L\+\_\+\+B\+I\+TS, m\+\_\+\+H\+DC, and m\+\_\+\+H\+RC.
+
+
+
+Referenced by Window\+P\+C().
+
+\index{Window\+PC@{Window\+PC}!post\+Frame@{post\+Frame}}
+\index{post\+Frame@{post\+Frame}!Window\+PC@{Window\+PC}}
+\subsubsection[{\texorpdfstring{post\+Frame(\+Context $\ast$context)}{postFrame(Context *context)}}]{\setlength{\rightskip}{0pt plus 5cm}void Window\+P\+C\+::post\+Frame (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_window_p_c_aa910bf9e32d41941f48eec5f2872ee80}{}\label{class_window_p_c_aa910bf9e32d41941f48eec5f2872ee80}
+
+
+Do anything that needs to be done immediately after rendering A prime example of this is the swapping of back-\/buffer to the display. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphical context \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 397 of file Window\+P\+C.\+cpp.
+
+
+
+References m\+\_\+\+H\+DC.
+
+
+
+Referenced by get\+Context(), and rendering\+Thread().
+
+\index{Window\+PC@{Window\+PC}!post\+Win32\+Event\+To\+Queue@{post\+Win32\+Event\+To\+Queue}}
+\index{post\+Win32\+Event\+To\+Queue@{post\+Win32\+Event\+To\+Queue}!Window\+PC@{Window\+PC}}
+\subsubsection[{\texorpdfstring{post\+Win32\+Event\+To\+Queue(\+W\+I\+N32\+\_\+\+E\+V\+E\+N\+T \&wievent)}{postWin32EventToQueue(WIN32_EVENT &wievent)}}]{\setlength{\rightskip}{0pt plus 5cm}void Window\+P\+C\+::post\+Win32\+Event\+To\+Queue (
+\begin{DoxyParamCaption}
+\item[{{\bf W\+I\+N32\+\_\+\+E\+V\+E\+NT} \&}]{wievent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_window_p_c_a18c8c102251f65235f83b733d248ed15}{}\label{class_window_p_c_a18c8c102251f65235f83b733d248ed15}
+
+
+Definition at line 403 of file Window\+P\+C.\+cpp.
+
+
+
+References m\+\_\+\+Event\+Queue.
+
+
+
+Referenced by Window\+Proc().
+
+\index{Window\+PC@{Window\+PC}!pre\+Frame@{pre\+Frame}}
+\index{pre\+Frame@{pre\+Frame}!Window\+PC@{Window\+PC}}
+\subsubsection[{\texorpdfstring{pre\+Frame(\+Context $\ast$context)}{preFrame(Context *context)}}]{\setlength{\rightskip}{0pt plus 5cm}void Window\+P\+C\+::pre\+Frame (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_window_p_c_a50f059f9690a597769035c9d1a81e994}{}\label{class_window_p_c_a50f059f9690a597769035c9d1a81e994}
+
+
+Do anything that needs to be done immediately before rendering. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphical context \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 392 of file Window\+P\+C.\+cpp.
+
+
+
+Referenced by get\+Context(), and rendering\+Thread().
+
+\index{Window\+PC@{Window\+PC}!rendering\+Thread@{rendering\+Thread}}
+\index{rendering\+Thread@{rendering\+Thread}!Window\+PC@{Window\+PC}}
+\subsubsection[{\texorpdfstring{rendering\+Thread(\+Context $\ast$context, Program $\ast$program)}{renderingThread(Context *context, Program *program)}}]{\setlength{\rightskip}{0pt plus 5cm}void Window\+P\+C\+::rendering\+Thread (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context, }
+\item[{{\bf Program} $\ast$}]{program}
+\end{DoxyParamCaption}
+)}\hypertarget{class_window_p_c_a329f37bb75b5ed1c5303fde8b7cef63f}{}\label{class_window_p_c_a329f37bb75b5ed1c5303fde8b7cef63f}
+
+
+Rendering thread function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphical context \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 333 of file Window\+P\+C.\+cpp.
+
+
+
+References Program\+::frame(), Shader\+Exception\+::get\+Component(), Configuration\+Exception\+::get\+Error(), File\+I\+O\+Exception\+::get\+Error(), Shader\+Exception\+::get\+Error\+Log(), Unsupported\+Feature\+Exception\+::get\+Feature(), File\+I\+O\+Exception\+::get\+File(), Shader\+Exception\+::get\+File(), Open\+G\+L\+Exception\+::get\+G\+L\+Error\+Code(), Unsupported\+Feature\+Exception\+::get\+Reason(), Open\+G\+L\+Exception\+::get\+Report(), Configuration\+Exception\+::get\+Setting(), Shader\+Exception\+::get\+Stage(), Open\+G\+L\+Exception\+::gl\+Error\+Code\+To\+String(), handle\+Win32\+Event\+Queue(), m\+\_\+\+Running, post\+Frame(), and pre\+Frame().
+
+
+
+Referenced by get\+Context(), and run().
+
+\index{Window\+PC@{Window\+PC}!run@{run}}
+\index{run@{run}!Window\+PC@{Window\+PC}}
+\subsubsection[{\texorpdfstring{run(std\+::unique\+\_\+ptr$<$ Program $>$ program) override}{run(std::unique_ptr< Program > program) override}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Exit\+Status} Window\+P\+C\+::run (
+\begin{DoxyParamCaption}
+\item[{std\+::unique\+\_\+ptr$<$ {\bf Program} $>$}]{program}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}\hypertarget{class_window_p_c_a37f3734410e8a9d99b5de80de7c14bf5}{}\label{class_window_p_c_a37f3734410e8a9d99b5de80de7c14bf5}
+
+
+Running environment, with the final return status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em program} & Pointer to the program to run in the window \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status to exit application and return to desktop 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_window_ad98ff66251be5270bdf3fe2e731dec0b}{Window}.
+
+
+
+Definition at line 304 of file Window\+P\+C.\+cpp.
+
+
+
+References destroy\+Window(), m\+\_\+\+Context, m\+\_\+\+H\+Wnd, rendering\+Thread(), simulation\+Thread(), and Success.
+
+
+
+Referenced by get\+Context(), and Win\+Main().
+
+\index{Window\+PC@{Window\+PC}!simulation\+Thread@{simulation\+Thread}}
+\index{simulation\+Thread@{simulation\+Thread}!Window\+PC@{Window\+PC}}
+\subsubsection[{\texorpdfstring{simulation\+Thread(\+Program $\ast$program)}{simulationThread(Program *program)}}]{\setlength{\rightskip}{0pt plus 5cm}void Window\+P\+C\+::simulation\+Thread (
+\begin{DoxyParamCaption}
+\item[{{\bf Program} $\ast$}]{program}
+\end{DoxyParamCaption}
+)}\hypertarget{class_window_p_c_ae12f24716fa0b959e65580aead8f3fc9}{}\label{class_window_p_c_ae12f24716fa0b959e65580aead8f3fc9}
+
+
+Simulation thread function. 
+
+
+
+Definition at line 321 of file Window\+P\+C.\+cpp.
+
+
+
+References m\+\_\+\+Running, and Program\+::step().
+
+
+
+Referenced by get\+Context(), and run().
+
+\index{Window\+PC@{Window\+PC}!temp\+Window\+Stuff@{temp\+Window\+Stuff}}
+\index{temp\+Window\+Stuff@{temp\+Window\+Stuff}!Window\+PC@{Window\+PC}}
+\subsubsection[{\texorpdfstring{temp\+Window\+Stuff(const std\+::string \&title, H\+I\+N\+S\+T\+A\+N\+C\+E h\+Instance)}{tempWindowStuff(const std::string &title, HINSTANCE hInstance)}}]{\setlength{\rightskip}{0pt plus 5cm}void Window\+P\+C\+::temp\+Window\+Stuff (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{title, }
+\item[{H\+I\+N\+S\+T\+A\+N\+CE}]{h\+Instance}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_window_p_c_ae90444398408f0b3e2248a1bcaf1f87f}{}\label{class_window_p_c_ae90444398408f0b3e2248a1bcaf1f87f}
+
+
+Definition at line 176 of file Window\+P\+C.\+cpp.
+
+
+
+References create\+Window(), and destroy\+Window().
+
+
+
+Referenced by Window\+P\+C().
+
+\index{Window\+PC@{Window\+PC}!Window\+Proc@{Window\+Proc}}
+\index{Window\+Proc@{Window\+Proc}!Window\+PC@{Window\+PC}}
+\subsubsection[{\texorpdfstring{Window\+Proc(\+H\+W\+N\+D h\+Wnd, U\+I\+N\+T message, W\+P\+A\+R\+A\+M w\+Param, L\+P\+A\+R\+A\+M l\+Param)}{WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)}}]{\setlength{\rightskip}{0pt plus 5cm}L\+R\+E\+S\+U\+LT C\+A\+L\+L\+B\+A\+CK Window\+P\+C\+::\+Window\+Proc (
+\begin{DoxyParamCaption}
+\item[{H\+W\+ND}]{h\+Wnd, }
+\item[{U\+I\+NT}]{message, }
+\item[{W\+P\+A\+R\+AM}]{w\+Param, }
+\item[{L\+P\+A\+R\+AM}]{l\+Param}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_window_p_c_a135d3ecba5245fd810c2e3e3d9cf8cf9}{}\label{class_window_p_c_a135d3ecba5245fd810c2e3e3d9cf8cf9}
+
+
+Definition at line 439 of file Window\+P\+C.\+cpp.
+
+
+
+References m\+\_\+\+Running, and post\+Win32\+Event\+To\+Queue().
+
+
+
+Referenced by get\+Context(), and Window\+P\+C().
+
+
+
+\subsection{Member Data Documentation}
+\index{Window\+PC@{Window\+PC}!m\+\_\+\+Context@{m\+\_\+\+Context}}
+\index{m\+\_\+\+Context@{m\+\_\+\+Context}!Window\+PC@{Window\+PC}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Context}{m_Context}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Context} Window\+P\+C\+::m\+\_\+\+Context\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_window_p_c_a7610d9a18a51203367a34c4391b170e9}{}\label{class_window_p_c_a7610d9a18a51203367a34c4391b170e9}
+
+
+Custom context. 
+
+
+
+Definition at line 90 of file Window\+P\+C.\+h.
+
+
+
+Referenced by create\+Window(), get\+Context(), run(), and Window\+P\+C().
+
+\index{Window\+PC@{Window\+PC}!m\+\_\+\+Event\+Mtx@{m\+\_\+\+Event\+Mtx}}
+\index{m\+\_\+\+Event\+Mtx@{m\+\_\+\+Event\+Mtx}!Window\+PC@{Window\+PC}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Event\+Mtx}{m_EventMtx}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::mutex Window\+P\+C\+::m\+\_\+\+Event\+Mtx\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_window_p_c_a1a277bf91c4c052094e7d6ec2005a2c1}{}\label{class_window_p_c_a1a277bf91c4c052094e7d6ec2005a2c1}
+
+
+Mutex for controlling queue access. 
+
+
+
+Definition at line 88 of file Window\+P\+C.\+h.
+
+\index{Window\+PC@{Window\+PC}!m\+\_\+\+Event\+Queue@{m\+\_\+\+Event\+Queue}}
+\index{m\+\_\+\+Event\+Queue@{m\+\_\+\+Event\+Queue}!Window\+PC@{Window\+PC}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Event\+Queue}{m_EventQueue}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::queue$<${\bf W\+I\+N32\+\_\+\+E\+V\+E\+NT}$>$ Window\+P\+C\+::m\+\_\+\+Event\+Queue\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_window_p_c_aae73501b77c9ab90594bd9dde22e7416}{}\label{class_window_p_c_aae73501b77c9ab90594bd9dde22e7416}
+
+
+Definition at line 87 of file Window\+P\+C.\+h.
+
+
+
+Referenced by handle\+Win32\+Event\+Queue(), and post\+Win32\+Event\+To\+Queue().
+
+\index{Window\+PC@{Window\+PC}!m\+\_\+\+H\+DC@{m\+\_\+\+H\+DC}}
+\index{m\+\_\+\+H\+DC@{m\+\_\+\+H\+DC}!Window\+PC@{Window\+PC}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+H\+DC}{m_HDC}}]{\setlength{\rightskip}{0pt plus 5cm}H\+DC Window\+P\+C\+::m\+\_\+\+H\+DC\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_window_p_c_af536c182db956b1e87d6f5ba20beb172}{}\label{class_window_p_c_af536c182db956b1e87d6f5ba20beb172}
+
+
+Definition at line 78 of file Window\+P\+C.\+h.
+
+
+
+Referenced by init\+G\+L(), post\+Frame(), and $\sim$\+Window\+P\+C().
+
+\index{Window\+PC@{Window\+PC}!m\+\_\+\+H\+RC@{m\+\_\+\+H\+RC}}
+\index{m\+\_\+\+H\+RC@{m\+\_\+\+H\+RC}!Window\+PC@{Window\+PC}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+H\+RC}{m_HRC}}]{\setlength{\rightskip}{0pt plus 5cm}H\+G\+L\+RC Window\+P\+C\+::m\+\_\+\+H\+RC\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_window_p_c_a5818491db2c9d38e13d4022cf2451889}{}\label{class_window_p_c_a5818491db2c9d38e13d4022cf2451889}
+
+
+Definition at line 79 of file Window\+P\+C.\+h.
+
+
+
+Referenced by init\+G\+L(), and $\sim$\+Window\+P\+C().
+
+\index{Window\+PC@{Window\+PC}!m\+\_\+\+H\+Wnd@{m\+\_\+\+H\+Wnd}}
+\index{m\+\_\+\+H\+Wnd@{m\+\_\+\+H\+Wnd}!Window\+PC@{Window\+PC}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+H\+Wnd}{m_HWnd}}]{\setlength{\rightskip}{0pt plus 5cm}H\+W\+ND Window\+P\+C\+::m\+\_\+\+H\+Wnd\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_window_p_c_a49b7d0fb393f4316e78dc753946fd5f9}{}\label{class_window_p_c_a49b7d0fb393f4316e78dc753946fd5f9}
+
+
+Definition at line 77 of file Window\+P\+C.\+h.
+
+
+
+Referenced by run(), Window\+P\+C(), and $\sim$\+Window\+P\+C().
+
+\index{Window\+PC@{Window\+PC}!m\+\_\+\+Loaded@{m\+\_\+\+Loaded}}
+\index{m\+\_\+\+Loaded@{m\+\_\+\+Loaded}!Window\+PC@{Window\+PC}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Loaded}{m_Loaded}}]{\setlength{\rightskip}{0pt plus 5cm}bool Window\+P\+C\+::m\+\_\+\+Loaded\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_window_p_c_a8fa7bd25448521da92f5b12a45392ded}{}\label{class_window_p_c_a8fa7bd25448521da92f5b12a45392ded}
+
+
+If false, constructor failed. 
+
+
+
+Definition at line 91 of file Window\+P\+C.\+h.
+
+\index{Window\+PC@{Window\+PC}!m\+\_\+\+Running@{m\+\_\+\+Running}}
+\index{m\+\_\+\+Running@{m\+\_\+\+Running}!Window\+PC@{Window\+PC}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Running}{m_Running}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::atomic$<$bool$>$ Window\+P\+C\+::m\+\_\+\+Running\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_window_p_c_a5a79f6bf453401d1e1027e1de926083c}{}\label{class_window_p_c_a5a79f6bf453401d1e1027e1de926083c}
+
+
+Whilst true, keep threads running. 
+
+
+
+Definition at line 92 of file Window\+P\+C.\+h.
+
+
+
+Referenced by rendering\+Thread(), simulation\+Thread(), and Window\+Proc().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lunar\+Drift/engine/containers/\hyperlink{_window_p_c_8h}{Window\+P\+C.\+h}\item 
+Lunar\+Drift/engine/containers/\hyperlink{_window_p_c_8cpp}{Window\+P\+C.\+cpp}\end{DoxyCompactItemize}

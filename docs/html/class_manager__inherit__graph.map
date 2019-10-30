@@ -1,0 +1,6 @@
+<map id="Manager" name="Manager">
+<area shape="rect" id="node2" href="$class_collision_manager.html" title="A manager class for encapsulating collision detection processes. " alt="" coords="5,80,127,107"/>
+<area shape="rect" id="node3" href="$class_model_manager.html" title="A manager class for handling and passing around model data. " alt="" coords="151,80,258,107"/>
+<area shape="rect" id="node4" href="$class_scene_object_manager.html" title="A manager class for handling and passing around scene objects. " alt="" coords="282,80,429,107"/>
+<area shape="rect" id="node5" href="$class_texture_manager.html" title="A manager class for handling and passing around texture data. " alt="" coords="453,80,567,107"/>
+</map>

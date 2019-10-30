@@ -1,0 +1,574 @@
+\hypertarget{class_shader_program}{}\section{Shader\+Program Class Reference}
+\label{class_shader_program}\index{Shader\+Program@{Shader\+Program}}
+
+
+Container for a G\+L\+SL shader program and its constituent shaders.  
+
+
+
+
+{\ttfamily \#include $<$Shader\+Program.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_shader_program_a4cc1af7c22b52019885503fb16e5c837}{Shader\+Program} (const std\+::string \&vertex, const std\+::string \&fragment)
+\begin{DoxyCompactList}\small\item\em Normal shader program constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_shader_program_af16e52eb0d138a14e33902b7ec313a6b}{Shader\+Program} (const std\+::string \&vertex, const std\+::string \&geometry, const std\+::string \&fragment)
+\begin{DoxyCompactList}\small\item\em Shader program w/ geometry shader constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_shader_program_a2d2eadcfc48cc2e2ddb82aba70553a9f}{$\sim$\+Shader\+Program} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_shader_program_a2231dc8ed81e75d4f36260b90cb19f4a}{load} (const std\+::string \&vertex, const std\+::string \&fragment)
+\begin{DoxyCompactList}\small\item\em Loads a shader program (Open\+GL 2 required) \end{DoxyCompactList}\item 
+void \hyperlink{class_shader_program_a69a116f12f5f9fcf8c7b4f97c15bb2da}{load} (const std\+::string \&vertex, const std\+::string \&geometry, const std\+::string \&fragment)
+\begin{DoxyCompactList}\small\item\em Loads a shader program (Open\+GL 3.\+2 required) \end{DoxyCompactList}\item 
+void \hyperlink{class_shader_program_a45ba12614fbdc743632baa677edd2247}{unload} ()
+\begin{DoxyCompactList}\small\item\em Unloads the shader program and its children. \end{DoxyCompactList}\item 
+G\+Luint \hyperlink{class_shader_program_a90f0b84a857b82aa1220246e9aeed9bd}{get\+Program\+Handle} () const 
+\begin{DoxyCompactList}\small\item\em Returns the program handle of the shader program. \end{DoxyCompactList}\item 
+G\+Lint \hyperlink{class_shader_program_aba49891be3e62c2fa03f3e0f03abd7df}{get\+Attribute\+Location} (const std\+::string \&name) const 
+\begin{DoxyCompactList}\small\item\em Obtains the location of an attribute in the shader program. \end{DoxyCompactList}\item 
+G\+Lint \hyperlink{class_shader_program_a434f4f504303d9132c5b8b89126d8c08}{get\+Uniform\+Location} (const std\+::string \&name) const 
+\begin{DoxyCompactList}\small\item\em Obtains the location of a uniform in the shader program. \end{DoxyCompactList}\item 
+int \hyperlink{class_shader_program_a771afbb9e66163c6ac685eb16d690ba0}{get\+Uniform\+Block\+Location} (const std\+::string \&name) const 
+\begin{DoxyCompactList}\small\item\em Get the identifier of a given uniform block. \end{DoxyCompactList}\item 
+void \hyperlink{class_shader_program_a753715c1bcc5c718f15c29ccb09a7261}{bind\+Uniform\+Block} (const std\+::string \&name, int binding\+Point) const 
+\begin{DoxyCompactList}\small\item\em Bind a given uniform block at an index. \end{DoxyCompactList}\item 
+void \hyperlink{class_shader_program_ad9fef410acc1d6246ea32fa4e5b48b8a}{use} (\hyperlink{class_context}{Context} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Bind the shader program to the Open\+GL state pipeline. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+G\+Lint \hyperlink{class_shader_program_a0dd6ee69d550a6826129ce3a0b227e93}{load\+And\+Compile\+File} (const std\+::string \&name, G\+Lenum stage)
+\begin{DoxyCompactList}\small\item\em Load and compile shader code from a file. \end{DoxyCompactList}\item 
+void \hyperlink{class_shader_program_a402c1d0936a1feb9b4981f747beaab59}{read\+Shader\+File} (const std\+::string \&filename, std\+::string $\ast$data)
+\begin{DoxyCompactList}\small\item\em Reads a shader from a file and returns its source code. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+{\bf }\par
+\begin{DoxyCompactItemize}
+\item 
+G\+Luint \hyperlink{class_shader_program_aeeb7c9dabeaae9aba49858cf3221d887}{m\+\_\+\+Program\+Handle}
+\begin{DoxyCompactList}\small\item\em Shader handlers. \end{DoxyCompactList}\item 
+G\+Lint \hyperlink{class_shader_program_a2056277d1b0c3a71a7b783e17e3733a1}{m\+\_\+\+Vertex\+Shader\+Handle}
+\item 
+G\+Lint \hyperlink{class_shader_program_ac9959fc7ce96370c40c1422e7d104a44}{m\+\_\+\+Geometry\+Shader\+Handle}
+\item 
+G\+Lint \hyperlink{class_shader_program_a8fe8505db597cb168b538df824d03906}{m\+\_\+\+Fragment\+Shader\+Handle}
+\end{DoxyCompactItemize}
+
+
+
+\subsection{Detailed Description}
+Container for a G\+L\+SL shader program and its constituent shaders. 
+
+This is composed of two to three shaders (if using geometry shaders) compiled and linked into a \char`\"{}shader program\char`\"{}.
+
+This supports Vertex/\+Fragment Shaders and Vertex/\+Geometry/\+Fragment Shaders. Version 4 is not supported, and so Tessellation Control and Evaluator shaders are available.
+
+\begin{DoxyPrecond}{Precondition}
+A valid Open\+GL context must be present to the program. 
+\end{DoxyPrecond}
+\begin{DoxyAuthor}{Author}
+Hayley Hatton 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+06/03/2016 
+\end{DoxyDate}
+
+
+Definition at line 20 of file Shader\+Program.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Shader\+Program@{Shader\+Program}!Shader\+Program@{Shader\+Program}}
+\index{Shader\+Program@{Shader\+Program}!Shader\+Program@{Shader\+Program}}
+\subsubsection[{\texorpdfstring{Shader\+Program(const std\+::string \&vertex, const std\+::string \&fragment)}{ShaderProgram(const std::string &vertex, const std::string &fragment)}}]{\setlength{\rightskip}{0pt plus 5cm}Shader\+Program\+::\+Shader\+Program (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{vertex, }
+\item[{const std\+::string \&}]{fragment}
+\end{DoxyParamCaption}
+)}\hypertarget{class_shader_program_a4cc1af7c22b52019885503fb16e5c837}{}\label{class_shader_program_a4cc1af7c22b52019885503fb16e5c837}
+
+
+Normal shader program constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vertex} & Vertex shader filename, minus .vert extension \\
+\hline
+{\em fragment} & Fragment shader filename, minus .frag extension \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_file_i_o_exception}{File\+I\+O\+Exception}} & \\
+\hline
+{\em Shader\+Compile\+Exception} & \\
+\hline
+{\em \hyperlink{class_open_g_l_exception}{Open\+G\+L\+Exception}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 9 of file Shader\+Program.\+cpp.
+
+
+
+References load().
+
+\index{Shader\+Program@{Shader\+Program}!Shader\+Program@{Shader\+Program}}
+\index{Shader\+Program@{Shader\+Program}!Shader\+Program@{Shader\+Program}}
+\subsubsection[{\texorpdfstring{Shader\+Program(const std\+::string \&vertex, const std\+::string \&geometry, const std\+::string \&fragment)}{ShaderProgram(const std::string &vertex, const std::string &geometry, const std::string &fragment)}}]{\setlength{\rightskip}{0pt plus 5cm}Shader\+Program\+::\+Shader\+Program (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{vertex, }
+\item[{const std\+::string \&}]{geometry, }
+\item[{const std\+::string \&}]{fragment}
+\end{DoxyParamCaption}
+)}\hypertarget{class_shader_program_af16e52eb0d138a14e33902b7ec313a6b}{}\label{class_shader_program_af16e52eb0d138a14e33902b7ec313a6b}
+
+
+Shader program w/ geometry shader constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vertex} & Vertex shader filename, minus .vert extension \\
+\hline
+{\em geometry} & Geometry shader filename \\
+\hline
+{\em fragment} & Fragment shader filename, minus .frag extension \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_file_i_o_exception}{File\+I\+O\+Exception}} & \\
+\hline
+{\em Shader\+Compile\+Exception} & \\
+\hline
+{\em \hyperlink{class_open_g_l_exception}{Open\+G\+L\+Exception}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 16 of file Shader\+Program.\+cpp.
+
+
+
+References load().
+
+\index{Shader\+Program@{Shader\+Program}!````~Shader\+Program@{$\sim$\+Shader\+Program}}
+\index{````~Shader\+Program@{$\sim$\+Shader\+Program}!Shader\+Program@{Shader\+Program}}
+\subsubsection[{\texorpdfstring{$\sim$\+Shader\+Program()}{~ShaderProgram()}}]{\setlength{\rightskip}{0pt plus 5cm}Shader\+Program\+::$\sim$\+Shader\+Program (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_shader_program_a2d2eadcfc48cc2e2ddb82aba70553a9f}{}\label{class_shader_program_a2d2eadcfc48cc2e2ddb82aba70553a9f}
+
+
+Default destructor. 
+
+
+
+Definition at line 24 of file Shader\+Program.\+cpp.
+
+
+
+References unload().
+
+
+
+\subsection{Member Function Documentation}
+\index{Shader\+Program@{Shader\+Program}!bind\+Uniform\+Block@{bind\+Uniform\+Block}}
+\index{bind\+Uniform\+Block@{bind\+Uniform\+Block}!Shader\+Program@{Shader\+Program}}
+\subsubsection[{\texorpdfstring{bind\+Uniform\+Block(const std\+::string \&name, int binding\+Point) const }{bindUniformBlock(const std::string &name, int bindingPoint) const }}]{\setlength{\rightskip}{0pt plus 5cm}void Shader\+Program\+::bind\+Uniform\+Block (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{int}]{binding\+Point}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_shader_program_a753715c1bcc5c718f15c29ccb09a7261}{}\label{class_shader_program_a753715c1bcc5c718f15c29ccb09a7261}
+
+
+Bind a given uniform block at an index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the uniform block \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Index to bind the uniform block at 
+\end{DoxyReturn}
+
+
+Definition at line 123 of file Shader\+Program.\+h.
+
+
+
+References m\+\_\+\+Program\+Handle.
+
+\index{Shader\+Program@{Shader\+Program}!get\+Attribute\+Location@{get\+Attribute\+Location}}
+\index{get\+Attribute\+Location@{get\+Attribute\+Location}!Shader\+Program@{Shader\+Program}}
+\subsubsection[{\texorpdfstring{get\+Attribute\+Location(const std\+::string \&name) const }{getAttributeLocation(const std::string &name) const }}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lint Shader\+Program\+::get\+Attribute\+Location (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_shader_program_aba49891be3e62c2fa03f3e0f03abd7df}{}\label{class_shader_program_aba49891be3e62c2fa03f3e0f03abd7df}
+
+
+Obtains the location of an attribute in the shader program. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the attribute \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Handle to the attribute; -\/1 if error 
+\end{DoxyReturn}
+
+
+Definition at line 96 of file Shader\+Program.\+h.
+
+
+
+References m\+\_\+\+Program\+Handle.
+
+\index{Shader\+Program@{Shader\+Program}!get\+Program\+Handle@{get\+Program\+Handle}}
+\index{get\+Program\+Handle@{get\+Program\+Handle}!Shader\+Program@{Shader\+Program}}
+\subsubsection[{\texorpdfstring{get\+Program\+Handle() const }{getProgramHandle() const }}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Shader\+Program\+::get\+Program\+Handle (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_shader_program_a90f0b84a857b82aa1220246e9aeed9bd}{}\label{class_shader_program_a90f0b84a857b82aa1220246e9aeed9bd}
+
+
+Returns the program handle of the shader program. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_program}{Program} handle 
+\end{DoxyReturn}
+
+
+Definition at line 89 of file Shader\+Program.\+h.
+
+
+
+References m\+\_\+\+Program\+Handle.
+
+\index{Shader\+Program@{Shader\+Program}!get\+Uniform\+Block\+Location@{get\+Uniform\+Block\+Location}}
+\index{get\+Uniform\+Block\+Location@{get\+Uniform\+Block\+Location}!Shader\+Program@{Shader\+Program}}
+\subsubsection[{\texorpdfstring{get\+Uniform\+Block\+Location(const std\+::string \&name) const }{getUniformBlockLocation(const std::string &name) const }}]{\setlength{\rightskip}{0pt plus 5cm}int Shader\+Program\+::get\+Uniform\+Block\+Location (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_shader_program_a771afbb9e66163c6ac685eb16d690ba0}{}\label{class_shader_program_a771afbb9e66163c6ac685eb16d690ba0}
+
+
+Get the identifier of a given uniform block. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the uniform block \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Identifier of the uniform block 
+\end{DoxyReturn}
+
+
+Definition at line 114 of file Shader\+Program.\+h.
+
+
+
+References m\+\_\+\+Program\+Handle.
+
+\index{Shader\+Program@{Shader\+Program}!get\+Uniform\+Location@{get\+Uniform\+Location}}
+\index{get\+Uniform\+Location@{get\+Uniform\+Location}!Shader\+Program@{Shader\+Program}}
+\subsubsection[{\texorpdfstring{get\+Uniform\+Location(const std\+::string \&name) const }{getUniformLocation(const std::string &name) const }}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lint Shader\+Program\+::get\+Uniform\+Location (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_shader_program_a434f4f504303d9132c5b8b89126d8c08}{}\label{class_shader_program_a434f4f504303d9132c5b8b89126d8c08}
+
+
+Obtains the location of a uniform in the shader program. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the uniform \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Handle to the uniform; -\/1 if error 
+\end{DoxyReturn}
+
+
+Definition at line 105 of file Shader\+Program.\+h.
+
+
+
+References m\+\_\+\+Program\+Handle.
+
+
+
+Referenced by Camera\+::apply().
+
+\index{Shader\+Program@{Shader\+Program}!load@{load}}
+\index{load@{load}!Shader\+Program@{Shader\+Program}}
+\subsubsection[{\texorpdfstring{load(const std\+::string \&vertex, const std\+::string \&fragment)}{load(const std::string &vertex, const std::string &fragment)}}]{\setlength{\rightskip}{0pt plus 5cm}void Shader\+Program\+::load (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{vertex, }
+\item[{const std\+::string \&}]{fragment}
+\end{DoxyParamCaption}
+)}\hypertarget{class_shader_program_a2231dc8ed81e75d4f36260b90cb19f4a}{}\label{class_shader_program_a2231dc8ed81e75d4f36260b90cb19f4a}
+
+
+Loads a shader program (Open\+GL 2 required) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vertex} & Vertex shader filename, minus .vert extension \\
+\hline
+{\em fragment} & Fragment shader filename, minus .frag extension \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_file_i_o_exception}{File\+I\+O\+Exception}} & \\
+\hline
+{\em Shader\+Compile\+Exception} & \\
+\hline
+{\em \hyperlink{class_open_g_l_exception}{Open\+G\+L\+Exception}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 29 of file Shader\+Program.\+cpp.
+
+
+
+References load\+And\+Compile\+File(), m\+\_\+\+Fragment\+Shader\+Handle, m\+\_\+\+Geometry\+Shader\+Handle, m\+\_\+\+Program\+Handle, and m\+\_\+\+Vertex\+Shader\+Handle.
+
+
+
+Referenced by Shader\+Program().
+
+\index{Shader\+Program@{Shader\+Program}!load@{load}}
+\index{load@{load}!Shader\+Program@{Shader\+Program}}
+\subsubsection[{\texorpdfstring{load(const std\+::string \&vertex, const std\+::string \&geometry, const std\+::string \&fragment)}{load(const std::string &vertex, const std::string &geometry, const std::string &fragment)}}]{\setlength{\rightskip}{0pt plus 5cm}void Shader\+Program\+::load (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{vertex, }
+\item[{const std\+::string \&}]{geometry, }
+\item[{const std\+::string \&}]{fragment}
+\end{DoxyParamCaption}
+)}\hypertarget{class_shader_program_a69a116f12f5f9fcf8c7b4f97c15bb2da}{}\label{class_shader_program_a69a116f12f5f9fcf8c7b4f97c15bb2da}
+
+
+Loads a shader program (Open\+GL 3.\+2 required) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vertex} & Vertex shader filename, minus .vert extension \\
+\hline
+{\em geometry} & Geometry shader filename, minus .geom extension \\
+\hline
+{\em fragment} & Fragment shader filename, minus .frag extension \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_file_i_o_exception}{File\+I\+O\+Exception}} & \\
+\hline
+{\em Shader\+Compile\+Exception} & \\
+\hline
+{\em \hyperlink{class_open_g_l_exception}{Open\+G\+L\+Exception}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 73 of file Shader\+Program.\+cpp.
+
+
+
+References load\+And\+Compile\+File(), m\+\_\+\+Fragment\+Shader\+Handle, m\+\_\+\+Geometry\+Shader\+Handle, m\+\_\+\+Program\+Handle, and m\+\_\+\+Vertex\+Shader\+Handle.
+
+\index{Shader\+Program@{Shader\+Program}!load\+And\+Compile\+File@{load\+And\+Compile\+File}}
+\index{load\+And\+Compile\+File@{load\+And\+Compile\+File}!Shader\+Program@{Shader\+Program}}
+\subsubsection[{\texorpdfstring{load\+And\+Compile\+File(const std\+::string \&name, G\+Lenum stage)}{loadAndCompileFile(const std::string &name, GLenum stage)}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lint Shader\+Program\+::load\+And\+Compile\+File (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{G\+Lenum}]{stage}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_shader_program_a0dd6ee69d550a6826129ce3a0b227e93}{}\label{class_shader_program_a0dd6ee69d550a6826129ce3a0b227e93}
+
+
+Load and compile shader code from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Shader filename \\
+\hline
+{\em stage} & Shader stage (e.\+g. G\+L\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+S\+H\+A\+D\+ER) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Handle to the shader code on the G\+PU 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_file_i_o_exception}{File\+I\+O\+Exception}} & \\
+\hline
+{\em Shader\+Compile\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 121 of file Shader\+Program.\+cpp.
+
+
+
+References read\+Shader\+File().
+
+
+
+Referenced by load(), and use().
+
+\index{Shader\+Program@{Shader\+Program}!read\+Shader\+File@{read\+Shader\+File}}
+\index{read\+Shader\+File@{read\+Shader\+File}!Shader\+Program@{Shader\+Program}}
+\subsubsection[{\texorpdfstring{read\+Shader\+File(const std\+::string \&filename, std\+::string $\ast$data)}{readShaderFile(const std::string &filename, std::string *data)}}]{\setlength{\rightskip}{0pt plus 5cm}void Shader\+Program\+::read\+Shader\+File (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{filename, }
+\item[{std\+::string $\ast$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_shader_program_a402c1d0936a1feb9b4981f747beaab59}{}\label{class_shader_program_a402c1d0936a1feb9b4981f747beaab59}
+
+
+Reads a shader from a file and returns its source code. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Location of the shader file \\
+\hline
+{\em data} & Ptr to string to be filled with the shader file\textquotesingle{}s data \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_file_i_o_exception}{File\+I\+O\+Exception}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 183 of file Shader\+Program.\+cpp.
+
+
+
+References Config\+::get().
+
+
+
+Referenced by load\+And\+Compile\+File(), and use().
+
+\index{Shader\+Program@{Shader\+Program}!unload@{unload}}
+\index{unload@{unload}!Shader\+Program@{Shader\+Program}}
+\subsubsection[{\texorpdfstring{unload()}{unload()}}]{\setlength{\rightskip}{0pt plus 5cm}void Shader\+Program\+::unload (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_shader_program_a45ba12614fbdc743632baa677edd2247}{}\label{class_shader_program_a45ba12614fbdc743632baa677edd2247}
+
+
+Unloads the shader program and its children. 
+
+
+
+Definition at line 174 of file Shader\+Program.\+cpp.
+
+
+
+References m\+\_\+\+Fragment\+Shader\+Handle, m\+\_\+\+Geometry\+Shader\+Handle, m\+\_\+\+Program\+Handle, and m\+\_\+\+Vertex\+Shader\+Handle.
+
+
+
+Referenced by $\sim$\+Shader\+Program().
+
+\index{Shader\+Program@{Shader\+Program}!use@{use}}
+\index{use@{use}!Shader\+Program@{Shader\+Program}}
+\subsubsection[{\texorpdfstring{use(\+Context $\ast$context)}{use(Context *context)}}]{\setlength{\rightskip}{0pt plus 5cm}void Shader\+Program\+::use (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_shader_program_ad9fef410acc1d6246ea32fa4e5b48b8a}{}\label{class_shader_program_ad9fef410acc1d6246ea32fa4e5b48b8a}
+
+
+Bind the shader program to the Open\+GL state pipeline. 
+
+
+
+Definition at line 131 of file Shader\+Program.\+h.
+
+
+
+References load\+And\+Compile\+File(), m\+\_\+\+Program\+Handle, and read\+Shader\+File().
+
+
+
+Referenced by Camera\+::apply().
+
+
+
+\subsection{Member Data Documentation}
+\index{Shader\+Program@{Shader\+Program}!m\+\_\+\+Fragment\+Shader\+Handle@{m\+\_\+\+Fragment\+Shader\+Handle}}
+\index{m\+\_\+\+Fragment\+Shader\+Handle@{m\+\_\+\+Fragment\+Shader\+Handle}!Shader\+Program@{Shader\+Program}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Fragment\+Shader\+Handle}{m_FragmentShaderHandle}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lint Shader\+Program\+::m\+\_\+\+Fragment\+Shader\+Handle\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_shader_program_a8fe8505db597cb168b538df824d03906}{}\label{class_shader_program_a8fe8505db597cb168b538df824d03906}
+
+
+Definition at line 159 of file Shader\+Program.\+h.
+
+
+
+Referenced by load(), and unload().
+
+\index{Shader\+Program@{Shader\+Program}!m\+\_\+\+Geometry\+Shader\+Handle@{m\+\_\+\+Geometry\+Shader\+Handle}}
+\index{m\+\_\+\+Geometry\+Shader\+Handle@{m\+\_\+\+Geometry\+Shader\+Handle}!Shader\+Program@{Shader\+Program}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Geometry\+Shader\+Handle}{m_GeometryShaderHandle}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lint Shader\+Program\+::m\+\_\+\+Geometry\+Shader\+Handle\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_shader_program_ac9959fc7ce96370c40c1422e7d104a44}{}\label{class_shader_program_ac9959fc7ce96370c40c1422e7d104a44}
+
+
+Definition at line 158 of file Shader\+Program.\+h.
+
+
+
+Referenced by load(), and unload().
+
+\index{Shader\+Program@{Shader\+Program}!m\+\_\+\+Program\+Handle@{m\+\_\+\+Program\+Handle}}
+\index{m\+\_\+\+Program\+Handle@{m\+\_\+\+Program\+Handle}!Shader\+Program@{Shader\+Program}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Program\+Handle}{m_ProgramHandle}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Shader\+Program\+::m\+\_\+\+Program\+Handle\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_shader_program_aeeb7c9dabeaae9aba49858cf3221d887}{}\label{class_shader_program_aeeb7c9dabeaae9aba49858cf3221d887}
+
+
+Shader handlers. 
+
+
+
+Definition at line 156 of file Shader\+Program.\+h.
+
+
+
+Referenced by bind\+Uniform\+Block(), get\+Attribute\+Location(), get\+Program\+Handle(), get\+Uniform\+Block\+Location(), get\+Uniform\+Location(), load(), unload(), and use().
+
+\index{Shader\+Program@{Shader\+Program}!m\+\_\+\+Vertex\+Shader\+Handle@{m\+\_\+\+Vertex\+Shader\+Handle}}
+\index{m\+\_\+\+Vertex\+Shader\+Handle@{m\+\_\+\+Vertex\+Shader\+Handle}!Shader\+Program@{Shader\+Program}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Vertex\+Shader\+Handle}{m_VertexShaderHandle}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lint Shader\+Program\+::m\+\_\+\+Vertex\+Shader\+Handle\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_shader_program_a2056277d1b0c3a71a7b783e17e3733a1}{}\label{class_shader_program_a2056277d1b0c3a71a7b783e17e3733a1}
+
+
+Definition at line 157 of file Shader\+Program.\+h.
+
+
+
+Referenced by load(), and unload().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lunar\+Drift/engine/graphics/shaders/\hyperlink{_shader_program_8h}{Shader\+Program.\+h}\item 
+Lunar\+Drift/engine/graphics/shaders/\hyperlink{_shader_program_8cpp}{Shader\+Program.\+cpp}\end{DoxyCompactItemize}

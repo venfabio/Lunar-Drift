@@ -1,0 +1,56 @@
+\hypertarget{_config_8cpp}{}\section{Lunar\+Drift/engine/\+Config.cpp File Reference}
+\label{_config_8cpp}\index{Lunar\+Drift/engine/\+Config.\+cpp@{Lunar\+Drift/engine/\+Config.\+cpp}}
+{\ttfamily \#include \char`\"{}Config.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}exceptions/\+Exceptions.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$cassert$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::string \hyperlink{_config_8cpp_aaa89281ba38c354659d57279895ad094}{to\+\_\+wstring} (T val)
+\begin{DoxyCompactList}\small\item\em Replacement for std\+::to\+\_\+string, which is unavailable at present. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{_config_8cpp_a8f7aeedb00f867f541fb7b391410be26}{trim} (std\+::string \&str)
+\begin{DoxyCompactList}\small\item\em Replacement for std\+::trim, which is unavailable at present. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Config.\+cpp@{Config.\+cpp}!to\+\_\+wstring@{to\+\_\+wstring}}
+\index{to\+\_\+wstring@{to\+\_\+wstring}!Config.\+cpp@{Config.\+cpp}}
+\subsubsection[{\texorpdfstring{to\+\_\+wstring(\+T val)}{to_wstring(T val)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ std\+::string to\+\_\+wstring (
+\begin{DoxyParamCaption}
+\item[{T}]{val}
+\end{DoxyParamCaption}
+)}\hypertarget{_config_8cpp_aaa89281ba38c354659d57279895ad094}{}\label{_config_8cpp_aaa89281ba38c354659d57279895ad094}
+
+
+Replacement for std\+::to\+\_\+string, which is unavailable at present. 
+
+
+
+Definition at line 11 of file Config.\+cpp.
+
+
+
+Referenced by Config\+::set().
+
+\index{Config.\+cpp@{Config.\+cpp}!trim@{trim}}
+\index{trim@{trim}!Config.\+cpp@{Config.\+cpp}}
+\subsubsection[{\texorpdfstring{trim(std\+::string \&str)}{trim(std::string &str)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string trim (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{str}
+\end{DoxyParamCaption}
+)}\hypertarget{_config_8cpp_a8f7aeedb00f867f541fb7b391410be26}{}\label{_config_8cpp_a8f7aeedb00f867f541fb7b391410be26}
+
+
+Replacement for std\+::trim, which is unavailable at present. 
+
+
+
+Definition at line 19 of file Config.\+cpp.
+
+
+
+Referenced by Config\+::load().
+

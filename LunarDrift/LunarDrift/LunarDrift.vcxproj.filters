@@ -1,0 +1,786 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{b4afdc7d-f73d-47a2-b23d-a16d0b78a314}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine">
+      <UniqueIdentifier>{25476602-69fb-43bf-adef-960a174c76a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine\audio">
+      <UniqueIdentifier>{dc326e2a-def6-447f-b587-669669465ed4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine\comms">
+      <UniqueIdentifier>{b5ed1696-526a-419b-bc50-dc67531caa66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine\containers">
+      <UniqueIdentifier>{74514165-d6b0-4275-a3fa-a280f08abc01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine\exceptions">
+      <UniqueIdentifier>{fb809faa-3c06-4baf-b6cc-6941c34c3e0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine\graphics">
+      <UniqueIdentifier>{d716223e-06d7-4552-8a02-138aa75d9542}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine\input">
+      <UniqueIdentifier>{480ff0b9-f2c1-4738-984b-6920284ba364}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine\graphics\buffers">
+      <UniqueIdentifier>{08431ebb-4179-4fcb-8292-3543a0977723}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine\graphics\renderers">
+      <UniqueIdentifier>{8f479c29-c9f3-4a33-8c91-80d096503a89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine\graphics\shaders">
+      <UniqueIdentifier>{36b57883-36c6-46e7-a22b-ac8eecf28ce7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine\comms\predefined">
+      <UniqueIdentifier>{6f384fc2-d1a9-4226-be6c-206c071de0b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\game">
+      <UniqueIdentifier>{9486497a-c051-4396-a059-5458eaab7941}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\game\scenes">
+      <UniqueIdentifier>{1a062e44-ce9c-4eb1-994d-6ca5f4ec1cbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\game\scenes\alphaspace">
+      <UniqueIdentifier>{19d7a778-dc65-4f0e-8470-44753b4f121c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine\managers">
+      <UniqueIdentifier>{0fab4226-5da4-49d5-bb9c-86984134ba8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine\components">
+      <UniqueIdentifier>{982d8dec-437c-419c-a65d-c6f2981b4d35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine\prefabs">
+      <UniqueIdentifier>{8b855228-e5fe-4f91-904f-b057dae96923}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\game\assets">
+      <UniqueIdentifier>{5d355a06-231b-411d-becc-4eeb6f90d0fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\game\assets\graphics">
+      <UniqueIdentifier>{904bd73d-0941-4de6-a6b1-8e96037c3ba6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\game\assets\graphics\shaders">
+      <UniqueIdentifier>{e47de355-9565-4962-b567-d55501d21bff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\game\scenes\mainmenu">
+      <UniqueIdentifier>{71400dfb-d6c5-43aa-9971-d86a3d29447d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\game\scenes\game">
+      <UniqueIdentifier>{1f686cbf-0539-4d0c-857e-4f4c26d48207}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\game\scenes\game\ships">
+      <UniqueIdentifier>{5a5aefbe-38d1-4403-9e59-07b2bb5bdac0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\game\scenes\game\hoops">
+      <UniqueIdentifier>{93b41295-e0da-41c5-a707-6b1cd05049f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\game\scenes\game\powerups">
+      <UniqueIdentifier>{8004e380-797c-49bb-acee-d9fac7a9d077}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\game\scenes\game\environment">
+      <UniqueIdentifier>{0629caf1-9ef5-493e-8351-d641032c266c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\game\scenes\game\weapons">
+      <UniqueIdentifier>{64b7bc88-6fac-4e0c-9dab-3ac55a2faaf2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="engine\Config.cpp">
+      <Filter>Source Files\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\Program.cpp">
+      <Filter>Source Files\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\audio\AudioPlayer.cpp">
+      <Filter>Source Files\engine\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\comms\Message.cpp">
+      <Filter>Source Files\engine\comms</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\comms\MessageSystem.cpp">
+      <Filter>Source Files\engine\comms</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\containers\ModelLoader.cpp">
+      <Filter>Source Files\engine\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\containers\Window.cpp">
+      <Filter>Source Files\engine\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\exceptions\ConfigurationException.cpp">
+      <Filter>Source Files\engine\exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\exceptions\Exceptions.cpp">
+      <Filter>Source Files\engine\exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\exceptions\FileIOException.cpp">
+      <Filter>Source Files\engine\exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\exceptions\OpenGLException.cpp">
+      <Filter>Source Files\engine\exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\exceptions\ShaderException.cpp">
+      <Filter>Source Files\engine\exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\exceptions\UnsupportedFeatureException.cpp">
+      <Filter>Source Files\engine\exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\graphics\Context.cpp">
+      <Filter>Source Files\engine\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\graphics\Framebuffer.cpp">
+      <Filter>Source Files\engine\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\graphics\Texture.cpp">
+      <Filter>Source Files\engine\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\graphics\Camera.cpp">
+      <Filter>Source Files\engine\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\graphics\buffers\IndexBufferObject.cpp">
+      <Filter>Source Files\engine\graphics\buffers</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\graphics\buffers\VertexArrayObject.cpp">
+      <Filter>Source Files\engine\graphics\buffers</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\graphics\buffers\VertexAttribute.cpp">
+      <Filter>Source Files\engine\graphics\buffers</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\graphics\buffers\VertexBufferObject.cpp">
+      <Filter>Source Files\engine\graphics\buffers</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\graphics\buffers\VertexBufferObjectBase.cpp">
+      <Filter>Source Files\engine\graphics\buffers</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\graphics\shaders\ShaderProgram.cpp">
+      <Filter>Source Files\engine\graphics\shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\graphics\shaders\ShaderUniformBlock.cpp">
+      <Filter>Source Files\engine\graphics\shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\input\ControllerButtonSet.cpp">
+      <Filter>Source Files\engine\input</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\input\InputMap.cpp">
+      <Filter>Source Files\engine\input</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\input\Joystick.cpp">
+      <Filter>Source Files\engine\input</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\input\Keyboard.cpp">
+      <Filter>Source Files\engine\input</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\containers\Scene.cpp">
+      <Filter>Source Files\engine\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\containers\SceneObject.cpp">
+      <Filter>Source Files\engine\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\graphics\renderers\Renderer.cpp">
+      <Filter>Source Files\engine\graphics\renderers</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\containers\Model.cpp">
+      <Filter>Source Files\engine\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\comms\predefined\ButtonDownEvent.cpp">
+      <Filter>Source Files\engine\comms\predefined</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\comms\predefined\ButtonUpEvent.cpp">
+      <Filter>Source Files\engine\comms\predefined</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\comms\predefined\InputEvent.cpp">
+      <Filter>Source Files\engine\comms\predefined</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\containers\WindowPC.cpp">
+      <Filter>Source Files\engine\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scenes\alphaspace\TestTriangle.cpp">
+      <Filter>Source Files\game\scenes\alphaspace</Filter>
+    </ClCompile>
+    <ClCompile Include="game\LunarDriftProgram.cpp">
+      <Filter>Source Files\game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\GameRenderer.cpp">
+      <Filter>Source Files\game</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\managers\ShaderManager.cpp">
+      <Filter>Source Files\engine\managers</Filter>
+    </ClCompile>
+    <ClCompile Include="EntryPoint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\components\SceneObjectComponent.cpp">
+      <Filter>Source Files\engine\components</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\managers\CollisionManager.cpp">
+      <Filter>Source Files\engine\managers</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\managers\ModelManager.cpp">
+      <Filter>Source Files\engine\managers</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\managers\SceneObjectManager.cpp">
+      <Filter>Source Files\engine\managers</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\managers\TextureManager.cpp">
+      <Filter>Source Files\engine\managers</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\managers\MetaManager.cpp">
+      <Filter>Source Files\engine\managers</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\components\CollisionComponent.cpp">
+      <Filter>Source Files\engine\components</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\components\ExplodableComponent.cpp">
+      <Filter>Source Files\engine\components</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\components\HitpointComponent.cpp">
+      <Filter>Source Files\engine\components</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\components\LifeTimeComponent.cpp">
+      <Filter>Source Files\engine\components</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\comms\predefined\CollisionMessage.cpp">
+      <Filter>Source Files\engine\comms\predefined</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\comms\predefined\DamageMessage.cpp">
+      <Filter>Source Files\engine\comms\predefined</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\comms\predefined\DeathMessage.cpp">
+      <Filter>Source Files\engine\comms\predefined</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scenes\alphaspace\TestStarfield.cpp">
+      <Filter>Source Files\game\scenes\alphaspace</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\MathHelper.cpp">
+      <Filter>Source Files\engine</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\prefabs\Explosion.cpp">
+      <Filter>Source Files\engine\prefabs</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\prefabs\ParticleSystem.cpp">
+      <Filter>Source Files\engine\prefabs</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scenes\alphaspace\TestScene.cpp">
+      <Filter>Source Files\game\scenes\alphaspace</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scenes\game\RaceScene.cpp">
+      <Filter>Source Files\game\scenes\game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scenes\mainmenu\MainMenuScene.cpp">
+      <Filter>Source Files\game\scenes\mainmenu</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scenes\game\ships\Ship.cpp">
+      <Filter>Source Files\game\scenes\game\ships</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\components\PhysicsComponent.cpp">
+      <Filter>Source Files\engine\components</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scenes\alphaspace\TestSpacecraft.cpp">
+      <Filter>Source Files\game\scenes\alphaspace</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scenes\alphaspace\TestTexturedBox.cpp">
+      <Filter>Source Files\game\scenes\alphaspace</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\prefabs\Text.cpp">
+      <Filter>Source Files\engine\prefabs</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\prefabs\DebuggingSphere.cpp">
+      <Filter>Source Files\engine\prefabs</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\components\PropulsionComponent.cpp">
+      <Filter>Source Files\engine\components</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scenes\game\hoops\HoopBlue.cpp">
+      <Filter>Source Files\game\scenes\game\hoops</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scenes\mainmenu\MenuBox.cpp">
+      <Filter>Source Files\game\scenes\mainmenu</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scenes\mainmenu\Cursor.cpp">
+      <Filter>Source Files\game\scenes\mainmenu</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scenes\game\environment\Planet.cpp">
+      <Filter>Source Files\game\scenes\game\environment</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\comms\predefined\ExitMessage.cpp">
+      <Filter>Source Files\engine\comms\predefined</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\comms\predefined\SceneActivateMessage.cpp">
+      <Filter>Source Files\engine\comms\predefined</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scenes\game\PauseScene.cpp">
+      <Filter>Source Files\game\scenes\game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scenes\game\ships\Derpy.cpp">
+      <Filter>Source Files\game\scenes\game\ships</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scenes\game\ships\PinkiePie.cpp">
+      <Filter>Source Files\game\scenes\game\ships</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scenes\mainmenu\MenuBoxAlt.cpp">
+      <Filter>Source Files\game\scenes\mainmenu</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scenes\mainmenu\SelectShipScene.cpp">
+      <Filter>Source Files\game\scenes\mainmenu</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scenes\mainmenu\SelectLevelScene.cpp">
+      <Filter>Source Files\game\scenes\mainmenu</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scenes\game\ScoreDisplayScene.cpp">
+      <Filter>Source Files\game\scenes\game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scenes\game\GameOverScene.cpp">
+      <Filter>Source Files\game\scenes\game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scenes\game\powerups\Laser.cpp">
+      <Filter>Source Files\game\scenes\game\powerups</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scenes\game\powerups\PowerUp.cpp">
+      <Filter>Source Files\game\scenes\game\powerups</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scenes\game\hoops\HoopGreen.cpp">
+      <Filter>Source Files\game\scenes\game\hoops</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scenes\game\hoops\HoopRed.cpp">
+      <Filter>Source Files\game\scenes\game\hoops</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scenes\game\hoops\HoopYellow.cpp">
+      <Filter>Source Files\game\scenes\game\hoops</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\prefabs\Skybox.cpp">
+      <Filter>Source Files\engine\prefabs</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\graphics\CubeMapTexture.cpp">
+      <Filter>Source Files\engine\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scenes\game\AntaresRaceScene.cpp">
+      <Filter>Source Files\game\scenes\game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scenes\game\weapons\MissileWeapon.cpp">
+      <Filter>Source Files\game\scenes\game\weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\comms\predefined\FireMissileMessage.cpp">
+      <Filter>Source Files\engine\comms\predefined</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\comms\predefined\ScoreAddMessage.cpp">
+      <Filter>Source Files\engine\comms\predefined</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scenes\game\AndromedaRaceScene.cpp">
+      <Filter>Source Files\game\scenes\game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scenes\game\hoops\HoopWhite.cpp">
+      <Filter>Source Files\game\scenes\game\hoops</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scenes\game\environment\Arch.cpp">
+      <Filter>Source Files\game\scenes\game\environment</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scenes\game\environment\Hill.cpp">
+      <Filter>Source Files\game\scenes\game\environment</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scenes\game\environment\ObliqueShape.cpp">
+      <Filter>Source Files\game\scenes\game\environment</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scenes\game\environment\Plane.cpp">
+      <Filter>Source Files\game\scenes\game\environment</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scenes\game\environment\WF_Bridge.cpp">
+      <Filter>Source Files\game\scenes\game\environment</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scenes\game\KesselRunRaceScene.cpp">
+      <Filter>Source Files\game\scenes\game</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scenes\mainmenu\SelectTrackScene.cpp">
+      <Filter>Source Files\game\scenes\mainmenu</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scenes\game\environment\Mars.cpp">
+      <Filter>Source Files\game\scenes\game\environment</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\input\InputRecorder.cpp">
+      <Filter>Source Files\engine\input</Filter>
+    </ClCompile>
+    <ClCompile Include="game\scenes\mainmenu\MenuBox2D.cpp">
+      <Filter>Source Files\game\scenes\mainmenu</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="engine\Config.h">
+      <Filter>Source Files\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\Program.h">
+      <Filter>Source Files\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\audio\AudioPlayer.h">
+      <Filter>Source Files\engine\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\comms\IMessageListener.h">
+      <Filter>Source Files\engine\comms</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\comms\Message.h">
+      <Filter>Source Files\engine\comms</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\comms\MessageSystem.h">
+      <Filter>Source Files\engine\comms</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\containers\ModelLoader.h">
+      <Filter>Source Files\engine\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\containers\Window.h">
+      <Filter>Source Files\engine\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\exceptions\ConfigurationException.h">
+      <Filter>Source Files\engine\exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\exceptions\Exceptions.h">
+      <Filter>Source Files\engine\exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\exceptions\FileIOException.h">
+      <Filter>Source Files\engine\exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\exceptions\OpenGLException.h">
+      <Filter>Source Files\engine\exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\exceptions\ShaderException.h">
+      <Filter>Source Files\engine\exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\exceptions\UnsupportedFeatureException.h">
+      <Filter>Source Files\engine\exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\graphics\Context.h">
+      <Filter>Source Files\engine\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\graphics\Framebuffer.h">
+      <Filter>Source Files\engine\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\graphics\Texture.h">
+      <Filter>Source Files\engine\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\graphics\Camera.h">
+      <Filter>Source Files\engine\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\graphics\buffers\IndexBufferObject.h">
+      <Filter>Source Files\engine\graphics\buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\graphics\buffers\VertexArrayObject.h">
+      <Filter>Source Files\engine\graphics\buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\graphics\buffers\VertexAttribute.h">
+      <Filter>Source Files\engine\graphics\buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\graphics\buffers\VertexBufferObject.h">
+      <Filter>Source Files\engine\graphics\buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\graphics\buffers\VertexBufferObjectBase.h">
+      <Filter>Source Files\engine\graphics\buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\graphics\shaders\ShaderProgram.h">
+      <Filter>Source Files\engine\graphics\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\graphics\shaders\ShaderUniformBlock.h">
+      <Filter>Source Files\engine\graphics\shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\input\ControllerButtonSet.h">
+      <Filter>Source Files\engine\input</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\input\InputMap.h">
+      <Filter>Source Files\engine\input</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\input\Joystick.h">
+      <Filter>Source Files\engine\input</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\input\Key.h">
+      <Filter>Source Files\engine\input</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\input\Keyboard.h">
+      <Filter>Source Files\engine\input</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\containers\Scene.h">
+      <Filter>Source Files\engine\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\containers\SceneObject.h">
+      <Filter>Source Files\engine\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\graphics\renderers\Renderer.h">
+      <Filter>Source Files\engine\graphics\renderers</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\containers\Model.h">
+      <Filter>Source Files\engine\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\comms\predefined\ButtonDownEvent.h">
+      <Filter>Source Files\engine\comms\predefined</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\comms\predefined\ButtonUpEvent.h">
+      <Filter>Source Files\engine\comms\predefined</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\comms\predefined\InputEvent.h">
+      <Filter>Source Files\engine\comms\predefined</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\containers\WindowPC.h">
+      <Filter>Source Files\engine\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\graphics\OpenGLConfig.h">
+      <Filter>Source Files\engine\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="game\scenes\alphaspace\TestTriangle.h">
+      <Filter>Source Files\game\scenes\alphaspace</Filter>
+    </ClInclude>
+    <ClInclude Include="game\LunarDriftProgram.h">
+      <Filter>Source Files\game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\GameRenderer.h">
+      <Filter>Source Files\game</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\managers\ShaderManager.h">
+      <Filter>Source Files\engine\managers</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\components\SceneObjectComponent.h">
+      <Filter>Source Files\engine\components</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\components\BaseComponent.h">
+      <Filter>Source Files\engine\components</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\managers\CollisionManager.h">
+      <Filter>Source Files\engine\managers</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\managers\Manager.h">
+      <Filter>Source Files\engine\managers</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\managers\ModelManager.h">
+      <Filter>Source Files\engine\managers</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\managers\SceneObjectManager.h">
+      <Filter>Source Files\engine\managers</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\managers\TextureManager.h">
+      <Filter>Source Files\engine\managers</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\managers\MetaManager.h">
+      <Filter>Source Files\engine\managers</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\components\CollisionComponent.h">
+      <Filter>Source Files\engine\components</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\components\ExplodableComponent.h">
+      <Filter>Source Files\engine\components</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\components\HitpointComponent.h">
+      <Filter>Source Files\engine\components</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\components\LifeTimeComponent.h">
+      <Filter>Source Files\engine\components</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\comms\predefined\CollisionMessage.h">
+      <Filter>Source Files\engine\comms\predefined</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\comms\predefined\DamageMessage.h">
+      <Filter>Source Files\engine\comms\predefined</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\comms\predefined\DeathMessage.h">
+      <Filter>Source Files\engine\comms\predefined</Filter>
+    </ClInclude>
+    <ClInclude Include="game\scenes\alphaspace\TestStarfield.h">
+      <Filter>Source Files\game\scenes\alphaspace</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\MathHelper.h">
+      <Filter>Source Files\engine</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\prefabs\Explosion.h">
+      <Filter>Source Files\engine\prefabs</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\prefabs\ParticleSystem.h">
+      <Filter>Source Files\engine\prefabs</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\graphics\IDeferredLoadable.h">
+      <Filter>Source Files\engine\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="game\scenes\alphaspace\TestScene.h">
+      <Filter>Source Files\game\scenes\alphaspace</Filter>
+    </ClInclude>
+    <ClInclude Include="game\scenes\game\RaceScene.h">
+      <Filter>Source Files\game\scenes\game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\scenes\mainmenu\MainMenuScene.h">
+      <Filter>Source Files\game\scenes\mainmenu</Filter>
+    </ClInclude>
+    <ClInclude Include="game\scenes\game\ships\Ship.h">
+      <Filter>Source Files\game\scenes\game\ships</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\components\PhysicsComponent.h">
+      <Filter>Source Files\engine\components</Filter>
+    </ClInclude>
+    <ClInclude Include="game\scenes\alphaspace\TestSpacecraft.h">
+      <Filter>Source Files\game\scenes\alphaspace</Filter>
+    </ClInclude>
+    <ClInclude Include="game\scenes\alphaspace\TestTexturedBox.h">
+      <Filter>Source Files\game\scenes\alphaspace</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\prefabs\Text.h">
+      <Filter>Source Files\engine\prefabs</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\prefabs\DebuggingSphere.h">
+      <Filter>Source Files\engine\prefabs</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\components\PropulsionComponent.h">
+      <Filter>Source Files\engine\components</Filter>
+    </ClInclude>
+    <ClInclude Include="game\scenes\game\hoops\HoopBlue.h">
+      <Filter>Source Files\game\scenes\game\hoops</Filter>
+    </ClInclude>
+    <ClInclude Include="game\scenes\mainmenu\MenuBox.h">
+      <Filter>Source Files\game\scenes\mainmenu</Filter>
+    </ClInclude>
+    <ClInclude Include="game\scenes\mainmenu\Cursor.h">
+      <Filter>Source Files\game\scenes\mainmenu</Filter>
+    </ClInclude>
+    <ClInclude Include="game\scenes\game\environment\Planet.h">
+      <Filter>Source Files\game\scenes\game\environment</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\comms\predefined\ExitMessage.h">
+      <Filter>Source Files\engine\comms\predefined</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\comms\predefined\SceneActivateMessage.h">
+      <Filter>Source Files\engine\comms\predefined</Filter>
+    </ClInclude>
+    <ClInclude Include="game\GameParameters.h">
+      <Filter>Source Files\game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\scenes\game\PauseScene.h">
+      <Filter>Source Files\game\scenes\game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\scenes\game\ships\Derpy.h">
+      <Filter>Source Files\game\scenes\game\ships</Filter>
+    </ClInclude>
+    <ClInclude Include="game\scenes\game\ships\PinkiePie.h">
+      <Filter>Source Files\game\scenes\game\ships</Filter>
+    </ClInclude>
+    <ClInclude Include="game\scenes\mainmenu\MenuBoxAlt.h">
+      <Filter>Source Files\game\scenes\mainmenu</Filter>
+    </ClInclude>
+    <ClInclude Include="game\scenes\mainmenu\SelectShipScene.h">
+      <Filter>Source Files\game\scenes\mainmenu</Filter>
+    </ClInclude>
+    <ClInclude Include="game\scenes\mainmenu\SelectLevelScene.h">
+      <Filter>Source Files\game\scenes\mainmenu</Filter>
+    </ClInclude>
+    <ClInclude Include="game\scenes\game\ScoreDisplayScene.h">
+      <Filter>Source Files\game\scenes\game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\scenes\game\GameOverScene.h">
+      <Filter>Source Files\game\scenes\game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\scenes\game\powerups\Laser.h">
+      <Filter>Source Files\game\scenes\game\powerups</Filter>
+    </ClInclude>
+    <ClInclude Include="game\scenes\game\powerups\PowerUp.h">
+      <Filter>Source Files\game\scenes\game\powerups</Filter>
+    </ClInclude>
+    <ClInclude Include="game\scenes\game\hoops\HoopGreen.h">
+      <Filter>Source Files\game\scenes\game\hoops</Filter>
+    </ClInclude>
+    <ClInclude Include="game\scenes\game\hoops\HoopRed.h">
+      <Filter>Source Files\game\scenes\game\hoops</Filter>
+    </ClInclude>
+    <ClInclude Include="game\scenes\game\hoops\HoopYellow.h">
+      <Filter>Source Files\game\scenes\game\hoops</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\prefabs\Skybox.h">
+      <Filter>Source Files\engine\prefabs</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\graphics\CubeMapTexture.h">
+      <Filter>Source Files\engine\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="game\scenes\game\AntaresRaceScene.h">
+      <Filter>Source Files\game\scenes\game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\scenes\game\weapons\MissileWeapon.h">
+      <Filter>Source Files\game\scenes\game\weapons</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\comms\predefined\FireMissileMessage.h">
+      <Filter>Source Files\engine\comms\predefined</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\comms\predefined\ScoreAddMessage.h">
+      <Filter>Source Files\engine\comms\predefined</Filter>
+    </ClInclude>
+    <ClInclude Include="game\scenes\game\AndromedaRaceScene.h">
+      <Filter>Source Files\game\scenes\game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\scenes\game\hoops\HoopWhite.h">
+      <Filter>Source Files\game\scenes\game\hoops</Filter>
+    </ClInclude>
+    <ClInclude Include="game\scenes\game\environment\Arch.h">
+      <Filter>Source Files\game\scenes\game\environment</Filter>
+    </ClInclude>
+    <ClInclude Include="game\scenes\game\environment\Hill.h">
+      <Filter>Source Files\game\scenes\game\environment</Filter>
+    </ClInclude>
+    <ClInclude Include="game\scenes\game\environment\ObliqueShape.h">
+      <Filter>Source Files\game\scenes\game\environment</Filter>
+    </ClInclude>
+    <ClInclude Include="game\scenes\game\environment\Plane.h">
+      <Filter>Source Files\game\scenes\game\environment</Filter>
+    </ClInclude>
+    <ClInclude Include="game\scenes\game\environment\WF_Bridge.h">
+      <Filter>Source Files\game\scenes\game\environment</Filter>
+    </ClInclude>
+    <ClInclude Include="game\scenes\game\KesselRunRaceScene.h">
+      <Filter>Source Files\game\scenes\game</Filter>
+    </ClInclude>
+    <ClInclude Include="game\scenes\mainmenu\SelectTrackScene.h">
+      <Filter>Source Files\game\scenes\mainmenu</Filter>
+    </ClInclude>
+    <ClInclude Include="game\scenes\game\environment\Mars.h">
+      <Filter>Source Files\game\scenes\game\environment</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\input\InputRecorder.h">
+      <Filter>Source Files\engine\input</Filter>
+    </ClInclude>
+    <ClInclude Include="game\scenes\mainmenu\MenuBox2D.h">
+      <Filter>Source Files\game\scenes\mainmenu</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="game\assets\graphics\shaders\passthrough.frag">
+      <Filter>Source Files\game\assets\graphics\shaders</Filter>
+    </None>
+    <None Include="game\assets\graphics\shaders\passthrough.vert">
+      <Filter>Source Files\game\assets\graphics\shaders</Filter>
+    </None>
+    <None Include="game\assets\graphics\shaders\raw.vert">
+      <Filter>Source Files\game\assets\graphics\shaders</Filter>
+    </None>
+    <None Include="game\assets\graphics\shaders\ship.vert">
+      <Filter>Source Files\game\assets\graphics\shaders</Filter>
+    </None>
+    <None Include="game\assets\graphics\shaders\passthrough_tex.frag">
+      <Filter>Source Files\game\assets\graphics\shaders</Filter>
+    </None>
+    <None Include="game\assets\graphics\shaders\box.vert">
+      <Filter>Source Files\game\assets\graphics\shaders</Filter>
+    </None>
+    <None Include="game\assets\graphics\shaders\text.frag">
+      <Filter>Source Files\game\assets\graphics\shaders</Filter>
+    </None>
+    <None Include="game\assets\graphics\shaders\text.vert">
+      <Filter>Source Files\game\assets\graphics\shaders</Filter>
+    </None>
+    <None Include="game\assets\graphics\shaders\collider.frag">
+      <Filter>Source Files\game\assets\graphics\shaders</Filter>
+    </None>
+    <None Include="game\assets\graphics\shaders\collider.vert">
+      <Filter>Source Files\game\assets\graphics\shaders</Filter>
+    </None>
+    <None Include="game\assets\graphics\shaders\explosion.vert">
+      <Filter>Source Files\game\assets\graphics\shaders</Filter>
+    </None>
+    <None Include="game\assets\graphics\shaders\particle_system.vert">
+      <Filter>Source Files\game\assets\graphics\shaders</Filter>
+    </None>
+    <None Include="game\assets\graphics\shaders\box2d.vert">
+      <Filter>Source Files\game\assets\graphics\shaders</Filter>
+    </None>
+  </ItemGroup>
+</Project>

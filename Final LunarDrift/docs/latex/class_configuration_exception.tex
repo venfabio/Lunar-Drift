@@ -1,0 +1,146 @@
+\hypertarget{class_configuration_exception}{}\section{Configuration\+Exception Class Reference}
+\label{class_configuration_exception}\index{Configuration\+Exception@{Configuration\+Exception}}
+
+
+Exception raised whenever a configuration setting is exceptional.  
+
+
+
+
+{\ttfamily \#include $<$Configuration\+Exception.\+h$>$}
+
+Inheritance diagram for Configuration\+Exception\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_configuration_exception}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_configuration_exception_aafdad5d128d9af78d608ef84bdadefae}{Configuration\+Exception} (const std\+::string \&setting, const std\+::string \&err)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+const std\+::string \& \hyperlink{class_configuration_exception_abdd1f89e64ba00cf95bf0486f9f79996}{get\+Setting} () const 
+\item 
+const std\+::string \& \hyperlink{class_configuration_exception_a3977f23c22371c3bc9a9e564afc7778c}{get\+Error} () const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::string \hyperlink{class_configuration_exception_a5ed87e962e3bb847b29a86b5460b9370}{m\+\_\+\+Setting}
+\item 
+const std\+::string \hyperlink{class_configuration_exception_a0d142ec503a6f32470c6d262af2d1298}{m\+\_\+\+Error}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Exception raised whenever a configuration setting is exceptional. 
+
+\begin{DoxyAuthor}{Author}
+Hayley Hatton 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/02/2016 
+\end{DoxyDate}
+
+
+Definition at line 12 of file Configuration\+Exception.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Configuration\+Exception@{Configuration\+Exception}!Configuration\+Exception@{Configuration\+Exception}}
+\index{Configuration\+Exception@{Configuration\+Exception}!Configuration\+Exception@{Configuration\+Exception}}
+\subsubsection[{\texorpdfstring{Configuration\+Exception(const std\+::string \&setting, const std\+::string \&err)}{ConfigurationException(const std::string &setting, const std::string &err)}}]{\setlength{\rightskip}{0pt plus 5cm}Configuration\+Exception\+::\+Configuration\+Exception (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{setting, }
+\item[{const std\+::string \&}]{err}
+\end{DoxyParamCaption}
+)}\hypertarget{class_configuration_exception_aafdad5d128d9af78d608ef84bdadefae}{}\label{class_configuration_exception_aafdad5d128d9af78d608ef84bdadefae}
+
+
+Default constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em setting} & Configuration setting at fault \\
+\hline
+{\em err} & Error string \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 3 of file Configuration\+Exception.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\index{Configuration\+Exception@{Configuration\+Exception}!get\+Error@{get\+Error}}
+\index{get\+Error@{get\+Error}!Configuration\+Exception@{Configuration\+Exception}}
+\subsubsection[{\texorpdfstring{get\+Error() const }{getError() const }}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string\& Configuration\+Exception\+::get\+Error (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_configuration_exception_a3977f23c22371c3bc9a9e564afc7778c}{}\label{class_configuration_exception_a3977f23c22371c3bc9a9e564afc7778c}
+
+
+Definition at line 25 of file Configuration\+Exception.\+h.
+
+
+
+References m\+\_\+\+Error.
+
+
+
+Referenced by Window\+P\+C\+::rendering\+Thread(), and Win\+Main().
+
+\index{Configuration\+Exception@{Configuration\+Exception}!get\+Setting@{get\+Setting}}
+\index{get\+Setting@{get\+Setting}!Configuration\+Exception@{Configuration\+Exception}}
+\subsubsection[{\texorpdfstring{get\+Setting() const }{getSetting() const }}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string\& Configuration\+Exception\+::get\+Setting (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_configuration_exception_abdd1f89e64ba00cf95bf0486f9f79996}{}\label{class_configuration_exception_abdd1f89e64ba00cf95bf0486f9f79996}
+
+
+Definition at line 23 of file Configuration\+Exception.\+h.
+
+
+
+References m\+\_\+\+Setting.
+
+
+
+Referenced by Window\+P\+C\+::rendering\+Thread(), and Win\+Main().
+
+
+
+\subsection{Member Data Documentation}
+\index{Configuration\+Exception@{Configuration\+Exception}!m\+\_\+\+Error@{m\+\_\+\+Error}}
+\index{m\+\_\+\+Error@{m\+\_\+\+Error}!Configuration\+Exception@{Configuration\+Exception}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Error}{m_Error}}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string Configuration\+Exception\+::m\+\_\+\+Error\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_configuration_exception_a0d142ec503a6f32470c6d262af2d1298}{}\label{class_configuration_exception_a0d142ec503a6f32470c6d262af2d1298}
+
+
+Definition at line 29 of file Configuration\+Exception.\+h.
+
+
+
+Referenced by get\+Error().
+
+\index{Configuration\+Exception@{Configuration\+Exception}!m\+\_\+\+Setting@{m\+\_\+\+Setting}}
+\index{m\+\_\+\+Setting@{m\+\_\+\+Setting}!Configuration\+Exception@{Configuration\+Exception}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Setting}{m_Setting}}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string Configuration\+Exception\+::m\+\_\+\+Setting\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_configuration_exception_a5ed87e962e3bb847b29a86b5460b9370}{}\label{class_configuration_exception_a5ed87e962e3bb847b29a86b5460b9370}
+
+
+Definition at line 28 of file Configuration\+Exception.\+h.
+
+
+
+Referenced by get\+Setting().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lunar\+Drift/engine/exceptions/\hyperlink{_configuration_exception_8h}{Configuration\+Exception.\+h}\item 
+Lunar\+Drift/engine/exceptions/\hyperlink{_configuration_exception_8cpp}{Configuration\+Exception.\+cpp}\end{DoxyCompactItemize}

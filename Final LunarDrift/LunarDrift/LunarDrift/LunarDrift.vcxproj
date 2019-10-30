@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="engine\audio\AudioPlayer.cpp" />
+    <ClCompile Include="engine\comms\Message.cpp" />
+    <ClCompile Include="engine\comms\MessageSystem.cpp" />
+    <ClCompile Include="engine\comms\predefined\ButtonDownEvent.cpp" />
+    <ClCompile Include="engine\comms\predefined\ButtonUpEvent.cpp" />
+    <ClCompile Include="engine\comms\predefined\CollisionMessage.cpp" />
+    <ClCompile Include="engine\comms\predefined\DamageMessage.cpp" />
+    <ClCompile Include="engine\comms\predefined\DeathMessage.cpp" />
+    <ClCompile Include="engine\comms\predefined\ExitMessage.cpp" />
+    <ClCompile Include="engine\comms\predefined\FireMissileMessage.cpp" />
+    <ClCompile Include="engine\comms\predefined\InputEvent.cpp" />
+    <ClCompile Include="engine\comms\predefined\SceneActivateMessage.cpp" />
+    <ClCompile Include="engine\comms\predefined\ScoreAddMessage.cpp" />
+    <ClCompile Include="engine\components\CollisionComponent.cpp" />
+    <ClCompile Include="engine\components\ExplodableComponent.cpp" />
+    <ClCompile Include="engine\components\HitpointComponent.cpp" />
+    <ClCompile Include="engine\components\LifeTimeComponent.cpp" />
+    <ClCompile Include="engine\components\PhysicsComponent.cpp" />
+    <ClCompile Include="engine\components\PropulsionComponent.cpp" />
+    <ClCompile Include="engine\components\SceneObjectComponent.cpp" />
+    <ClCompile Include="engine\Config.cpp" />
+    <ClCompile Include="engine\containers\Model.cpp" />
+    <ClCompile Include="engine\containers\ModelLoader.cpp" />
+    <ClCompile Include="engine\containers\Scene.cpp" />
+    <ClCompile Include="engine\containers\SceneObject.cpp" />
+    <ClCompile Include="engine\containers\Window.cpp" />
+    <ClCompile Include="engine\containers\WindowPC.cpp" />
+    <ClCompile Include="engine\exceptions\ConfigurationException.cpp" />
+    <ClCompile Include="engine\exceptions\Exceptions.cpp" />
+    <ClCompile Include="engine\exceptions\FileIOException.cpp" />
+    <ClCompile Include="engine\exceptions\OpenGLException.cpp" />
+    <ClCompile Include="engine\exceptions\ShaderException.cpp" />
+    <ClCompile Include="engine\exceptions\UnsupportedFeatureException.cpp" />
+    <ClCompile Include="engine\graphics\buffers\IndexBufferObject.cpp" />
+    <ClCompile Include="engine\graphics\buffers\VertexArrayObject.cpp" />
+    <ClCompile Include="engine\graphics\buffers\VertexAttribute.cpp" />
+    <ClCompile Include="engine\graphics\buffers\VertexBufferObject.cpp" />
+    <ClCompile Include="engine\graphics\buffers\VertexBufferObjectBase.cpp" />
+    <ClCompile Include="engine\graphics\Camera.cpp" />
+    <ClCompile Include="engine\graphics\Context.cpp" />
+    <ClCompile Include="engine\graphics\CubeMapTexture.cpp" />
+    <ClCompile Include="engine\graphics\Framebuffer.cpp" />
+    <ClCompile Include="engine\graphics\renderers\Renderer.cpp" />
+    <ClCompile Include="engine\graphics\shaders\ShaderProgram.cpp" />
+    <ClCompile Include="engine\graphics\shaders\ShaderUniformBlock.cpp" />
+    <ClCompile Include="engine\graphics\Texture.cpp" />
+    <ClCompile Include="engine\input\ControllerButtonSet.cpp" />
+    <ClCompile Include="engine\input\InputMap.cpp" />
+    <ClCompile Include="engine\input\InputRecorder.cpp" />
+    <ClCompile Include="engine\input\Joystick.cpp" />
+    <ClCompile Include="engine\input\Keyboard.cpp" />
+    <ClCompile Include="engine\managers\CollisionManager.cpp" />
+    <ClCompile Include="engine\managers\MetaManager.cpp" />
+    <ClCompile Include="engine\managers\ModelManager.cpp" />
+    <ClCompile Include="engine\managers\SceneObjectManager.cpp" />
+    <ClCompile Include="engine\managers\ShaderManager.cpp" />
+    <ClCompile Include="engine\managers\TextureManager.cpp" />
+    <ClCompile Include="engine\MathHelper.cpp" />
+    <ClCompile Include="engine\prefabs\DebuggingSphere.cpp" />
+    <ClCompile Include="engine\prefabs\Explosion.cpp" />
+    <ClCompile Include="engine\prefabs\ParticleSystem.cpp" />
+    <ClCompile Include="engine\prefabs\Skybox.cpp" />
+    <ClCompile Include="engine\prefabs\Text.cpp" />
+    <ClCompile Include="engine\Program.cpp" />
+    <ClCompile Include="EntryPoint.cpp" />
+    <ClCompile Include="game\scenes\alphaspace\TestScene.cpp" />
+    <ClCompile Include="game\scenes\alphaspace\TestSpacecraft.cpp" />
+    <ClCompile Include="game\scenes\alphaspace\TestStarfield.cpp" />
+    <ClCompile Include="game\scenes\alphaspace\TestTexturedBox.cpp" />
+    <ClCompile Include="game\scenes\alphaspace\TestTriangle.cpp" />
+    <ClCompile Include="game\GameRenderer.cpp" />
+    <ClCompile Include="game\LunarDriftProgram.cpp" />
+    <ClCompile Include="game\scenes\game\AndromedaRaceScene.cpp" />
+    <ClCompile Include="game\scenes\game\AntaresRaceScene.cpp" />
+    <ClCompile Include="game\scenes\game\environment\Arch.cpp" />
+    <ClCompile Include="game\scenes\game\environment\Hill.cpp" />
+    <ClCompile Include="game\scenes\game\environment\Mars.cpp" />
+    <ClCompile Include="game\scenes\game\environment\ObliqueShape.cpp" />
+    <ClCompile Include="game\scenes\game\environment\Plane.cpp" />
+    <ClCompile Include="game\scenes\game\environment\Planet.cpp" />
+    <ClCompile Include="game\scenes\game\environment\WF_Bridge.cpp" />
+    <ClCompile Include="game\scenes\game\GameOverScene.cpp" />
+    <ClCompile Include="game\scenes\game\hoops\HoopBlue.cpp" />
+    <ClCompile Include="game\scenes\game\hoops\HoopGreen.cpp" />
+    <ClCompile Include="game\scenes\game\hoops\HoopRed.cpp" />
+    <ClCompile Include="game\scenes\game\hoops\HoopWhite.cpp" />
+    <ClCompile Include="game\scenes\game\hoops\HoopYellow.cpp" />
+    <ClCompile Include="game\scenes\game\KesselRunRaceScene.cpp" />
+    <ClCompile Include="game\scenes\game\PauseScene.cpp" />
+    <ClCompile Include="game\scenes\game\powerups\Laser.cpp" />
+    <ClCompile Include="game\scenes\game\powerups\PowerUp.cpp" />
+    <ClCompile Include="game\scenes\game\RaceScene.cpp" />
+    <ClCompile Include="game\scenes\game\ScoreDisplayScene.cpp" />
+    <ClCompile Include="game\scenes\game\ships\Derpy.cpp" />
+    <ClCompile Include="game\scenes\game\ships\PinkiePie.cpp" />
+    <ClCompile Include="game\scenes\game\ships\Ship.cpp" />
+    <ClCompile Include="game\scenes\game\weapons\MissileWeapon.cpp" />
+    <ClCompile Include="game\scenes\mainmenu\Cursor.cpp" />
+    <ClCompile Include="game\scenes\mainmenu\MainMenuScene.cpp" />
+    <ClCompile Include="game\scenes\mainmenu\MenuBox.cpp" />
+    <ClCompile Include="game\scenes\mainmenu\MenuBox2D.cpp" />
+    <ClCompile Include="game\scenes\mainmenu\MenuBoxAlt.cpp" />
+    <ClCompile Include="game\scenes\mainmenu\SelectLevelScene.cpp" />
+    <ClCompile Include="game\scenes\mainmenu\SelectShipScene.cpp" />
+    <ClCompile Include="game\scenes\mainmenu\SelectTrackScene.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="engine\audio\AudioPlayer.h" />
+    <ClInclude Include="engine\comms\IMessageListener.h" />
+    <ClInclude Include="engine\comms\Message.h" />
+    <ClInclude Include="engine\comms\MessageSystem.h" />
+    <ClInclude Include="engine\comms\predefined\ButtonDownEvent.h" />
+    <ClInclude Include="engine\comms\predefined\ButtonUpEvent.h" />
+    <ClInclude Include="engine\comms\predefined\CollisionMessage.h" />
+    <ClInclude Include="engine\comms\predefined\DamageMessage.h" />
+    <ClInclude Include="engine\comms\predefined\DeathMessage.h" />
+    <ClInclude Include="engine\comms\predefined\ExitMessage.h" />
+    <ClInclude Include="engine\comms\predefined\FireMissileMessage.h" />
+    <ClInclude Include="engine\comms\predefined\InputEvent.h" />
+    <ClInclude Include="engine\comms\predefined\SceneActivateMessage.h" />
+    <ClInclude Include="engine\comms\predefined\ScoreAddMessage.h" />
+    <ClInclude Include="engine\components\BaseComponent.h" />
+    <ClInclude Include="engine\components\CollisionComponent.h" />
+    <ClInclude Include="engine\components\ExplodableComponent.h" />
+    <ClInclude Include="engine\components\HitpointComponent.h" />
+    <ClInclude Include="engine\components\LifeTimeComponent.h" />
+    <ClInclude Include="engine\components\PhysicsComponent.h" />
+    <ClInclude Include="engine\components\PropulsionComponent.h" />
+    <ClInclude Include="engine\components\SceneObjectComponent.h" />
+    <ClInclude Include="engine\Config.h" />
+    <ClInclude Include="engine\containers\Model.h" />
+    <ClInclude Include="engine\containers\ModelLoader.h" />
+    <ClInclude Include="engine\containers\Scene.h" />
+    <ClInclude Include="engine\containers\SceneObject.h" />
+    <ClInclude Include="engine\containers\Window.h" />
+    <ClInclude Include="engine\containers\WindowPC.h" />
+    <ClInclude Include="engine\exceptions\ConfigurationException.h" />
+    <ClInclude Include="engine\exceptions\Exceptions.h" />
+    <ClInclude Include="engine\exceptions\FileIOException.h" />
+    <ClInclude Include="engine\exceptions\OpenGLException.h" />
+    <ClInclude Include="engine\exceptions\ShaderException.h" />
+    <ClInclude Include="engine\exceptions\UnsupportedFeatureException.h" />
+    <ClInclude Include="engine\graphics\buffers\IndexBufferObject.h" />
+    <ClInclude Include="engine\graphics\buffers\VertexArrayObject.h" />
+    <ClInclude Include="engine\graphics\buffers\VertexAttribute.h" />
+    <ClInclude Include="engine\graphics\buffers\VertexBufferObject.h" />
+    <ClInclude Include="engine\graphics\buffers\VertexBufferObjectBase.h" />
+    <ClInclude Include="engine\graphics\Camera.h" />
+    <ClInclude Include="engine\graphics\Context.h" />
+    <ClInclude Include="engine\graphics\CubeMapTexture.h" />
+    <ClInclude Include="engine\graphics\Framebuffer.h" />
+    <ClInclude Include="engine\graphics\IDeferredLoadable.h" />
+    <ClInclude Include="engine\graphics\OpenGLConfig.h" />
+    <ClInclude Include="engine\graphics\renderers\Renderer.h" />
+    <ClInclude Include="engine\graphics\shaders\ShaderProgram.h" />
+    <ClInclude Include="engine\graphics\shaders\ShaderUniformBlock.h" />
+    <ClInclude Include="engine\graphics\Texture.h" />
+    <ClInclude Include="engine\input\ControllerButtonSet.h" />
+    <ClInclude Include="engine\input\InputMap.h" />
+    <ClInclude Include="engine\input\InputRecorder.h" />
+    <ClInclude Include="engine\input\Joystick.h" />
+    <ClInclude Include="engine\input\Key.h" />
+    <ClInclude Include="engine\input\Keyboard.h" />
+    <ClInclude Include="engine\managers\CollisionManager.h" />
+    <ClInclude Include="engine\managers\Manager.h" />
+    <ClInclude Include="engine\managers\MetaManager.h" />
+    <ClInclude Include="engine\managers\ModelManager.h" />
+    <ClInclude Include="engine\managers\SceneObjectManager.h" />
+    <ClInclude Include="engine\managers\ShaderManager.h" />
+    <ClInclude Include="engine\managers\TextureManager.h" />
+    <ClInclude Include="engine\MathHelper.h" />
+    <ClInclude Include="engine\prefabs\DebuggingSphere.h" />
+    <ClInclude Include="engine\prefabs\Explosion.h" />
+    <ClInclude Include="engine\prefabs\ParticleSystem.h" />
+    <ClInclude Include="engine\prefabs\Skybox.h" />
+    <ClInclude Include="engine\prefabs\Text.h" />
+    <ClInclude Include="engine\Program.h" />
+    <ClInclude Include="game\GameParameters.h" />
+    <ClInclude Include="game\scenes\alphaspace\TestScene.h" />
+    <ClInclude Include="game\scenes\alphaspace\TestSpacecraft.h" />
+    <ClInclude Include="game\scenes\alphaspace\TestStarfield.h" />
+    <ClInclude Include="game\scenes\alphaspace\TestTexturedBox.h" />
+    <ClInclude Include="game\scenes\alphaspace\TestTriangle.h" />
+    <ClInclude Include="game\GameRenderer.h" />
+    <ClInclude Include="game\LunarDriftProgram.h" />
+    <ClInclude Include="game\scenes\game\AndromedaRaceScene.h" />
+    <ClInclude Include="game\scenes\game\AntaresRaceScene.h" />
+    <ClInclude Include="game\scenes\game\environment\Arch.h" />
+    <ClInclude Include="game\scenes\game\environment\Hill.h" />
+    <ClInclude Include="game\scenes\game\environment\Mars.h" />
+    <ClInclude Include="game\scenes\game\environment\ObliqueShape.h" />
+    <ClInclude Include="game\scenes\game\environment\Plane.h" />
+    <ClInclude Include="game\scenes\game\environment\Planet.h" />
+    <ClInclude Include="game\scenes\game\environment\WF_Bridge.h" />
+    <ClInclude Include="game\scenes\game\GameOverScene.h" />
+    <ClInclude Include="game\scenes\game\hoops\HoopBlue.h" />
+    <ClInclude Include="game\scenes\game\hoops\HoopGreen.h" />
+    <ClInclude Include="game\scenes\game\hoops\HoopRed.h" />
+    <ClInclude Include="game\scenes\game\hoops\HoopWhite.h" />
+    <ClInclude Include="game\scenes\game\hoops\HoopYellow.h" />
+    <ClInclude Include="game\scenes\game\KesselRunRaceScene.h" />
+    <ClInclude Include="game\scenes\game\PauseScene.h" />
+    <ClInclude Include="game\scenes\game\powerups\Laser.h" />
+    <ClInclude Include="game\scenes\game\powerups\PowerUp.h" />
+    <ClInclude Include="game\scenes\game\RaceScene.h" />
+    <ClInclude Include="game\scenes\game\ScoreDisplayScene.h" />
+    <ClInclude Include="game\scenes\game\ships\Derpy.h" />
+    <ClInclude Include="game\scenes\game\ships\PinkiePie.h" />
+    <ClInclude Include="game\scenes\game\ships\Ship.h" />
+    <ClInclude Include="game\scenes\game\weapons\MissileWeapon.h" />
+    <ClInclude Include="game\scenes\mainmenu\Cursor.h" />
+    <ClInclude Include="game\scenes\mainmenu\MainMenuScene.h" />
+    <ClInclude Include="game\scenes\mainmenu\MenuBox.h" />
+    <ClInclude Include="game\scenes\mainmenu\MenuBox2D.h" />
+    <ClInclude Include="game\scenes\mainmenu\MenuBoxAlt.h" />
+    <ClInclude Include="game\scenes\mainmenu\SelectLevelScene.h" />
+    <ClInclude Include="game\scenes\mainmenu\SelectShipScene.h" />
+    <ClInclude Include="game\scenes\mainmenu\SelectTrackScene.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="game\assets\graphics\shaders\box.vert" />
+    <None Include="game\assets\graphics\shaders\box2d.vert" />
+    <None Include="game\assets\graphics\shaders\collider.frag" />
+    <None Include="game\assets\graphics\shaders\collider.vert" />
+    <None Include="game\assets\graphics\shaders\explosion.vert" />
+    <None Include="game\assets\graphics\shaders\particle_system.vert" />
+    <None Include="game\assets\graphics\shaders\passthrough.frag" />
+    <None Include="game\assets\graphics\shaders\passthrough.vert" />
+    <None Include="game\assets\graphics\shaders\passthrough_tex.frag" />
+    <None Include="game\assets\graphics\shaders\raw.vert" />
+    <None Include="game\assets\graphics\shaders\ship.vert" />
+    <None Include="game\assets\graphics\shaders\text.frag" />
+    <None Include="game\assets\graphics\shaders\text.vert" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8AD3EF69-6CEC-4B57-B56E-D315AB343DA1}</ProjectGuid>
+    <RootNamespace>LunarDrift</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(GLI);$(OpenGL3);$(GLEW_IncludePath);$(VC_IncludePath);$(WindowsSDK_IncludePath);;C:\Program Files (x86)\Parasoft\C++test for Visual Studio\9.5\engine\runtime\include</IncludePath>
+    <LibraryPath>$(GLEW_LibraryPath_x86);$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(GLI);$(OpenGL3);$(GLEW_IncludePath);$(VC_IncludePath);$(WindowsSDK_IncludePath);;C:\Program Files (x86)\Parasoft\C++test for Visual Studio\9.5\engine\runtime\include</IncludePath>
+    <LibraryPath>$(GLEW_LibraryPath_x86);$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>DEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

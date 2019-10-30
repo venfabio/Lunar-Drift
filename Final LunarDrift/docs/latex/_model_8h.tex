@@ -1,0 +1,71 @@
+\hypertarget{_model_8h}{}\section{Lunar\+Drift/engine/containers/\+Model.h File Reference}
+\label{_model_8h}\index{Lunar\+Drift/engine/containers/\+Model.\+h@{Lunar\+Drift/engine/containers/\+Model.\+h}}
+{\ttfamily \#include \char`\"{}../graphics/buffers/\+Vertex\+Array\+Object.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$glm/glm.\+hpp$>$}\\*
+{\ttfamily \#include $<$memory$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_model}{Model}
+\begin{DoxyCompactList}\small\item\em Container for and loader of \char`\"{}model data\char`\"{} (a combination of vertex and texture data) \end{DoxyCompactList}\item 
+struct \hyperlink{struct_model_1_1_vertex}{Model\+::\+Vertex}
+\begin{DoxyCompactList}\small\item\em Predefined vertex format for standard 3D models. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_model_8h_a8e9638a65349c0abba4e6b97c8251994}{Primitive\+Mode} \{ \\*
+\hyperlink{_model_8h_a8e9638a65349c0abba4e6b97c8251994a75dd5f1160a3f02b6fae89c54361a1b3}{Primitive\+Mode\+::\+Points} = G\+L\+\_\+\+P\+O\+I\+N\+TS, 
+\hyperlink{_model_8h_a8e9638a65349c0abba4e6b97c8251994ae7f9e73b8edd21f420a63b3ace5768a2}{Primitive\+Mode\+::\+Line\+Strip} = G\+L\+\_\+\+L\+I\+N\+E\+\_\+\+S\+T\+R\+IP, 
+\hyperlink{_model_8h_a8e9638a65349c0abba4e6b97c8251994a2ba065d2b3004087cc8f111bf56f134b}{Primitive\+Mode\+::\+Line\+Loop} = G\+L\+\_\+\+L\+I\+N\+E\+\_\+\+L\+O\+OP, 
+\hyperlink{_model_8h_a8e9638a65349c0abba4e6b97c8251994aa0b0293a2db49f5f93c15a62e095c819}{Primitive\+Mode\+::\+Lines} = G\+L\+\_\+\+L\+I\+N\+ES, 
+\\*
+\hyperlink{_model_8h_a8e9638a65349c0abba4e6b97c8251994ac1852cb12d8adf08120505e7e7e6a864}{Primitive\+Mode\+::\+Line\+Strip\+Adj} = G\+L\+\_\+\+L\+I\+N\+E\+\_\+\+S\+T\+R\+I\+P\+\_\+\+A\+D\+J\+A\+C\+E\+N\+CY, 
+\hyperlink{_model_8h_a8e9638a65349c0abba4e6b97c8251994af2550c26c26049cb1258bd9fce1b7dcc}{Primitive\+Mode\+::\+Lines\+Adj} = G\+L\+\_\+\+L\+I\+N\+E\+S\+\_\+\+A\+D\+J\+A\+C\+E\+N\+CY, 
+\hyperlink{_model_8h_a8e9638a65349c0abba4e6b97c8251994a1da0b9ead8b051940a89214bae22831c}{Primitive\+Mode\+::\+Triangle\+Strip} = G\+L\+\_\+\+T\+R\+I\+A\+N\+G\+L\+E\+\_\+\+S\+T\+R\+IP, 
+\hyperlink{_model_8h_a8e9638a65349c0abba4e6b97c8251994a18d58fde618e4a30e2dfdc122e693047}{Primitive\+Mode\+::\+Triangle\+Fan} = G\+L\+\_\+\+T\+R\+I\+A\+N\+G\+L\+E\+\_\+\+F\+AN, 
+\\*
+\hyperlink{_model_8h_a8e9638a65349c0abba4e6b97c8251994a7ca66fdfaad3eb33fc65d7490178f856}{Primitive\+Mode\+::\+Triangles} = G\+L\+\_\+\+T\+R\+I\+A\+N\+G\+L\+ES, 
+\hyperlink{_model_8h_a8e9638a65349c0abba4e6b97c8251994af96be28908bc8d0d4557aae7145df525}{Primitive\+Mode\+::\+Triangle\+Strip\+Adj} = G\+L\+\_\+\+T\+R\+I\+A\+N\+G\+L\+E\+\_\+\+S\+T\+R\+I\+P\+\_\+\+A\+D\+J\+A\+C\+E\+N\+CY, 
+\hyperlink{_model_8h_a8e9638a65349c0abba4e6b97c8251994aa6fbef62b2b8d3b4231ef3a9a2746d5c}{Primitive\+Mode\+::\+Triangles\+Adj} = G\+L\+\_\+\+T\+R\+I\+A\+N\+G\+L\+E\+S\+\_\+\+A\+D\+J\+A\+C\+E\+N\+CY, 
+\hyperlink{_model_8h_a8e9638a65349c0abba4e6b97c8251994ac4d283323af70979073f5cb6145f3a4b}{Primitive\+Mode\+::\+Patches} = G\+L\+\_\+\+P\+A\+T\+C\+H\+ES
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\index{Model.\+h@{Model.\+h}!Primitive\+Mode@{Primitive\+Mode}}
+\index{Primitive\+Mode@{Primitive\+Mode}!Model.\+h@{Model.\+h}}
+\subsubsection[{\texorpdfstring{Primitive\+Mode}{PrimitiveMode}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Primitive\+Mode}\hspace{0.3cm}{\ttfamily [strong]}}\hypertarget{_model_8h_a8e9638a65349c0abba4e6b97c8251994}{}\label{_model_8h_a8e9638a65349c0abba4e6b97c8251994}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Points@{Points}!Model.\+h@{Model.\+h}}\index{Model.\+h@{Model.\+h}!Points@{Points}}\item[{\em 
+Points\hypertarget{_model_8h_a8e9638a65349c0abba4e6b97c8251994a75dd5f1160a3f02b6fae89c54361a1b3}{}\label{_model_8h_a8e9638a65349c0abba4e6b97c8251994a75dd5f1160a3f02b6fae89c54361a1b3}
+}]\index{Line\+Strip@{Line\+Strip}!Model.\+h@{Model.\+h}}\index{Model.\+h@{Model.\+h}!Line\+Strip@{Line\+Strip}}\item[{\em 
+Line\+Strip\hypertarget{_model_8h_a8e9638a65349c0abba4e6b97c8251994ae7f9e73b8edd21f420a63b3ace5768a2}{}\label{_model_8h_a8e9638a65349c0abba4e6b97c8251994ae7f9e73b8edd21f420a63b3ace5768a2}
+}]\index{Line\+Loop@{Line\+Loop}!Model.\+h@{Model.\+h}}\index{Model.\+h@{Model.\+h}!Line\+Loop@{Line\+Loop}}\item[{\em 
+Line\+Loop\hypertarget{_model_8h_a8e9638a65349c0abba4e6b97c8251994a2ba065d2b3004087cc8f111bf56f134b}{}\label{_model_8h_a8e9638a65349c0abba4e6b97c8251994a2ba065d2b3004087cc8f111bf56f134b}
+}]\index{Lines@{Lines}!Model.\+h@{Model.\+h}}\index{Model.\+h@{Model.\+h}!Lines@{Lines}}\item[{\em 
+Lines\hypertarget{_model_8h_a8e9638a65349c0abba4e6b97c8251994aa0b0293a2db49f5f93c15a62e095c819}{}\label{_model_8h_a8e9638a65349c0abba4e6b97c8251994aa0b0293a2db49f5f93c15a62e095c819}
+}]\index{Line\+Strip\+Adj@{Line\+Strip\+Adj}!Model.\+h@{Model.\+h}}\index{Model.\+h@{Model.\+h}!Line\+Strip\+Adj@{Line\+Strip\+Adj}}\item[{\em 
+Line\+Strip\+Adj\hypertarget{_model_8h_a8e9638a65349c0abba4e6b97c8251994ac1852cb12d8adf08120505e7e7e6a864}{}\label{_model_8h_a8e9638a65349c0abba4e6b97c8251994ac1852cb12d8adf08120505e7e7e6a864}
+}]\index{Lines\+Adj@{Lines\+Adj}!Model.\+h@{Model.\+h}}\index{Model.\+h@{Model.\+h}!Lines\+Adj@{Lines\+Adj}}\item[{\em 
+Lines\+Adj\hypertarget{_model_8h_a8e9638a65349c0abba4e6b97c8251994af2550c26c26049cb1258bd9fce1b7dcc}{}\label{_model_8h_a8e9638a65349c0abba4e6b97c8251994af2550c26c26049cb1258bd9fce1b7dcc}
+}]\index{Triangle\+Strip@{Triangle\+Strip}!Model.\+h@{Model.\+h}}\index{Model.\+h@{Model.\+h}!Triangle\+Strip@{Triangle\+Strip}}\item[{\em 
+Triangle\+Strip\hypertarget{_model_8h_a8e9638a65349c0abba4e6b97c8251994a1da0b9ead8b051940a89214bae22831c}{}\label{_model_8h_a8e9638a65349c0abba4e6b97c8251994a1da0b9ead8b051940a89214bae22831c}
+}]\index{Triangle\+Fan@{Triangle\+Fan}!Model.\+h@{Model.\+h}}\index{Model.\+h@{Model.\+h}!Triangle\+Fan@{Triangle\+Fan}}\item[{\em 
+Triangle\+Fan\hypertarget{_model_8h_a8e9638a65349c0abba4e6b97c8251994a18d58fde618e4a30e2dfdc122e693047}{}\label{_model_8h_a8e9638a65349c0abba4e6b97c8251994a18d58fde618e4a30e2dfdc122e693047}
+}]\index{Triangles@{Triangles}!Model.\+h@{Model.\+h}}\index{Model.\+h@{Model.\+h}!Triangles@{Triangles}}\item[{\em 
+Triangles\hypertarget{_model_8h_a8e9638a65349c0abba4e6b97c8251994a7ca66fdfaad3eb33fc65d7490178f856}{}\label{_model_8h_a8e9638a65349c0abba4e6b97c8251994a7ca66fdfaad3eb33fc65d7490178f856}
+}]\index{Triangle\+Strip\+Adj@{Triangle\+Strip\+Adj}!Model.\+h@{Model.\+h}}\index{Model.\+h@{Model.\+h}!Triangle\+Strip\+Adj@{Triangle\+Strip\+Adj}}\item[{\em 
+Triangle\+Strip\+Adj\hypertarget{_model_8h_a8e9638a65349c0abba4e6b97c8251994af96be28908bc8d0d4557aae7145df525}{}\label{_model_8h_a8e9638a65349c0abba4e6b97c8251994af96be28908bc8d0d4557aae7145df525}
+}]\index{Triangles\+Adj@{Triangles\+Adj}!Model.\+h@{Model.\+h}}\index{Model.\+h@{Model.\+h}!Triangles\+Adj@{Triangles\+Adj}}\item[{\em 
+Triangles\+Adj\hypertarget{_model_8h_a8e9638a65349c0abba4e6b97c8251994aa6fbef62b2b8d3b4231ef3a9a2746d5c}{}\label{_model_8h_a8e9638a65349c0abba4e6b97c8251994aa6fbef62b2b8d3b4231ef3a9a2746d5c}
+}]\index{Patches@{Patches}!Model.\+h@{Model.\+h}}\index{Model.\+h@{Model.\+h}!Patches@{Patches}}\item[{\em 
+Patches\hypertarget{_model_8h_a8e9638a65349c0abba4e6b97c8251994ac4d283323af70979073f5cb6145f3a4b}{}\label{_model_8h_a8e9638a65349c0abba4e6b97c8251994ac4d283323af70979073f5cb6145f3a4b}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 7 of file Model.\+h.
+

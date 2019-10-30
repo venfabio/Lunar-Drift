@@ -1,0 +1,393 @@
+\hypertarget{class_message_system}{}\section{Message\+System Class Reference}
+\label{class_message_system}\index{Message\+System@{Message\+System}}
+
+
+Singletonized central processing system for messages and events.  
+
+
+
+
+{\ttfamily \#include $<$Message\+System.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_message_system_a91321ec1bf6906c05d3822da67a9c6bf}{register\+Listener} (const std\+::string \&name, \hyperlink{class_i_message_listener}{I\+Message\+Listener} $\ast$listener)
+\begin{DoxyCompactList}\small\item\em Register a class instance as a message listener. \end{DoxyCompactList}\item 
+void \hyperlink{class_message_system_accddc135ff948b8278d35463548327e2}{unregister\+Listener} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Unregister a message listener from being a listener. \end{DoxyCompactList}\item 
+void \hyperlink{class_message_system_af555d4baae75e939aa5f388284138547}{unregister\+Listener} (\hyperlink{class_i_message_listener}{I\+Message\+Listener} $\ast$listener)
+\begin{DoxyCompactList}\small\item\em Unregister a class instance from being a listener. \end{DoxyCompactList}\item 
+void \hyperlink{class_message_system_aae34b407afa37e0a5b8c8eab0cf986b0}{subscribe} (const std\+::string \&sevent, \hyperlink{class_i_message_listener}{I\+Message\+Listener} $\ast$listener)
+\begin{DoxyCompactList}\small\item\em Subscribe a class instance to receive events of a given name. \end{DoxyCompactList}\item 
+void \hyperlink{class_message_system_a68fdb778ec79f4ddf25561d0e39b1c00}{unsubscribe} (const std\+::string \&sevent, \hyperlink{class_i_message_listener}{I\+Message\+Listener} $\ast$listener)
+\begin{DoxyCompactList}\small\item\em Unsubscribe a class instance from receiving events of a given name. \end{DoxyCompactList}\item 
+void \hyperlink{class_message_system_a2dc1a1964004d3133caea558b6e05f52}{broadcast} (std\+::shared\+\_\+ptr$<$ \hyperlink{class_message}{Message} $>$ event)
+\begin{DoxyCompactList}\small\item\em Broadcast an event in the system to anyone interested. \end{DoxyCompactList}\item 
+void \hyperlink{class_message_system_a13765245014da37033b0a3696425708a}{post} (const std\+::string \&to, std\+::shared\+\_\+ptr$<$ \hyperlink{class_message}{Message} $>$ msg)
+\begin{DoxyCompactList}\small\item\em Post a message to a registered listener. \end{DoxyCompactList}\item 
+void \hyperlink{class_message_system_a435432c27003a5d62b4a85811740cc33}{post} (\hyperlink{class_i_message_listener}{I\+Message\+Listener} $\ast$listener, std\+::shared\+\_\+ptr$<$ \hyperlink{class_message}{Message} $>$ msg)
+\begin{DoxyCompactList}\small\item\em Post a message to a listener. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_message_system}{Message\+System} \& \hyperlink{class_message_system_a90338799a15b484765c4a8b94d140648}{get\+Instance} ()
+\begin{DoxyCompactList}\small\item\em Singleton access. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_message_system_ac7a164731432f7aa8bfadbc46008f777}{Message\+System} ()
+\item 
+\hyperlink{class_message_system_ab0bcc49967b11c9e34231972b44a22cd}{Message\+System} (\hyperlink{class_message_system}{Message\+System} const \&)=delete
+\item 
+void \hyperlink{class_message_system_adae1512cf046f08efff4b00244d80caf}{operator=} (\hyperlink{class_message_system}{Message\+System} const \&)=delete
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ std\+::string, \hyperlink{class_i_message_listener}{I\+Message\+Listener} $\ast$ $>$ \hyperlink{class_message_system_ab4b90cfd3e6e27a6ae7417ecf17123d7}{m\+\_\+\+Listeners}
+\item 
+std\+::map$<$ std\+::string, std\+::list$<$ \hyperlink{class_i_message_listener}{I\+Message\+Listener} $\ast$ $>$ $>$ \hyperlink{class_message_system_a64730035cb0e435bd3b1ff4c1c8dfe20}{m\+\_\+\+Subscribers}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Singletonized central processing system for messages and events. 
+
+This singleton encapsulates communication between entities in the program. Events and messages are dispatched through this class for dispatching to the relevant entities. For understanding, imagine if you will the idea of a post office, wherein letters and newspapers are posted through; this class is that post office. Consequently, its responsibilities include holding information on \char`\"{}subscriptions\char`\"{} (who is subscribed to set events) and storing names and addresses of \char`\"{}listeners\char`\"{} (for posting messages to), and processing the dispatching of events and messages to those interested, respectively.
+
+\begin{DoxyAuthor}{Author}
+Hayley Hatton 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+10/03/2016 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_i_message_listener}{I\+Message\+Listener} 
+
+\hyperlink{class_message}{Message} 
+\end{DoxySeeAlso}
+
+
+Definition at line 24 of file Message\+System.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Message\+System@{Message\+System}!Message\+System@{Message\+System}}
+\index{Message\+System@{Message\+System}!Message\+System@{Message\+System}}
+\subsubsection[{\texorpdfstring{Message\+System()}{MessageSystem()}}]{\setlength{\rightskip}{0pt plus 5cm}Message\+System\+::\+Message\+System (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}\hypertarget{class_message_system_ac7a164731432f7aa8bfadbc46008f777}{}\label{class_message_system_ac7a164731432f7aa8bfadbc46008f777}
+
+
+Definition at line 99 of file Message\+System.\+h.
+
+
+
+References operator=().
+
+\index{Message\+System@{Message\+System}!Message\+System@{Message\+System}}
+\index{Message\+System@{Message\+System}!Message\+System@{Message\+System}}
+\subsubsection[{\texorpdfstring{Message\+System(\+Message\+System const \&)=delete}{MessageSystem(MessageSystem const &)=delete}}]{\setlength{\rightskip}{0pt plus 5cm}Message\+System\+::\+Message\+System (
+\begin{DoxyParamCaption}
+\item[{{\bf Message\+System} const \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}\hypertarget{class_message_system_ab0bcc49967b11c9e34231972b44a22cd}{}\label{class_message_system_ab0bcc49967b11c9e34231972b44a22cd}
+
+
+\subsection{Member Function Documentation}
+\index{Message\+System@{Message\+System}!broadcast@{broadcast}}
+\index{broadcast@{broadcast}!Message\+System@{Message\+System}}
+\subsubsection[{\texorpdfstring{broadcast(std\+::shared\+\_\+ptr$<$ Message $>$ event)}{broadcast(std::shared_ptr< Message > event)}}]{\setlength{\rightskip}{0pt plus 5cm}void Message\+System\+::broadcast (
+\begin{DoxyParamCaption}
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Message} $>$}]{event}
+\end{DoxyParamCaption}
+)}\hypertarget{class_message_system_a2dc1a1964004d3133caea558b6e05f52}{}\label{class_message_system_a2dc1a1964004d3133caea558b6e05f52}
+
+
+Broadcast an event in the system to anyone interested. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & Smart pointer to event \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 46 of file Message\+System.\+cpp.
+
+
+
+References m\+\_\+\+Subscribers.
+
+
+
+Referenced by get\+Instance(), Hitpoint\+Component\+::on\+Message(), Keyboard\+::set\+Key\+Down(), and Keyboard\+::set\+Key\+Up().
+
+\index{Message\+System@{Message\+System}!get\+Instance@{get\+Instance}}
+\index{get\+Instance@{get\+Instance}!Message\+System@{Message\+System}}
+\subsubsection[{\texorpdfstring{get\+Instance()}{getInstance()}}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Message\+System}\& Message\+System\+::get\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{class_message_system_a90338799a15b484765c4a8b94d140648}{}\label{class_message_system_a90338799a15b484765c4a8b94d140648}
+
+
+Singleton access. 
+
+
+
+Definition at line 30 of file Message\+System.\+h.
+
+
+
+References broadcast(), post(), register\+Listener(), subscribe(), unregister\+Listener(), and unsubscribe().
+
+
+
+Referenced by Collision\+Component\+::\+Collision\+Component(), Hitpoint\+Component\+::\+Hitpoint\+Component(), Hitpoint\+Component\+::on\+Message(), Keyboard\+::set\+Key\+Down(), Keyboard\+::set\+Key\+Up(), Test\+Scene3\+D\+::\+Test\+Scene3\+D(), Test\+Triangle\+::\+Test\+Triangle(), Collision\+Component\+::$\sim$\+Collision\+Component(), Hitpoint\+Component\+::$\sim$\+Hitpoint\+Component(), and Test\+Triangle\+::$\sim$\+Test\+Triangle().
+
+\index{Message\+System@{Message\+System}!operator=@{operator=}}
+\index{operator=@{operator=}!Message\+System@{Message\+System}}
+\subsubsection[{\texorpdfstring{operator=(\+Message\+System const \&)=delete}{operator=(MessageSystem const &)=delete}}]{\setlength{\rightskip}{0pt plus 5cm}void Message\+System\+::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf Message\+System} const \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}\hypertarget{class_message_system_adae1512cf046f08efff4b00244d80caf}{}\label{class_message_system_adae1512cf046f08efff4b00244d80caf}
+
+
+Referenced by Message\+System().
+
+\index{Message\+System@{Message\+System}!post@{post}}
+\index{post@{post}!Message\+System@{Message\+System}}
+\subsubsection[{\texorpdfstring{post(const std\+::string \&to, std\+::shared\+\_\+ptr$<$ Message $>$ msg)}{post(const std::string &to, std::shared_ptr< Message > msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void Message\+System\+::post (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{to, }
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Message} $>$}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{class_message_system_a13765245014da37033b0a3696425708a}{}\label{class_message_system_a13765245014da37033b0a3696425708a}
+
+
+Post a message to a registered listener. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em to} & Name of the registered listener \\
+\hline
+{\em msg} & Smart pointer to the message \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 57 of file Message\+System.\+cpp.
+
+
+
+References m\+\_\+\+Listeners.
+
+
+
+Referenced by get\+Instance().
+
+\index{Message\+System@{Message\+System}!post@{post}}
+\index{post@{post}!Message\+System@{Message\+System}}
+\subsubsection[{\texorpdfstring{post(\+I\+Message\+Listener $\ast$listener, std\+::shared\+\_\+ptr$<$ Message $>$ msg)}{post(IMessageListener *listener, std::shared_ptr< Message > msg)}}]{\setlength{\rightskip}{0pt plus 5cm}void Message\+System\+::post (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+Message\+Listener} $\ast$}]{listener, }
+\item[{std\+::shared\+\_\+ptr$<$ {\bf Message} $>$}]{msg}
+\end{DoxyParamCaption}
+)}\hypertarget{class_message_system_a435432c27003a5d62b4a85811740cc33}{}\label{class_message_system_a435432c27003a5d62b4a85811740cc33}
+
+
+Post a message to a listener. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em listener} & Pointer to the listener \\
+\hline
+{\em msg} & Smart pointer to the message \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 62 of file Message\+System.\+cpp.
+
+\index{Message\+System@{Message\+System}!register\+Listener@{register\+Listener}}
+\index{register\+Listener@{register\+Listener}!Message\+System@{Message\+System}}
+\subsubsection[{\texorpdfstring{register\+Listener(const std\+::string \&name, I\+Message\+Listener $\ast$listener)}{registerListener(const std::string &name, IMessageListener *listener)}}]{\setlength{\rightskip}{0pt plus 5cm}void Message\+System\+::register\+Listener (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{{\bf I\+Message\+Listener} $\ast$}]{listener}
+\end{DoxyParamCaption}
+)}\hypertarget{class_message_system_a91321ec1bf6906c05d3822da67a9c6bf}{}\label{class_message_system_a91321ec1bf6906c05d3822da67a9c6bf}
+
+
+Register a class instance as a message listener. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name for posting messages to \\
+\hline
+{\em listener} & Pointer to class instance \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 3 of file Message\+System.\+cpp.
+
+
+
+References m\+\_\+\+Listeners.
+
+
+
+Referenced by get\+Instance().
+
+\index{Message\+System@{Message\+System}!subscribe@{subscribe}}
+\index{subscribe@{subscribe}!Message\+System@{Message\+System}}
+\subsubsection[{\texorpdfstring{subscribe(const std\+::string \&sevent, I\+Message\+Listener $\ast$listener)}{subscribe(const std::string &sevent, IMessageListener *listener)}}]{\setlength{\rightskip}{0pt plus 5cm}void Message\+System\+::subscribe (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{sevent, }
+\item[{{\bf I\+Message\+Listener} $\ast$}]{listener}
+\end{DoxyParamCaption}
+)}\hypertarget{class_message_system_aae34b407afa37e0a5b8c8eab0cf986b0}{}\label{class_message_system_aae34b407afa37e0a5b8c8eab0cf986b0}
+
+
+Subscribe a class instance to receive events of a given name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sevent} & Event name to subscribe to \\
+\hline
+{\em listener} & Pointer to the class instance \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 26 of file Message\+System.\+cpp.
+
+
+
+References m\+\_\+\+Subscribers.
+
+
+
+Referenced by Collision\+Component\+::\+Collision\+Component(), get\+Instance(), Hitpoint\+Component\+::\+Hitpoint\+Component(), Test\+Scene3\+D\+::\+Test\+Scene3\+D(), and Test\+Triangle\+::\+Test\+Triangle().
+
+\index{Message\+System@{Message\+System}!unregister\+Listener@{unregister\+Listener}}
+\index{unregister\+Listener@{unregister\+Listener}!Message\+System@{Message\+System}}
+\subsubsection[{\texorpdfstring{unregister\+Listener(const std\+::string \&name)}{unregisterListener(const std::string &name)}}]{\setlength{\rightskip}{0pt plus 5cm}void Message\+System\+::unregister\+Listener (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+)}\hypertarget{class_message_system_accddc135ff948b8278d35463548327e2}{}\label{class_message_system_accddc135ff948b8278d35463548327e2}
+
+
+Unregister a message listener from being a listener. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the listener \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 10 of file Message\+System.\+cpp.
+
+
+
+References m\+\_\+\+Listeners.
+
+
+
+Referenced by get\+Instance().
+
+\index{Message\+System@{Message\+System}!unregister\+Listener@{unregister\+Listener}}
+\index{unregister\+Listener@{unregister\+Listener}!Message\+System@{Message\+System}}
+\subsubsection[{\texorpdfstring{unregister\+Listener(\+I\+Message\+Listener $\ast$listener)}{unregisterListener(IMessageListener *listener)}}]{\setlength{\rightskip}{0pt plus 5cm}void Message\+System\+::unregister\+Listener (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+Message\+Listener} $\ast$}]{listener}
+\end{DoxyParamCaption}
+)}\hypertarget{class_message_system_af555d4baae75e939aa5f388284138547}{}\label{class_message_system_af555d4baae75e939aa5f388284138547}
+
+
+Unregister a class instance from being a listener. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em listener} & Class instance pointer \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 15 of file Message\+System.\+cpp.
+
+
+
+References m\+\_\+\+Listeners.
+
+\index{Message\+System@{Message\+System}!unsubscribe@{unsubscribe}}
+\index{unsubscribe@{unsubscribe}!Message\+System@{Message\+System}}
+\subsubsection[{\texorpdfstring{unsubscribe(const std\+::string \&sevent, I\+Message\+Listener $\ast$listener)}{unsubscribe(const std::string &sevent, IMessageListener *listener)}}]{\setlength{\rightskip}{0pt plus 5cm}void Message\+System\+::unsubscribe (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{sevent, }
+\item[{{\bf I\+Message\+Listener} $\ast$}]{listener}
+\end{DoxyParamCaption}
+)}\hypertarget{class_message_system_a68fdb778ec79f4ddf25561d0e39b1c00}{}\label{class_message_system_a68fdb778ec79f4ddf25561d0e39b1c00}
+
+
+Unsubscribe a class instance from receiving events of a given name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sevent} & Event name to unsubscribe from \\
+\hline
+{\em listener} & Pointer to the class instance \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 39 of file Message\+System.\+cpp.
+
+
+
+References m\+\_\+\+Subscribers.
+
+
+
+Referenced by get\+Instance(), Collision\+Component\+::$\sim$\+Collision\+Component(), Hitpoint\+Component\+::$\sim$\+Hitpoint\+Component(), and Test\+Triangle\+::$\sim$\+Test\+Triangle().
+
+
+
+\subsection{Member Data Documentation}
+\index{Message\+System@{Message\+System}!m\+\_\+\+Listeners@{m\+\_\+\+Listeners}}
+\index{m\+\_\+\+Listeners@{m\+\_\+\+Listeners}!Message\+System@{Message\+System}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Listeners}{m_Listeners}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$std\+::string, {\bf I\+Message\+Listener}$\ast$$>$ Message\+System\+::m\+\_\+\+Listeners\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_message_system_ab4b90cfd3e6e27a6ae7417ecf17123d7}{}\label{class_message_system_ab4b90cfd3e6e27a6ae7417ecf17123d7}
+
+
+Definition at line 103 of file Message\+System.\+h.
+
+
+
+Referenced by post(), register\+Listener(), and unregister\+Listener().
+
+\index{Message\+System@{Message\+System}!m\+\_\+\+Subscribers@{m\+\_\+\+Subscribers}}
+\index{m\+\_\+\+Subscribers@{m\+\_\+\+Subscribers}!Message\+System@{Message\+System}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Subscribers}{m_Subscribers}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$std\+::string, std\+::list$<${\bf I\+Message\+Listener}$\ast$$>$ $>$ Message\+System\+::m\+\_\+\+Subscribers\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_message_system_a64730035cb0e435bd3b1ff4c1c8dfe20}{}\label{class_message_system_a64730035cb0e435bd3b1ff4c1c8dfe20}
+
+
+Definition at line 104 of file Message\+System.\+h.
+
+
+
+Referenced by broadcast(), subscribe(), and unsubscribe().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lunar\+Drift/engine/comms/\hyperlink{_message_system_8h}{Message\+System.\+h}\item 
+Lunar\+Drift/engine/comms/\hyperlink{_message_system_8cpp}{Message\+System.\+cpp}\end{DoxyCompactItemize}

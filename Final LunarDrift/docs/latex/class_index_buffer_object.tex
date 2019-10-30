@@ -1,0 +1,215 @@
+\hypertarget{class_index_buffer_object}{}\section{Index\+Buffer\+Object Class Reference}
+\label{class_index_buffer_object}\index{Index\+Buffer\+Object@{Index\+Buffer\+Object}}
+
+
+Buffer manager for model indices.  
+
+
+
+
+{\ttfamily \#include $<$Index\+Buffer\+Object.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_index_buffer_object_af68b0d097152e2956479d931d553057f}{Index\+Buffer\+Object} (\hyperlink{class_context}{Context} $\ast$context, const std\+::vector$<$ unsigned short $>$ \&indices)
+\begin{DoxyCompactList}\small\item\em Default constructor. Creates the I\+BO buffer on the G\+PU. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_index_buffer_object_ab90647bffb075f60071e404260881731}{$\sim$\+Index\+Buffer\+Object} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. Destroys the I\+BO buffer. \end{DoxyCompactList}\item 
+void \hyperlink{class_index_buffer_object_aff2a0368134dec8cad54605d5435ba25}{bind} (\hyperlink{class_context}{Context} $\ast$context)
+\begin{DoxyCompactList}\small\item\em Binds the I\+BO to the Open\+GL pipeline. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{class_index_buffer_object_a1d23270c5c1e3a39c48a98cb13abe80f}{size} () const 
+\begin{DoxyCompactList}\small\item\em Access the amount of indices in the I\+BO. \end{DoxyCompactList}\item 
+G\+Lenum \hyperlink{class_index_buffer_object_aa819995c955a645ca8db56fbdf3fcbbe}{get\+Open\+G\+L\+Class} () const 
+\begin{DoxyCompactList}\small\item\em Access the Open\+GL integer class of the indices stored in the I\+BO. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ unsigned short $>$ \hyperlink{class_index_buffer_object_a990bafed8ff20200858ce93a833019af}{m\+\_\+\+Indices}
+\begin{DoxyCompactList}\small\item\em Index buffer. \end{DoxyCompactList}\item 
+G\+Luint \hyperlink{class_index_buffer_object_a861d3d51556c2e639d626a74d9ff71c6}{m\+\_\+\+I\+BO}
+\begin{DoxyCompactList}\small\item\em Open\+G\+L-\/provided I\+BO handle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Buffer manager for model indices. 
+
+Index buffer objects (or I\+B\+Os) in Open\+GL describe the order in which vertices are drawn, which allow models to be drawn without repeating vertices.
+
+\begin{DoxyPrecond}{Precondition}
+A valid Open\+GL context must be present to the program 
+\end{DoxyPrecond}
+\begin{DoxyAuthor}{Author}
+Hayley Hatton 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+20/02/2016 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_vertex_array_object}{Vertex\+Array\+Object} 
+\end{DoxySeeAlso}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000006}{Todo}](Hayley\#6\#02/22/16)\+: Handling of dynamic buffers and syncronicity between C\+PU and G\+PU \end{DoxyRefDesc}
+
+
+Definition at line 18 of file Index\+Buffer\+Object.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Index\+Buffer\+Object@{Index\+Buffer\+Object}!Index\+Buffer\+Object@{Index\+Buffer\+Object}}
+\index{Index\+Buffer\+Object@{Index\+Buffer\+Object}!Index\+Buffer\+Object@{Index\+Buffer\+Object}}
+\subsubsection[{\texorpdfstring{Index\+Buffer\+Object(\+Context $\ast$context, const std\+::vector$<$ unsigned short $>$ \&indices)}{IndexBufferObject(Context *context, const std::vector< unsigned short > &indices)}}]{\setlength{\rightskip}{0pt plus 5cm}Index\+Buffer\+Object\+::\+Index\+Buffer\+Object (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context, }
+\item[{const std\+::vector$<$ unsigned short $>$ \&}]{indices}
+\end{DoxyParamCaption}
+)}\hypertarget{class_index_buffer_object_af68b0d097152e2956479d931d553057f}{}\label{class_index_buffer_object_af68b0d097152e2956479d931d553057f}
+
+
+Default constructor. Creates the I\+BO buffer on the G\+PU. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphics context \\
+\hline
+{\em indices} & Initial index buffer state \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 5 of file Index\+Buffer\+Object.\+cpp.
+
+
+
+References bind(), and m\+\_\+\+I\+BO.
+
+\index{Index\+Buffer\+Object@{Index\+Buffer\+Object}!````~Index\+Buffer\+Object@{$\sim$\+Index\+Buffer\+Object}}
+\index{````~Index\+Buffer\+Object@{$\sim$\+Index\+Buffer\+Object}!Index\+Buffer\+Object@{Index\+Buffer\+Object}}
+\subsubsection[{\texorpdfstring{$\sim$\+Index\+Buffer\+Object()}{~IndexBufferObject()}}]{\setlength{\rightskip}{0pt plus 5cm}Index\+Buffer\+Object\+::$\sim$\+Index\+Buffer\+Object (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_index_buffer_object_ab90647bffb075f60071e404260881731}{}\label{class_index_buffer_object_ab90647bffb075f60071e404260881731}
+
+
+Default destructor. Destroys the I\+BO buffer. 
+
+
+
+Definition at line 31 of file Index\+Buffer\+Object.\+cpp.
+
+
+
+References m\+\_\+\+I\+BO.
+
+
+
+\subsection{Member Function Documentation}
+\index{Index\+Buffer\+Object@{Index\+Buffer\+Object}!bind@{bind}}
+\index{bind@{bind}!Index\+Buffer\+Object@{Index\+Buffer\+Object}}
+\subsubsection[{\texorpdfstring{bind(\+Context $\ast$context)}{bind(Context *context)}}]{\setlength{\rightskip}{0pt plus 5cm}void Index\+Buffer\+Object\+::bind (
+\begin{DoxyParamCaption}
+\item[{{\bf Context} $\ast$}]{context}
+\end{DoxyParamCaption}
+)}\hypertarget{class_index_buffer_object_aff2a0368134dec8cad54605d5435ba25}{}\label{class_index_buffer_object_aff2a0368134dec8cad54605d5435ba25}
+
+
+Binds the I\+BO to the Open\+GL pipeline. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & Graphics context \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 37 of file Index\+Buffer\+Object.\+cpp.
+
+
+
+References m\+\_\+\+I\+BO.
+
+
+
+Referenced by Index\+Buffer\+Object().
+
+\index{Index\+Buffer\+Object@{Index\+Buffer\+Object}!get\+Open\+G\+L\+Class@{get\+Open\+G\+L\+Class}}
+\index{get\+Open\+G\+L\+Class@{get\+Open\+G\+L\+Class}!Index\+Buffer\+Object@{Index\+Buffer\+Object}}
+\subsubsection[{\texorpdfstring{get\+Open\+G\+L\+Class() const }{getOpenGLClass() const }}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lenum Index\+Buffer\+Object\+::get\+Open\+G\+L\+Class (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_index_buffer_object_aa819995c955a645ca8db56fbdf3fcbbe}{}\label{class_index_buffer_object_aa819995c955a645ca8db56fbdf3fcbbe}
+
+
+Access the Open\+GL integer class of the indices stored in the I\+BO. 
+
+\begin{DoxyReturn}{Returns}
+Open\+GL enumerator describing the integer size 
+\end{DoxyReturn}
+
+
+Definition at line 50 of file Index\+Buffer\+Object.\+h.
+
+\index{Index\+Buffer\+Object@{Index\+Buffer\+Object}!size@{size}}
+\index{size@{size}!Index\+Buffer\+Object@{Index\+Buffer\+Object}}
+\subsubsection[{\texorpdfstring{size() const }{size() const }}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Index\+Buffer\+Object\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_index_buffer_object_a1d23270c5c1e3a39c48a98cb13abe80f}{}\label{class_index_buffer_object_a1d23270c5c1e3a39c48a98cb13abe80f}
+
+
+Access the amount of indices in the I\+BO. 
+
+\begin{DoxyReturn}{Returns}
+Number of elements in the I\+BO 
+\end{DoxyReturn}
+
+
+Definition at line 44 of file Index\+Buffer\+Object.\+h.
+
+
+
+References m\+\_\+\+Indices.
+
+
+
+\subsection{Member Data Documentation}
+\index{Index\+Buffer\+Object@{Index\+Buffer\+Object}!m\+\_\+\+I\+BO@{m\+\_\+\+I\+BO}}
+\index{m\+\_\+\+I\+BO@{m\+\_\+\+I\+BO}!Index\+Buffer\+Object@{Index\+Buffer\+Object}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+I\+BO}{m_IBO}}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Index\+Buffer\+Object\+::m\+\_\+\+I\+BO\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_index_buffer_object_a861d3d51556c2e639d626a74d9ff71c6}{}\label{class_index_buffer_object_a861d3d51556c2e639d626a74d9ff71c6}
+
+
+Open\+G\+L-\/provided I\+BO handle. 
+
+
+
+Definition at line 54 of file Index\+Buffer\+Object.\+h.
+
+
+
+Referenced by bind(), Index\+Buffer\+Object(), and $\sim$\+Index\+Buffer\+Object().
+
+\index{Index\+Buffer\+Object@{Index\+Buffer\+Object}!m\+\_\+\+Indices@{m\+\_\+\+Indices}}
+\index{m\+\_\+\+Indices@{m\+\_\+\+Indices}!Index\+Buffer\+Object@{Index\+Buffer\+Object}}
+\subsubsection[{\texorpdfstring{m\+\_\+\+Indices}{m_Indices}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$unsigned short$>$ Index\+Buffer\+Object\+::m\+\_\+\+Indices\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_index_buffer_object_a990bafed8ff20200858ce93a833019af}{}\label{class_index_buffer_object_a990bafed8ff20200858ce93a833019af}
+
+
+Index buffer. 
+
+
+
+Definition at line 53 of file Index\+Buffer\+Object.\+h.
+
+
+
+Referenced by size().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lunar\+Drift/engine/graphics/buffers/\hyperlink{_index_buffer_object_8h}{Index\+Buffer\+Object.\+h}\item 
+Lunar\+Drift/engine/graphics/buffers/\hyperlink{_index_buffer_object_8cpp}{Index\+Buffer\+Object.\+cpp}\end{DoxyCompactItemize}

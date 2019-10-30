@@ -1,0 +1,11 @@
+<map id="LunarDrift/LunarDrift/engine/managers/SceneObjectManager.h" name="LunarDrift/LunarDrift/engine/managers/SceneObjectManager.h">
+<area shape="rect" id="node2" href="$_manager_8h.html" title="Manager.h" alt="" coords="64,363,147,389"/>
+<area shape="rect" id="node4" href="$_scene_object_8h.html" title="../containers/SceneObject.h" alt="" coords="210,109,394,136"/>
+<area shape="rect" id="node5" href="$_scene_object_component_8h.html" title="../components/SceneObject\lComponent.h" alt="" coords="339,184,523,225"/>
+<area shape="rect" id="node10" href="$_context_8h.html" title="../graphics/Context.h" alt="" coords="498,363,641,389"/>
+<area shape="rect" id="node14" href="$_shader_manager_8h.html" title="../managers/ShaderManager.h" alt="" coords="75,191,272,218"/>
+<area shape="rect" id="node6" href="$_base_component_8h.html" title="BaseComponent.h" alt="" coords="345,363,474,389"/>
+<area shape="rect" id="node7" href="$_meta_manager_8h.html" title="../managers/MetaManager.h" alt="" coords="121,281,306,307"/>
+<area shape="rect" id="node11" href="$_open_g_l_config_8h.html" title="OpenGLConfig.h" alt="" coords="511,437,628,464"/>
+<area shape="rect" id="node15" href="$_shader_program_8h.html" title="../graphics/shaders\l/ShaderProgram.h" alt="" coords="331,273,464,315"/>
+</map>

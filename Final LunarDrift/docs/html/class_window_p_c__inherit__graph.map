@@ -1,0 +1,4 @@
+<map id="WindowPC" name="WindowPC">
+<area shape="rect" id="node2" href="$class_window.html" title="Abstract window container, for bridging the system to the program. " alt="" coords="5,5,73,32"/>
+<area shape="rect" id="node3" href="$class_i_message_listener.html" title="Interface for handling messages sent from other entities. " alt="" coords="97,5,221,32"/>
+</map>
